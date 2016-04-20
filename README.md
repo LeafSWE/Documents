@@ -1,2 +1,2 @@
-# Documents-RQ
-Documents Repo for RQ at SWE Unipd
+# SWE
+Progetto di Ingegneria del Software

@@ -1,0 +1,85 @@
+%ricordarsi di compilare più di una volta
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{leaf}
+\usepackage{float}
+
+%per i blocchi di codice
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+%fine per i blocchi di codice
+\titlepage{}
+
+\author{Tavella Federico, Tombolato Andrea}
+\date{04/03/2016}
+\intestazioni{Norme di progetto}
+\pagenumbering{gobble}
+\begin{document}
+\begin{titlepage}
+	\centering
+	{\huge\bfseries CLIPS\par}
+	Communication \& Localization with Indoor Positioning Systems \\*
+	\line(1,0){350} \\
+	{\scshape\LARGE Università di Padova \par}
+	\vspace{1cm}
+	%devono essere cambiato il titolo ogni volta
+	{\scshape\Large Norme di progetto v4.00 \par}
+	\logo
+	\newpage
+		\begin{tabular}{c|c}
+			{\hfill \textbf{Versione}} 		& 4.00				\\
+			{\hfill\textbf{Data Redazione}} 	& 2016-03-20		 	\\ 
+			{\hfill\textbf{Redazione}} 		& Davide Castello		\\ 
+			{\hfill\textbf{Verifica}} 		& Marco Zanella		\\
+			{\hfill\textbf{Approvazione}} 		& Oscar Elia Conti		\\
+			{\hfill\textbf{Uso}} 			& Interno			\\
+			{\hfill\textbf{Distribuzione}} 		& \leaf				\\
+		\end{tabular}
+	\end{titlepage}
+	\newpage
+	\pagestyle{myfront}
+	\include{diarioModificheNP}
+		\newpage
+			\tableofcontents
+		\newpage
+			\listoffigures	
+	\label{LastFrontPage}
+	\newpage
+	\pagestyle{mymain}
+         
+    \newpage
+		\subfile{sections/introduzione}
+
+	\newpage
+		\subfile{sections/ProcessiPrimari}
+	
+	\newpage
+		\subfile{sections/ProcessiDiSupporto}
+	
+	\newpage
+		\subfile{sections/ProcessiOrganizzativi}
+		
+	\label{LastPage}
+
+\end{document}

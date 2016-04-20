@@ -1,0 +1,38 @@
+Per quanto riguarda la pianificazione del progetto...
+
+Obiettivi (immagine di un calendario?)
+Il gruppo Leaf si è impegnato a rispettare le prime date di consegna. 
+Con pianificata la consenga della definizione di prodotto alla revisione di progettazione e la conclusione del progetto a giugno.
+
+Analisi dei rischi (slide con un esempio di rischio)
+-identificare il rischio
+-analizzarlo (stimare occorrenza e impatto sul progetto)
+-controllo (evitare il rischio)
+-mitigazione (mitigare il rischio nel caso si verifichi)
+
+Ciclo di sviluppo (1 slide con modello incrementale, una con le varie fasi)
+Il gruppo Leaf si è impegnato e si impegna a seguire un modello incrementale. I principali motivi per cui è stato scelto sono due:
+	1. necessità di coinvolgere il proponente il più possibile per ottenere un feedback sul lavoro fatto
+	2. necessità, come gruppo di lavoro principiante, di poter correggere i propri errori riducendoli a correzioni
+Identificate delle fasi per
+- analizzare i requisiti
+- progettare il software (logica e di dettaglio)
+- codificare i requisiti
+- testare il software (periodicamente essendo sperimentale)
+- validare il prodotto
+
+Strumenti di controllo e rendicontazione (slide con loghi dei vari strumenti)
+Gantt (per la pianificazione)
+Teamwork (per la gestione di progetto e la rendicontazione)
+Google Calendar (pianificazione)
+Teamwork & Github (assegnazione task e ticket)
+Riunioni interne
+
+Preventivo (slide con bar chart e pie chart)
+Sulla base di disponibilità dei membri e della pianificazione, un preventivo
+per ogni fase stimando ore (e di conseguenza costi).
+Creati dei chart per dare un'idea immediata della suddivisione (anche meno "precisa")
+
+Consuntivo
+Permette di verificare l'avanzamento dei lavori, definendo quanto si sfora di ore e/o costi.
+Aggiornato alla fine di ogni fase.
