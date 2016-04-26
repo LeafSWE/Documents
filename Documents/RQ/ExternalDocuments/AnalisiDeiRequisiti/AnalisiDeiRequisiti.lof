@@ -1,0 +1,22 @@
+\select@language {italian}
+\select@language {italian}
+\contentsline {figure}{\numberline {1}{\ignorespaces Attori e relazioni tra essi\relax }}{5}{figure.caption.5}
+\contentsline {figure}{\numberline {2}{\ignorespaces Caso d'uso UCG: Utilizzo generale del prototipo\relax }}{6}{figure.caption.6}
+\contentsline {figure}{\numberline {3}{\ignorespaces Caso d'uso UC1: Navigazione\relax }}{8}{figure.caption.7}
+\contentsline {figure}{\numberline {4}{\ignorespaces Caso d'uso UC1.1: Inserimento destinazione\relax }}{9}{figure.caption.8}
+\contentsline {figure}{\numberline {5}{\ignorespaces Caso d'uso UC1.2: Avvio navigazione\relax }}{12}{figure.caption.9}
+\contentsline {figure}{\numberline {6}{\ignorespaces Caso d'uso UC1.4: Accesso a maggiori indicazioni\relax }}{14}{figure.caption.10}
+\contentsline {figure}{\numberline {7}{\ignorespaces Caso d'uso UC2: Accesso alle informazioni\relax }}{18}{figure.caption.11}
+\contentsline {figure}{\numberline {8}{\ignorespaces Caso d'uso UC2.1: Accesso alle informazioni dell'edificio\relax }}{19}{figure.caption.12}
+\contentsline {figure}{\numberline {9}{\ignorespaces Caso d'uso UC2.4: Accesso informazione POI\relax }}{22}{figure.caption.13}
+\contentsline {figure}{\numberline {10}{\ignorespaces Caso d'uso UC3: Gestione dell'applicazione\relax }}{24}{figure.caption.14}
+\contentsline {figure}{\numberline {11}{\ignorespaces Caso d'uso UC3.1: Gestione mappe\relax }}{25}{figure.caption.15}
+\contentsline {figure}{\numberline {12}{\ignorespaces Caso d'uso UC3.1.1: Gestione mappe installate\relax }}{26}{figure.caption.16}
+\contentsline {figure}{\numberline {13}{\ignorespaces Caso d'uso UC3.1.2: Gestione mappe non installate\relax }}{28}{figure.caption.17}
+\contentsline {figure}{\numberline {14}{\ignorespaces Caso d'uso UC3.2: Gestione preferenze navigazione\relax }}{31}{figure.caption.18}
+\contentsline {figure}{\numberline {15}{\ignorespaces Caso d'uso UC3.2.1: Gestione fruizione indicazioni\relax }}{32}{figure.caption.19}
+\contentsline {figure}{\numberline {16}{\ignorespaces Caso d'uso UC3.2.2: Gestione preferenze percorso\relax }}{35}{figure.caption.20}
+\contentsline {figure}{\numberline {17}{\ignorespaces Caso d'uso UC4: Attivazione funzionalit\IeC {\`a} sviluppatore\relax }}{37}{figure.caption.21}
+\contentsline {figure}{\numberline {18}{\ignorespaces Caso d'uso UC6: Accesso funzionalit\IeC {\`a} sviluppatore\relax }}{40}{figure.caption.22}
+\contentsline {figure}{\numberline {19}{\ignorespaces Caso d'uso UC6.1: Accesso informazioni beacon circostanti\relax }}{41}{figure.caption.23}
+\contentsline {figure}{\numberline {20}{\ignorespaces Caso d'uso UC6.2: Gestione log\relax }}{46}{figure.caption.24}
