@@ -558,5 +558,13 @@ le relazioni tra essi</message>
 		<date>2016-04-26</date>
 	</entry>
 
-		</registry>
+	<entry>
+		<version>4.02</version>
+		<author>Cristian Andrighetto</author>
+		<role>Analista</role>
+		<message>Modificati RObbV3 e discendenti in requisiti funzionali, modificati RObbV4 e RObbV5 e discendenti in requisiti di qualità </message>
+		<date>2016-04-26</date>
+	</entry>
+	
+</registry>
 		
