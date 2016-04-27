@@ -151,4 +151,6 @@
 		<message>Approvazione del documento</message>
 		<date>2016-04-10</date>
 	</entry>
+
+<entry><version>1.01</version><author>Eduard Bicego</author><role>Progettista</role><message>Migliorata la precisione dei riferimenti</message><date>2016-04-26</date></entry>
 </registry>

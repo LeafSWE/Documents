@@ -273,7 +273,7 @@
 		<message>Approvazione documento</message>
 		<date>2016-03-14</date>
 	</entry>
-	
+
 	<entry>
 		<version>3.01</version>
 		<author>Federico Tavella</author>
@@ -281,7 +281,7 @@
 		<message>Aggiunta analisi rischi fase PDROB</message>
 		<date>2016-03-16</date>
 	</entry>
-	
+
 	<entry>
 		<version>3.02</version>
 		<author>Cristian Andrighetto</author>
@@ -289,7 +289,7 @@
 		<message>Verifica del documento</message>
 		<date>2016-03-20</date>
 	</entry>
-	
+
 	<entry>
 		<version>3.03</version>
 		<author>Oscar Elia Conti</author>
@@ -297,7 +297,7 @@
 		<message>Aggiunto riscontro effettivo rischi fase PDROB e consuntivo fase PDROB</message>
 		<date>2016-04-10</date>
 	</entry>
-	
+
 	<entry>
 		<version>3.04</version>
 		<author>Cristian Andrighetto</author>
@@ -305,7 +305,7 @@
 		<message>Verifica del documento</message>
 		<date>2016-04-10</date>
 	</entry>
-	
+
 	<entry>
 		<version>4.00</version>
 		<author>Oscar Elia Conti</author>
@@ -315,5 +315,19 @@
 	</entry>
 
 
-<entry><version>4.01</version><author>Eduard Bicego</author><role>Responsabile di progetto</role><message>Aggiunti preventivi a finire</message><date>2016-04-24</date></entry>
+	<entry>
+		<version>4.01</version>
+		<author>Davide Castello</author>
+		<role>Responsabile di progetto</role>
+		<message>Aggiunti preventivi a finire</message>
+		<date>2016-04-24</date>
+	</entry>
+
+	<entry>
+		<version>4.02</version>
+		<author>Davide Castello</author>
+		<role>Responsabile di progetto</role>
+		<message>Aggiunto riferimento alla pianificazione nell'analisi dei rischi e rimossa sezione Meccanismi di controllo</message>
+		<date>2016-04-26</date>
+	</entry>
 </registry>
