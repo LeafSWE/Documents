@@ -153,4 +153,6 @@
 	</entry>
 
 <entry><version>1.01</version><author>Eduard Bicego</author><role>Progettista</role><message>Migliorata la precisione dei riferimenti</message><date>2016-04-26</date></entry>
+
+<entry><version>1.02</version><author>Eduard Bicego</author><role>Progettista</role><message>Aggiunta sezione architettura applicazione e diagramma di sequenza Avvio bussola</message><date>2016-04-28</date></entry>
 </registry>
