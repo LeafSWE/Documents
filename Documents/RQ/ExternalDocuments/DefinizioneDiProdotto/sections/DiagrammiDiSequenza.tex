@@ -59,5 +59,21 @@ L'oggetto di tipo \verb|BeaconManagerAdapter| è un service\g\ e implementa il l
 			\label{StartNavigation}
 		\end{figure}
 		
+	\newpage
+	\subsection{Avvio della bussola}
+	
+		Il diagramma in figura \ref{StartCompass} rappresenta il flusso generato dall'oggetto della classe \verb|NavigationManagerPresenter|, esso effettua due operazioni principali:
+		\begin{itemize}
+			\item Creazione di \verb|NavigationManager| che causa la creazione dell'oggetto \verb|Compass| a cui viene passato come parametro del costruttore il riferimento a \verb|SensorManager|, classe della libreria Android che permette di recuperare i riferimenti ai sensori del device attraverso la chiamata del metodo \verb|getDefaultSensor(typeSensor)|. \verb|Compass| per calcolare l'orientamento del device necessita dei dati provenienti dal magnetometro e accellerometro.
+			\item \verb|startCompass()| invece accende la bussola \verb|Compass| attraverso la classe \verb|NavigationManager| il quale chiama il metodo \verb|registerListener()|, tale metodo tramite il riferimento a \verb|sensorManager| chiama il metodo \verb|registerListener()| e imposta l'oggetto \verb|compass| observer dei sensori.
+		\end{itemize}
+	
+	
+		\begin{figure} [h]
+			\includegraphics[width=\textwidth]{diagrams/StartCompass}
+			\caption{Diagramma di sequenza - Avvio della bussola}
+			\label{StartCompass}
+		\end{figure}
+		
 		
 \end{document}
