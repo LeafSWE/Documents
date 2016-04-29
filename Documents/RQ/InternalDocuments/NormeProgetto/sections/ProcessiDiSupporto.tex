@@ -522,17 +522,31 @@ In questa sezione sono indicati gli standard riguardanti la struttura e la stesu
 				\begin{itemize}
 					\item /Documents
 					\begin{itemize}
-						\item NormeDiProgetto;
-						\item StudioDiFattibilità;
-						\item AnalisiDeiRequisiti;
-						\item PianoDiProgetto;
-						\item PianoDiQualifica;
-						\item Verbali;
-						\item Glossario.
+						\item /ExternalDocuments
+						\begin{itemize}
+							\item /AnalisiDeiRequisiti
+							\item /DefinizioneDiProdotto
+							\item /Glossario
+							\item /ManualeUtente
+							\item /ManualeSviluppatore
+							\item /PianoDiProgetto
+							\item /PianoDiQualifica
+							\item /VerbaliEsterni
+						\end{itemize}
+						\item /InternalDocuments
+						\begin{itemize}
+							\item /NormeDiProgetto
+							\item /StudioDiFattibilità
+							\item /VerbaliInterni
+						\end{itemize}
 					\end{itemize}
 					\item /Source
+						\begin{itemize}
+							\item /clips
+						\end{itemize}
+					\item /Tools
 				\end{itemize}
-				La struttura di /Source verrà decisa all'inizio della progettazione architetturale.
+
 			\subparagraph{Commit}
 				L'esecuzione di ogni comando commit deve sottostare alle seguenti norme:
 				\begin{itemize}
