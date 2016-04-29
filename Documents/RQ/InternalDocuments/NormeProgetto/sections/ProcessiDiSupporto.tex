@@ -511,14 +511,27 @@ In questa sezione sono indicati gli standard riguardanti la struttura e la stesu
 				\item OQPRD[Z];
 				\item OQPRS[Z].
 			\end{itemize}
+			
 \subsection{Configurazione}
 	\subsubsection{Controllo di versione}
-		Il controllo di versione di documenti e file sorgente viene fatto utilizzando il software\g\ Git\g\ e la piattaforma GitHub\g. Ad ogni modifica sostanziale ad un documento o ad un file sorgente impone che a quest'ultimo venga assegnato nuovo numero di versione. \\ Per quanto riguarda le norme di versionamento dei file inerenti alla documentazione si rimanda alla sezione \hyperref[sec:Versionamento dei documenti]{Versionamento dei documenti} del presente documento.
+		Il controllo di versione di documenti e file sorgente viene fatto utilizzando il software\g\ Git\g\ e la piattaforma GitHub\g. Ad ogni modifica sostanziale ad un documento o ad un file sorgente impone che a quest'ultimo venga assegnato nuovo numero di versione. 
+		
+		Per quanto riguarda le norme di versionamento dei file inerenti alla documentazione si rimanda alla sezione \hyperref[sec:Versionamento dei documenti]{Versionamento dei documenti} del presente documento.
+		Per quanto riguarda le norme di versionamento dei file inerenti al codice si rimanda alla sezione \hyperref[sec:versionamento_file_codice]{Versionamento dei file di codice} del presente documento. 
+		
 		\paragraph{Richieste di modifica}
 			Ogni componente del gruppo può avanzare una richiesta di modifica al \responsabilediprogetto, qualora lo ritenga necessario. Il \responsabilediprogetto\ ha il compito di analizzare tale richiesta e decidere se approvarla o meno. In caso affermativo, deve assegnare il compito di realizzare tale modifica ad un membro del gruppo, in base al ruolo da lui ricoperto in quel momento. Una volta effettuata la modifica questa deve essere sottoposta a verifica e dev'essere fatta mantenendo traccia dello stato precedente. In ogni caso, sia di accettazione della richiesta di modifica, sia in caso di rifiuto, il \responsabilediprogetto\ è tenuto a motivare la scelta.
-		\paragraph{Repository}	
-			\subparagraph{Struttura del repository}
-				I file all'interno del repository\g\ verranno organizzati secondo questa struttura:
+			
+		\paragraph{Repository}
+			Per organizzare e gestire meglio i file, nonché la dimensione del repository in locale, i file prodotti dal team si dividono in due categorie: documenti e codice sorgente, quindi sono mantenuti in due repository\g\ distinti.
+			\begin{description}
+				\item[Documents:] comprende i file necessari a redigere i documenti e gli strumenti che agiscono su di essi;
+				\item[clips:] comprende i file necessari alla creazione del prodotto software.
+			\end{description}
+			
+			\subparagraph{Struttura del repository Documents}
+				
+				I file all'interno del repository\g\ Documents verranno organizzati secondo questa struttura:
 				\begin{itemize}
 					\item /Documents
 					\begin{itemize}
@@ -540,12 +553,23 @@ In questa sezione sono indicati gli standard riguardanti la struttura e la stesu
 							\item /VerbaliInterni
 						\end{itemize}
 					\end{itemize}
-					\item /Source
-						\begin{itemize}
-							\item /clips
-						\end{itemize}
 					\item /Tools
 				\end{itemize}
+				
+			\subparagraph{Struttura del repository clips}
+				\begin{itemize}
+					\item /app
+						\begin{itemize}
+							\item /src
+							\begin{itemize}
+								\item /androidTest
+								\item /main
+								\item /test
+							\end{itemize}
+						\end{itemize}
+					\item /gradle
+				\end{itemize}
+			
 
 			\subparagraph{Commit}
 				L'esecuzione di ogni comando commit deve sottostare alle seguenti norme:
@@ -555,8 +579,10 @@ In questa sezione sono indicati gli standard riguardanti la struttura e la stesu
 					\item è vietato l'utilizzo del comando \texttt{git add *} prima di un comando commit per evitare di includere nel repository\g\ file nascosti, temporanei o non voluti;
 					\item è consigliato specificare il riassunto delle modifiche apportate ad ogni commit tramite il comando \texttt{git commit} rispetto al comando \texttt{git commit -m}, dove il messaggio deve essere scritto inline tra virgolette.
 				\end{itemize}
+				
 			\subparagraph{Visibilità del repository}
-				Per la condivisione e il versionamento dei configuration item è stato creato un repository\g\ privato su GitHub\g, raggiungibile all'indirizzo \url{https://github.com/mzanella/Leaf}. L'accesso è consentito solo ai membri del gruppo.	
+				Per la condivisione e il versionamento dei configuration item sono stati creati due repository\g\ su GitHub\g\ all'interno del gruppo di lavoro \textit{LeafSWE} composto dai membri del gruppo \leaf, accessibile all'indirizzo \frmURI{https://github.com/LeafSWE}.
+				
 			\subparagraph{File}	
 				\subsubparagraph{Nomi dei file}
 					I nomi dei file interni al repository\g\ devono sottostare alle seguenti norme:
@@ -602,8 +628,10 @@ In questa sezione sono indicati gli standard riguardanti la struttura e la stesu
 					\includegraphics[scale=0.5, width=\textwidth]{sections/img/proceduraRichiestaModifica.png}
 					\caption{Procedura di richiesta modifica di un documento}\label{fig:Procedura di richiesta modifica di un documento} 
 				\end{figure}
-			\subparagraph{Aggiornamento del repository}
-				Per l'aggiornamento del repository\g\ è prevista la seguente procedura:
+				
+				
+			\subparagraph{Aggiornamento del repository Documents}
+				Per l'aggiornamento del repository\g\ Documents è prevista la seguente procedura:
 				\begin{itemize}
 					\item dare il comando \texttt{git pull}. Nel caso in cui si verifichino dei conflitti:
 						\begin{itemize}
@@ -616,11 +644,34 @@ In questa sezione sono indicati gli standard riguardanti la struttura e la stesu
 					\item dare il comando \texttt{git commit}, e successivamente specificare sinteticamente il riassunto delle modifiche effettuate;
 					\item dare il comando \texttt{git push}.
 				\end{itemize}
+				
 				\begin{figure}[H]
 					\centering
 					\includegraphics[scale=0.95]{sections/img/proceduraAggiornamentoRepository.png}
-					\caption{Procedura di aggiornamento del repository}\label{fig:Procedura di aggiornamento del repository} 
+					\caption{Procedura di aggiornamento del repository Documents}\label{fig:Procedura di aggiornamento del repository} 
 				\end{figure}
+				
+				
+			\subparagraph{Aggiornamento del repository clips}
+				Per l'aggiornamento del repository\g\ clips è prevista la seguente procedura:
+				\begin{enumerate}
+					\item Usare il comando \verb|git checkout type/nome_feature development|, sostituendo con \verb|type| la tipologia di branch:
+						\begin{itemize}
+							\item \verb|f| (feature) per una nuova funzionalità;
+							\item \verb|d| (debug) per eseguire test e verifiche per isolare e riprodurre la procedura che causa un bug;
+						\end{itemize}					 
+					e con \verb|nome_feature| il nome della caratteristica da aggiungere che diventerà il nome del nuovo branch;
+					\item Eseguire le modifiche necessarie nel branch appena creato per l'aggiunta della nuova caratteristica usando i comandi:
+						\begin{itemize}
+							\item \verb|git add NomeFile|;
+							\item \verb|git commit|;
+							\item \verb|git push|;
+						\end{itemize}
+					\item Una volta che la modifica è stata completata e testata aprire la pagina github del repository ed eseguire una pull request specificando il branch \verb|development| come \textit{base} e il branch \verb|nome_feature| come \textit{compare}. Infine selezionare il pulsante \textit{'Create pull request'};
+					\item Successivamente alla \textit{pull request} vengono eseguiti con lo strumento Travis CI\g\ tutti i test, se il risultato è positivo il \responsabilediprogetto è incaricato di accettare la \textit{pull request} e chiudere così il branch \verb|nome_feature| altrimenti la \textit{pull request} non è accettata e si torna al punto 2.
+				\end{enumerate}
+		
+				
 			\subparagraph{Esecuzione di un commit}
 				Per facilitare la stesura del diario delle modifiche, sono stati aggiunti al repository\g\ degli hook, che permettono di effettuare operazioni prima e/o dopo l'esecuzione di un comando Git\g. La procedura ridefinita per l'esecuzione di un commit viene descritta dal seguente diagramma.
 				\begin{figure}[H]
