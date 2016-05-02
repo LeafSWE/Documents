@@ -68,11 +68,11 @@ public void convertAndInsert(JsonObject object);
 
 /**
 * Metodo per rimuovere la mappa di un edificio dal database locale
-* @param id Identificativo dell'edificio da rimuovere
+* @param buildingMap Mappa dell'edificio da rimuovere
 * @return  void
 */
 @Override 
-public void deleteBuilding(int id);
+public void deleteBuilding(BuildingMap buildingMap);
 
 /**
 * Metodo per recuperare le informazioni di tutte le mappe degli edifici presenti nel database locale
