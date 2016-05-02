@@ -78,7 +78,7 @@ $newfile = $newfile."\\makeglossaries
 			{\\hfill\\textbf{Uso}} 				& Esterno			\\\\[1ex]
 			{\\hfill\\textbf{Distribuzione}} 		& Prof. Vardanega Tullio	\\\\[1ex]
                                                     			& Prof. Cardin Riccardo		\\\\[1ex]
-                                                    			& Prof. Miriade S.p.A.		\\\\[1ex]
+                                                    			& Miriade S.p.A.		\\\\[1ex]
 		\\end{tabular}
 	\\end{titlepage}
 
