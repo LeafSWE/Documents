@@ -19,7 +19,7 @@ my $newfile = "\\documentclass[a4paper]{article}
 
 \\titlepage{}
 \\newglossarystyle{myaltlistgroup}{%
-\\setcounter{page}{0}
+\\setcounter{page}{1}
   \\setglossarystyle{altlistgroup}%
   \\renewcommand*{\\glsgroupheading}[1]{%
    \\newpage
@@ -102,8 +102,9 @@ $newfile = $newfile."\\makeglossaries
 	\\pagebreak
 	\\pagestyle{mymain}
 	\\titleformat{\\section}[block]{\\bfseries\\filcenter\\fontsize{25pt}{25pt}\\selectfont}{}{1em}{}	
-	\\glsaddall		
+			
 	\\printglossary[style=myaltlistgroup, nonumberlist]
+	\\glsaddall	
 	\\label{LastPage}
 \\end{document}";
 

@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "This script require pdftk package becuse of a latex command that cannot be redefined..."
+#echo "This script require pdftk package becuse of a latex command that cannot be redefined..."
 echo "glossario.pl compiling:"
 perl glossario.pl
 echo "Latex compiling could take long time..."
@@ -18,7 +18,7 @@ echo "Latex compiling could take long time..."
 	rm Glossario.out
 	rm Glossario.toc
 } &> /dev/null
-pdftk Glossario.pdf cat 1-8 10-end output Glossario2.pdf
-rm Glossario.pdf
-mv Glossario2.pdf Glossario.pdf
+#pdftk Glossario.pdf cat 1-8 10-end output Glossario2.pdf
+#rm Glossario.pdf
+#mv Glossario2.pdf Glossario.pdf
 echo "Done!"
