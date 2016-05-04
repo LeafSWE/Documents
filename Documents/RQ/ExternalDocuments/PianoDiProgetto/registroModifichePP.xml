@@ -338,4 +338,6 @@
 		<message>Aggiunta analisi rischi fase PDRD</message>
 		<date>2016-04-26</date>
 	</entry>
+
+<entry><version>4.04</version><author>Eduard Bicego</author><role>Responsabile di progetto</role><message>Aggiunto riscontro effettivo rischi fase PDRD</message><date>2016-05-04</date></entry>
 </registry>
