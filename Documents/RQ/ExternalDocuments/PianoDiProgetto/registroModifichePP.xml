@@ -330,4 +330,6 @@
 		<message>Aggiunto riferimento alla pianificazione nell'analisi dei rischi e rimossa sezione Meccanismi di controllo</message>
 		<date>2016-04-26</date>
 	</entry>
+
+<entry><version>4.03</version><author>Eduard Bicego</author><role>Responsabile di progetto</role><message>Aggiunta analisi rischi fase PDRD</message><date>2016-05-04</date></entry>
 </registry>
