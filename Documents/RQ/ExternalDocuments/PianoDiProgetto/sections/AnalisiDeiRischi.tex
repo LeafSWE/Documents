@@ -1,9 +1,5 @@
 \documentclass[../PianoProgetto.tex]{subfiles}
 
-	\newcolumntype{F}{>{\hsize=.225\hsize}X}
-	\newcolumntype{O}{>{\hsize=.19\hsize \centering}X}
-	\newcolumntype{P}{>{\hsize=.435\hsize}X}
-
 \begin{document}
 
 \section{Analisi dei rischi}
@@ -76,35 +72,48 @@
 
 	\paragraph*{Descrizione:} per lo svolgimento del progetto didattico, il team\g\ dovrà utilizzare una serie di strumenti che nessun membro ha mai utilizzato.
 	
-	%\paragraph*{Analisi:}
-	\hspace{0pt}
-		\begin{longtabu} to \textwidth {X[.55] X[c .50] X[c .50] X}
-			\toprule
-			\textbf{Fase} & \textbf{Occorrenza} & \textbf{Impatto} & \textbf{Possibili conseguenze}\\
-			\midrule
-			\endhead
+	\paragraph*{Analisi del rischio per fase:} 
+	
+		\subparagraph*{Analisi}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} alta;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} rallentamento delle attività che richiedono l'utilizzo dei suddetti strumenti e conseguente ritardo nella consegna.
+			\end{itemize}
 			
-			\arrayrulecolor{gray}
-			Analisi & Alta & Alto & Rallentamento delle attività che richiedono l'utilizzo dei suddetti strumenti e conseguente ritardo nella consegna. \\
-			\midrule
-			Analisi di \par Dettaglio & Bassa & Alto & Il rischio non dovrebbe presentarsi perché non saranno introdotti nuovi strumenti e il gruppo ha acquisito sufficiente esperienza con gli strumenti adottati fino ad ora. \\
-			\midrule
-			Progettazione Architetturale & Bassa &  Medio & Tale rischio dovrebbe presentarsi solo per strumenti poco utilizzati nelle fasi precedenti, mentre per gli altri strumenti il gruppo dovrebbe aver acquisito sufficiente esperienza. \\
-			\midrule
-			Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Obbligatori & Bassa & Medio & Il team dovrebbe aver sviluppato delle best practice per l'apprendimento di nuovi strumenti, di conseguenza non dovrebbero verificarsi ritardi o rallentamenti nei lavori\\
-			\midrule
-			Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Desiderabili & ??? & ??? & ??? \\
-			%\midrule
-			%Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Opzionali & ??? & ??? & ??? \\
-			%\midrule
-			%Validazione & ??? & ??? & ??? \\
-			\arrayrulecolor{black}
-			\bottomrule
+		\subparagraph*{Analisi di Dettaglio}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} il rischio non dovrebbe presentarsi perché non saranno introdotti nuovi strumenti e il gruppo ha acquisito sufficiente esperienza con gli strumenti adottati fino ad ora.
+			\end{itemize}
 			
-			\caption{Inesperienza nell'utilizzo - Analisi}
-			\label{tab:Inesperienza nell'utilizzo - Analisi}	
-		\end{longtabu}
+		\subparagraph*{Progettazione Architetturale}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} tale rischio dovrebbe presentarsi solo per strumenti poco utilizzati nelle fasi precedenti, mentre per gli altri strumenti il gruppo dovrebbe aver acquisito sufficiente esperienza.
+			\end{itemize}
 			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Obbligatori}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} il team dovrebbe aver sviluppato delle best practice per l'apprendimento di nuovi strumenti, di conseguenza non dovrebbero verificarsi ritardi o rallentamenti nei lavori.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Desiderabili}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} tale rischio potrebbe impattare nella qualità e correttezza del codice.
+			\end{itemize}
+		%\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Opzionali}
+			%\begin{itemize}[label={-}]
+				%\item \textbf{Occorrenza:} ???;
+				%\item \textbf{Impatto:} ???;
+				%\item \textbf{Possibili conseguenze:} ???
+			%\end{itemize}
 	
 	\paragraph*{Identificazione:} il \responsabilediprogetto\ si impegnerà a verificare periodicamente il livello di conoscenza dei singoli membri sulle tecnologie adottate.
 	
@@ -125,7 +134,7 @@
 			\textbf{Requisiti Obbligatori} il gruppo non ha introdotto nuovi strumenti e di conseguenza il rischio non è stato riscontrato. \ \\
 					 
 			\item[Fase PDRD - Progettazione di Dettaglio e codifica dei] \ \\
-					\textbf{Requisiti Desiderabili} ???
+					\textbf{Requisiti Desiderabili} il gruppo ha introdotto lo strumento Android Studio e grazie alla sua semplicità e alla somiglianza con altri ambienti di sviluppo è stato pienamente integrato nel processo di sviluppo per cui il rischio non si è presentato.
 			%\item[Fase PDROP - Progettazione di Dettaglio e codifica dei]  \ \\
 					%\textbf{Requisiti Opzionali} ???
 		\end{description}
@@ -138,37 +147,49 @@
 
 	\paragraph*{Descrizione:} per la progettazione e l'implementazione del software\g\ per il progetto, il team\g\ dovrà utilizzare una serie di tecnologie praticamente sconosciute.
 	
-	%\paragraph*{Analisi:}
+	\paragraph*{Analisi del rischio per fase:} 
 
-	\hspace{0pt}
-		\begin{longtabu} to \textwidth {X[.55] X[c .50] X[c .50] X}
-			\toprule
-			\textbf{Fase} & \textbf{Occorrenza} & \textbf{Impatto} & \textbf{Possibili conseguenze}\\
-			\midrule
-			\endhead			
+		\subparagraph*{Analisi}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} l'utilizzo di tecnologie sconosciute richiede tempo per la scelta e l'apprendimento di quest'ultima, il che può portare ad un ritardo sulle date di consegna.
+			\end{itemize}
 			
-			\arrayrulecolor{gray}
-			Analisi & Media & Alto & L'utilizzo di tecnologie sconosciute richiede tempo per la scelta e l'apprendimento di quest'ultima, il che può portare ad un ritardo sulle date di consegna. \\
-			\midrule
-			Analisi di \par Dettaglio & Bassa & Alto & Il rischio non dovrebbe presentarsi perché non sono previste nuove tecnologie da introdurre. Potrebbe esserci una remota possibilità, in quel caso alcune attività potrebbero subire rallentamenti. \\
-			\midrule
-			Progettazione Architetturale & Alta & Alto & Rallentamenti ed errori nelle scelte soprattutto riguardanti la progettazione, che possono portare ritardi nello svolgimento delle attività e quindi nella consegna.\\
-			\midrule
-			Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Obbligatori & Medio & Alto & Possibili rallentamenti e ritardi sulle date di consegna.\\
-			\midrule
-			Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Desiderabili & ??? & ??? & ???\\
-			%\midrule
-			%Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Opzionali & ??? & ??? & ???\\
-			%\midrule
-			%Validazione & ??? & ??? & ???\\
-			\arrayrulecolor{black}
-			\bottomrule
+		\subparagraph*{Analisi di Dettaglio}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} il rischio non dovrebbe presentarsi perché non sono previste nuove tecnologie da introdurre. Potrebbe esserci una remota possibilità, in quel caso alcune attività potrebbero subire rallentamenti.
+			\end{itemize}
 			
-			\caption{Tecnologie adottate sconosciute - Analisi}
-			\label{tab:Tecnologie adottate sconosciute - Analisi}
-		\end{longtabu}
-
-		
+		\subparagraph*{Progettazione Architetturale}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} alta;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} rallentamenti ed errori nelle scelte soprattutto riguardanti la progettazione, che possono portare ritardi nello svolgimento delle attività e quindi nella consegna.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Obbligatori}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} possibili rallentamenti e ritardi sulle date di consegna.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Desiderabili}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} ritardi e riduzione della qualità del codice.
+			\end{itemize}
+			
+		%\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Opzionali}
+			%\begin{itemize}[label={-}]
+				%\item \textbf{Occorrenza:} ???;
+				%\item \textbf{Impatto:} ???;
+				%\item \textbf{Possibili conseguenze:} ???
+			%\end{itemize}		
 	
 	\paragraph*{Identificazione:} il \responsabilediprogetto\ si impegnerà a monitorare costantemente il grado di conoscenza delle tecnologie adottate.	
 	
@@ -188,7 +209,7 @@
 			\item[Fase PDROB - Progettazione di Dettaglio e codifica dei]  \ \\
 					 \textbf{Requisiti Obbligatori} lo studio della tecnologia Android\g\ ha rallentato notevolmente i \progettisti\, causando un ritardo sulle date previste per la stesura della \definizionediprodotto.
 			\item[Fase PDRD - Progettazione di Dettaglio e codifica dei] \ \\
-					\textbf{Requisiti Desiderabili} ???
+					\textbf{Requisiti Desiderabili} le tecnologie utilizzate sono ormai conosciute da tutti i membri del team\g. Non è stato riscontrato il rischio grazie alla collaborazione e allo scambio reciproco di conoscenza tra il gruppo.
 			%\item[Fase PDROP - Progettazione di Dettaglio e codifica dei]  \ \\
 					%\textbf{Requisiti Opzionali} ???
 		\end{description}
@@ -199,37 +220,49 @@
 	
 	\paragraph*{Descrizione:} durante lo svolgimento del progetto didattico, è possibile che si verifichino guasti hardware e/o malfunzionamenti software\g\ che comportino la perdita di dati.
 	
-	%\paragraph*{Analisi:}
-	
-	\hspace{0pt}
-		\begin{longtabu} to \textwidth {X[.55] X[c .50] X[c .50] X}
-			\toprule
-			\textbf{Fase} & \textbf{Occorrenza} & \textbf{Impatto} & \textbf{Possibili conseguenze}\\
-			\midrule
-			\endhead			
-			
-			\arrayrulecolor{gray}
-			Analisi & Bassa & Basso & Il malfunzionamento di un dispositivo può portare al rallentamento delle attività e alla perdita di dati, con una conseguente ripetizione del lavoro già svolto. \\
-			\midrule
-			Analisi di \par Dettaglio & Bassa & Basso & Il rischio non dovrebbe presentarsi. Una sua manifestazione potrebbe comportare un rallentamento delle attività e alla perdita di dati. \\
-			\midrule
-			Progettazione Architetturale & Bassa & Basso & Il malfunzionamento di uno dispositivo può portare al rallentamento delle attività e alla perdita di dati, con una conseguente ripetizione del lavoro già svolto. \\
-			\midrule
-			Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Obbligatori & Bassa & Basso & Un'eventuale malfunzionamento di un dispositivo potrebbe causare un rallentamento delle attività per il team.\\
-			\midrule
-			Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Desiderabili & ??? & ??? & ???\\
-			%\midrule
-			%Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Opzionali & ??? & ??? & ???\\
-			%\midrule
-			%Validazione & ??? & ??? & ???\\
-			\arrayrulecolor{black}
-			\bottomrule
-			
-			\caption{Guasti hardware e malfunzionamenti software - Analisi}
-			\label{tab:Guasti hardware e malfunzionamenti software - Analisi}	
-		\end{longtabu}
+	\paragraph*{Analisi del rischio per fase:} 
 
-
+		\subparagraph*{Analisi}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} basso;
+				\item \textbf{Possibili conseguenze:} il malfunzionamento di un dispositivo può portare al rallentamento delle attività e alla perdita di dati, con una conseguente ripetizione del lavoro già svolto.
+			\end{itemize}
+			
+		\subparagraph*{Analisi di Dettaglio}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} basso;
+				\item \textbf{Possibili conseguenze:} il rischio non dovrebbe presentarsi. Una sua manifestazione potrebbe comportare un rallentamento delle attività e alla perdita di dati.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione Architetturale}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} basso;
+				\item \textbf{Possibili conseguenze:} il malfunzionamento di uno dispositivo può portare al rallentamento delle attività e alla perdita di dati, con una conseguente ripetizione del lavoro già svolto.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Obbligatori}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} basso;
+				\item \textbf{Possibili conseguenze:} un'eventuale malfunzionamento di un dispositivo potrebbe causare un rallentamento delle attività per il team.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Desiderabili}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} un'eventuale malfunzionamento ad un dispositivo potrebbe causare il rallentamento delle attività per il team.
+			\end{itemize}
+			
+		%\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Opzionali}
+			%\begin{itemize}[label={-}]
+				%\item \textbf{Occorrenza:} ???;
+				%\item \textbf{Impatto:} ???;
+				%\item \textbf{Possibili conseguenze:} ???
+			%\end{itemize}
 		
 	\paragraph*{Identificazione:} ogni membro del team\g\ avrà cura della propria attrezzatura; ne verificherà inoltre giornalmente il completo funzionamento.
 	
@@ -249,7 +282,7 @@
 			\item[Fase PDROB - Progettazione di Dettaglio e codifica dei]  \ \\
 					\textbf{Requisiti Obbligatori} il notebook di un membro del gruppo ha subito un danno hardware al monitor ma, fortunatamente, questo non ha causato un rallentamento nei lavori.
 			\item[Fase PDRD - Progettazione di Dettaglio e codifica dei] \ \\
-					\textbf{Requisiti Desiderabili} ???
+					\textbf{Requisiti Desiderabili} un membro del gruppo ha avuto problemi con il proprio computer portatile, tuttavia i malfunzionamenti non sono stati così gravi da compromettere il proseguimento delle attività previste.
 			%\item[Fase PDROP - Progettazione di Dettaglio e codifica dei]  \ \\
 					%\textbf{Requisiti Opzionali} ???
 		\end{description}
@@ -262,35 +295,49 @@
 
 	\paragraph*{Descrizione:} essendo al primo approccio con un progetto di questa dimensione, il team\g\ potrebbe andare incontro a stime errate di valutazione delle risorse.
 	
-	%\paragraph*{Analisi:}
-	
-	\hspace{0pt}
-		\begin{longtabu} to \textwidth {X[.55] X[c .50] X[c .50] X}
-			\toprule
-			\textbf{Fase} & \textbf{Occorrenza} & \textbf{Impatto} & \textbf{Possibili conseguenze}\\
-			\midrule
-			\endhead
-			
-			\arrayrulecolor{gray}
-			Analisi & Media & Alto & Un'errata stima delle risorse può portare ad un ritardo nelle date di consegna (sottostima) o ad un eccessivo spreco d'esse per le attività di progetto (sovrastima). \\
-			\midrule
-			Analisi di \par Dettaglio & Media & Alto & Un bilanciamento errato delle risorse assegnate ai processi potrebbe comportare una disomogeneità nello svolgimento delle attività. Il rischio ha una probabilità medio-alta di presentarsi perché la pianificazione e la distribuzione delle risorse soffre dell'inesperienza del gruppo. \\
-			\midrule
-			Progettazione Architetturale & Media & Medio & Un'errata stima può portare ad un utilizzo di risorse eccessivo per l'attività di progettazione a discapito delle altre, causando ritardi e possibili errori nelle attività sottostimate. \\
-			\midrule
-			Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Obbligatori & Media & Alto & Un'errata stima può portare ad un utilizzo di risorse eccessivo per l'attività di progettazione a discapito delle altre, causando ritardi e possibili errori nelle attività sottostimate.\\
-			\midrule
-			Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Desiderabili & ??? & ??? & ???\\
-			%\midrule
-			%Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Opzionali & ??? & ??? & ???\\
-			%\midrule
-			%Validazione & ??? & ??? & ???\\
-			\arrayrulecolor{black}
-			\bottomrule
+	\paragraph*{Analisi del rischio per fase:} 
 
-		\caption{Valutazione delle risorse - Analisi}
-		\label{tab:Valutazione delle risorse - Analisi}	
-	\end{longtabu}
+		\subparagraph*{Analisi}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} un'errata stima delle risorse può portare ad un ritardo nelle date di consegna (sottostima) o ad un eccessivo spreco d'esse per le attività di progetto (sovrastima).
+			\end{itemize}
+			
+		\subparagraph*{Analisi di Dettaglio}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} un bilanciamento errato delle risorse assegnate ai processi potrebbe comportare una disomogeneità nello svolgimento delle attività. Il rischio ha una probabilità medio-alta di presentarsi perché la pianificazione e la distribuzione delle risorse soffre dell'inesperienza del gruppo.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione Architetturale}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} un'errata stima può portare ad un utilizzo di risorse eccessivo per l'attività di progettazione a discapito delle altre, causando ritardi e possibili errori nelle attività sottostimate.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Obbligatori}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} un'errata stima può portare ad un utilizzo di risorse eccessivo per l'attività di progettazione a discapito delle altre, causando ritardi e possibili errori nelle attività sottostimate. 
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Desiderabili}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} un'errata stima può portare ad un ritardo sulla consegna.
+			\end{itemize}
+			
+		%\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Opzionali}
+			%\begin{itemize}[label={-}]
+				%\item \textbf{Occorrenza:} ???;
+				%\item \textbf{Impatto:} ???;
+				%\item \textbf{Possibili conseguenze:} ???
+			%\end{itemize}
 	
 	\paragraph*{Identificazione:} il \responsabilediprogetto\ si impegnerà a verificare, di giorno in giorno tramite l'utilizzo della Dashboard\g, lo stato di avanzamento delle attività.
 	
@@ -306,11 +353,11 @@
 		\begin{description}
 			\item[Fase A - Analisi] in un primo momento, era stato stimato un periodo ottimistico per la stesura della documentazione, di conseguenza è stata rieffettuata una pianificazione delle attività tenendo conto dell'errore commesso, che non ha intaccato le date di consegna.
 			\item[Fase AD - Analisi di Dettaglio] il rischio previsto si è manifestato e ha comportato un ritardo delle attività sulla pianificazione prevista. Il rischio è stato alimentato da impegni da parte dei componenti del gruppo e da una pianificazione ottimistica. Per recuperare il ritardo è stata eseguita una redistribuzione delle attività.
-			\item[Fase PA - Progettazione Architetturale] Il rischio previsto non si è manifestato. È stato necessario invece, da parte dei \progettisti, impiegare più ore di investimento di quante preventivate a causa della scarsa esperienza nella progettazione software\g.
+			\item[Fase PA - Progettazione Architetturale] il rischio previsto non si è manifestato. È stato necessario invece, da parte dei \progettisti, impiegare più ore di investimento di quante preventivate a causa della scarsa esperienza nella progettazione software\g.
 			\item[Fase PDROB - Progettazione di Dettaglio e codifica dei]  \ \\
-					\textbf{Requisiti Obbligatori} A causa del ritardo accumulato nelle fasi precedenti, è stato necessario ridistribuire le ore per ruolo, in modo da evitare ritardi nella consegna dei documenti.
+					\textbf{Requisiti Obbligatori} a causa del ritardo accumulato nelle fasi precedenti, è stato necessario ridistribuire le ore per ruolo, in modo da evitare ritardi nella consegna dei documenti.
 			\item[Fase PDRD - Progettazione di Dettaglio e codifica dei] \ \\
-					\textbf{Requisiti Desiderabili} ???
+					\textbf{Requisiti Desiderabili} grazie alla ripianificazione effettuata nella fase precedente non si è riscontrato il rischio.
 			%\item[Fase PDROP - Progettazione di Dettaglio e codifica dei]  \ \\
 					%\textbf{Requisiti Opzionali} ???
 		\end{description}
@@ -324,33 +371,49 @@
 
 	\paragraph*{Descrizione:} ogni membro del team\g\ avrà le sue necessità e i suoi impegni personali lungo la durata del progetto. Di conseguenza è inevitabile prevedere che alcuni membri del team\g\ non siano disponibili in certi momenti.
 	 
-	%\paragraph*{Analisi:}
-	
-	\hspace{0pt}
-		\begin{longtabu} to \textwidth {X[.55] X[c .50] X[c .50] X}
-			\toprule
-			\textbf{Fase} & \textbf{Occorrenza} & \textbf{Impatto} & \textbf{Possibili conseguenze}\\
-			\midrule
-			\arrayrulecolor{gray}
-			Analisi & Media & Medio & Possibile ritardo nello svolgimento delle attività nel caso di impegni imprevisti di qualche membro del gruppo. \\
-			\midrule
-			Analisi di \par Dettaglio & Alta & Medio & Possibile ritardo delle attività previste. Il rischio ha una alta probabilità di presentarsi perché il periodo comprende diversi impegni dei componenti del gruppo.\\
-			\midrule
-			Progettazione Architetturale & Media & Medio & Possibile ritardo delle attività previste. Il rischio ha una probabilità più bassa di presentarsi perché il periodo comprende un numero minore di impegni da parte dei componenti del gruppo.\\
-			\midrule
-			Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Obbligatori & Media & Medio & Possibile ritardo nello svolgimento delle attività nel caso di impegni imprevisti di qualche membro del gruppo.\\
-			\midrule
-			Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Desiderabili & ??? & ??? & ???\\
-			%\midrule
-			%Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Opzionali & ??? & ??? & ???\\
-			%\midrule
-			%Validazione & ??? & ??? & ???\\
-			\arrayrulecolor{black}
-			\bottomrule
+	\paragraph*{Analisi del rischio per fase:} 
 
-		\caption{Problemi personali dei membri del team - Analisi}
-		\label{tab:Problemi personali dei membri del team - Analisi}	
-	\end{longtabu}
+		\subparagraph*{Analisi}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} possibile ritardo nello svolgimento delle attività nel caso di impegni imprevisti di qualche membro del gruppo.
+			\end{itemize}
+			
+		\subparagraph*{Analisi di Dettaglio}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} alta;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} possibile ritardo delle attività previste. Il rischio ha una alta probabilità di presentarsi perché il periodo comprende diversi impegni dei componenti del gruppo.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione Architetturale}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} possibile ritardo delle attività previste. Il rischio ha una probabilità più bassa di presentarsi perché il periodo comprende un numero minore di impegni da parte dei componenti del gruppo.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Obbligatori}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} possibile ritardo nello svolgimento delle attività nel caso di impegni imprevisti di qualche membro del gruppo.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Desiderabili}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} alta;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} possibile ritardo nella consegna o mancata consegna nei tempi previsti.
+			\end{itemize}
+			
+		%\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Opzionali}
+			%\begin{itemize}[label={-}]
+				%\item \textbf{Occorrenza:} ???;
+				%\item \textbf{Impatto:} ???;
+				%\item \textbf{Possibili conseguenze:} ???
+			%\end{itemize}
 		
 	\paragraph*{Identificazione:} i membri del team\g\ comunicheranno, con il maggior anticipo possibile, i propri impegni al \responsabilediprogetto . Questo compito verrà reso più semplice dall'utilizzo di un calendario di gruppo. 
 	
@@ -370,7 +433,7 @@
 			\item[Fase PDROB - Progettazione di Dettaglio e codifica dei]  \ \\
 					\textbf{Requisiti Obbligatori} i membri del gruppo hanno avuto un minor numero di impegni in questa fase e di conseguenza il rischio non si è verificato.
 			\item[Fase PDRD - Progettazione di Dettaglio e codifica dei] \ \\
-					\textbf{Requisiti Desiderabili} ???
+					\textbf{Requisiti Desiderabili} causa inizio tirocinio imminente, in molte occasioni i membri del gruppo hanno avuto impegni non previsti per sostenere colloqui di lavoro. Due membri del team\g\ hanno iniziato l'attività di tirocinio. Nonostante questo però non è stata necessaria una ridistribuzione delle ore e il rischio quindi non si è presentato.
 			%\item[Fase PDROP - Progettazione di Dettaglio e codifica dei]  \ \\
 					%\textbf{Requisiti Opzionali} ???
 		\end{description}
@@ -381,35 +444,49 @@
 
 	\paragraph*{Descrizione:} i membri del team\g\ non hanno mai collaborato alla realizzazione di un progetto che richiedesse collaborazione a stretto contatto, il che può causare attriti tra essi.
 	
-	%\paragraph*{Analisi:}
-	
-	\hspace{0pt}
-		\begin{longtabu} to \textwidth {X[.55] X[c .50] X[c .50] X}
-			\toprule
-			\textbf{Fase} & \textbf{Occorrenza} & \textbf{Impatto} & \textbf{Possibili conseguenze}\\
-			\midrule
-			\endhead
+	\paragraph*{Analisi del rischio per fase:} 
+
+		\subparagraph*{Analisi}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} problemi tra i membri del team\g\ possono causare un rallentamento delle attività.
+			\end{itemize}
 			
-			\arrayrulecolor{gray}
-			Analisi & Media & Alto & Problemi tra i membri del team\g\ possono causare un rallentamento delle attività. \\
-			\midrule
-			Analisi di \par Dettaglio & Bassa & Alto & Problemi tra i membri del team\g\ possono causare un rallentamento delle attività. Il rischio dovrebbe avere un'occorrenza sempre minore con l'aumentare del tempo. \\
-			\midrule
-			Progettazione Architetturale & Media & Alto & Problemi tra i membri del team\g\ possono causare un rallentamento delle attività. Il rischio è più alto per via delle attività che andranno intraprese, che includono molte decisioni da prendere, che possono non essere condivise dai tutti i componenti del gruppo. \\
-			\midrule
-			Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Obbligatori & Media & Alto & Problemi tra i membri del team\g\ possono causare un rallentamento delle attività. Il rischio mantiene una probabilità media in quanto l'elevato carico di lavoro è fonte di stress per i membri del gruppo.\\
-			\midrule
-			Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Desiderabili & ??? & ??? & ???\\
-			%\midrule
-			%Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Opzionali & ??? & ??? & ???\\
-			%\midrule
-			%Validazione & ??? & ??? & ???\\
-			\arrayrulecolor{black}
-			\bottomrule
-		
-		\caption{Problemi personali tra i membri del team - Analisi}
-		\label{tab:Problemi personali tra i membri del team - Analisi}	
-	\end{longtabu}
+		\subparagraph*{Analisi di Dettaglio}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} problemi tra i membri del team\g\ possono causare un rallentamento delle attività. Il rischio dovrebbe avere un'occorrenza sempre minore con l'aumentare del tempo.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione Architetturale}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} problemi tra i membri del team\g\ possono causare un rallentamento delle attività. Il rischio è più alto per via delle attività che andranno intraprese, che includono molte decisioni da prendere, che possono non essere condivise dai tutti i componenti del gruppo. 
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Obbligatori}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} problemi tra i membri del team\g\ possono causare un rallentamento delle attività. Il rischio mantiene una probabilità media in quanto l'elevato carico di lavoro è fonte di stress per i membri del gruppo. 
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Desiderabili}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} ritardi sulla consegna con necessaria ripianificazione delle attività e riduzione della produttività del gruppo.
+			\end{itemize}
+			
+		%\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Opzionali}
+			%\begin{itemize}[label={-}]
+				%\item \textbf{Occorrenza:} ???;
+				%\item \textbf{Impatto:} ???;
+				%\item \textbf{Possibili conseguenze:} ???
+			%\end{itemize}
 	
 	\paragraph*{Identificazione:} il \responsabilediprogetto\ avrà l'onere di verificare periodicamente i rapporti tra i vari membri del team\g. D'altro canto, ogni membro del team\g\ si impegnerà a riferire al \responsabilediprogetto\ eventuali problemi di cui non è a conoscenza.
 	
@@ -442,34 +519,49 @@
 
 	\paragraph*{Descrizione:} è possibile che durante le varie attività di analisi dei requisiti del problema non vengano compresi o siano fraintesi.
 	
-	%\paragraph*{Analisi:}
-	\hspace{0pt}
-		\begin{longtabu} to \textwidth {X[.55] X[c .50] X[c .50] X}
-			\toprule
-			\textbf{Fase} & \textbf{Occorrenza} & \textbf{Impatto} & \textbf{Possibili conseguenze}\\
-			\midrule
-			\endhead
+	\paragraph*{Analisi del rischio per fase:} 
+
+		\subparagraph*{Analisi}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} alta;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} possibili divergenze tra la visione del prodotto\g\ da parte del team\g\ e quella del proponente.
+			\end{itemize}
 			
-			\arrayrulecolor{gray}
-			Analisi & Alta & Alto & Possibili divergenze tra la visione del prodotto\g\ da parte del team\g\ e quella del proponente. \\
-			\midrule
-			Analisi di \par Dettaglio & Alta & Alto & Possibili divergenze tra la visione del prodotto\g\ da parte del team\g\ e quella del proponente.\\
-			\midrule
-			Progettazione Architetturale & Media & Medio & Possibili divergenze tra la visione del prodotto\g\ da parte del team\g\ e quella del proponente. \\
-			\midrule
-			Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Obbligatori & Media & Medio & Possibili divergenze tra la visione del prodotto\g\ da parte del team\g\ e quella del proponente.\\
-			\midrule
-			Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Desiderabili & ??? & ??? & ???\\
-			%\midrule
-			%Progettazione \par di Dettaglio \par e codifica \par dei Requisiti \par Opzionali & ??? & ??? & ???\\
-			%\midrule
-			%Validazione & ??? & ??? & ???\\
-			\arrayrulecolor{black}
-			\bottomrule
-		
-		\caption{Mancata comprensione - Analisi}
-		\label{tab:Mancata comprensione - Analisi}	
-	\end{longtabu}
+		\subparagraph*{Analisi di Dettaglio}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} alta;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} possibili divergenze tra la visione del prodotto\g\ da parte del team\g\ e quella del proponente.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione Architetturale}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} possibili divergenze tra la visione del prodotto\g\ da parte del team\g\ e quella del proponente.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Obbligatori}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} possibili divergenze tra la visione del prodotto\g\ da parte del team\g\ e quella del proponente.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Desiderabili}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} ???;
+				\item \textbf{Impatto:} ???;
+				\item \textbf{Possibili conseguenze:} ???
+			\end{itemize}
+			
+		%\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Opzionali}
+			%\begin{itemize}[label={-}]
+				%\item \textbf{Occorrenza:} ???;
+				%\item \textbf{Impatto:} ???;
+				%\item \textbf{Possibili conseguenze:} ???
+			%\end{itemize}
 		
 	\paragraph*{Identificazione:} il team\g\ effettuerà una serie di incontri con il proponente per verificare la comprensione dei requisiti e la corrispondenza con le loro aspettative.
 	
