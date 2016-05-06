@@ -75,5 +75,59 @@ L'oggetto di tipo \verb|BeaconManagerAdapter| è un service\g\ e implementa il l
 			\label{StartCompass}
 		\end{figure}
 		
+	\newpage
+	\subsection{Costruzione di oggetti-Table da Json}
+	
+		Il diagramma in figura \ref{FromJsonToEdgeTable} rappresenta il flusso generato dall'oggetto della classe \verb|RemoteEdgeDao| per la costruzione di un oggetto \verb|EdgeTable| a partire da un oggetto \verb|JsonObject|:
+		\begin{itemize}
+			\item viene creato un oggetto \verb|Gson|. Tale oggetto permette di gestire l'oggetto \verb|JsonObject| passato;
+			\item su questo oggetto viene invocato il metodo \verb|fromJson()|, passando come parametri l'oggetto \verb|JsonObject| e l'oggetto \verb|EdgeTable.class|. In questo modo viene creato l'oggetto \verb|EdgeTable|, sfruttando il fatto che l'oggetto \verb|JsonObject| è stato creato utilizzando gli stessi nomi per i campi dato di tale oggetto e i campi dato dell'oggetto \verb|EdgeTable|.
+		\end{itemize}
+
+		\vfill
+		\begin{figure} [h]
+			\includegraphics[width=\textwidth]{diagrams/FromJsonToEdgeTable}
+			\caption{Diagramma di sequenza - Costruzione di EdgeTable da Json}
+			\label{FromJsonToEdgeTable}
+		\end{figure}
+
+		\vfill	
+		
+		\newpage		
+		
+		Tale costruzione è analoga per oggetti \verb|BuildingTable|, \verb|CategoryTable|, \verb|EdgeTypeTable|, \verb|PhotoTable|, \verb|PointOfInterestTable| e \verb|RegionOfInterestTable|, mentre è differente per la classe \verb|RoiPoiTable|. In questo caso infatti non è stato possibile scaricare un file JSON che abbia dei campi dato con lo stesso nome dei campi dato di \verb|RoiPoiTable|. 
+		
+		Il diagramma in figura \ref{FromJsonToRoiPoiTable} rappresenta la costruzione di un oggetto \verb|RoiPoiTable| a partire da un oggetto \verb|JsonObject|:
+		\begin{itemize}
+			\item viene creato un oggetto \verb|GsonBuilder|. Tale oggetto è necessario per la costruzione di un oggetto a partire da un oggetto \verb|JsonObject| che abbia campi dato con nome differente dall'oggetto da costruire;
+			\item viene creato un oggetto di una classe anonima che implementa la classe \verb|JsonDeserializer<RoiPoiTable>|. In tale classe viene fatto l'override del metodo \verb|deserialize()| definendo come un oggetto \verb|RoiPoiTable| può essere costruito sfruttando i campi dati dell'oggetto \verb|JsonObject|;
+			\item viene invocato sull'oggetto \verb|GsonBuilder | \verb|registerTypeAdapter()| passando come parametri gli oggetti \verb|RoiPoiTable.class| e l'oggetto della classe che implementa \verb|JsonDeserializer<RoiPoiTable>|;
+			\item viene creato un oggetto \verb|Gson| invocando il metodo create() sull'oggetto \verb|GsonBuilder|;
+			\item infine, per creare l'oggetto \verb|RoiPoiTable|, viene invocato il metodo \verb|fromJson()| sull'oggetto \verb|Gson| passando come argomenti i due oggetti \verb|JsonObject| e \verb|RoiPoiTable.class|.
+		\end{itemize}
+		%\newpage
+		\begin{figure} [p]
+			\includegraphics[width=\textwidth]{diagrams/FromJsonToRoiPoiTable}
+			\caption{Diagramma di sequenza - Costruzione di RoiPoiTable da Json}
+			\label{FromJsonToRoiPoiTable}
+		\end{figure}
+		
+	\newpage
+	\subsection{Modifica delle preferenze}
+	
+		Il diagramma in figura \ref{SetPreference} rappresenta il flusso generato dall'oggetto della classe \verb|SettingImp| per la modifica delle preferenze sul percorso:
+		\begin{itemize}
+			\item per prima viene aggiornato il campo dati dell'oggetto \verb|SettingImp|, eguagliandolo all'oggetto \verb|PathPreference| passato;
+			\item viene recuperata un'istanza di \verb|SharedPreferences.Editor| per poter aggiornare le preferenze salvate nelle \verb|SharedPreferences|;
+			\item infine vengono aggiornate le \verb|SharedPreferences| prima invocando il metodo \verb|putInt()| sull'oggetto \verb|SharedPreferences|.Editor passando come argomenti la costante di classe \verb|PATH_PREFERENCES| e l'intero che rappresenta l'oggetto \verb|PathPreferenc|e passato alla chiamata del metodo \verb|setPathPreference()|.
+		\end{itemize}
+		
+		\begin{figure} [h]
+			\includegraphics[width=\textwidth]{diagrams/SetPreference}
+			\caption{Diagramma di sequenza - Modifica delle preferenze}
+			\label{SetPreference}
+		\end{figure}
+		
+		%\newpage
 		
 \end{document}
