@@ -1,0 +1,11 @@
+Creazione di un oggetto EdgeTable a partire da un oggetto JsonObject
+Il diagramma in figura ### rappresenta il flusso generato dall’oggetto della classe RemoteEdgeDao per la costruzione di un oggetto EdgeTable a partire da un oggetto JsonObject:
+- viene creato un oggetto Gson. Tale oggetto permette di gestire l'oggetto JsonObject passato;
+- su questo oggetto viene invocato il metodo fromJson(), passando come parametri l'oggetto JsonObject e l'oggetto EdgeTable.class. In questo modo viene creato l'oggetto EdgeTable, sfruttando il fatto che l'oggetto JsonObject è stato creato utilizzando gli stessi nomi per i campi dato di tale oggetto e i campi dato dell'oggetto EdgeTable.
+************************Figura*********************************
+Tale costruzione è analoga per oggetti BuildingTable, CategoryTable, EdgeTypeTable, PhotoTable, PointOfInterestTable e RegionOfInterestTable, mentre è differente per la classe RoiPoiTable. In questo caso infatti non è stato possibile scaricare un file JSON che abbia dei campi dato con lo stesso nome dei campi dato di RoiPoiTable. Il diagramma in figura ### rappresenta la costruzione di un oggetto RoiPoiTable a partire da un oggetto JsonObject:
+- viene creato un oggetto GsonBuilder. Tale oggetto è necessario per la costruzione di un oggetto a partire da un oggetto JsonObject che abbia campi dato con nome differente dall'oggetto da costruire;
+- viene creato un oggetto di una classe anonima che implementa la classe JsonDeserializer<RoiPoiTable>. In tale classe viene fatto l'override del metodo deserializa() definendo come un oggetto RoiPoiTable può essere costruito sfruttando i campi dati dell'oggetto JsonObject;
+- viene invocato sull'oggetto GsonBuilder il mmetodo registerTypeAdapter() passando come paramentri gli oggetti RoiPoiTable.class e l'oggetto della classe che implementa JsonDeserializer<RoiPoiTable>;
+- viene creato un oggetto Gson invocando il metodo create() sull'oggetto GsonBuilder;
+- infine, per creare l'oggetto RoiPoiTable, viene invocato il metodo fromJson() sull'oggetto Gson passando come argomenti l'oggetto JsonObject e l'oggetto RoiPoiTable.class
