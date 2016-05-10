@@ -1,0 +1,115 @@
+# NEW MANUALE SVILUPPATORE #
+	Introduzione 
+		Panoramica generale
+		Riferimenti -> javadoc nostro e esterni
+	Inizializzazione
+	
+	Strumenti di sviluppo
+		Repo
+		Android Studio
+		build gradle
+		come eseguire Test
+			Unit test
+			Instrumentation test
+
+	COmpoenenti Esterne
+		JDK 
+		SDK Android
+			- Descrizione delle componenti android utilizzate
+			(fare riferimento alle sezioni sucessive per le classi che le implementano)
+		
+		JGraphT
+			- Descrizione delle componenti della libreria usate
+			(fare riferimento alle sezioni sucessive per le classi che le implementano)
+	
+		AltBeacon library
+			- Descrizione delle componenti della libraria usate 
+			(fare riferimento alle sezioni sucessive per le classi che le implementano)
+
+		Gson
+		SQLite
+		Picasso
+	
+	Architettura
+		MVP
+		Interfacce
+		Dependency Injection
+	
+	
+	Funzionalità
+	
+		$Localizzazione utente
+			Panoramica
+				- Descrizione funzionalità
+				- Sequenza azioni coinvolte
+			Interfaccia grafica (view)
+				Per ogni view coinvolta
+				- Screen view (riqudri numerati)
+				- Descrizione classe view 
+				- spiegazione dei numeri
+			Presenter (activity)
+				- ciclo di vita
+				- gestion view (relazioni col model)
+				
+			LOOP
+			Particolare della funzionalità
+			$gestione beacon
+				Componenti interne coinvolte
+					Package (ref javadoc)
+					Classi (ref javadoc)
+				Componenti esterne coinvolte
+					Classi $framework (ref javadoc framework)
+				
+				Descrizione classi principali
+				Metodi principali coinvolti
+					- ref method (ref javadoc);
+					- ...
+			$recupero dati
+				...
+			$creazione grafo
+				...
+					
+		$Gestione delle preferenze
+			Panoramica
+				- Descrizione funzionalità
+				- Sequenza azioni coinvolte
+			Interfaccia grafica (view)
+				Per ogni view coinvolta
+				- Screen view (riqudri numerati)
+				- Descrizione classe view 
+				- spiegazione dei numeri
+			Presenter (activity)
+				- ciclo di vita
+				- gestion view (relazioni col model)
+			
+			LOOP
+			$setting
+				...
+				
+		$Gestione delle mappe
+		
+			LOOP
+			-gestiona db
+			-json
+			-connessione
+			
+		$Navigazione
+			
+			LOOP
+			-componenti del grafo
+			-calcolo percorso
+			-compass
+			-navigazione attraverso i listener
+			
+		$Area sviluppatore
+			-sblocco
+			-log
+	
+	Appendice
+		Fondamenti di Android
+		Rappresentazione oggetti JSON
+		Descrizione Database
+		
+			
+	Glossario
+	Indice voci

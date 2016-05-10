@@ -2,7 +2,7 @@
 
 \begin{document}
 \section{Struttura degli oggetti JSON per il download delle mappe}
-	La struttura di seguito proposta ricalca la struttura data agli oggetti JSON scaricati dal database remoto per l'installazione di mappe in locale. Nel caso in cui si voglia cambiare tale struttura si consiglia di estendere le classi con prefisso \"Remote\" e suffisso \"Dao\" presenti nel package \"dao\".
+	La struttura di seguito proposta ricalca la struttura data agli oggetti JSON scaricati dal database remoto per l'installazione di mappe in locale. Nel caso in cui si voglia cambiare tale struttura si consiglia di estendere le classi con prefisso \textbf{Remote} e suffisso \textbf{Dao} presenti nel package \textbf{dao}.
 	\subsection{Esempio di oggetto JSON rappresentante una mappa}
 			\begin{lstlisting}
 {
@@ -103,15 +103,15 @@
 		\end{lstlisting}
 		Tale oggetto è utilizzato per raccogliere le informazioni generali riguardanti un edificio e la sua mappa. In particolare:
 		\begin{itemize}
-			\item \"id\": Rappresenta l'identificativo numerico univoco dell'oggetto;
-			\item \"uuid\": Rappresenta l'identificativo UUID uguale per tutti i beacon sfruttati dall'applicativo;
-			\item \"major\": Rappresenta l'identificativo Major uguale per tutti i beacon appartenenti ad uno stesso edificio;
-			\item \"name\": Rappresenta il nome dell'edificio;
-			\item \"description\": Rappresenta una descrizione dell'edificio. In questa parte si consiglia di spiegare la tipologia di edificio e per cosa tale edificio è utilizzato;
-			\item \"openingHours\": Rappresenta l'orario di apertura e chiusura dell'edificio;
-			\item \"address\": Rappresenta l'indirizzo dell'edificio;
-			\item \"mapVersion\": Rappresenta la versione della mappa;
-			\item \"mapSize\": Rappresenta la dimensione della mappa.
+			\item \textbf{id}: Rappresenta l'identificativo numerico univoco dell'oggetto;
+			\item \textbf{uuid} Rappresenta l'identificativo UUID uguale per tutti i beacon sfruttati dall'applicativo;
+			\item \textbf{major} Rappresenta l'identificativo Major uguale per tutti i beacon appartenenti ad uno stesso edificio;
+			\item \textbf{name} Rappresenta il nome dell'edificio;
+			\item \textbf{description} Rappresenta una descrizione dell'edificio. In questa parte si consiglia di spiegare la tipologia di edificio e per cosa tale edificio è utilizzato;
+			\item \textbf{openingHours} Rappresenta l'orario di apertura e chiusura dell'edificio;
+			\item \textbf{address} Rappresenta l'indirizzo dell'edificio;
+			\item \textbf{mapVersion} Rappresenta la versione della mappa;
+			\item \textbf{mapSize} Rappresenta la dimensione della mappa.
 		\end{itemize} 
 	\subsection{Descrizione oggetto rois}
 		\begin{lstlisting}
@@ -128,10 +128,10 @@
 		\end{lstlisting}
 		Tale oggetto è utilizzato per rappresentare tutti le Region Of Interest di un certo edificio. Ogni oggetto all'interno all'interno di tale array rappresenta una specifica Region Of Interest. In particolare:
 		\begin{itemize}
-			\item \"id\": Rappresenta l'identificativo numerico univoco dell'oggetto;
-			\item \"uuid\": Rappresenta l'identificativo UUID uguale per tutti i beacon sfruttati dall'applicativo;
-			\item \"major\": Rappresenta l'identificativo Major uguale per tutti i beacon appartenenti ad uno stesso edificio;
-			\item \"minor\": Rappresenta l'identificativo univoco di un certo beacon all'interno di un edificio.
+			\item \textbf{id} Rappresenta l'identificativo numerico univoco dell'oggetto;
+			\item \textbf{uuid} Rappresenta l'identificativo UUID uguale per tutti i beacon sfruttati dall'applicativo;
+			\item \textbf{major} Rappresenta l'identificativo Major uguale per tutti i beacon appartenenti ad uno stesso edificio;
+			\item \textbf{minor} Rappresenta l'identificativo univoco di un certo beacon all'interno di un edificio.
 		\end{itemize}
 		\subsection{Descrizione oggetto pois}
 		\begin{lstlisting}
@@ -148,10 +148,10 @@
 		\end{lstlisting}
 		Tale oggetto è utilizzato per rappresentare tutti i Point Of Interest di un certo edificio. Ogni oggetto all'interno all'interno di tale array rappresenta uno specifico Point Of Interest. In particolare:
 		\begin{itemize}
-			\item \"id\": Rappresenta l'identificativo numerico univoco dell'oggetto;
-			\item \"name\": Rappresenta il nome associato ad uno specifico Point Of Interest;
-			\item \"description\": Rappresenta una descrizione associata ad un Point Of Interest. Si consiglia di mettere in tale descrizione la funzione di tale Point Of Interest;
-			\item \"categoryId\": Rappresenta l'identificativo associato alla categoria di appartenenza del Point Of Interest.
+			\item \textbf{id} Rappresenta l'identificativo numerico univoco dell'oggetto;
+			\item \textbf{name} Rappresenta il nome associato ad uno specifico Point Of Interest;
+			\item \textbf{description} Rappresenta una descrizione associata ad un Point Of Interest. Si consiglia di mettere in tale descrizione la funzione di tale Point Of Interest;
+			\item \textbf{categoryId} Rappresenta l'identificativo associato alla categoria di appartenenza del Point Of Interest.
 		\end{itemize}
 	\subsection{Descrizione oggetto roipois}
 		\begin{lstlisting}
@@ -167,8 +167,8 @@
 		\end{lstlisting}
 		Tale oggetto è utilizzato per rappresentare i collegamenti tra Region Of Interest e Point Of Interest in un certo edificio. Ogni oggetto all'interno all'interno di tale array rappresenta uno specifico collegamento. In particolare:
 		\begin{itemize}
-			\item \"roiid\": Rappresenta l'identificativo numerico univoco di una Region Of Interest;
-			\item \"poiid\": Rappresenta l'identificativo numerico univoco di un Point Of Interest.
+			\item \textbf{roiid} Rappresenta l'identificativo numerico univoco di una Region Of Interest;
+			\item \textbf{poiid} Rappresenta l'identificativo numerico univoco di un Point Of Interest.
 		\end{itemize}
 	\subsection{Descrizione oggetto edges}
 		\begin{lstlisting}
@@ -192,14 +192,14 @@
 		\end{lstlisting}
 		Tale oggetto è utilizzato per rappresentare tutti gli archi che collegano Region Of Interest nel grafo che rappresenta un edificio. Ogni oggetto all'interno all'interno di tale array rappresenta uno specifico arco. In particolare:
 		\begin{itemize}
-			\item \"id\": Rappresenta l'identificativo numerico univoco dell'oggetto;
-			\item \"startROI\": Rappresenta la Region Of Interest di partenza dell'arco;
-			\item \"endROI\": Rappresenta la Region Of Interest di arrivo dell'arco;
-			\item \"distance\": Rappresenta lunghezza dell'arco;
-			\item \"coordinate\": Rappresenta l'ampiezza dell'arco che ha per lati l'arco e il collegamento tra la Region Of Interest di partenza e il nord polare;
-			\item \"typeId\": Rappresenta l'identificativo associato al tipo di appartenenza dell'arco';
-			\item \"action\": Rappresenta una descrizione basilare delle azioni da compiere per superare l'arco;
-			\item \"description\": Rappresenta una descrizione dettagliata delle azioni da compiere per superare l'arco.
+			\item \textbf{id} Rappresenta l'identificativo numerico univoco dell'oggetto;
+			\item \textbf{startROI} Rappresenta la Region Of Interest di partenza dell'arco;
+			\item \textbf{endROI} Rappresenta la Region Of Interest di arrivo dell'arco;
+			\item \textbf{distance} Rappresenta lunghezza dell'arco;
+			\item \textbf{coordinate} Rappresenta l'ampiezza dell'arco che ha per lati l'arco e il collegamento tra la Region Of Interest di partenza e il nord polare;
+			\item \textbf{typeId} Rappresenta l'identificativo associato al tipo di appartenenza dell'arco';
+			\item \textbf{action} Rappresenta una descrizione basilare delle azioni da compiere per superare l'arco;
+			\item \textbf{description} Rappresenta una descrizione dettagliata delle azioni da compiere per superare l'arco.
 		\end{itemize}
 	\subsection{Descrizione oggetto edgeTypes}
 		\begin{lstlisting}
@@ -214,8 +214,8 @@
 		\end{lstlisting}
 		Tale oggetto è utilizzato per rappresentare tutti i tipi di arco che possono essere presenti all'interno di un edificio. Ogni oggetto all'interno all'interno di tale array rappresenta uno specifico tipo di arco. In particolare:
 		\begin{itemize}
-			\item \"id\": Rappresenta l'identificativo numerico univoco di un tipo;
-			\item \"description\": Rappresenta una descrizione testuale del tipo di arco.
+			\item \textbf{id} Rappresenta l'identificativo numerico univoco di un tipo;
+			\item \textbf{description} Rappresenta una descrizione testuale del tipo di arco.
 		\end{itemize}
 	\subsection{Descrizione oggetto photos}
 		\begin{lstlisting}
@@ -231,8 +231,8 @@
 		\end{lstlisting}
 		Tale oggetto è utilizzato per rappresentare i link alle immagini utili alla navigazione. Ogni oggetto all'interno all'interno di tale array rappresenta il collegamento ad una specifica immagine collegata ad uno specifico arco. In particolare:
 		\begin{itemize}
-			\item \"id\": Rappresenta l'identificativo numerico univoco dell'oggetto;
-			\item \"edgeId\": Rappresenta l'identificativo numerico univoco della Region Of Interest a cui l'immagine è collegata;
-			\item \"url\": Rappresenta l'URL a cui è possibile recuperare l'immagine.
+			\item \textbf{id} Rappresenta l'identificativo numerico univoco dell'oggetto;
+			\item \textbf{edgeId} Rappresenta l'identificativo numerico univoco della Region Of Interest a cui l'immagine è collegata;
+			\item \textbf{url} Rappresenta l'URL a cui è possibile recuperare l'immagine.
 		\end{itemize}
 \end{document}
