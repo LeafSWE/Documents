@@ -74,4 +74,33 @@
 			\item \textbf{URL}: stringa, rappresenta l'URL a cui recuperare l'immagine;
 			\item \textbf{edgeId}: intero, chiave esterna verso la relazione Edge, rappresenta l'Edge a cui è associata l'immagine.
 			\end{itemize}
+	\subsection{Descrizione associazioni}
+		\subsubsection{Ownership}
+			Associazione che unisce ogni ROI all'edificio di appartenenza.\\
+			\textbf{Molteplicità}:(1,N) Ad ogni Building possono essere associati uno o più ROI, ogni ROI può essere associato un solo edificio.
+
+		\subsubsection{Connection}
+			Associazione che unisce ogni Edge ai ROI di partenza e arrivo. \\
+			\textbf{Molteplicità}:(2,N) Ad ogni Edge associa il ROI di inizio e fine, ogni ROI può essere associato ad uno o più Edge.
+
+		\subsubsection{Joint}
+			Associazione che unisce ogni ROI ai ROIPOI di appartenenza. \\
+			\textbf{Molteplicità}:(1,N) Ogni ROI può essere associato ad uno o più ROIPOI, ogni ROIPOI può essere associato ad un unico ROI.
+
+		\subsubsection{Bound}
+			Associazione che unisce ogni POI ai ROIPOI di appartenenza. \\
+			\textbf{Molteplicità}:(1,N) Ogni POI può essere associato ad uno o più ROIPOI, ogni ROIPOI può essere associato ad un unico POI.
+
+		\subsubsection{Inherence}
+			Associazione che unisce ogni POI alla categoria a cui appartiene.\\
+			\textbf{Molteplicità}:(1,N) Ogni POI può essere associato ad una unica Category, ogni Category può essere associata a più POI.
+
+		\subsubsection{Rappresentation}
+			Associazione che unisce ogni Photo all'Edge che rappresenta. \\
+			\textbf{Molteplicità}:(1,N) Ogni Photo può essere associata ad un unico Edge, ogni Edge può avere più Photo.
+
+		\subsubsection{Belonging}
+			Associazione che unisce ogni Edge al tipo a cui appartiene.\\
+			\textbf{Molteplicità}:(1,N) Ogni Edge può essere associato ad un unico EdgeType, ogni EdgeType può essere associato ad uno o più Edge.
+
 \end{document}
