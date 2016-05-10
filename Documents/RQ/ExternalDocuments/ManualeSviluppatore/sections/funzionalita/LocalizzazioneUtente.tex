@@ -110,13 +110,7 @@
 			%Attraverso la classe BeaconManagerImp viene avviato il Service BeaconManagerAdapter il quale inizia il monitoring costante in background.
 			%Se la region dei beacon rilevati è coincidente a quella dell'applicativo inizia il ranging.
 			
-			La classe \BeaconManagerAdapter\ si occupa di effettuare il ranging e il monitoring dei beacon circostanti. 
-			Essa estende un Service (vedi appendice \ref{sec:FondamentiDiAndroid})per cui presenta un ciclo di vita così gestito:
-			
-			
-			
-			
-			
+			La classe \BeaconManagerAdapter\ estende un \Service (vedi appendice \ref{sec:FondamentiDiAndroid}) ed ha il compito di effettuare il ranging e il monitoring dei beacon circostanti. 
 			
 			I principali metodi sono:
 			\begin{itemize}
