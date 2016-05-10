@@ -1,6 +1,7 @@
 \documentclass[../Funzionalita.tex]{subfiles}
 
 \begin{document}
+\label{sec:LocalizzazioneUtente}
 \subsection{Localizzazione utente}
 		
 		\subsubsection{Panoramica}
@@ -28,12 +29,13 @@
 					\end{itemize}
 			\end{enumerate}
 			
+		\newpage
 		\subsection{Interfaccia grafica}
 		
 			\paragraph*{Componenti interne}
 			\begin{description}
-				\item[Package:]
-				\item[Classi:]
+				\item[Package:] ???
+				\item[Classi:] ???
 			\end{description}
 			
 			\paragraph*{Componenti esterne}
@@ -51,9 +53,10 @@
 		
 			??? Activity
 			
-			\begin{itemize}[label={-}]
+			\begin{itemize}[label={--}]
 				\item \verb|onCreate()|
 				\item \verb|onDestroy()|
+				\item ...
 			\end{itemize}
 			
 		\subsubsection{Rilevamento beacon}
@@ -68,9 +71,9 @@
 					\item \dataaccess;
 				\end{itemize}
 				
-				\item Classi: 
+				\item Classi:
 				\begin{itemize}
-					\item \BeaconManagerAdapter, 
+					\item \BeaconManagerAdapter, \MyBeacon;
 				\end{itemize}
 												
 			\end{itemize}
@@ -80,18 +83,20 @@
 			
 				\item Classi JDK:
 				\begin{itemize}
-					\item \PriorityQueue;
+					\item[] \PriorityQueue;
 				\end{itemize}
 				
 				\item Classi SDK:
 				\begin{itemize}
-					\item \Intent, \LocalBroadcastManager, \Service, \Binder, \LocalBroadcastManager;
+					\item[] \Intent, \LocalBroadcastManager, \Service, \Binder, \LocalBroadcastManager;
 				\end{itemize}
 				
 				\item Classi AltBeacon:
 				\begin{itemize}
-					\item \BeaconManager, \BootstrapNotifier, \BeaconConsumer, \RangeNotifier, \Region, \BeaconParser, \DistanceCalculator, \Beacon.
+					\item[] \BeaconManager, \BootstrapNotifier, \BeaconConsumer, \RangeNotifier, \Region, \BeaconParser, \DistanceCalculator, \Beacon.
 				\end{itemize}
+				
+				
 				
 			\end{itemize}
 			
