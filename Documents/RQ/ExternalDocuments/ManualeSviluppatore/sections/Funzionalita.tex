@@ -2,7 +2,8 @@
 
 \begin{document}
 \section{Funzionalità}
-	Nella presente sezione vengono spiegate nel dettaglio le componenti dell'applicazione e il loro scopo. Esse sono presentate suddivise nelle funzionalità che offre l'applicazione.
+	Nella presente sezione vengono spiegate nel dettaglio le componenti dell'applicazione e il loro scopo, presentate per funzionalità offerte dall'applicazione.
+	Ogni funzionalità viene prima descritta in una sottosezione "Panoramica" e successivamente in sottosezioni che approfondiscono gli aspetti che compongono la funzionalità.
 
 	\subsection{Localizzazione utente}
 		
@@ -50,55 +51,54 @@
 			
 			??? Immagini dell'applicazione nella home vuota con messaggio di avviso mappa non disponibile nel device
 			
+		\subsection{Presenter}
+		
+			??? Activity
+			
 		\subsubsection{Rilevamento beacon}
 			Per il rilevamento interno 
 			
 			\paragraph*{Componenti interne}
 			\begin{description}
 				\item[Package:] \verb|model|, \verb|beacon|, \verb|dataaccess|;
-				\item[Classi:] \href{http://leafswe.github.io/clips/}{BeaconManagerAdapter}
+				\item[Classi:] \href{http://leafswe.github.io/clips/com/leaf/clips/model/beacon/BeaconManagerAdapter.html}{BeaconManagerAdapter}
 			\end{description}
 			
 			\paragraph*{Componenti esterne}
 			\begin{description}
-				\item[Classi SDK]
-				\item[Classi AltBeacon:] 
+				\item[Classi JDK:] \verb|PriorityQueue|;
+				\item[Classi SDK:] \verb|Intent|, \verb|LocalBroadcastManager|, \verb|Service|, \verb|Binder|, \\ \verb|LocalBroadcastManager|;
+				\item[Classi AltBeacon:] \verb|BeaconManager|, \verb|BootstrapNotifier|, \verb|BeaconConsumer|, \verb|RangeNotifier|, \verb|Region|, \verb|BeaconParser|,  \verb|DistanceCalculator|, \verb|Beacon|.
 			\end{description}
 			
-			???
+			%Attraverso la classe BeaconManagerImp viene avviato il Service BeaconManagerAdapter il quale inizia il monitoring costante in background.
+			%Se la region dei beacon rilevati è coincidente a quella dell'applicativo inizia il ranging.
+			
+			La classe \href{http://leafswe.github.io/clips/com/leaf/clips/model/beacon/BeaconManagerAdapter.html}{BeaconManagerAdapter} si occupa di effettuare il ranging e il monitoring dei beacon circostanti. 
+			Essa estende un Service (vedi appendice )per cui presenta un ciclo di vita così gestito:
+			
+			
+			
+			
+			
+			
+			I principali metodi sono:
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+			\end{itemize}						
+			
+			Classe AltBeacon:
+				???
+			Classe AltBeacon:
+				???
 			
 		\subsection{Costruzione grafo}
 		
 		
 		%\subsection{Reindirizzamento alla gestione mappe}
-			
-								
-			
-			Spiegare ranging e monitoring beacon
-			
-			avvio app
-			information manager e service
-			preso un beacon letto il major
-			i beacon rilevati appartengono alla nostra app attraverso il setting della region
-			una volta riconosciuto un beacon 
-			letto i major (uno dei tre identificativi del beacon)
-			InforamtionManager chiede a dataaccess DBService se il major corrisponde ad un beacon all'interno di una delle mappe disponibili nel database locale
-			Se c'è
-				Caricamento della mappa e creazione del grafo
-				Restituite le informazioni base, mostrate all'utente
-				
-			Se non c'è
-				
-				
-			Information manager 
-				major in db
-					carica mappa
-					restituisce info base edificio
-				major non presente
-					segnalato al presenter la non presenza
-					sengalata all'utente attraverso UI
-					indirizzato alla gestione mappe
-					
+						
 			
 			
 
