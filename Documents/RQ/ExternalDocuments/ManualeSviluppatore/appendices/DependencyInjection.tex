@@ -1,0 +1,26 @@
+\documentclass[../ManualeSviluppatore.tex]{subfiles}
+
+\begin{document}
+\section{Dependency Injection}
+	\subsection{Dichiarazione delle dipendenze}
+	Le dipendenze devono essere dichiarate annotando con @Inject i campi dati o il costruttore di cui Dagger deve costruire una istanza. In questo modo Dagger può assegnare, per esempio, ad ogni interfaccia l'implementazione corretta. Le classe in cui viene utilizzata tale annotazione sono:
+	\begin{itemize}
+		\item...
+	\end{itemize}
+
+	\subsection{Module}
+	I moduli vengono dichiarando annotando una classe con @Module. Tali classi sono necessarie per risolvere le dipendenze dichiarate. In queste classi devono essere dichiarati metodi annotati con @Provides. Questi servono per dichiarare a dagger le azioni da compiere per risolvere una certa dipendenza. un metodo può essere annotato con @Singleton. In questo caso verrà restituita sempre la stessa istanza per ogni dipendenza dichiarata verso quel metodo. 
+	La classe ... risolve le dipendenze:
+	\begin{itemize}
+		\item...
+	\end{itemize}
+	
+	\subsection{Component}
+	I component sono interfacce che Dagger autonomamente si occupa di implementare. Queste devono essere annotate con @Component e fanno da collegamento tra i moduli e le classi in cui devono essere iniettate le dipendenze. In tali interfacce devono essere dichiarate dei metodi con la seguente firma:
+	\begin{lstlisting}
+		void inject(Type type);
+	\end{lstlisting}
+	Tali metodi devono richiedere come argomento un oggetto della classe che ha al suo interno annotazioni @Inject.
+
+	\subsection{Utilizzo dei metodi }
+\end{document}
