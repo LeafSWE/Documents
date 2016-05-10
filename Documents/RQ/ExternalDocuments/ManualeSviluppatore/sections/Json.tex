@@ -151,7 +151,7 @@
 			\item \"id\": Rappresenta l'identificativo numerico univoco dell'oggetto;
 			\item \"name\": Rappresenta il nome associato ad uno specifico Point Of Interest;
 			\item \"description\": Rappresenta una descrizione associata ad un Point Of Interest. Si consiglia di mettere in tale descrizione la funzione di tale Point Of Interest;
-			\item \"categoryId\": Rappresenta l'identificativo associato alla categoia di appartenenza del Point Of Interest.
+			\item \"categoryId\": Rappresenta l'identificativo associato alla categoria di appartenenza del Point Of Interest.
 		\end{itemize}
 	\subsection{Descrizione oggetto roipois}
 		\begin{lstlisting}
@@ -170,6 +170,69 @@
 			\item \"roiid\": Rappresenta l'identificativo numerico univoco di una Region Of Interest;
 			\item \"poiid\": Rappresenta l'identificativo numerico univoco di un Point Of Interest.
 		\end{itemize}
-
-		\subsection{mancano edge edgetypes e photo}
+	\subsection{Descrizione oggetto edges}
+		\begin{lstlisting}
+...
+  "edges" : [ {
+    "id" : 1,
+    "startROI" : 1,
+    "endROI" : 2,
+    "distance" : 50,
+    "coordinate" : "23",
+    "typeId" : 1,
+    "action" : "Alla fine del corridoio troverai 
+    	il bagno femminile.",
+    "longDescription" : "Esci da aula 2BC60, 
+    	prosegui nel corridoio e in fondo a 
+    	sinistra troverai il bagno femminile"
+  },
+  ...
+  ]
+...
+		\end{lstlisting}
+		Tale oggetto è utilizzato per rappresentare tutti gli archi che collegano Region Of Interest nel grafo che rappresenta un edificio. Ogni oggetto all'interno all'interno di tale array rappresenta uno specifico arco. In particolare:
+		\begin{itemize}
+			\item \"id\": Rappresenta l'identificativo numerico univoco dell'oggetto;
+			\item \"startROI\": Rappresenta la Region Of Interest di partenza dell'arco;
+			\item \"endROI\": Rappresenta la Region Of Interest di arrivo dell'arco;
+			\item \"distance\": Rappresenta lunghezza dell'arco;
+			\item \"coordinate\": Rappresenta l'ampiezza dell'arco che ha per lati l'arco e il collegamento tra la Region Of Interest di partenza e il nord polare;
+			\item \"typeId\": Rappresenta l'identificativo associato al tipo di appartenenza dell'arco';
+			\item \"action\": Rappresenta una descrizione basilare delle azioni da compiere per superare l'arco;
+			\item \"description\": Rappresenta una descrizione dettagliata delle azioni da compiere per superare l'arco.
+		\end{itemize}
+	\subsection{Descrizione oggetto edgeTypes}
+		\begin{lstlisting}
+...
+  "edgeTypes" : [ {
+    "id" : 1,
+    "description" : "Default"
+  }, 
+  ...
+  ],
+...
+		\end{lstlisting}
+		Tale oggetto è utilizzato per rappresentare tutti i tipi di arco che possono essere presenti all'interno di un edificio. Ogni oggetto all'interno all'interno di tale array rappresenta uno specifico tipo di arco. In particolare:
+		\begin{itemize}
+			\item \"id\": Rappresenta l'identificativo numerico univoco di un tipo;
+			\item \"description\": Rappresenta una descrizione testuale del tipo di arco.
+		\end{itemize}
+	\subsection{Descrizione oggetto photos}
+		\begin{lstlisting}
+...
+  "photos" : [ {
+    "id" : 1,
+    "edgeId" : 1,
+    "url" : "www.imageurl.com"
+  },  
+  ...
+  ],
+...
+		\end{lstlisting}
+		Tale oggetto è utilizzato per rappresentare i link alle immagini utili alla navigazione. Ogni oggetto all'interno all'interno di tale array rappresenta il collegamento ad una specifica immagine collegata ad uno specifico arco. In particolare:
+		\begin{itemize}
+			\item \"id\": Rappresenta l'identificativo numerico univoco dell'oggetto;
+			\item \"edgeId\": Rappresenta l'identificativo numerico univoco della Region Of Interest a cui l'immagine è collegata;
+			\item \"url\": Rappresenta l'URL a cui è possibile recuperare l'immagine.
+		\end{itemize}
 \end{document}
