@@ -26,6 +26,7 @@
 	
 	% comandi tipografici classi interne
 	\newcommand{\BeaconManagerAdapter}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/beacon/BeaconManagerAdapter.html}{BeaconManagerAdapter}}
+	\newcommand{\MyBeacon}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/beacon/MyBeacon.html}{MyBeacon}}
 	%\newcommand{}{\href{}{}}
 	
 	
@@ -42,6 +43,11 @@
 	\newcommand{\BeaconManager}{\href{https://altbeacon.github.io/android-beacon-library/javadoc/org/altbeacon/beacon/BeaconManager.html}{BeaconManager}}
 	\newcommand{\Beacon}{\href{https://altbeacon.github.io/android-beacon-library/javadoc/org/altbeacon/beacon/Beacon.html}{Beacon}}
 	\newcommand{\BootstrapNotifier}{\href{https://altbeacon.github.io/android-beacon-library/javadoc/org/altbeacon/beacon/startup/BootstrapNotifier.html}{BootstrapNotifier}}
+	\newcommand{\BeaconConsumer}{\href{https://altbeacon.github.io/android-beacon-library/javadoc/org/altbeacon/beacon/BeaconConsumer.html}{BeaconConsumer}}
+	\newcommand{\Region}{\href{https://altbeacon.github.io/android-beacon-library/javadoc/org/altbeacon/beacon/Region.html}{Regin}}
+	\newcommand{\BeaconParser}{\href{https://altbeacon.github.io/android-beacon-library/javadoc/org/altbeacon/beacon/BeaconParser.html}{BeaconParser}}
+	\newcommand{\DistanceCalculator}{\href{https://altbeacon.github.io/android-beacon-library/javadoc/org/altbeacon/beacon/BeaconParser.html}{DistanceCalculator}}
+	\newcommand{\RangeNotifier}{\href{https://altbeacon.github.io/android-beacon-library/javadoc/org/altbeacon/beacon/RangeNotifier.html}{RangeNotifier}}
 	
 		
 % -------------------
@@ -52,14 +58,28 @@
 	Nella presente sezione vengono spiegate nel dettaglio le componenti dell'applicazione e il loro scopo, presentate per funzionalità offerte dall'applicazione.
 	Ogni funzionalità viene prima descritta in una sottosezione \textit{"Panoramica"} e successivamente in sottosezioni che approfondiscono gli aspetti che compongono la funzionalità.
 	
+	Le funzionalità offerte dall'applicazione e descritte in seguito sono:
+	\begin{itemize}
+		\item Localizzazione Utente \ref{sec:LocalizzazioneUtente};
+		\item Gestione preferenze \ref{sec:GestionePreferenze};
+		\item Gestione delle mappe \ref{sec:GestioneDelleMappe};
+		\item Navigazione \ref{sec:Navigazione};
+		\item Area sviluppatore \ref{sec:AreaSviluppatore}.
+	\end{itemize}
+	
+	\newpage
 	\subfile{sections/funzionalita/LocalizzazioneUtente}
 	
+	\newpage
 	\subfile{sections/funzionalita/GestionePreferenze}
 	
+	\newpage
 	\subfile{sections/funzionalita/GestioneDelleMappe}
 	
+	\newpage
 	\subfile{sections/funzionalita/Navigazione}
 	
+	\newpage
 	\subfile{sections/funzionalita/AreaSviluppatore}
 
 \end{document}
