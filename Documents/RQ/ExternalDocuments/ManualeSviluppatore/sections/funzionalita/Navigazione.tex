@@ -1,0 +1,204 @@
+\documentclass[../Funzionalita.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Navigazione}
+\label{subsec:Navigazione}
+
+		\subsubsection{Panoramica}
+			La funzionalità di navigazione è resa disponibile dalle componenti dei package:
+			\begin{itemize}
+				\item \verb|navigator|;
+				\item \verb|beacon|;
+				\item \verb|compass|;
+				\item \verb|dataaccess|;
+				\item \verb|setting|.
+			\end{itemize}
+			Esse permettono di guidare l'utente all'interno di un edificio.
+			La navigazione è gestita attraverso queste fasi:
+			\begin{enumerate}
+				\item l'utente interagendo con l'interfaccia grafica avvia la navigazione;
+				\item la business logic dell'applicazione costruisce un grafo;
+				\item alle componenti di \verb|navigator| viene passato il grafo;
+				\item viene calcolato il percorso utilizzando la libraria \verb|JgraphT|;
+				\item vengono restituite le informazioni necessarie per guidare l'utente verso la destinazione da lui scelta;
+				\item l'interfaccia mostra all'utente le informazioni.
+			\end{enumerate}
+			
+		\subsubsection{Interfaccia grafica}
+			
+			\paragraph*{Componenti interne}
+			\begin{itemize}
+			
+				\item Package:
+				\begin{itemize}
+					\item[]
+					\item[] ...
+				\end{itemize}
+				
+				\item Interfacce e classi:
+				\begin{itemize}
+					\item[] ...
+				\end{itemize}
+				
+			\end{itemize}
+			
+			
+			\paragraph*{Componenti esterne}
+			
+			\begin{itemize}
+				\item Interfacce e classi SDK:
+				\begin{itemize}
+					\item[] ...
+				\end{itemize}
+			\end{itemize}
+		
+		\subsection{Presenter}
+		
+			\paragraph*{Componenti interne}
+			\begin{itemize}
+			
+				\item Package:
+				\begin{itemize}
+					\item[]
+					\item[] ...
+				\end{itemize}
+				
+				\item Interfacce e classi:
+				\begin{itemize}
+					\item[] ...
+				\end{itemize}
+				
+			\end{itemize}
+			
+			
+			\paragraph*{Componenti esterne}
+			
+			\begin{itemize}
+				\item Interfacce e classi SDK:
+				\begin{itemize}
+					\item[] ...
+				\end{itemize}
+			\end{itemize}
+					
+		
+		\subsubsection{Calcolo percorso}
+		
+			\paragraph*{Componenti interne}
+			\begin{itemize}
+			
+				\item Package:
+				\begin{itemize}
+					\item[] \navigator;
+					\item[] \algorithm;
+				\end{itemize}
+				
+				\item Interfacce e classi:
+				\begin{itemize}
+					\item[] ...
+				\end{itemize}
+				
+			\end{itemize}
+			
+			
+			\paragraph*{Componenti esterne}
+			
+			\begin{itemize}
+				\item Interfacce e classi SDK:
+				\begin{itemize}
+					\item[] ...
+				\end{itemize}
+			\end{itemize}
+		
+		
+		\subsubsection{Bussola}
+		
+			\paragraph*{Componenti interne}
+			\begin{itemize}
+			
+				\item Package:
+				\begin{itemize}
+					\item[] \compass;
+				\end{itemize}
+				
+				\item Interfacce e classi:
+				\begin{itemize}
+					\item[] \Compass;
+				\end{itemize}
+				
+			\end{itemize}
+			
+			
+			\paragraph*{Componenti esterne}
+			\begin{itemize}
+			
+				\item Interfacce e classi SDK:
+				\begin{itemize}
+					\item[] \SensorManager, \Sensor, \SensorEventListener.
+				\end{itemize}
+				
+			\end{itemize}
+			
+			La classe \Compass\ permette all'applicazione di ricevere dati dai sensori hardware del device gestiti grazie alla classe \Sensor. \Compass\ rende disponibili i metodi per registrare i listener ai sensori e per rimuoverla. Poiché i sensori comunicano attraverso eventi tramite interfaccia \SensorEventListener\ i dati recuperati della bussola non corrispondono all'istante in cui sono recuperati.
+			
+		
+		\subsubsection{Navigazione}
+		
+			\paragraph*{Componenti interne}
+			\begin{description}
+				\item[Package:] \verb|navigator|, \verb|graph|, \verb|edge|, \verb|vertex|, \verb|area|;
+				\item[Classi:] \verb||.
+			\end{description}
+			
+			\paragraph*{Componenti esterne}
+			\begin{description}
+				\item[Classi JGraphT:] \verb|SimpleDirectedWeightedGraph|, \verb|DijkstraPathFinder|, \verb|DefaultWeightedEdge|;
+				\item[Classi JDK:] \verb|Exception|.
+			\end{description}
+			
+		\subsubsection{Eccezioni e gestione}
+		\paragraph*{Componenti interne}
+			\begin{itemize}
+			
+				\item Package:
+				\begin{itemize}
+					\item[] \model;
+					\item[] \navigator;
+				\end{itemize}
+				
+				\item Interfacce e classi:
+				\begin{itemize}
+					\item[] \NavigationManagerImp, \Navigator, \NavigatorImp, \NavigationExceptions, \NoGraphSetException, \PathException, \NoNavigationInformationException;
+				\end{itemize}
+				
+			\end{itemize}
+			
+			
+			\paragraph*{Componenti esterne}
+			\begin{itemize}
+			
+				\item Interfacce e classi JDK:
+				\begin{itemize}
+					\item[] \Exception.
+				\end{itemize}
+				
+			\end{itemize}
+			
+			Nel package \navigator vengono lanciate delle eccezioni per far sì che chiunque le utilizzi rispetti un particolare ordine. Tale ordine coinvolge le seguenti operazioni:
+			\begin{itemize}
+				\item Set del grafo in \NavigatorImp;
+				\item Calcolo del percorso attraverso \NavigatorImp;
+				\item Esecuzione della navigazione.
+			\end{itemize}
+			Il non rispetto di tale ordine può sollevare diversi tipi di eccezioni:
+			\begin{itemize}
+				\item \NoGraphSetException\ se il grafo non è stato settato e si richiede il calcolo del percorso o l'esecuzione della navigazione;
+				\item \NoNavigationInformationException\ se si avvia la navigazione ma non si è calcolato il percorso precedentemente.
+			\end{itemize}
+			Mentre se il rilevamento dei beacon non corrisponde con quanto previsto, a significare che l'utente sta sbagliando percorso, viene lanciata l'eccezione:
+			\begin{itemize}
+				\item \PathException.
+			\end{itemize}
+			Nell'applicazione tali operazioni sono gestite da \NavigationManagerImp.
+
+\end{document}
