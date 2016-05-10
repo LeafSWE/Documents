@@ -1,0 +1,238 @@
+\documentclass[../ManualeSviluppatore.tex]{subfiles}
+
+\begin{document}
+\section{Struttura degli oggetti JSON per il download delle mappe}
+	La struttura di seguito proposta ricalca la struttura data agli oggetti JSON scaricati dal database remoto per l'installazione di mappe in locale. Nel caso in cui si voglia cambiare tale struttura si consiglia di estendere le classi con prefisso \"Remote\" e suffisso \"Dao\" presenti nel package \"dao\".
+	\subsection{Esempio di oggetto JSON rappresentante una mappa}
+			\begin{lstlisting}
+{
+  "building" : {
+    "id" : 1,
+    "uuid" : "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
+    "major" : 666,
+    "name" : "Torre Archimede"
+    "description" : "Edificio del Dipartimento di Matematica",
+    "openingHours" : "08:00-19:00",
+    "address" : "Via Trieste 63, 35121, Padova (PD)",
+    "mapVersion" : "1.0",
+    "mapVersion" : "5.2 KB"
+  },
+  "rois" : [ {
+    "id" : 1,
+    "uuid" : "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
+    "major" : 666,
+    "minor" : 1001
+  }, {
+    "id" : 2,
+    "uuid" : "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
+    "major" : 666,
+    "minor" : 1002
+  }, {
+    "id" : 3,
+    "uuid" : "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
+    "major" : 666,
+    "minor" : 1003
+  } ],
+  "categories" : [ {
+    "id" : 2,
+    "description" : "Aule"
+  }, {
+    "id" : 1,
+    "description" : "Bagni"
+  } ],
+  "pois" : [ {
+    "id" : 1,
+    "name" : "2BC60",
+    "description" : "Aula 2BC60",
+    "categoryId" : 2
+  }, {
+    "id" : 2,
+    "name" : "Bagno femminile",
+    "description" : "Bagno femminile",
+    "categoryId" : 1
+  } ],
+  "roipois" : [ {
+    "roiid" : 1,
+    "poiid" : 1
+  }, {
+    "roiid" : 2,
+    "poiid" : 2
+  } ],
+  "edgeTypes" : [ {
+    "id" : 1,
+    "description" : "Default"
+  } ],
+  "edges" : [ {
+    "id" : 1,
+    "startROI" : 1,
+    "endROI" : 2,
+    "distance" : 50,
+    "coordinate" : "23",
+    "typeId" : 1,
+    "action" : "Alla fine del corridoio troverai 
+    	il bagno femminile.",
+    "longDescription" : "Esci da aula 2BC60, 
+    	prosegui nel corridoio e in fondo a 
+    	sinistra troverai il bagno femminile"
+  } ],
+  "photos" : [ {
+    "id" : 1,
+    "edgeId" : 1,
+    "url" : "URL della prima foto"
+  }, {
+    "id" : 2,
+    "edgeId" : 1,
+    "url" : "URL della seconda foto"
+  } ]
+}
+			\end{lstlisting}
+	\subsection{Descrizione oggetto building}
+		\begin{lstlisting}
+...
+  "building" : {
+    "id" : 1,
+    "uuid" : "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
+    "major" : 666,
+    "description" : "Edificio del Dipartimento di Matematica",
+    "openingHours" : "08:00-19:00",
+    "address" : "Via Trieste 63, 35121, Padova (PD)",
+    "mapVersion" : "1.0",
+    "mapSize" : "5.2 KB"
+  }
+...
+		\end{lstlisting}
+		Tale oggetto è utilizzato per raccogliere le informazioni generali riguardanti un edificio e la sua mappa. In particolare:
+		\begin{itemize}
+			\item \"id\": Rappresenta l'identificativo numerico univoco dell'oggetto;
+			\item \"uuid\": Rappresenta l'identificativo UUID uguale per tutti i beacon sfruttati dall'applicativo;
+			\item \"major\": Rappresenta l'identificativo Major uguale per tutti i beacon appartenenti ad uno stesso edificio;
+			\item \"name\": Rappresenta il nome dell'edificio;
+			\item \"description\": Rappresenta una descrizione dell'edificio. In questa parte si consiglia di spiegare la tipologia di edificio e per cosa tale edificio è utilizzato;
+			\item \"openingHours\": Rappresenta l'orario di apertura e chiusura dell'edificio;
+			\item \"address\": Rappresenta l'indirizzo dell'edificio;
+			\item \"mapVersion\": Rappresenta la versione della mappa;
+			\item \"mapSize\": Rappresenta la dimensione della mappa.
+		\end{itemize} 
+	\subsection{Descrizione oggetto rois}
+		\begin{lstlisting}
+...
+  "rois" : [ {
+    "id" : 1,
+    "uuid" : "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
+    "major" : 666,
+    "minor" : 1001
+  },
+  ...
+  ],
+...
+		\end{lstlisting}
+		Tale oggetto è utilizzato per rappresentare tutti le Region Of Interest di un certo edificio. Ogni oggetto all'interno all'interno di tale array rappresenta una specifica Region Of Interest. In particolare:
+		\begin{itemize}
+			\item \"id\": Rappresenta l'identificativo numerico univoco dell'oggetto;
+			\item \"uuid\": Rappresenta l'identificativo UUID uguale per tutti i beacon sfruttati dall'applicativo;
+			\item \"major\": Rappresenta l'identificativo Major uguale per tutti i beacon appartenenti ad uno stesso edificio;
+			\item \"minor\": Rappresenta l'identificativo univoco di un certo beacon all'interno di un edificio.
+		\end{itemize}
+		\subsection{Descrizione oggetto pois}
+		\begin{lstlisting}
+...
+  "pois" : [ {
+	"id" : 1,
+	"name" : "2BC60",
+	"description" : "Aula 2BC60",
+	"categoryId" : 2
+    }, 
+  ...
+  ],
+...
+		\end{lstlisting}
+		Tale oggetto è utilizzato per rappresentare tutti i Point Of Interest di un certo edificio. Ogni oggetto all'interno all'interno di tale array rappresenta uno specifico Point Of Interest. In particolare:
+		\begin{itemize}
+			\item \"id\": Rappresenta l'identificativo numerico univoco dell'oggetto;
+			\item \"name\": Rappresenta il nome associato ad uno specifico Point Of Interest;
+			\item \"description\": Rappresenta una descrizione associata ad un Point Of Interest. Si consiglia di mettere in tale descrizione la funzione di tale Point Of Interest;
+			\item \"categoryId\": Rappresenta l'identificativo associato alla categoria di appartenenza del Point Of Interest.
+		\end{itemize}
+	\subsection{Descrizione oggetto roipois}
+		\begin{lstlisting}
+...
+  
+  "roipois" : [ {
+	"roiid" : 1,
+	"poiid" : 1
+  },  
+  ...
+  ],
+...
+		\end{lstlisting}
+		Tale oggetto è utilizzato per rappresentare i collegamenti tra Region Of Interest e Point Of Interest in un certo edificio. Ogni oggetto all'interno all'interno di tale array rappresenta uno specifico collegamento. In particolare:
+		\begin{itemize}
+			\item \"roiid\": Rappresenta l'identificativo numerico univoco di una Region Of Interest;
+			\item \"poiid\": Rappresenta l'identificativo numerico univoco di un Point Of Interest.
+		\end{itemize}
+	\subsection{Descrizione oggetto edges}
+		\begin{lstlisting}
+...
+  "edges" : [ {
+    "id" : 1,
+    "startROI" : 1,
+    "endROI" : 2,
+    "distance" : 50,
+    "coordinate" : "23",
+    "typeId" : 1,
+    "action" : "Alla fine del corridoio troverai 
+    	il bagno femminile.",
+    "longDescription" : "Esci da aula 2BC60, 
+    	prosegui nel corridoio e in fondo a 
+    	sinistra troverai il bagno femminile"
+  },
+  ...
+  ]
+...
+		\end{lstlisting}
+		Tale oggetto è utilizzato per rappresentare tutti gli archi che collegano Region Of Interest nel grafo che rappresenta un edificio. Ogni oggetto all'interno all'interno di tale array rappresenta uno specifico arco. In particolare:
+		\begin{itemize}
+			\item \"id\": Rappresenta l'identificativo numerico univoco dell'oggetto;
+			\item \"startROI\": Rappresenta la Region Of Interest di partenza dell'arco;
+			\item \"endROI\": Rappresenta la Region Of Interest di arrivo dell'arco;
+			\item \"distance\": Rappresenta lunghezza dell'arco;
+			\item \"coordinate\": Rappresenta l'ampiezza dell'arco che ha per lati l'arco e il collegamento tra la Region Of Interest di partenza e il nord polare;
+			\item \"typeId\": Rappresenta l'identificativo associato al tipo di appartenenza dell'arco';
+			\item \"action\": Rappresenta una descrizione basilare delle azioni da compiere per superare l'arco;
+			\item \"description\": Rappresenta una descrizione dettagliata delle azioni da compiere per superare l'arco.
+		\end{itemize}
+	\subsection{Descrizione oggetto edgeTypes}
+		\begin{lstlisting}
+...
+  "edgeTypes" : [ {
+    "id" : 1,
+    "description" : "Default"
+  }, 
+  ...
+  ],
+...
+		\end{lstlisting}
+		Tale oggetto è utilizzato per rappresentare tutti i tipi di arco che possono essere presenti all'interno di un edificio. Ogni oggetto all'interno all'interno di tale array rappresenta uno specifico tipo di arco. In particolare:
+		\begin{itemize}
+			\item \"id\": Rappresenta l'identificativo numerico univoco di un tipo;
+			\item \"description\": Rappresenta una descrizione testuale del tipo di arco.
+		\end{itemize}
+	\subsection{Descrizione oggetto photos}
+		\begin{lstlisting}
+...
+  "photos" : [ {
+    "id" : 1,
+    "edgeId" : 1,
+    "url" : "www.imageurl.com"
+  },  
+  ...
+  ],
+...
+		\end{lstlisting}
+		Tale oggetto è utilizzato per rappresentare i link alle immagini utili alla navigazione. Ogni oggetto all'interno all'interno di tale array rappresenta il collegamento ad una specifica immagine collegata ad uno specifico arco. In particolare:
+		\begin{itemize}
+			\item \"id\": Rappresenta l'identificativo numerico univoco dell'oggetto;
+			\item \"edgeId\": Rappresenta l'identificativo numerico univoco della Region Of Interest a cui l'immagine è collegata;
+			\item \"url\": Rappresenta l'URL a cui è possibile recuperare l'immagine.
+		\end{itemize}
+\end{document}
