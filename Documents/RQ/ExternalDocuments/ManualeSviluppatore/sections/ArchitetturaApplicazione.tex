@@ -15,19 +15,19 @@
 			
 			Il suo principale ambito di utilizzo è nelle applicazioni in cui sia necessario separare la logica dei componenti visivi della GUI dai componenti stessi consentendo così l'uso di diversi linguaggi per le due cose. Per esempio  descrivere le componenti in XML e definirne la logica in Java.
 			
-			\paragraph{Componenti}
+			\subsubsection{Componenti}
 			Il pattern è basato sul principio di disaccoppiamento di tre oggetti distinti, riducendo in questo modo le dipendenze reciproche; inoltre permette di fornire una maggiore modularità, manutenibilità e robustezza al software.
-				\subparagraph*{Model}
+				\paragraph*{Model}
 					Il Model rappresenta il cuore dell'applicazione: esso definisce il modello dei dati definendo gli oggetti secondo la logica di utilizzo dell'applicazione, ossia la sua business logic. Inoltre, indica le possibili operazioni che si possono effettuare sui dati.
 					
-				\subparagraph*{View}
+				\paragraph*{View}
 					Nel pattern MVP, la View è un componente passivo che si occupa essenzialmente di notificare al Presenter eventuali interazioni con l'eventuale utente. È compito del Presenter raccogliere questi segnali ed elaborarli in qualche modo.
 					
-				\subparagraph*{Presenter}
+				\paragraph*{Presenter}
 					Il Presenter è l'intermediario tra il Model e la View. Si occupa di implementare l'insieme di operazioni eseguibili sul modello dei dati attraverso una particolare vista, ossia l'application logic. Solitamente ad ogni componente della View corrisponde un componente del Presenter.
 					
-			\paragraph{Perché MVP}
-				Il pattern MVP per l'architettura dell'applicazione CLIPS è stato scelta perché:
+			\subsubsection{Vantaggi}
+				Il pattern MVP per l'architettura dell'applicazione CLIPS è stato scelto perché:
 				\begin{itemize}
 					\item Consente di separare completamente l'interfaccia grafica dalla logica e quindi di utilizzare il linguaggio XML per descrivere l'interfaccia dell'applicazione;
 					\item La completa separazione di View e Presenter consente maggiore flessibilità nella manutenzione e nell'eventuale modifica dell'interfaccia grafica;
