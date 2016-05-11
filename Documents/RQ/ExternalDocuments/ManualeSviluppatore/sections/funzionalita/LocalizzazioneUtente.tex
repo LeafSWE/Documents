@@ -31,7 +31,7 @@
 			\end{enumerate}
 			
 		\newpage
-		\subsection{Interfaccia grafica}
+		\subsubsection{Interfaccia grafica}
 		
 			\paragraph*{Componenti interne}
 			\begin{itemize}
@@ -65,7 +65,7 @@
 			
 			??? Immagini dell'applicazione nella home vuota con messaggio di avviso mappa non disponibile nel device
 			
-		\subsection{Presenter}
+		\subsubsection{Presenter}
 		
 			\paragraph*{Componenti interne}
 			\begin{itemize}
@@ -100,6 +100,8 @@
 			\end{itemize}
 			
 		\subsubsection{Rilevamento beacon}
+			La classe \BeaconManagerAdapter\ estende un bind \Service\ (vedi appendice \ref{sec:FondamentiDiAndroid}) ed ha il compito di effettuare il ranging e il monitoring dei beacon circostanti. Il ranging è l'operazione svolta in background per riconoscere i beacon circostanti senza eccessiva precisione mentre il monitoring è l'operazione che segue in cui i beacon vengono invece rilevati con tutte le informazioni e con più precisamente.
+			La comunicazione dei beacon rilevati dal \model\ avviene attraverso l'uso degli oggetti \MyBeacon\ inviati tramite \Intent\ per cui serializzati. Gli \Intent\ vengono recuperati tramite \BroadcastReceiver\ implementato in altre classi.
 			
 			\paragraph*{Componenti interne}
 			\begin{itemize}
@@ -122,7 +124,7 @@
 			
 				\item Interfacce e classi AltBeacon:
 				\begin{itemize}
-					\item[] \BeaconManager, \BootstrapNotifier, \BeaconConsumer, \RangeNotifier, \Region, \BeaconParser, \DistanceCalculator, \Beacon.
+					\item[] \BeaconManager, \BootstrapNotifier, \BeaconConsumer, \RangeNotifier, \Region, \BeaconParser, \DistanceCalculator, \Beacon;
 				\end{itemize}
 			
 				\item Interfacce e classi JDK:
@@ -132,17 +134,15 @@
 				
 				\item Interfacce e classi SDK:
 				\begin{itemize}
-					\item[] \Intent, \LocalBroadcastManager, \Service, \Binder, \LocalBroadcastManager, \IBinder;
+					\item[] \Intent, \LocalBroadcastManager, \Service, \Binder, \LocalBroadcastManager, \IBinder.
 				\end{itemize}
 				
 				
 				
 			\end{itemize}
 			
-			La classe \BeaconManagerAdapter\ estende un bind \Service\ (vedi appendice \ref{sec:FondamentiDiAndroid}) ed ha il compito di effettuare il ranging e il monitoring dei beacon circostanti. Il ranging è l'operazione svolta in background per riconoscere i beacon circostanti senza eccessiva precisione mentre il monitoring è l'operazione che segue in cui i beacon vengono invece rilevati con tutte le informazioni e con più precisamente.
-			La comunicazione dei beacon rilevati dal \model\ avviene attraverso l'uso degli oggetti \MyBeacon\ inviati tramite \Intent\ per cui serializzati. Gli \Intent\ vengono recuperati tramite \BroadcastReceiver\ implementato in altre classi.
 			
-		\subsection{Costruzione grafo}
+		\subsubsection{Costruzione grafo}
 		
 			\paragraph*{Componenti interne}
 			\begin{itemize}
@@ -162,7 +162,7 @@
 				
 				\item Interfacce e classi:
 				\begin{itemize}
-					\item[] \MapGraph,
+					\item[] \MapGraph, 
 				\end{itemize}
 			\end{itemize}
 			
