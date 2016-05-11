@@ -100,6 +100,8 @@
 			\end{itemize}
 			
 		\subsubsection{Rilevamento beacon}
+			La classe \BeaconManagerAdapter\ estende un bind \Service\ (vedi appendice \ref{sec:FondamentiDiAndroid}) ed ha il compito di effettuare il ranging e il monitoring dei beacon circostanti. Il ranging è l'operazione svolta in background per riconoscere i beacon circostanti senza eccessiva precisione mentre il monitoring è l'operazione che segue in cui i beacon vengono invece rilevati con tutte le informazioni e con più precisamente.
+			La comunicazione dei beacon rilevati dal \model\ avviene attraverso l'uso degli oggetti \MyBeacon\ inviati tramite \Intent\ per cui serializzati. Gli \Intent\ vengono recuperati tramite \BroadcastReceiver\ implementato in altre classi.
 			
 			\paragraph*{Componenti interne}
 			\begin{itemize}
@@ -139,8 +141,6 @@
 				
 			\end{itemize}
 			
-			La classe \BeaconManagerAdapter\ estende un bind \Service\ (vedi appendice \ref{sec:FondamentiDiAndroid}) ed ha il compito di effettuare il ranging e il monitoring dei beacon circostanti. Il ranging è l'operazione svolta in background per riconoscere i beacon circostanti senza eccessiva precisione mentre il monitoring è l'operazione che segue in cui i beacon vengono invece rilevati con tutte le informazioni e con più precisamente.
-			La comunicazione dei beacon rilevati dal \model\ avviene attraverso l'uso degli oggetti \MyBeacon\ inviati tramite \Intent\ per cui serializzati. Gli \Intent\ vengono recuperati tramite \BroadcastReceiver\ implementato in altre classi.
 			
 		\subsubsection{Costruzione grafo}
 		

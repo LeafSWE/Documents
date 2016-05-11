@@ -8,11 +8,11 @@
 		\subsubsection{Panoramica}
 			La funzionalità di navigazione è resa disponibile dalle componenti dei package:
 			\begin{itemize}
-				\item \verb|navigator|;
-				\item \verb|beacon|;
-				\item \verb|compass|;
-				\item \verb|dataaccess|;
-				\item \verb|setting|.
+				\item \navigator;
+				\item \beacon;
+				\item \compass;
+				\item \dataaccess;
+				\item \usersetting.
 			\end{itemize}
 			Esse permettono di guidare l'utente all'interno di un edificio.
 			La navigazione è gestita attraverso queste fasi:
@@ -53,6 +53,7 @@
 				\end{itemize}
 			\end{itemize}
 		
+		
 		\subsubsection{Presenter}
 		
 			\paragraph*{Componenti interne}
@@ -77,7 +78,7 @@
 			\begin{itemize}
 				\item Interfacce e classi SDK:
 				\begin{itemize}
-					\item[] ...
+					\item[] \Activity ...
 				\end{itemize}
 			\end{itemize}
 					
@@ -91,11 +92,13 @@
 				\begin{itemize}
 					\item[] \navigator;
 					\item[] \algorithm;
+					\item[] \graph;
+					\item[] \area;
 				\end{itemize}
 				
 				\item Interfacce e classi:
 				\begin{itemize}
-					\item[] ...
+					\item[] \Navigator, \NavigatorImp, \ProcessedInformation, \ProcessedInformationImp, \PathFinder, \DijkstraPathFinder, \Compass, \MapGraph, \EnrichedEdge, \PointOfInterest, \RegionOfInterest;
 				\end{itemize}
 				
 			\end{itemize}
@@ -104,14 +107,15 @@
 			\paragraph*{Componenti esterne}
 			
 			\begin{itemize}
-				\item Interfacce e classi SDK:
+				\item Interfacce e classi JGraphT:
 				\begin{itemize}
-					\item[] ...
+					\item[] %\DijkstraShortestPath, \SimpleDirectedWeightedGraph.
 				\end{itemize}
 			\end{itemize}
 		
 		
 		\subsubsection{Bussola}
+			La classe \Compass\ permette all'applicazione di ricevere dati dai sensori hardware del device gestiti grazie alla classe \Sensor. \Compass\ rende disponibili i metodi per registrare i listener ai sensori e per rimuoverla. Poiché i sensori comunicano attraverso eventi tramite interfaccia \SensorEventListener\ i dati recuperati della bussola non corrispondono all'istante in cui sono recuperati.
 		
 			\paragraph*{Componenti interne}
 			\begin{itemize}
@@ -138,9 +142,7 @@
 				\end{itemize}
 				
 			\end{itemize}
-			
-			La classe \Compass\ permette all'applicazione di ricevere dati dai sensori hardware del device gestiti grazie alla classe \Sensor. \Compass\ rende disponibili i metodi per registrare i listener ai sensori e per rimuoverla. Poiché i sensori comunicano attraverso eventi tramite interfaccia \SensorEventListener\ i dati recuperati della bussola non corrispondono all'istante in cui sono recuperati.
-			
+						
 		
 		\subsubsection{Navigazione}
 		
