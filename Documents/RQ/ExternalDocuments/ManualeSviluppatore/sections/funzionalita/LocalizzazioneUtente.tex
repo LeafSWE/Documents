@@ -12,22 +12,22 @@
 			\begin{enumerate}
 				\item l'utente avvia l'applicazione;
 				\item l'applicazione avvia il monitoring per poter rilevare i beacon circostanti;
-				\item l'applicazione reperisce l'identificativo major;
+				\item l'applicazione avvia il ranging e reperisce l'identificativo major dei beacon;
 				\item l'applicazione si accerta che i beacon rilevati siano pertinenti all'applicazione attraverso un confronto tra major rilevato e major dei beacon nel database locale;
 				\item se il beacon è riconosciuto ed esiste un match nel database locale:
 					\begin{itemize}
-						\item viene costruito il grafico dal database;
+						\item vengono costruiti concretamente gli oggetti e raccolti nell'oggetto \BuildingMap;
 						\item vengono mostrate all'utente semplici informazioni sull'edificio;
 					\end{itemize}
-				\item se il beacon è riconosciuto e non esiste un match nel database locale:
-					\begin{itemize}
-						\item viene segnalato all'utente che la mappa dell'edificio non è scaricata nel device;
-						\item l'utente se lo desidera è reindirizzato alla gestione delle mappe;
-					\end{itemize}
-				\item se il beacon non è riconosciuto:
-					\begin{itemize}
-						\item viene ignorato.
-					\end{itemize}
+				%\item se il beacon è riconosciuto e non esiste un match nel database locale:
+					%\begin{itemize}
+						%\item viene segnalato all'utente che la mappa dell'edificio non è scaricata nel device;
+						%\item l'utente se lo desidera è reindirizzato alla gestione delle mappe;
+					%\end{itemize}
+				%\item se il beacon non è riconosciuto:
+					%\begin{itemize}
+					%	\item viene ignorato.
+					%\end{itemize}
 			\end{enumerate}
 			
 		\newpage
@@ -142,7 +142,20 @@
 			\end{itemize}
 			
 			
-		\subsubsection{Costruzione grafo}
+		\subsubsection{Costruzione BuildingMap}
+			L'oggetto \InformationManagerImp\ comunica a \DatabaseService\ la necessità di costruire l'oggetto \BuildingMap. \DatabaseService\ costruisce tale oggetto incaricando \PointOfInterestService, \RegionOfInterestService, \EdgeService, \PhotoService di costruire le componenti di \BuildingMap ossia:
+			\begin{itemize}
+				\item \PointOfInterest;
+				\item \RegionOfInterest;
+				\item \EnrichedEdge;
+			\end{itemize}
+			Tali componenti sono prelevate e costruite facendo uso di semplici oggetti data grazie alle classi con suffisso \textit{Dao}. Questi oggetti semplici sono descritti da un nome riferito all'elemento all'interno di una tabella del database locale e con il suffisso \textit{Table}. 
+			Le operazioni eseguite per costruire \BuildingMap\ si distinguono in due casi:
+			\begin{itemize}
+				\item I dati necessari per la costruzione di \BuildingMap\ sono nel database locale. A questo punto se la versione dei dati in locale corrispondono alla versione in remoto l'\InformationManagerImp\ incarica \DatabaseService\ di costruire l'oggetto \BuildingMap\ come spiegato in precedenza, altrimenti si effettuano le operazioni descritte nel caso successivo;
+				\item I dati necessari per la costruzione di \BuildingMap\ devono essere scaricati dal database remoto. A questo punto, dopo aver fatto richiesta all'utente di poter effettuare il download dei dati, \DatabaseService\ reperisce le informazioni dal database remoto converte i dati dal formato Json trasmetto ad oggetti attraverso le classi con prefisso \textit{Remote}, inserisce tali oggetti nel database locale attraverso le classi con suffisso \textit{Dao} e infine costruisce l'oggetto \BuildingMap\ desiderato.
+			\end{itemize}
+			
 		
 			\paragraph*{Componenti interne}
 			\begin{itemize}
@@ -157,40 +170,46 @@
 					\item[] \edge
 					\item[] \vertex
 					\item[] \area
-					\item[] \navigationinformation
 				\end{itemize}
 				
 				\item Interfacce e classi:
 				\begin{itemize}
-					\item[] \MapGraph, 
+					\item[] \BuildingMap, \BuildingMapImp, \BuildingInformation, \PointOfInterest, \RegionOfInterest, \EnrichedEdge, \DatabaseService, \BuildingService, \EdgeService, \PhotoService, \PointOfInterestService, \RegionOfInterestService, \ServiceHelper,
+					\CursorConverter, \DaoFactoryHelper, \RemoteDaoFactory, \SQLiteDaoFactory;
+					
+					\item[] con suffisso \textit{Dao}: 
+					\SQLDao, \BuildingDao, \CategoryDao, \EdgeDao, \EdgeTypeDao, \PhotoDao, \PointOfInterestDao, \RegionOfInterestDao, \RoiPoiDao, \RemoteBuildingDao, \RemoteCategoryDao, \RemoteEdgeDao, \RemoteEdgeTypeDao,  \RemotePhotoDao,  \RemotePointOfInterestDao, \RemoteRegionOfInterestDao, \RemoteRoiPoiDao;
+					
+					\item[] con prefisso \textit{SQL} e suffisso \textit{Dao}:
+						\SQLiteBuildingDao, \SQLiteCategoryDao, \SQLiteEdgeDao, \SQLitePhotoDao, \SQLiteEdgeTypeDao, \SQLitePointOfInterestDao, \SQLiteRegionOfInterestDao, \SQLiteRoiPoiDao;
+						
+					\item[] con suffisso \textit{Table} e \textit{Contract}:
+						\BuildingTable, \BuildingContract,
+					 \CategoryTable, \CategoryContract,
+					\EdgeTable, \EdgeContract,
+					 \EdgeTypeTable, \EdgeTypeContract,
+					\PhotoTable, \PhotoContract,
+					 \PointOfInterestTable, \PointOfInterestContract,
+					  \RegionOfInterestTable, \RegionOfInterestContract,
+					  \RoiPoiTable, \RoiPoiContract;
 				\end{itemize}
 			\end{itemize}
 			
 			\paragraph*{Componenti esterne}
 			\begin{itemize}
 			
-				\item Interfacce e classi JDK:
+				\item Interfacce e classi Gson:
 				\begin{itemize}
-					\item[]	???
-				\end{itemize}
-			
-				\item Interfacce e classi JGraphT:
-				\begin{itemize}
-					\item[] ???
+					\item[]	\Gson, \GsonBuilder, \JsonObject, \JsonArray, \JsonParser;
 				\end{itemize}
 				
 				\item Interfacce e classi SDK:
 				\begin{itemize}
-					\item[]	???
+					\item[]	\SQLiteOpenHelper, \SQLiteDatabase, \Cursor, \ContentValue, \BaseColumns.
 				\end{itemize}
 				
 			\end{itemize}
 			
-			La costruzione del grafo avviene MapGraph
-				
-			dal database
-			parti del grafo
-			spiegare package graph
 		
 		%\subsection{Reindirizzamento alla gestione mappe}
 		
