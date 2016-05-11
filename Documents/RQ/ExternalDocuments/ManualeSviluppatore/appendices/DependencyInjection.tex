@@ -5,22 +5,61 @@
 	\subsection{Dichiarazione delle dipendenze}
 	Le dipendenze devono essere dichiarate annotando con @Inject i campi dati o il costruttore di cui Dagger deve costruire una istanza. In questo modo Dagger può assegnare, per esempio, ad ogni interfaccia l'implementazione corretta. Le classe in cui viene utilizzata tale annotazione sono:
 	\begin{itemize}
-		\item...
+		\item \HomeActivity;
+		\item \DeveloperUnlockerActivity;
+		\item \LogInformationActivity;
+		\item \MainDeveloperActivity;
+		\item \MainDeveloperPresenter;
+		\item \MyApplication;
+		\item \NavigationActivity;
+		\item \NearbyPoiActivity;
+		\item \PoiCategoryActivity.
 	\end{itemize}
 
 	\subsection{Module}
 	I moduli vengono dichiarando annotando una classe con @Module. Tali classi sono necessarie per risolvere le dipendenze dichiarate. In queste classi devono essere dichiarati metodi annotati con @Provides. Questi servono per dichiarare a dagger le azioni da compiere per risolvere una certa dipendenza. un metodo può essere annotato con @Singleton. In questo caso verrà restituita sempre la stessa istanza per ogni dipendenza dichiarata verso quel metodo. 
-	La classe ... risolve le dipendenze:
+	La classe \AppModule\ risolve:
 	\begin{itemize}
-		\item...
+		\item dipendenze verso Context(??Mettere url android??), il metodo è annotato anche come @Singleton;
+		\item dipendenze verso Application(??Mettere url android??) restituendo una istanza di \MyApplication, il metodo è annotato come @Singleton.
 	\end{itemize}
-	
+	La classe \DatabaseModule\ risolve:
+	\begin{itemize}
+		\item dipendenze verso \SQLiteDaoFactory, il metodo è annotato come @Singleton;
+		\item dipendenze verso \RemoteDaoFactory, il metodo è annotato come @Singleton;
+		\item dipendenze verso \DatabaseAccess\ restituendo un'istanza di \BuildingAccess, il metodo è annotato come @Singleton.
+	\end{itemize}
+	La classe \InfoModule\ risolve:
+	\begin{itemize}
+		\item dipendenze verso \InformationManager\ restituendo un'istanza di \InformationManagerImp, il metodo è annotato come @Singleton.
+	\end{itemize}
+	La classe \SettingModule\ risolve:
+	\begin{itemize}
+		\item dipendenze verso \Setting\ restituendo un'istanza di \SettingImp, il metodo è annotato come @Singleton.
+	\end{itemize}
+
 	\subsection{Component}
 	I component sono interfacce che Dagger autonomamente si occupa di implementare. Queste devono essere annotate con @Component e fanno da collegamento tra i moduli e le classi in cui devono essere iniettate le dipendenze. In tali interfacce devono essere dichiarate dei metodi con la seguente firma:
 	\begin{lstlisting}
 		void inject(Type type);
 	\end{lstlisting}
-	Tali metodi devono richiedere come argomento un oggetto della classe che ha al suo interno annotazioni @Inject.
+	Tali metodi devono richiedere come argomento un oggetto della classe che ha al suo interno annotazioni @Inject. \\
+	L'unica interfaccia annotata con @Component è \InfoComponent. Tale interfaccia permette di risolvere le dipendenze di:
+	\begin{itemize}
+		\item \HomeActivity;
+		\item \DeveloperUnlockerActivity;
+		\item \LogInformationActivity;
+		\item \MainDeveloperActivity;
+		\item \MainDeveloperPresenter;
+		\item \MyApplication;
+		\item \NavigationActivity;
+		\item \NearbyPoiActivity;
+		\item \PoiCategoryActivity.
+	\end{itemize}
 
-	\subsection{Utilizzo dei metodi }
+	\subsection{Utilizzo dei metodi inject}
+	Per poter effettivamente risolvere le dipendenze è necessario recuperare una istanza dell'implementazione dell'interfaccia annotata come @Component. Dagger a queste implementazioni da come nome \textit{Dagger} seguito dal nome dato al componente. Per recuperare tale istanza è necessario invocare il metodo statico \textit{builder()} sulla classe creata da Dagger. Questo ritorna un Builder per la classe creata da Dagger. A questo Builder è necessario aggiungere i moduli in cui è dichiarato come risolvere le dipendenze delle classi richieste come argomenti ai metodi \textit{inject()} dichiarati nell'interfaccia annotata come @Component. Per fare questo è possibile invocare i metodi che hanno nome uguale alla classe annotata come @Module ma con nome che inizia con lettera minuscola. Quando sono stati aggiunti tutti i moduli è possibile invocare il metodo \textit{build()} per ottenere l'istanza del componente.\\
+	Una volta creato un componente è possibile invocare il metodo \textit{inject()} passando come argomento l'istanza in cui ``iniettare'' le dipendeze.
+	In questo modo l'istanza di oggetto passata al metodo \textit{inject()} avrà le dipendenze soddisfatte.\\
+	L'istanza di Dagger che implementa l'inperfaccia \InfoComponent\ e l'aggiunta dei moduli viene fatto in \MyApplication, mentre i vari metodi \textit{inject()} vengono invocati tutti nel metodo \textit{onCreate()}, poichè le classi in cui è usata la dependency injection sono tutte o Activity(??Mettere url android??) oppure Application(??Mettere url android??) nel caso di \MyApplication.
 \end{document}
