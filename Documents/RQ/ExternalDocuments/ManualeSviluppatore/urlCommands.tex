@@ -55,6 +55,10 @@
 	\newcommand{\ProcessedInformation}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/navigator/ProcessedInformation.html}{ProcessedInformation}}
 	\newcommand{\ProcessedInformationImp}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/navigator/ProcessedInformationImp.html}{ProcessedInformationImp}}
 	
+	\newcommand{\BuildingMap}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/navigator/BuildingMap.html}{BuildingMap}}
+	\newcommand{\BuildingMapImp}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/navigator/BuildingMapImp.html}{BuildingMapImp}}
+	\newcommand{\BuildingInformation}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/navigator/BuildingInformation.html}{BuildingInformation}}
+	
 	% algorithm
 	\newcommand{\DijkstraPathFinder}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/navigator/algorithm/DijkstraPathFinder.html}{DijkstraPathFinder}}
 	\newcommand{\PathFinder}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/navigator/algorithm/PathFinder.html}{PathFinder}}
@@ -92,9 +96,9 @@
 	\newcommand{\PhotoService}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/dataaccess/service/PhotoService.html}{PhotoService}}
 	\newcommand{\PointOfInterestService}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/dataaccess/service/PointOfInterestService.html}{PointOfInterestService}}
 	\newcommand{\RegionOfInterestService}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/dataaccess/service/RegionOfInterestService.html}{RegionOfInterestService}}
-	\newcommand{ServiceHelper}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/dataaccess/service/ServiceHelper.html}{ServiceHelper}}
+	\newcommand{\ServiceHelper}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/dataaccess/service/ServiceHelper.html}{ServiceHelper}}
 	% dao
-	\newcommand{\BuildingCommand}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/dataaccess/dao/BuildingContract.html}{BuildingCommand}}
+	\newcommand{\BuildingContract}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/dataaccess/dao/BuildingContract.html}{BuildingCommand}}
 	\newcommand{\BuildingDao}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/dataaccess/dao/BuildingDao.html}{BuildingDao}}
 	\newcommand{\BuildingTable}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/dataaccess/dao/BuildingTable.html}{BuildingTable}}
 	\newcommand{\CategoryContract}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/dataaccess/dao/CategoryContract.html}{CategoryContract}}
@@ -161,10 +165,6 @@
 	%component
 	\newcommand{\InfoComponent}{\href{http://leafswe.github.io/clips/com/leaf/clips/di/component/InfoComponent.html}{InfoComponent}}
 
-	%dao
-	\newcommand{\SQLiteDaoFactory}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/dataaccess/dao/SQLiteDaoFactory.html}{SQLiteDaoFactory}}
-	\newcommand{\RemoteDaoFactory}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/dataaccess/dao/RemoteDaoFactory.html}{RemoteDaoFactory}}
-
 	%service
 	\newcommand{\DatabaseAccess}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/dataaccess/service/DatabaseService.html}{DatabaseAccess}}
 	\newcommand{\BuildingAccess}{\href{http://leafswe.github.io/clips/com/leaf/clips/model/dataaccess/service/BuildingService.html}{BuildingAccess}}
@@ -196,13 +196,19 @@
 	\newcommand{\Application}{\href{http://developer.android.com/reference/android/app/Application.html}{Application}}
 	\newcommand{\Activity}{\href{http://developer.android.com/reference/android/app/Activity.html}{Activity}}
 	
+	\newcommand{\SQLiteOpenHelper}{\href{http://developer.android.com/reference/android/database/sqlite/SQLiteOpenHelper.html}{SQLiteOpenHelper}}
+	\newcommand{\SQLiteDatabase}{\href{http://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html}{SQLiteDatabase}}
+	\newcommand{\Cursor}{\href{http://developer.android.com/reference/android/database/Cursor.html}{Cursor}}
+	\newcommand{\ContentValue}{\href{http://developer.android.com/reference/android/content/ContentValues.html}{ContentValue}}
+	\newcommand{\BaseColumns}{\href{http://developer.android.com/reference/android/provider/BaseColumns.html}{BaseColumns}}
+	
 	
 	% comandi tipografici classi AltBeacon
 	\newcommand{\BeaconManager}{\href{https://altbeacon.github.io/android-beacon-library/javadoc/org/altbeacon/beacon/BeaconManager.html}{BeaconManager}}
 	\newcommand{\Beacon}{\href{https://altbeacon.github.io/android-beacon-library/javadoc/org/altbeacon/beacon/Beacon.html}{Beacon}}
 	\newcommand{\BootstrapNotifier}{\href{https://altbeacon.github.io/android-beacon-library/javadoc/org/altbeacon/beacon/startup/BootstrapNotifier.html}{BootstrapNotifier}}
 	\newcommand{\BeaconConsumer}{\href{https://altbeacon.github.io/android-beacon-library/javadoc/org/altbeacon/beacon/BeaconConsumer.html}{BeaconConsumer}}
-	\newcommand{\Region}{\href{https://altbeacon.github.io/android-beacon-library/javadoc/org/altbeacon/beacon/Region.html}{Regin}}
+	\newcommand{\Region}{\href{https://altbeacon.github.io/android-beacon-library/javadoc/org/altbeacon/beacon/Region.html}{Region}}
 	\newcommand{\BeaconParser}{\href{https://altbeacon.github.io/android-beacon-library/javadoc/org/altbeacon/beacon/BeaconParser.html}{BeaconParser}}
 	\newcommand{\DistanceCalculator}{\href{https://altbeacon.github.io/android-beacon-library/javadoc/org/altbeacon/beacon/BeaconParser.html}{DistanceCalculator}}
 	\newcommand{\RangeNotifier}{\href{https://altbeacon.github.io/android-beacon-library/javadoc/org/altbeacon/beacon/RangeNotifier.html}{RangeNotifier}}
@@ -211,6 +217,14 @@
 	\newcommand{\SimpleDirectedWeightGraph}{\href{http://jgrapht.org/javadoc/org/jgrapht/graph/SimpleDirectedWeightedGraph.html}{SimpleDirectedWeightGraph}}
 	\newcommand{\DefaultWeightedEdge}{\href{http://jgrapht.org/javadoc/org/jgrapht/graph/DefaultWeightedEdge.html}{DefaultWeightEdge}}
 	\newcommand{\DijkstraShorterPath}{\href{http://jgrapht.org/javadoc/org/jgrapht/alg/DijkstraShortestPath.html}{DijkstraShorterPath}}
+	
+	% comandi tipografici classi Gson
+	\newcommand{\JsonObject}{\href{http://static.javadoc.io/com.google.code.gson/gson/2.6.2/com/google/gson/JsonObject.html}{JsonObject}}
+	\newcommand{\JsonArray}{\href{http://static.javadoc.io/com.google.code.gson/gson/2.6.2/com/google/gson/JsonArray.html}{JsonArray}}
+	\newcommand{\JsonParser}{\href{http://static.javadoc.io/com.google.code.gson/gson/2.6.2/com/google/gson/JsonParser.html}{JsonParser}}
+	\newcommand{\Gson}{\href{http://static.javadoc.io/com.google.code.gson/gson/2.6.2/com/google/gson/Gson.html}{Gson}}
+	\newcommand{\GsonBuilder}{\href{http://static.javadoc.io/com.google.code.gson/gson/2.6.2/com/google/gson/GsonBuilder.html}{GsonBuilder}}
+	
 	
 		
 % -------------------

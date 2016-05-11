@@ -9,17 +9,27 @@
 	\subsection{Android SDK}
 		Framework di sviluppo per applicazioni Android.
 		\begin{itemize} 
-			\item Veesione SDK 24.4.1;
+			\item Versione SDK 24.4.1;
 			\item Versione build tools 23.0.3;
 			\item Versione target SDK 23;
 			\item Versione minima SDK 19.
 		\end{itemize}
+		Reperibile a partire dal seguente link:
+		\begin{quote}
+			\centering
+			\url{http://developer.android.com/sdk/older_releases.html}
+		\end{quote}
 		
 	\subsection{Java JDK}
 		Insieme di strumenti di sviluppo per applicazioni Java. 
 		\begin{itemize} 
 			\item Versione oraclejdk8.
 		\end{itemize}
+		Reperibile al seguente link:
+		\begin{quote}
+			\centering
+			\url{http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html}
+		\end{quote}
 		
 	\newpage
 	\subsection{Gradle}
@@ -29,28 +39,6 @@
 			\item Vesione 2.1.0.
 		\end{itemize}
 		
-		\subsubsection{Configurazione gradle Android Studio}
-			Per assicurarsi che la \textbf{build} di Gradle funzioni correttamente: in Android Studio cliccare \textbf{File} $\rightarrow$ \textbf{Settings} oppure premere \textbf{CTRL+ALT+S}:
-			
-		\begin{figure} [h]
-			\centering
-			\includegraphics[width=\textwidth]{img/settings}
-			\label{fig:Settings}
-			\caption{Aprire le impostazioni Android Studio}
-		\end{figure}
-		
-		\paragraph*{}
-			Nella nuova finestra aperta spostarsi su \textbf{Build, Execution, Deployment} $\rightarrow$ \textbf{Build Tools} $\rightarrow$ \textbf{Gradle}. Spuntare l'opzione \textbf{Use default gradle wrapper (raccommended)} come in figura \ref{fig:SetGradle}:
-			
-			\begin{figure} [h]
-				\centering
-				\includegraphics[width=\textwidth]{img/SetGradle}
-				\caption{Impostare Gradle correttamente}
-				\label{fig:SetGradle}
-			\end{figure}
-		
-		
-		\newpage		
 		\subsubsection{Contenuto file gradle}
 		Nel file gradle vengono dichiarate tutte le dipendenze da risolvere per poter testare, compilare ed eseguire l'applicazione. Di seguito sono riportate le dipendenze dichiarate per l'applicativo. 
 		\begin{itemize}

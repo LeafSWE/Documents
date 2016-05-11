@@ -63,7 +63,7 @@
 		
 		\begin{figure} [h]
 			\centering
-			\includegraphics[scale=0.4]{img/AprireProgetto}
+			\includegraphics[scale=0.5]{img/AprireProgetto}
 			\label{fig:AprireProgetto}
 			\caption{Aprire il progetto con Android Studio}
 		\end{figure}
@@ -73,20 +73,43 @@
 			
 		\begin{figure} [h]
 			\centering
-			\includegraphics[scale=0.34]{img/BuildGradle}
+			\includegraphics[width=\textwidth]{img/BuildGradleCut}
 			\caption{Build project info di Gradle}
-			\label{fig:BuildGradle}
+			\label{fig:BuildGradleCut}
 		\end{figure}
 		
 		\paragraph*{Nota:}
-			Nel caso in cui il processo di Gradle fallisca seguire le indicazioni nella sezione \ref{subsec:Gradle}:
+			Nel caso in cui il processo di Gradle fallisca, come in figura \ref{fig:GradleError}, seguire le indicazioni nella sezione successiva \ref{subsec:ConfigGradleAS}
 			
 		\begin{figure} [h]
 			\centering
 			\includegraphics[width=\textwidth]{img/GradleError}
-			\label{fig:GradleError}
 			\caption{Errore build project info di Gradle}
+			\label{fig:GradleError}
 		\end{figure}
+		
+		\newpage
+		\subsection{Configurazione Gradle in Android Studio}
+		\label{subsec:ConfigGradleAS}
+			Per assicurarsi che la \textbf{build} di Gradle funzioni correttamente: in Android Studio cliccare \textbf{File} $\rightarrow$ \textbf{Settings} oppure premere \textbf{CTRL+ALT+S}:
+			
+		
+		\begin{figure} [h]
+			\centering
+			\includegraphics[width=\textwidth]{img/settings}
+			\label{fig:Settings}
+			\caption{Aprire le impostazioni Android Studio}
+		\end{figure}
+		
+		\paragraph*{}
+			Nella nuova finestra aperta spostarsi su \textbf{Build, Execution, Deployment} $\rightarrow$ \textbf{Build Tools} $\rightarrow$ \textbf{Gradle}. Spuntare l'opzione \textbf{Use default gradle wrapper (raccommended)} come in figura \ref{fig:SetGradle}:
+			
+			\begin{figure} [h]
+				\centering
+				\includegraphics[width=\textwidth]{img/SetGradle}
+				\caption{Impostare Gradle correttamente}
+				\label{fig:SetGradle}
+			\end{figure}
 		
 
 \end{document}
