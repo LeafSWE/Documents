@@ -16,8 +16,8 @@
 				\item l'applicazione si accerta che i beacon rilevati siano pertinenti all'applicazione attraverso un confronto tra major rilevato e major dei beacon nel database locale;
 				\item se il beacon è riconosciuto ed esiste un match nel database locale:
 					\begin{itemize}
-						\item vengono costruiti concretamente gli oggetti e raccolti nell'oggetto \BuildingMap;
-						\item vengono mostrate all'utente semplici informazioni sull'edificio;
+						\item vengono costruiti concretamente gli oggetti dai dati nel database locale e raccolti nell'oggetto \BuildingMap;
+						\item vengono mostrate all'utente informazioni sull'edificio in cui si trova;
 					\end{itemize}
 				%\item se il beacon è riconosciuto e non esiste un match nel database locale:
 					%\begin{itemize}
@@ -183,7 +183,7 @@
 					\item[] con prefisso \textit{SQL} e suffisso \textit{Dao}:
 						\SQLiteBuildingDao, \SQLiteCategoryDao, \SQLiteEdgeDao, \SQLitePhotoDao, \SQLiteEdgeTypeDao, \SQLitePointOfInterestDao, \SQLiteRegionOfInterestDao, \SQLiteRoiPoiDao;
 						
-					\item[] con suffisso \textit{Table} e \textit{Contract}:
+					\item[] con suffisso \textit{Table} o \textit{Contract}:
 						\BuildingTable, \BuildingContract,
 					 \CategoryTable, \CategoryContract,
 					\EdgeTable, \EdgeContract,
