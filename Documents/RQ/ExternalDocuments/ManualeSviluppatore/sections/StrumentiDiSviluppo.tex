@@ -39,6 +39,29 @@
 			\item Vesione 2.1.0.
 		\end{itemize}
 		
+		\subsubsection{Configurazione gradle Android Studio}
+			Per assicurarsi che la \textbf{build} di Gradle funzioni correttamente: in Android Studio cliccare \textbf{File} $\rightarrow$ \textbf{Settings} oppure premere \textbf{CTRL+ALT+S}:
+			
+		\begin{figure} [h]
+			\centering
+			%\includegraphics[width=\textwidth]{img/settings}
+			\label{fig:Settings}
+			\caption{Aprire le impostazioni Android Studio}
+		\end{figure}
+		
+		\paragraph*{}
+			Nella nuova finestra aperta spostarsi su \textbf{Build, Execution, Deployment} $\rightarrow$ \textbf{Build Tools} $\rightarrow$ \textbf{Gradle}. Spuntare l'opzione \textbf{Use default gradle wrapper (raccommended)} come in figura \ref{fig:SetGradle}:
+			
+			\begin{figure} [h]
+				\centering
+				\includegraphics[width=\textwidth]{img/SetGradle}
+				\caption{Impostare Gradle correttamente}
+				\label{fig:SetGradle}
+			\end{figure}
+		
+		
+		\newpage		
+
 		\subsubsection{Contenuto file gradle}
 		Nel file gradle vengono dichiarate tutte le dipendenze da risolvere per poter testare, compilare ed eseguire l'applicazione. Di seguito sono riportate le dipendenze dichiarate per l'applicativo. 
 		\begin{itemize}
