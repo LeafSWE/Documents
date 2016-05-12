@@ -109,6 +109,16 @@
 					
 		
 		\subsubsection{Calcolo percorso}
+			La classe \NavigationManagerImp\ richiede il calcolo del percorso a \Navigator\ implementata dalla classe \NavigatorImp. Perché \NavigatorImp\ funzioni come si deve devono essere effettuate tali operazioni in questo ordine (non vengono scritti i parametri, si faccia riferimento alla javadoc):
+			\begin{enumerate}
+				\item eseguire la chiamata del metodo \lstinline|setGraph()| settare il grafo dell'edificio rilevato;
+				\item eseguire la chiamata del metodo \lstinline|calculatePath()| per far sì che \NavigatorImp\ calcoli il percorso dal punto in cui si è (\lstinline|startROI| )alla destinazione scelta (\lstinline|endPOI|)
+				\item utilizzare uno o entrambi i metodi che ritornano informazioni incapsulate in \ProcessedInformation:
+				\begin{itemize}
+					\item \lstinline|getAllInstruction()| per recuperare immediatamente tutte le informazioni per raggiungere la destinazione;
+					\item \lstinline|toNextRegion()| per recuperare solo l'informazione del prossimo punto da raggiungere, guidando l'utente con un passaggio alla volta.
+				\end{itemize}
+			\end{enumerate}
 		
 			\paragraph*{Componenti interne}
 			\begin{itemize}
@@ -168,20 +178,6 @@
 				
 			\end{itemize}
 						
-		
-		\subsubsection{Navigazione}
-		
-			\paragraph*{Componenti interne}
-			\begin{description}
-				\item[Package:] \verb|navigator|, \verb|graph|, \verb|edge|, \verb|vertex|, \verb|area|;
-				\item[Classi:] \verb||.
-			\end{description}
-			
-			\paragraph*{Componenti esterne}
-			\begin{description}
-				\item[Classi JGraphT:] \verb|SimpleDirectedWeightedGraph|, \verb|DijkstraPathFinder|, \verb|DefaultWeightedEdge|;
-				\item[Classi JDK:] \verb|Exception|.
-			\end{description}
 			
 		\subsubsection{Eccezioni e gestione}
 		\paragraph*{Componenti interne}
