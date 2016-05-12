@@ -32,53 +32,77 @@
 			
 		\newpage
 		\subsubsection{Interfaccia grafica}
+			\HomeViewImp\ implementa la vista principale che viene visualizzata subito dopo l'avvio dell'applicazione dopo la generazione della splash page da \MainActivity\ la classe di avvio dell'applicazione. \HomeView\ è legata alla componente del presenter \HomeActivity\ e può essere di due tipologie:
+			\begin{itemize}
+				\item vuota, ossia priva di informazioni dell'edificio. Ciò significa che il device non ha ancora rilevato un beacon riconosciuto dall'applicazione.
+				\item mostra le informazioni dell'edificio in cui è l'utente. Ciò significa che l'applicazione ha rilevato almeno un beacon riconosciuto dall'applicazione.
+			\end{itemize}
 		
 			\paragraph*{Componenti interne}
 			\begin{itemize}
 			
 				\item Package:
 				\begin{itemize}
-					\item[]
-					\item[] ...
+					\item[] \view;
 				\end{itemize}
 				
 				\item Interfacce e classi:
 				\begin{itemize}
-					\item[] ...
+					\item[] \HomeView, \HomeViewImp;
 				\end{itemize}
 				
 			\end{itemize}
 			
-			
 			\paragraph*{Componenti esterne}
-			
 			\begin{itemize}
 				\item Interfacce e classi SDK:
 				\begin{itemize}
-					\item[] ...
+					\item[] \Activity, \Toolbar, \TextView, \DrawerLayout, \TextView, \SearchView, \FloatingActionButton, \ListView, \ActionBarDrawerToggle.
 				\end{itemize}
 			\end{itemize}
 			
-			??? Immagine dell'applicazione nella home vuota
+			Nella figura \ref{fig:LocalizzazioneUtente-HomeView} si indicano i seguenti widget offerti dal kit Android SDK:
+				\begin{enumerate}
+					\item \SearchView;
+					\item \TextView;
+					\item \ListView;
+					\item \FloatingActionButton.
+				\end{enumerate}
 			
-			??? Immagine dell'applicazione nella home con le informazioni dell'edificio
+
+				\begin{figure}[h]
+					\centering
+					\includegraphics[width=\textwidth]{img/LocalizzazioneUtente-HomeView_}
+					\caption{HomeView - Screen con informazioni edificio}
+					\label{fig:LocalizzazioneUtente-HomeView}
+				\end{figure}
+				
+				%\begin{figure} [h]
+					%\centering
+					%\includegraphics[scale=0.19]{img/LocalizzazioneUtente-HomeView2}
+					%\caption{HomeView - Screen vuota}
+					%\label{fig:LocalizzazioneUtente-HomeView2}
+				%\end{figure}
+				
+				
 			
-			??? Immagini dell'applicazione nella home vuota con messaggio di avviso mappa non disponibile nel device
-			
+
+		\newpage	
 		\subsubsection{Presenter}
+			Il compito del presenter per questa funzionalità è affidato all'oggetto \HomeActivity\ che comunica con la vista \HomeViewImp\ attraverso l'interfaccia \HomeView. \HomeActivity\ comunica con le componenti del model \InformationManager\ attraverso la dependency injection.
 		
 			\paragraph*{Componenti interne}
 			\begin{itemize}
 			
 				\item Package:
 				\begin{itemize}
-					\item[]
-					\item[] ...
+					\item[] \view;
+					\item[] \presenter;
 				\end{itemize}
 				
 				\item Interfacce e classi:
 				\begin{itemize}
-					\item[] ...
+					\item[] \HomeActivity, \HomeView;
 				\end{itemize}
 				
 			\end{itemize}
@@ -89,15 +113,10 @@
 			\begin{itemize}
 				\item Interfacce e classi SDK:
 				\begin{itemize}
-					\item[] ...
+					\item[] \Activity, \InformationManager.
 				\end{itemize}
 			\end{itemize}
 			
-			\begin{itemize}[label={--}]
-				\item \verb|onCreate()| 
-				\item \verb|onDestroy()|
-				\item ...
-			\end{itemize}
 			
 		\subsubsection{Rilevamento beacon}
 			La classe \BeaconManagerAdapter\ estende un bind \Service\ (vedi appendice \ref{sec:FondamentiDiAndroid}) ed ha il compito di effettuare il ranging e il monitoring dei beacon circostanti. Il ranging è l'operazione svolta in background per riconoscere i beacon circostanti senza eccessiva precisione mentre il monitoring è l'operazione che segue in cui i beacon vengono invece rilevati con tutte le informazioni e con più precisamente.
