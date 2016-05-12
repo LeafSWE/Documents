@@ -25,49 +25,74 @@
 				\item l'interfaccia mostra all'utente le informazioni.
 			\end{enumerate}
 			
+		\newpage
 		\subsubsection{Interfaccia grafica}
+			La navigazione comprende diverse viste. Tutto parte dalla vista della \HomeView\ da cui è possibile selezionare la categoria della possibile destinazione, formalmente descritta come \textit{point of interest} (POI). Una volta selezionata la categoria l'utente passa alla vista \PoiCategoryViewImp\ che mostra  la lista di possibili destinazioni della categoria selezionata. Una volta selezionata la destinazione all'utente è mostrata una nuova vista che presenta tutti i passaggi necessari per raggiungerla. \NavigationView\ e \PoiCategoryView\ sono rispettivamente collegate alle classi che rappresentano il presenter \NavigationActivity\ e \PoiCategoryActivity.
 			
 			\paragraph*{Componenti interne}
 			\begin{itemize}
 			
 				\item Package:
 				\begin{itemize}
-					\item[]
-					\item[] ...
+					\item[] \view;
 				\end{itemize}
 				
 				\item Interfacce e classi:
 				\begin{itemize}
-					\item[] ...
+					\item[] \PoiCategoryView, \PoiCategoryViewImp, \NavigationView, \NavigationViewImp;
 				\end{itemize}
 				
 			\end{itemize}
 			
 			
 			\paragraph*{Componenti esterne}
-			
 			\begin{itemize}
 				\item Interfacce e classi SDK:
 				\begin{itemize}
-					\item[] ...
+					\item[] \AdapterView, \ArrayAdapter, \ListView;
 				\end{itemize}
 			\end{itemize}
+			
+			Nella figura \ref{fig:Navigazione-NavigationView} si indicano i seguenti widget offerti dal kit Android SDK :
+			\begin{enumerate}
+				\item \Toolbar;
+				\item \ListView.
+			\end{enumerate}
+		
+		\newpage	
+		\vfill
+			\begin{figure} [h]
+				\centering
+				\includegraphics[width=\textwidth]{img/Navigazione-NavigationView_}
+				\caption{Navigazione - Lista istruzioni percorso}
+				\label{fig:Navigazione-NavigationView}
+			\end{figure}
+			\vfill
+			\begin{figure} [h]
+				\centering
+				\includegraphics[scale=0.3]{img/Navigazione-PoiCategoryView_}
+				\caption{Navigazione - Scelta destinazione nella categoria \textit{Aule}}
+				\label{fig:Navigazione-PoiCategoryView}
+			\end{figure}
+		\vfill
 		
 		
+		\newpage
 		\subsubsection{Presenter}
+			Il compito del presenter per questa funzionalità è affidato all'oggetto \PoiCategoryActivity\ che comunica con la vista \PoiCategoryViewImp\ attraverso l'interfaccia \HomeView\ e \NavigationActivity\ che comunica con la vista \NavigationViewImp\ attraverso l'interfaccia \NavigationView\. \PoiCategoryActivity\ comunica con le componenti del model \InformationManager\ attraverso la dependency injection mentre \NavigationActivity\ comunica con le componenti del model \InformationManager\ e \NavigationManager\ sempre attraverso l'uso della dependency injection.
 		
 			\paragraph*{Componenti interne}
 			\begin{itemize}
 			
 				\item Package:
 				\begin{itemize}
-					\item[]
-					\item[] ...
+					\item[] \view;
+					\item[] \presenter;
 				\end{itemize}
 				
 				\item Interfacce e classi:
 				\begin{itemize}
-					\item[] ...
+					\item[] \NavigationActivity, \PoiCategoryActivity, \NavigationView, \PoiCategoryView, \NavigationAdapter;
 				\end{itemize}
 				
 			\end{itemize}
@@ -78,7 +103,7 @@
 			\begin{itemize}
 				\item Interfacce e classi SDK:
 				\begin{itemize}
-					\item[] \Activity ...
+					\item[] \Activity, \AppCompatActivity;
 				\end{itemize}
 			\end{itemize}
 					
