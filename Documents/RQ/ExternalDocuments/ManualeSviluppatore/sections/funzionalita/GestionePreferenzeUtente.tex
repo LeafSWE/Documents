@@ -3,7 +3,7 @@
 \begin{document}
 
 \subsection{Gestione delle preferenze}
-\label{subsec:Navigazione}
+\label{subsec:GestionPreferenze}
 
 		\subsubsection{Panoramica}
 			La funzionalità di gestione delle preferenze utente è resa disponibile dalle componenti dei package:
@@ -78,7 +78,7 @@
 					
 		
 		\subsubsection{Gestione delle preferenze di percorso}
-			La classe \SettingImp\ permette di impostare le preferenze di percorso utilizzando il metodo \textit{setPathPreference()} e passando come argomento l'oggetto di tipo \PathPreference che rappresenta la preferenza voluta. \SettingImp\ provvederà a rendere tale preferenza persistente utilizzando le classi \SharedPreference\ e \SharedPreferenceEditor.
+			La classe \SettingImp\ permette di impostare le preferenze di percorso utilizzando il metodo \lstinline|setPathPreference()| e passando come argomento l'oggetto di tipo \PathPreference che rappresenta la preferenza voluta. \SettingImp\ provvederà a rendere tale preferenza persistente utilizzando le classi \SharedPreference\ e \SharedPreferenceEditor.
 
 			\paragraph*{Componenti interne}
 			\begin{itemize}
@@ -107,7 +107,7 @@
 		
 		
 		\subsubsection{Gestione delle preferenze di fruizione delle informazioni}
-			La classe \SettingImp\ permette di impostare le preferenze di fruizione delle informazioni di navigazione utilizzando il metodo \textit{setInstructionPreference()} e passando come argomento l'oggetto di tipo \InstructionPreference che rappresenta la preferenza voluta. \SettingImp\ provvederà a rendere tale preferenza persistente utilizzando le classi \SharedPreference\ e \SharedPreferenceEditor.
+			La classe \SettingImp\ permette di impostare le preferenze di fruizione delle informazioni di navigazione utilizzando il metodo \lstinline|setInstructionPreference()| e passando come argomento l'oggetto di tipo \InstructionPreference\ che rappresenta la preferenza voluta. \SettingImp\ provvederà a rendere tale preferenza persistente utilizzando le classi \SharedPreference\ e \SharedPreferenceEditor.
 		
 			\paragraph*{Componenti interne}
 			\begin{itemize}
@@ -136,7 +136,7 @@
 						
 		
 		\subsubsection{Sblocco funzionalità sviluppatore}
-			La classe \SettingImp\ permette di sbloccare le funzionalità sviluppatore utilizzando il metodo \textit{unlockDeveloper()} e passando come argomento una stringa rappresentate il codice sviluppatore. \SettingImp\ validerà tale codice utilizzando la classe \DeveloperCodeManager utilizzando il metodo \textit{isValid()} e salvando in modo persistente tale sblocco utilizzando le classi \SharedPreference\ e \SharedPreferenceEditor.
+			La classe \SettingImp\ permette di sbloccare le funzionalità sviluppatore utilizzando il metodo \lstinline|unlockDeveloper()| e passando come argomento una stringa rappresentate il codice sviluppatore. \SettingImp\ validerà tale codice utilizzando la classe \DeveloperCodeManager\ utilizzando il metodo \lstinline|isValid()| e salvando in modo persistente tale sblocco utilizzando le classi \SharedPreference\ e \SharedPreferenceEditor.
 		
 			\paragraph*{Componenti interne}
 			\begin{itemize}

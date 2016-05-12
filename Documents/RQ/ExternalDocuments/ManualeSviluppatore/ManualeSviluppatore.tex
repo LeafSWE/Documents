@@ -4,15 +4,15 @@
 \usepackage{listings}
 \usepackage{enumitem}
 
-\include{listingsSettings}
-
+% comandi personalizzazioni
+\include{listingsSetting}
 \include{urlCommands}
 
 \titlepage{}
 
 \author{Eduard Bicego}
 \date{08/05/2016}
-\intestazioni{Manuale utente}
+\intestazioni{Manuale Sviluppatore}
 \pagenumbering{gobble}
 
 \begin{document}
@@ -67,11 +67,8 @@
 		\subfile{sections/ArchitetturaApplicazione}
 	\newpage
 		\subfile{sections/Funzionalita}
-	%\newpage
-		%\subfile{sections/MappaturaEdificio}
-			% parte di Json
 	\newpage
-		\subfile{appendices/Json}
+		\subfile{sections/PersistenzaDeiDati}
 		
 	% appendices
 	\newpage
