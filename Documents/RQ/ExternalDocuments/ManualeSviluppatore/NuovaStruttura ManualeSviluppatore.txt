@@ -1,4 +1,4 @@
-# NEW MANUALE SVILUPPATORE #
+# NEW MANUALE SVILUPPATORE#
 	Introduzione 
 		Panoramica generale
 		Riferimenti -> javadoc nostro e esterni
