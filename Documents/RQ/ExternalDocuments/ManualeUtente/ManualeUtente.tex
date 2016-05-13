@@ -5,6 +5,11 @@
 \usepackage{framed}
 \usepackage{subfig}
 \usepackage{sidecap}
+\usepackage[toc]{glossaries}
+
+\include{GlossarioMU/glos}
+
+\makeglossaries
 
 \titlepage{}
 
@@ -36,6 +41,8 @@
 		{\hfill\textbf{Distribuzione}} 			& Pubblica 		\\
 	\end{tabular}
 \end{titlepage}
+
+
 	
 	\newpage
 	\pagestyle{myfront}
@@ -63,7 +70,9 @@
 	\newpage
 		\subfile{sections/Applicazione}
 	
+	
 	% Glossario
+	\printglossary
 	% Indice
 
 		
