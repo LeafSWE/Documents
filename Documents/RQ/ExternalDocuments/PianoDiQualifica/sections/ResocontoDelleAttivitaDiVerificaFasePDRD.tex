@@ -198,14 +198,13 @@ All'interno di questa fase\g, secondo quanto riportato nel documento \pianodipro
 				\centering
 				\begin{tabular}{l * {2}{c}}
 					\midrule
-					Copertura requisiti obbligatori & ??? \\
+					Copertura requisiti obbligatori & 72,8 \% \\
 					\midrule
 				\end{tabular}
 				\caption{Copertura requisiti obbligatori al termine della fase PDRD}
 				\label{tab:copertura_requisiti_obbligatori}
 			\end{table}
-			
-			??? Esito 
+			I requisiti obbligatori non sono stati completamente implementati, perchè si sono riscontrati problemi durante il processo di codifica.L'origine di questi problemi può essere derivata dalla progettazione poco matura e dalla complessità del sistema Android\g.  
 			
 			\paragraph{Funzionalità desiderabili}
 				Il prodotto\g\ deve ricoprire tutte le funzionalità descritte nei requisiti desiderabili. Per monitorare lo stato di completamento delle funzionalità richieste, il gruppo ha pensato di rapportare i requisiti completati con quelli ancora da completare.
@@ -213,14 +212,13 @@ All'interno di questa fase\g, secondo quanto riportato nel documento \pianodipro
 				\centering
 				\begin{tabular}{l * {2}{c}}
 					\midrule
-					Copertura requisiti desiderabili & ??? \\
+					Copertura requisiti desiderabili & 44,4 \% \\
 					\midrule
 				\end{tabular}
 				\caption{Copertura requisiti desiderabili al termine della fase PDRD}
 				\label{tab:copertura_requisiti_desiderabili}
 			\end{table}
-			
-			??? Esito
+			Sono stati implementati circa la metà dei requisiti desiderabili e per questo l'esito risulta negativo. I motivi di questo risultato possono essere ricondotti ai medesimi citati in precedenza.
 			
 			\paragraph{Manutenibilità e Comprensibilità del codice}
 				Il prodotto\g\ deve avere codice manutenibile e non deve generare incomprensioni al suo interno. Per questo si tiene conto della sua complessità e della sua lunghezza. Codice poco manutenibile può portare all'abbandono dello sviluppo del prodotto\g.
@@ -230,20 +228,19 @@ All'interno di questa fase\g, secondo quanto riportato nel documento \pianodipro
 					\toprule
 					\textbf{Metrica} & \textbf{Valore} & \textbf{Esito} \\
 					\midrule
-					Numero di statement per metodo & ??? & ??? \\
-					Numero di parametri per metodo & ??? & ??? \\
-					Numero di campi dati per classe & ??? & ??? \\
-					Grado di accoppiamento & ??? & ??? \\
-					Cyclomatic number & ??? & ??? \\
-					Adequacy of variable names & ??? & ??? \\
-					Average Module Size & ??? & ??? \\
+					Numero di statement per metodo & max 53 & Accettabile \\
+					Numero di parametri per metodo & max 9 & Accettabile \\
+					Numero di campi dati per classe & max 13 & Accettabile \\
+					Grado di accoppiamento medio & 9,41 & Accettabile \\
+					Cyclomatic number (medio) & 1,46 & Ottimale \\
+					Adequacy of variable names & 100\% & Ottimale \\
+					Average Module Size & 16,69 & Ottimale \\
 					\midrule
 				\end{tabular}
-				\caption{Numero di statement per metodo durante la fase PDRD}
+				\caption{Risultati delle metriche per il codice durante la fase PDRD}
 				\label{tab:numero_statement_metodo}
 			\end{table}
-			
-			??? Esito
+			La qualità del codice secondo le metriche prese in considerazione risulta essere relativamente buona. Nelle prime tre metriche il dato preso in considerazione è il massimo valore riscontrato, mentre nelle altre si usa il valore medio. Dalla penultima metrica si nota che la codifica segue di pari passo la progettazione e non vi sono particolari incongruenze tra le due. Si noti inoltre che ci sono alcuni valori che tendono al limite dell'accettabilità e sono: il "numero di statement per metodo", il "numero di parametri per metodo"  e il "grado di accoppiamento". Essi dovranno essere monitorati durante le prossime fasi.  
 			
 			\paragraph{Copertura dei test richiesti}
 				Il prodotto\g\ deve essere testato in ogni sua parte per garantirne il funzionamento. I test presi in considerazioni sono quelli che testano le funzionalità previste dai requisiti.
@@ -251,14 +248,13 @@ All'interno di questa fase\g, secondo quanto riportato nel documento \pianodipro
 				\centering
 				\begin{tabular}{l * {2}{c}}
 					\midrule
-					Test passati & ??? \\
+					Test passati & 24,5\% \\
 					\midrule
 				\end{tabular}
 				\caption{Test passati al termine della fase PDRD}
 				\label{tab:copertura_test}
 			\end{table}
-			
-			??? Esito
+			L'esito dato da questa metrica risulta negativo, perchè i test presi in considerazione riguardano tutte le tipologie. Al momento sono implementati e superati con successo circa il 98\% dei test di unità. 
 			
 			\paragraph{Robustezza}
 				Il prodotto\g\ deve essere robusto e non deve interrompere il suo funzionamento in seguito al verificarsi di situazioni anomale\g. Il prodotto\g\ deve essere in grado inoltre di gestire le situazioni di errore.
@@ -266,14 +262,13 @@ All'interno di questa fase\g, secondo quanto riportato nel documento \pianodipro
 				\centering
 				\begin{tabular}{l * {2}{c}}
 					\midrule
-					Failure avoidance & ??? \\
+					Failure avoidance & 80\% \\
 					\midrule
 				\end{tabular}
 				\caption{Failure avoidance al termine della fase PDRD}
 				\label{tab:failure_avoidance}
 			\end{table}
-			
-			??? Esito
+			Il prodotto in seguito ai vari stress test eseguiti riesce ad evitare nel 80\% dei casi un'interruzione critica. L'esito risulta pertanto accettabile. 
 			
 			\paragraph{Funzionamento senza interruzioni}
 				Il prodotto\g\ deve garantire un funzionamento senza interruzioni. Questo livello è considerato ottimale ma secondo la metrica scelta possono esserci al massimo il 20\% di interruzioni dovute al verificarsi di situazioni anomale\g.
@@ -281,14 +276,13 @@ All'interno di questa fase\g, secondo quanto riportato nel documento \pianodipro
 				\centering
 				\begin{tabular}{l * {2}{c}}
 					\midrule
-					Breakdown avoidance & ??? \\
+					Breakdown avoidance & 80\% \\
 					\midrule
 				\end{tabular}
 				\caption{Breakdown avoidance al termine della fase PDRD}
-				\label{tab:breackdown_avoidance}
+				\label{tab:breakdown_avoidance}
 			\end{table}	
-			
-			??? Esito
+			Il prodotto è in grado di gestire nel 80\% dei casi delle situazioni anomale e garantire il continuo e corretto funzionamento. Il valore riscontrato risulta pertanto accettabile.
 				
 	
 \end{appendices}
