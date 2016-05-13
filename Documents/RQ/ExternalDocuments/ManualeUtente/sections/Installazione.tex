@@ -4,25 +4,74 @@
 \section{Installazione}
 	Di seguito si elencano i passaggi necessari per la corretta installazione dell'applicazione nello smartphone.
 	
-		\subsection{Disattivare i controlli di sicurezza}
-			???
 
-		\subsection{Download e installazione applicazione}		
+		\subsection{Download applicazione}
+			\begin{enumerate}
+				\item dal proprio smartphone aprire il browser preferito;
+				\item digitare correttamente il seguente indirizzo web: \\
+					\url{http://leafswe.github.io/download/}
+				\item premere il pulsante \textbf{download} come in figura \ref{fig:DownloadApplicazioneSito};
+				\item accettare il download;
+			\end{enumerate}
+			
+			\begin{figure} [h]
+				\centering
+				\includegraphics[width=\textwidth]{img/DownloadApplicazioneSito}
+				\caption{Pagina del sito da cui effettuare il download dell'applicazione}
+				\label{fig:DownloadApplicazioneSito}
+			\end{figure}
+		
+		\newpage
+		\subsection{Sblocco controlli di sicurezza per installare l'applicazione}
+		
+			\begin{framed}
+				\textbf{Nota:} l'applicazione è sperimentale per cui il processo d'installazione non è agevolato da nessun Market Place (per esempio Google Play) e necessita di passaggi in più rispetto all'installazione di una normale applicazione.
+			\end{framed}
+		
+			\begin{enumerate}
+				\item selezionare il file \lstinline|clips.apk| scaricato;
+				\item il sistema ti avviserà che l'installazione è bloccata per applicazioni con fonti non certificate (figira \ref{fig:InstallazioneBloccata}). Premi \textit{Impostazioni} per andare nelle impostazioni del tuo smartphone;
+				
+				\begin{figure}[h]
+					\centering
+					\includegraphics[scale=0.2]{img/InstallazioneBloccata}
+					\caption{Avviso del sistema per l'installazione di applicazioni non certificate}
+					\label{fig:InstallazioneBloccata}
+				\end{figure}
+				
+				\item dalla schermata \textit{Sicurezza} aperta seleziona \textit{Sorgenti sconosciute} come in figura \ref{fig:ImpostazioniPermessi};
+				\item nella finestra di dialogo aperta (figura \ref{fig:SorgentiSconosciute}) selezionare \textit{OK};
+				\end{enumerate}	
+				
+				\begin{figure} [h]
+					\centering
+					\subfloat[][Schermata delle impostazioni di sicurezza del proprio smartphone]
+					{\includegraphics[width=.3\textwidth]{img/ImpostazioniPermessi}
+					\label{fig:ImpostazioniPermessi}} \quad
+					\hspace{1.5cm}
+					\subfloat[][Finestra di accettazione installazione di applicazioni da sorgenti sconosciute]
+					{\includegraphics[width=.3\textwidth]{img/SorgentiSconosciute}
+					\label{fig:SorgentiSconosciute}} \\
+					
+					%\caption{}
+					%\label{fig:Sicurezza}
+				\end{figure}				
+				
+		\newpage
+		\subsection{Installazione applicazione}		
+		
 		\begin{enumerate}
-			\item dal proprio smartphone aprire il browser preferito;
-			\item digitare correttamente il seguente indirizzo web: \\
-				\url{http://leafswe.github.io/download/}
-			\item premere il pulsante \textbf{download} come in figura \ref{fig:DownloadApplicazioneSito};
-			\item accettare il download;
-			\item selezionare il file \lstinline|clips.apk| scaricato;
 			\item accettare che l'applicazione sia installata nel proprio dispositivo.
 		\end{enumerate}
 		
-		\begin{figure} [h]
-			\centering
-			\includegraphics[width=\textwidth]{img/DownloadApplicazioneSito}
-			\caption{Pagina del sito da cui effettuare il download dell'applicazione}
-			\label{fig:DownloadApplicazioneSito}
-		\end{figure}
+			\vfill
+			\begin{figure} [h]
+				\centering
+				\includegraphics[scale=0.3]{img/Installa_}
+				\caption{Schermata di installazione dell'applicazione}
+				\label{fig:Installa}
+			\end{figure}
+			\vfill
+		
 		
 \end{document}
