@@ -6,16 +6,16 @@
 	Nel caso in cui si voglia utilizzare o estendere il codice di CLIPS si consiglia di seguire i passi di seguito descritti.
 
 	\subsection{IDE}
-		È consigliato aprire ed eventualmente modificare il progetto con l'IDE Android Studio, ossia l'IDE utilizzato ufficialmente nello sviluppo. La versione con cui è stato sviluppato il progetto è la 1.5.1. Questa sezione farà riferimento a tale versione.
+		È consigliato aprire ed eventualmente modificare il progetto con l'IDE \gls{Android Studio}, ossia l'IDE utilizzato ufficialmente nello sviluppo. La versione con cui è stato sviluppato il progetto è la 1.5.1. Questa sezione farà riferimento a tale versione.
 		
-		Android Studio è disponibile gratuitamente al seguente link:
+	 \gls{Android Studio} è disponibile gratuitamente al seguente link:
 		\begin{quote}
 			\centering
 			\url{http://developer.android.com/sdk/index.html}
 		\end{quote}
 		
 		\paragraph*{Nota:} 
-			Il progetto non è stato provato su Android Studio con versioni successive o precedenti, non dovrebbe portare elevate differenze per le versioni successive.
+			Il progetto non è stato provato su \gls{Android Studio} con versioni successive o precedenti, non dovrebbe portare elevate differenze per le versioni successive.
 		
 		
 		
@@ -58,18 +58,19 @@
 			
 		
 	\newpage	
-	\subsection{Aprire il progetto con Android Studio}
-		Aprire Android Studio e selezionare \textbf{Opening an existing Android Studio project}:
+	\subsection{Aprire il progetto con \gls{Android} Studio}
+		Aprire \gls{Android Studio} e selezionare \textbf{Opening an existing \gls{Android Studio}\ 
+project}:
 		
 		\begin{figure} [h]
 			\centering
 			\includegraphics[scale=0.5]{img/AprireProgetto}
-			\caption{Aprire il progetto con Android Studio}
+			\caption{Aprire il progetto con \gls{Android} Studio}
 			\label{fig:AprireProgetto}
 		\end{figure}
 		
 		\paragraph*{}
-			Selezionare, seguendo il giusto path, la cartella del progetto \verb|clips-master|. Attendere la \textbf{Build project info} di Gradle. Anche quando Android Studio è aperto attendere la conclusione del processo di Gradle:
+			Selezionare, seguendo il giusto path, la cartella del progetto \verb|clips-master|. Attendere la \textbf{Build project info} di Gradle. Anche quando \gls{Android Studio} è aperto attendere la conclusione del processo di Gradle:
 			
 		\begin{figure} [h]
 			\centering
@@ -89,20 +90,20 @@
 		\end{figure}
 		
 		\newpage
-		\subsection{Configurazione Gradle in Android Studio}
+		\subsection{Configurazione Gradle in \gls{Android} Studio}
 		\label{subsec:ConfigGradleAS}
-			Per assicurarsi che la \textbf{build} di Gradle funzioni correttamente: in Android Studio cliccare \textbf{File} $\rightarrow$ \textbf{Settings} oppure premere \textbf{CTRL+ALT+S}:
+			Per assicurarsi che la \textbf{build} di Gradle funzioni correttamente: in \gls{Android Studio} cliccare \textbf{File} $\rightarrow$ \textbf{Settings} oppure premere \textbf{CTRL+ALT+S}:
 			
 		
 		\begin{figure} [h]
 			\centering
 			\includegraphics[width=\textwidth]{img/settings}
-			\caption{Aprire le impostazioni Android Studio}
+			\caption{Aprire le impostazioni \gls{Android} Studio}
 			\label{fig:Settings}
 		\end{figure}
 		
 		\paragraph*{}
-			Nella nuova finestra aperta spostarsi su \textbf{Build, Execution, Deployment} $\rightarrow$ \textbf{Build Tools} $\rightarrow$ \textbf{Gradle}. Spuntare l'opzione \textbf{Use default gradle wrapper (raccommended)} come in figura \ref{fig:SetGradle}:
+			Nella nuova finestra aperta spostarsi su \textbf{Build, Execution, Deployment} $\rightarrow$ \textbf{Build Tools} $\rightarrow$ \textbf{Gradle}. Spuntare l'opzione \textbf{Use default gradle \gls{Wrapper} (raccommended)} come in figura \ref{fig:SetGradle}:
 			
 			\begin{figure} [h]
 				\centering

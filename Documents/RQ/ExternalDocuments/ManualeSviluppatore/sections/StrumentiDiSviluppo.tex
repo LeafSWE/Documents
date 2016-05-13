@@ -3,11 +3,11 @@
 \begin{document}
 \section{Strumenti di sviluppo}
 	
-	Per la generazione del progetto sono necessari i kit di sviluppo Andrid SDK e Java JDK installate nel proprio computer, inoltre la generazione dell'applicativo con risoluzione delle dipendenze è automatica grazie all'uso di Gradle.
-	Di seguito si indicano le versioni dei kit di sviluppo utilizzate nel progetto e la descrizione del file gradle e le istruzioni di come eseguirlo nell'ambiente di sviluppo Android Studio.
+	Per la generazione del progetto sono necessari i kit di sviluppo Andrid SDK e \gls{Java} JDK installate nel proprio computer, inoltre la generazione dell'applicativo con risoluzione delle dipendenze è automatica grazie all'uso di Gradle.
+	Di seguito si indicano le versioni dei kit di sviluppo utilizzate nel progetto e la descrizione del file gradle e le istruzioni di come eseguirlo nell'ambiente di sviluppo \gls{Android Studio}.
 
 	\subsection{Android SDK}
-		Framework di sviluppo per applicazioni Android.
+	 \gls{Framework} di sviluppo per applicazioni \gls{Android}.
 		\begin{itemize} 
 			\item Versione SDK 24.4.1;
 			\item Versione build tools 23.0.3;
@@ -21,7 +21,7 @@
 		\end{quote}
 		
 	\subsection{Java JDK}
-		Insieme di strumenti di sviluppo per applicazioni Java. 
+		Insieme di strumenti di sviluppo per applicazioni \gls{Java}. 
 		\begin{itemize} 
 			\item Versione oraclejdk8.
 		\end{itemize}
@@ -34,7 +34,7 @@
 	\newpage
 	\subsection{Gradle}
 	\label{subsec:Gradle}
-		Sistema open source per l'automazione dello sviluppo basato su Groovy.
+		Sistema \gls{open source} per l'automazione dello sviluppo basato su Groovy.
 		\begin{itemize} 
 			\item Vesione 2.1.0.
 		\end{itemize}
@@ -61,7 +61,7 @@ buildscript {
     }
 }
 			\end{lstlisting}
-			\item Dichiarazione della configurazione di Android utilizzata
+			\item Dichiarazione della configurazione di \gls{Android} utilizzata
 			\lstset{language=Java}
 			\begin{lstlisting}
 android {
@@ -92,7 +92,8 @@ android {
 			\end{lstlisting}
 			\item Dichiarazione delle dipendenze verso pacchetti esterni utilizzati
 				\begin{itemize}
-					\item Dipendenze da componenti Android		
+					\item Dipendenze da componenti \gls{Android}\ 
+	
 						\lstset{language=Java}
 						\begin{lstlisting}
 compile 'com.android.support:appcompat-v7:23.3.0'
