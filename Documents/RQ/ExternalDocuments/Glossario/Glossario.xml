@@ -1,6 +1,46 @@
 <glossario>
 	<voce>
 		<termine>
+			Schema ER (Modello entity-relationship)
+		</termine>
+		<descrizione>
+			Modello per la rappresentazione concettuale dei dati ad un alto livello di astrazione. È spesso utilizzato per la progettazione di basi di dati
+		</descrizione>
+	</voce>
+	<voce>
+		<termine>
+			Lint
+		</termine>
+		<descrizione>
+			Strumento di analisi statica del codice implementato nella piattaforma Android Studio. Esso permette attraverso un'approfondita analisi del codice scritto di segnalare e scovare problemi e possibili fonti di errori
+		</descrizione>
+	</voce>
+	<voce>
+		<termine>
+			FindBugs
+		</termine>
+		<descrizione>
+			Strumento di analisi statica del codice. Esso permette attraverso un'approfondita analisi del codice scritto di segnalare e scovare problemi e possibili fonti di errori
+		</descrizione>
+	</voce>
+	<voce>
+		<termine>
+			Travis CI
+		</termine>
+		<descrizione>
+			Strumento di intergrazione continua che può essere programmato semplicemente attraverso un file che ad ogni aggiornamento del repository effettua la compilazione del progetto e ne esegue i test segnalando tramite strumenti di notifica, ad esempio via mail, i risultati
+		</descrizione>
+	</voce>
+	<voce>
+		<termine>
+			Marketplace
+		</termine>
+		<descrizione>
+			Mercato online in cui sono raggruppate servizi, come applicazioni e programmi ed è possibile scaricarli ed installarli
+		</descrizione>
+	</voce>
+	<voce>
+		<termine>
 			Astah
 		</termine>
 		<descrizione>
