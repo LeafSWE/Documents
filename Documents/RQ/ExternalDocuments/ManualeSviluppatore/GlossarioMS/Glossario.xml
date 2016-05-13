@@ -1,18 +1,42 @@
 <glossario>
 	<voce>
 		<termine>
-			Marketplace
+			Schema ER (Modello entity-relationship)
 		</termine>
 		<descrizione>
-			Mercato online in cui sono raggruppate servizi, come applicazioni e programmi ed è possibile scaricarli ed installarli
+			Modello per la rappresentazione concettuale dei dati ad un alto livello di astrazione. È spesso utilizzato per la progettazione di basi di dati
 		</descrizione>
 	</voce>
 	<voce>
 		<termine>
-			Android Studio
+			Lint
 		</termine>
 		<descrizione>
-			IDE di riferimento per lo sviluppo di applicazioni per Android
+			Strumento di analisi statica del codice implementato nella piattaforma Android Studio. Esso permette attraverso un'approfondita analisi del codice scritto di segnalare e scovare problemi e possibili fonti di errori
+		</descrizione>
+	</voce>
+	<voce>
+		<termine>
+			FindBugs
+		</termine>
+		<descrizione>
+			Strumento di analisi statica del codice. Esso permette attraverso un'approfondita analisi del codice scritto di segnalare e scovare problemi e possibili fonti di errori
+		</descrizione>
+	</voce>
+	<voce>
+		<termine>
+			Travis CI
+		</termine>
+		<descrizione>
+			Strumento di intergrazione continua che può essere programmato semplicemente attraverso un file che ad ogni aggiornamento del repository effettua la compilazione del progetto e ne esegue i test segnalando tramite strumenti di notifica, ad esempio via mail, i risultati
+		</descrizione>
+	</voce>
+	<voce>
+		<termine>
+			Marketplace
+		</termine>
+		<descrizione>
+			Mercato online in cui sono raggruppate servizi, come applicazioni e programmi ed è possibile scaricarli ed installarli
 		</descrizione>
 	</voce>
 	<voce>
@@ -624,7 +648,14 @@
 GUI (Graphical UI), ossia un'interfaccia composta da oggetti grafici
 		</descrizione>
 	</voce>
-	
+	<voce>
+		<termine>
+			Android Studio
+		</termine>
+		<descrizione>
+			IDE di riferimento per lo sviluppo di applicazioni per Android
+		</descrizione>
+	</voce>
 	<voce>
 		<termine>
 			JUnit

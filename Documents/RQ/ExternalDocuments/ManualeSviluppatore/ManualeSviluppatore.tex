@@ -9,9 +9,9 @@
 \usepackage{subfig}
 \usepackage[toc]{glossaries}
 
-%\include{GlossarioMU/glos}
+\include{GlossarioMS/glos}
 
-%\makeglossaries
+\makeglossaries
 
 % comandi personalizzazioni
 \include{listingsSetting}
@@ -73,6 +73,8 @@
 	\newpage
 		\subfile{sections/ComponentiEsterneUtilizzate}
 	\newpage
+		\subfile{sections/MappaturaEdificio}
+	\newpage
 		\subfile{sections/ArchitetturaApplicazione}
 	\newpage
 		\subfile{sections/Funzionalita}
@@ -84,7 +86,8 @@
 		\subfile{appendices/FondamentiDiAndroid}
 
 	% Glossario
-	%\printglossary
+	\newpage
+		\printglossary
 
 		
 	\label{LastPage}
