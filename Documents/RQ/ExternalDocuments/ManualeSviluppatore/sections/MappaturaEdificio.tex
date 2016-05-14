@@ -113,5 +113,24 @@
 			\item assegnare ad ogni \gls{beacon} un Minor in cui le premi due cifre identificano il numero del piano e le ultime tre identificano la ROI in quel piano;
 			\item inserire nel server delle mappe tali informazioni. Per ulteriori informazioni su quest'ultimo punto si rimanda alla sezione \ref{sec:PersistenzaDeiDati}.
 		\end{enumerate}
+		
+	\subsection{Area sviluppatore}
+	Nell'applicazione è stata inclusa un'\textbf{area sviluppatore} accessibile solo tramite password. Tale area ha lo scopo di facilitare la raccolta di dati e mostrarli tramite l'interfaccia grafica dell'applicazione. È stato fatto ciò per consentire di effettuare più facilmente e velocemente test sul campo durante la \textbf{mappatura di un edificio}. Di seguito si elencano i passaggi necessari per accedervi e le funzionalità offerte:
+	\begin{enumerate}
+		\item dal menu dell'applicazione selezionare \textbf{Area sviluppatore};
+		\item inserire il codice sviluppatore sottostante:
+		\begin{quote}
+			\centering
+			\verb|miriade|
+		\end{quote}
+		\item effettuare l'operazione desiderata:
+		\begin{itemize}
+			\item visualizzazione dettagliata dei log salvati;
+			\item avvio di un nuovo log;
+			\item rimozione di un log salvato.
+		\end{itemize}
+	\end{enumerate}		
+	
+	Per approfondire le possibilità offerte da tale funzionalità si rimanda alla consultazione del \textit{Manuale Utente}.
 
 \end{document}
