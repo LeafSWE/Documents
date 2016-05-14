@@ -62,7 +62,7 @@ L'oggetto di tipo \verb|BeaconManagerAdapter| è un service\g\ e implementa il l
 	\newpage
 	\subsection{Avvio della bussola}
 	
-		Il diagramma in figura \ref{StartCompass} rappresenta il flusso generato dall'oggetto della classe \verb|NavigationManagerPresenter|, esso effettua due operazioni principali:
+		Il diagramma in figura \ref{fig:StartCompass} rappresenta il flusso generato dall'oggetto della classe \verb|NavigationManagerPresenter|, esso effettua due operazioni principali:
 		\begin{itemize}
 			\item Creazione di \verb|NavigationManager| che causa la creazione dell'oggetto \verb|Compass| a cui viene passato come parametro del costruttore il riferimento a \verb|SensorManager|, classe della libreria Android che permette di recuperare i riferimenti ai sensori del device attraverso la chiamata del metodo \verb|getDefaultSensor(typeSensor)|. \verb|Compass| per calcolare l'orientamento del device necessita dei dati provenienti dal magnetometro e accellerometro.
 			\item \verb|startCompass()| invece accende la bussola \verb|Compass| attraverso la classe \verb|NavigationManager| il quale chiama il metodo \verb|registerListener()|, tale metodo tramite il riferimento a \verb|sensorManager| chiama il metodo \verb|registerListener()| e imposta l'oggetto \verb|compass| observer dei sensori.
@@ -72,13 +72,25 @@ L'oggetto di tipo \verb|BeaconManagerAdapter| è un service\g\ e implementa il l
 		\begin{figure} [h]
 			\includegraphics[width=\textwidth]{diagrams/StartCompass}
 			\caption{Diagramma di sequenza - Avvio della bussola}
-			\label{StartCompass}
+			\label{fig:StartCompass}
+		\end{figure}
+		
+	\newpage
+	\subsection{Caricamento della mappa dal database}
+		
+		Il diagramma in figura \ref{fig:LoadMap} rappresenta il flusso generato dalla chiamata del metodo \verb|onReceive()| la quale è invocata solo quando è avvenuta la ricezione dei beacon nelle vicinanze attraverso l'uso degli \verb|Intent| offerti dalla libreria SDK Android. Quando la classe \verb|InformationManagerImp| riceve i beacon\g\ chiama il metodo privato \verb|loadMap()| preleva il primo beacon\g, ossia quello rilevato con la potenza di segnale più alta, dalla \verb|PriorityQueue| attraverso la chiamata al metodo \verb|peek()|. Una volta estratto il beacon\g\ si preleva il Major\g\ da esso e si chiama il metodo \verb|isBuildingMapPresent()| della classe \verb|BuidingService| per capire se la mappa è disponibile, se questa lo è viene invocato il metodo \verb|findBuildingMapByMajor()| che restituisce la mappa che viene settata in un campo dati della classe \verb|InformationManagerImp|.
+		
+		\begin{figure} [h]
+			\centering
+			\includegraphics[width=\textwidth]{diagrams/LoadMap}
+			\caption{Diagramma di sequenza - Caricamento della mappa dal database}
+			\label{fig:LoadMap}
 		\end{figure}
 		
 	\newpage
 	\subsection{Costruzione di oggetti-Table da Json}
 	
-		Il diagramma in figura \ref{FromJsonToEdgeTable} rappresenta il flusso generato dall'oggetto della classe \verb|RemoteEdgeDao| per la costruzione di un oggetto \verb|EdgeTable| a partire da un oggetto \verb|JsonObject|:
+		Il diagramma in figura \ref{fig:FromJsonToEdgeTable} rappresenta il flusso generato dall'oggetto della classe \verb|RemoteEdgeDao| per la costruzione di un oggetto \verb|EdgeTable| a partire da un oggetto \verb|JsonObject|:
 		\begin{itemize}
 			\item viene creato un oggetto \verb|Gson|. Tale oggetto permette di gestire l'oggetto \verb|JsonObject| passato;
 			\item su questo oggetto viene invocato il metodo \verb|fromJson()|, passando come parametri l'oggetto \verb|JsonObject| e l'oggetto \verb|EdgeTable.class|. In questo modo viene creato l'oggetto \verb|EdgeTable|, sfruttando il fatto che l'oggetto \verb|JsonObject| è stato creato utilizzando gli stessi nomi per i campi dato di tale oggetto e i campi dato dell'oggetto \verb|EdgeTable|.
@@ -88,7 +100,7 @@ L'oggetto di tipo \verb|BeaconManagerAdapter| è un service\g\ e implementa il l
 		\begin{figure} [h]
 			\includegraphics[width=\textwidth]{diagrams/FromJsonToEdgeTable}
 			\caption{Diagramma di sequenza - Costruzione di EdgeTable da Json}
-			\label{FromJsonToEdgeTable}
+			\label{fig:FromJsonToEdgeTable}
 		\end{figure}
 
 		\vfill	
@@ -97,7 +109,7 @@ L'oggetto di tipo \verb|BeaconManagerAdapter| è un service\g\ e implementa il l
 		
 		Tale costruzione è analoga per oggetti \verb|BuildingTable|, \verb|CategoryTable|, \verb|EdgeTypeTable|, \verb|PhotoTable|, \verb|PointOfInterestTable| e \verb|RegionOfInterestTable|, mentre è differente per la classe \verb|RoiPoiTable|. In questo caso infatti non è stato possibile scaricare un file JSON che abbia dei campi dato con lo stesso nome dei campi dato di \verb|RoiPoiTable|. 
 		
-		Il diagramma in figura \ref{FromJsonToRoiPoiTable} rappresenta la costruzione di un oggetto \verb|RoiPoiTable| a partire da un oggetto \verb|JsonObject|:
+		Il diagramma in figura \ref{fig:FromJsonToRoiPoiTable} rappresenta la costruzione di un oggetto \verb|RoiPoiTable| a partire da un oggetto \verb|JsonObject|:
 		\begin{itemize}
 			\item viene creato un oggetto \verb|GsonBuilder|. Tale oggetto è necessario per la costruzione di un oggetto a partire da un oggetto \verb|JsonObject| che abbia campi dato con nome differente dall'oggetto da costruire;
 			\item viene creato un oggetto di una classe anonima che implementa la classe \verb|JsonDeserializer<RoiPoiTable>|. In tale classe viene fatto l'override del metodo \verb|deserialize()| definendo come un oggetto \verb|RoiPoiTable| può essere costruito sfruttando i campi dati dell'oggetto \verb|JsonObject|;
@@ -109,13 +121,13 @@ L'oggetto di tipo \verb|BeaconManagerAdapter| è un service\g\ e implementa il l
 		\begin{figure} [p]
 			\includegraphics[width=\textwidth]{diagrams/FromJsonToRoiPoiTable}
 			\caption{Diagramma di sequenza - Costruzione di RoiPoiTable da Json}
-			\label{FromJsonToRoiPoiTable}
+			\label{fig:FromJsonToRoiPoiTable}
 		\end{figure}
 		
 	\newpage
 	\subsection{Modifica delle preferenze}
 	
-		Il diagramma in figura \ref{SetPreference} rappresenta il flusso generato dall'oggetto della classe \verb|SettingImp| per la modifica delle preferenze sul percorso:
+		Il diagramma in figura \ref{fig:SetPreference} rappresenta il flusso generato dall'oggetto della classe \verb|SettingImp| per la modifica delle preferenze sul percorso:
 		\begin{itemize}
 			\item per prima viene aggiornato il campo dati dell'oggetto \verb|SettingImp|, eguagliandolo all'oggetto \verb|PathPreference| passato;
 			\item viene recuperata un'istanza di \verb|SharedPreferences.Editor| per poter aggiornare le preferenze salvate nelle \verb|SharedPreferences|;
@@ -125,9 +137,9 @@ L'oggetto di tipo \verb|BeaconManagerAdapter| è un service\g\ e implementa il l
 		\begin{figure} [h]
 			\includegraphics[width=\textwidth]{diagrams/SetPreference}
 			\caption{Diagramma di sequenza - Modifica delle preferenze}
-			\label{SetPreference}
+			\label{fig:SetPreference}
 		\end{figure}
 		
 		%\newpage
-		
+
 \end{document}
