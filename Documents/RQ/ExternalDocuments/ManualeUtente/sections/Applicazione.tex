@@ -5,7 +5,7 @@
 \section{Altre funzionalità dell'applicazione}
 	Nella sezione seguente vengono raccolte tutte le istruzioni necessarie per poter usufruire pienamente di tutte le altre funzionalità a supporto della navigazione offerte dall'applicazione CLIPS.
 	
-	\newpage
+	%\newpage
 	\subsection{Esplora luoghi nelle vicinanze}
 		L'applicazione è in grado di individuare la posizione approssimata dello smartphone all'interno dell'edificio.
 		È possibile visualizzare una lista delle aree di interesse attorno alla posizione in cui si è, per visualizzare ciò:
@@ -24,19 +24,18 @@
 		
 		\begin{figure} [h]
 			\centering
-			\includegraphics[scale=0.3]{img/PulsanteEsplora}
-			\caption{Pulsante per accedere alla lista di aree d'interesse vicine}
-			\label{fig:PulsanteEsplora}
-		\end{figure}
-		
-		\begin{figure} [h]
-			\centering
-			\includegraphics[scale=0.3]{img/ListaNearbyPoi}
-			\caption{Lista di possibili aree d'interesse ottenuta dopo la procedura}
+			\subfloat[][Pulsante per accedere alla lista di aree d'interesse vicine]
+			{\includegraphics[width=0.33\textwidth]{img/PulsanteEsplora}
+			\label{fig:PulsanteEsplora}} \quad
+			\hspace{1.5cm}
+			\subfloat[][Lista di possibili aree d'interesse ottenuta dopo la procedura]
+			{\includegraphics[width=0.33\textwidth]{img/ListaNearbyPoi}
+			\label{fig:ListaNearbyPoi}} \\
+			\caption{Utilizzare la funzionalità esplora area}
 		\end{figure}
 		
 \iffalse % non implementata e non stampata nel \gls{PDF}\ 
-	\newpage
+	%\newpage
 	\subsection{Preferenze}
 		È possibile configurare la navigazione attraverso l'impostazione di determinate preferenze. Tali preferenze impatteranno nel calcolo del percorso nella navigazione.
 		Le preferenze disponibili sono:
@@ -75,8 +74,35 @@
 		\begin{enumerate}
 			\item apri il menu dell'applicazione selezionando l'icona $\equiv$;
 			\item seleziona \textbf{Area sviluppatore}; %figure inline 
-			\item inserisci la \textbf{password sviluppatore}, ti verrà mostrata la lista dei file log in ordine di data e ora;
-			\item seleziona il log di interesse per visualizzarlo; 
+			\item inserisci la \textbf{password sviluppatore} (figura \ref{fig:AreaSviluppatore-InserisciPassword}), ti verrà mostrata la lista dei file log in ordine di data e ora (figura \ref{fig:AreaSviluppatore-ListaLog});
+			
+		\begin{framed}
+			\textbf{Nota:} la password sviluppatore verrà chiesta soltanto la prima volta, gli accessi all'area successivi si salterà tale passaggio. Ad ogni reinstallazione dell'applicazione o cancellazione dei dati la password verrà richiesta nuovamente.
+		\end{framed}
+					
+			\item seleziona il log di interesse per visualizzarlo in dettaglio (figura \ref{fig:AreaSviluppatore-DettaglioLog}) e il pulsante in basso a destra se si desidera eliminarlo;
+			
+			\item seleziona il pulsante in basso a destra per avviare la registrazione di nuovi dati in un nuovo file log. Dalla nuova schermata seleziona nuovamente il pulsante per fermare la registrazione di dati e salvare il file log (figura \ref{fig:AreaSviluppatore-NuovoLog}).
 		\end{enumerate}
+		
+			\begin{figure} [p]
+				\centering
+				\subfloat[][Schermata in cui si richiede la password per sbloccare l'area sviluppatore]
+				{\includegraphics[width=0.33\textwidth]{img/AreaSviluppatore-InserisciPassword}
+				\label{fig:AreaSviluppatore-InserisciPassword}} \quad
+				\hspace{1.5cm}
+				\subfloat[][Schermata principale dell'area sviluppatore in cui si visualizzano tutti i log salvati]
+				{\includegraphics[width=0.33\textwidth]{img/AreaSviluppatore-ListaLog}
+				\label{fig:AreaSviluppatore-ListaLog}} \\
+				\subfloat[][Schermata di dettaglio di un log selezionato]
+				{\includegraphics[width=0.33\textwidth]{img/AreaSviluppatore-DettaglioLog} 
+				\label{fig:AreaSviluppatore-DettaglioLog}} \quad
+				\hspace{1.5cm}
+				\subfloat[][Schermata di dettaglio nuovo log avviato]
+				{\includegraphics[width=0.33\textwidth]{img/AreaSviluppatore-NuovoLog}
+				\label{fig:AreaSviluppatore-NuovoLog}} \\
+				\caption{Area sviluppatore}
+			\end{figure}
+			
 
 \end{document}
