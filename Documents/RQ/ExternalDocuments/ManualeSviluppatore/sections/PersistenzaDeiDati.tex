@@ -7,11 +7,13 @@
 	\subsection{Database locale e remoto}
 		L'applicazione è costituita da un database locale in SQLite che in base alle necessità dell'utente si sincronizza con quello remoto in PostgreSQL attraverso un RESTful server. Il database contiene tutti i dati necessari a comporre i grafi degli edifici supportati. L'applicazione, ossia la parte client della comunicazione, effettua solo richieste GET dal server, nessun'altra operazione può essere effettuata (DELETE, POST e PUT) dall'applicazione. 
 	
-		\subsection{Schema ER}
-		\begin{figure} [h]
-				\includegraphics[scale=0.5]{img/db}		
-				\caption{Schema ER - Base di dati}
-				\label{Database}
+		\subsection{Diagramma ER}
+			Di seguito si descrive il Diagramma ER della base di dati rappresentato in figura \ref{fig:Database}.
+		\begin{figure} [p]
+			\centering
+				\includegraphics[width=\textwidth]{img/db}		
+				\caption{Diagramma ER - Base di dati dell'applicazione}
+				\label{fig:Database}
 		\end{figure}
 	\subsection{Descrizione relazioni}
 		\subsubsection{Building}

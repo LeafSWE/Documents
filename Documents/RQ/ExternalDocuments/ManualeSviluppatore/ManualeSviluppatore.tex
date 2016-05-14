@@ -9,6 +9,10 @@
 \usepackage{subfig}
 \usepackage[toc]{glossaries}
 
+% colore dei link del glossario
+\definecolor{myred}{HTML}{CC0000}
+\renewcommand*{\glstextformat}[1]{\textcolor{myred}{#1}}
+
 \include{GlossarioMS/glos}
 
 \makeglossaries

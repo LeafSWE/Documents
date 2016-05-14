@@ -9,7 +9,7 @@
 	Per un edificio quindi è necessario individuare i due elementi che compongono un grafo:
 	\begin{itemize}
 		\item Vertici;
-		\item Archi;
+		\item Archi.
 	\end{itemize}
 	
 	\subsection{Vertici: Region of Interest \& Point of Interest}
@@ -49,7 +49,7 @@
 	
 	
 	\subsection{Percorso}
-	Un POI, ripetiamo, è una possibile destinazione dell'utente ossia il punto d'arrivo di un possibile percorso mentre una ROI è l'area in cui l'utente si trova, grazie al rilevamento dei \gls{beacon}. Gli Edge e i ROI tra queste due entità rappresentano il percorso da percorrere.
+	Un POI è una possibile destinazione dell'utente ossia il punto d'arrivo di un possibile percorso mentre una ROI è l'area in cui l'utente si trova, grazie al rilevamento dei \gls{beacon}. Gli Edge e i ROI tra queste due entità rappresentano il percorso da percorrere.
 	
 	Dato quindi un punto di partenza e uno di arrivo abbiamo la necessità di calcolare il percorso più corto per raggiungere il punto di arrivo. Poiché lavoriamo rappresentando gli spazi interni dell'edificio in un grafo possiamo sfruttare tutta la conoscenza matematica su questi.
 	Implementando l'algoritmo di Dijkstra otteniamo il percorso più corto da una ROI ad un'altra.
@@ -92,8 +92,13 @@
 		\begin{enumerate}
 			\item procurarsi una planimetria dell'edificio;
 			\item identificare tutti i POI dell'edificio di ogni piano;
-			\item raggruppare i POI vicini in ROI garantendo che tutto l'edificio sia coperto dal segnale dei beacon e che non ci sia eccessiva distanza tra una ROI all'altra e che una ROI non contenga troppi ROI;
-			\item collegare ogni ROI alle ROI raggiungibili da essa identificando la tipologia di Edge (normale, scale, ascensori\dots). \textbf{NOTA:} i collegamenti sono unidirezionali per cui se da un ROI posso andare ad un altro ROI e viceversa dovrò documentare due Edge distinti.
+			\item raggruppare i POI vicini in ROI garantendo che:
+			\begin{itemize}
+				\item tutto l'edificio sia coperto dal segnale dei beacon;
+				\item non ci sia eccessiva distanza tra una ROI all'altra;
+				\item una ROI non contenga troppi POI;
+			\end{itemize}
+			\item collegare ogni ROI alle ROI raggiungibili da essa senza passare per altre ROI e identificando la tipologia di Edge (normale, scale, ascensori\dots). \textbf{NOTA:} se da un ROI posso raggiungere un'altra ROI e viceversa dovrò necessariamente documentare due Edge distinti.
 			\item per ogni Edge identificato rilevare le informazioni necessarie per descriverlo in toto. 
 			\begin{itemize}
 				\item distanza;
