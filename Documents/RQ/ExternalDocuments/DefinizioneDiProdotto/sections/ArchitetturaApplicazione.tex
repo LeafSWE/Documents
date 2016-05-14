@@ -1,11 +1,10 @@
-\documentclass[../DefinizioneDiProdotto.tex]{subfiles}
-
+\documentclass[../DefinizioneDiProdotto.tex,lanscape]{subfiles}
 \begin{document}
 
 \section{Architettura applicazione}
 
 	\subsection{Architettura ad alto livello}
-		L'architettura dell'applicazione rispecchia il pattern architetturale a livelli presentando quattro livelli:
+		L'architettura dell'applicazione rispecchia il pattern architetturale a livelli presentando cinque livelli:
 		\begin{description}
 			\item[Presentation layer:] contiene le componenti dell'interfaccia grafica utente passiva e le componenti facenti parte dell'interfaccia di comunicazione tra vista e il layer sottostante;
 			\item[Business layer:] contiene le componenti logiche del model tranne quelle adibite all'accesso al database;
@@ -29,7 +28,7 @@
 		
 	
 \subsection{Diagrammi riassuntivi package significativi}
-Di seguito sono riportati tutti i package dell'applicativo ad eccezione della \verb|view|, essendo applicato il pattern MVP, per chiarire la relazione tra le componenti e le classi al suo interno. Per chiarezza ed esigenza di spazio le classi rappresentate all'interno dei package sono senza metodi e attributi.
+Di seguito sono riportati tutti i package dell'applicativo per chiarire la relazione tra le componenti e le classi al suo interno visto l'utilizzo del pattern MVP. Per chiarezza ed esigenza di spazio le classi rappresentate all'interno dei package sono senza metodi e attributi.
 
 \begin{figure}[H]
 	\includegraphics[angle=90,width=\textwidth, height=\textheight, keepaspectratio]{diagrams/ModelCompleteNoMethods/PNGpackage/model}
