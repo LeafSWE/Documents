@@ -17,6 +17,7 @@ echo "Latex compiling could take long time..."
 	rm Glossario.log
 	rm Glossario.out
 	rm Glossario.toc
+	rm DiarioModificheG.aux
 } &> /dev/null
 #pdftk Glossario.pdf cat 1-8 10-end output Glossario2.pdf
 #rm Glossario.pdf
