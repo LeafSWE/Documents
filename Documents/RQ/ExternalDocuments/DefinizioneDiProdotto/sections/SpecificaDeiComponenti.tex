@@ -63,7 +63,6 @@
 		
 	
 	% componenti da esportare da Tracy
-
 \subsection{Componenti}
 
 \subsubsection{di}
@@ -646,7 +645,11 @@
 	\item \textbf{Descrizione:} Package per il componente Presenter del pattern architetturale MVP;
 	\item \textbf{Classi Contenute}:
 	\begin{itemize}
+		\item \texttt{BlankHomeFragment};
+		
 		\item \texttt{Checker};
+		
+		\item \texttt{CompleteHomeFragment};
 		
 		\item \texttt{DatabaseServiceManager};
 		
@@ -662,9 +665,9 @@
 		
 		\item \texttt{ImageDetailActivity};
 		
-		\item \texttt{ImageListFragment};
+		\item \texttt{ImageDetailFragment};
 		
-		\item \texttt{ImagePageAdapter};
+		\item \texttt{ImageListFragment};
 		
 		\item \texttt{InformationManagerPresenter};
 		
@@ -726,8 +729,6 @@
 		
 		\item \texttt{ImageDetailViewImp};
 		
-		\item \texttt{ImageListFragmentViewImp};
-		
 		\item \texttt{LocalMapManagerViewImp};
 		
 		\item \texttt{LoggingViewImp};
@@ -735,8 +736,6 @@
 		\item \texttt{LogInformationViewImp};
 		
 		\item \texttt{MainDeveloperViewImp};
-		
-		\item \texttt{MainViewImp};
 		
 		\item \texttt{MapDownloaderViewImp};
 		
@@ -763,8 +762,6 @@
 		
 		\item \texttt{ImageDetailView};
 		
-		\item \texttt{ImageListFragmentView};
-		
 		\item \texttt{LocalMapManagerView};
 		
 		\item \texttt{LoggingView};
@@ -772,8 +769,6 @@
 		\item \texttt{LogInformationView};
 		
 		\item \texttt{MainDeveloperView};
-		
-		\item \texttt{MainView};
 		
 		\item \texttt{MapDownloaderView};
 		
@@ -797,7 +792,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/InfoComponent.png}
-	\caption{'.Interfaccia.'InfoComponent}\label{fig:di::component::InfoComponent} 
+	\caption{Interfaccia InfoComponent}\label{fig:di::component::InfoComponent} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{InfoComponent};
@@ -879,7 +874,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/AppModule.png}
-	\caption{'.Classe.'AppModule}\label{fig:di::module::AppModule} 
+	\caption{Classe AppModule}\label{fig:di::module::AppModule} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{AppModule};
@@ -915,7 +910,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/DatabaseModule.png}
-	\caption{'.Classe.'DatabaseModule}\label{fig:di::module::DatabaseModule} 
+	\caption{Classe DatabaseModule}\label{fig:di::module::DatabaseModule} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{DatabaseModule};
@@ -967,7 +962,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/InfoModule.png}
-	\caption{'.Classe.'InfoModule}\label{fig:di::module::InfoModule} 
+	\caption{Classe InfoModule}\label{fig:di::module::InfoModule} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{InfoModule};
@@ -994,7 +989,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NavModule.png}
-	\caption{'.Classe.'NavModule}\label{fig:di::module::NavModule} 
+	\caption{Classe NavModule}\label{fig:di::module::NavModule} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{NavModule};
@@ -1029,7 +1024,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/SettingModule.png}
-	\caption{'.Classe.'SettingModule}\label{fig:di::module::SettingModule} 
+	\caption{Classe SettingModule}\label{fig:di::module::SettingModule} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{SettingModule};
@@ -1064,7 +1059,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/AbsBeaconReceiverManager.png}
-	\caption{'.Classe astratta.'AbsBeaconReceiverManager}\label{fig:model::AbsBeaconReceiverManager} 
+	\caption{Classe astratta AbsBeaconReceiverManager}\label{fig:model::AbsBeaconReceiverManager} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{\textit{AbsBeaconReceiverManager}};
@@ -1157,7 +1152,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/InformationListener.png}
-	\caption{'.Interfaccia.'InformationListener}\label{fig:model::InformationListener} 
+	\caption{Interfaccia InformationListener}\label{fig:model::InformationListener} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{InformationListener};
@@ -1175,11 +1170,11 @@
 		\item \texttt{+ cannotRetrieveRemoteMapsDetails() : void}\\
 		Metodo che viene invocato dalla classe in cui l'oggetto si è registrato come listener nel caso in cui non sia possibile recuperare le informazioni riguardanti le mappe dal database remoto
 		\item \texttt{+ noLastMapVersion() : boolean}\\
-		Metodo che viene invocato dalla classe in cui l'oggetto si è registrato come listener nel caso in cui la versione della mappa locale differisca dalla versione della mappa in remoto. Deve ritornare "true" nel caso in cui si voglia scaricare la mappa da remoto, "false" altrimenti
+		Metodo che viene invocato dalla classe in cui l'oggetto si è registrato come listener nel caso in cui la versione della mappa locale differisca dalla versione della mappa in remoto
 		\item \texttt{+ onDatabaseLoaded() : void}\\
 		Metodo che viene invocato quando il database è stato caricaricato dalla classe in cui l'oggetto si è registrato come listener
 		\item \texttt{+ onLocalMapNotFound() : boolean}\\
-		Metodo che viene invocato dalla classe in cui l'oggetto si è registrato come listener nel caso in cui non sia stata trovata una mappa nel database locale. Deve ritornare "true" nel caso in cui si voglia cercare la mappa nel database remote, "false" altrimenti
+		Metodo che viene invocato dalla classe in cui l'oggetto si è registrato come listener nel caso in cui non sia stata trovata una mappa nel database locale
 		\item \texttt{+ onRemoteMapNotFound() : void}\\
 		Metodo che viene invocato dalla classe in cui l'oggetto si è registrato come listener nel caso in cui non sia stata trovata un acerta mappa nel database remoto
 	\end{itemize}
@@ -1190,7 +1185,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/InformationManager.png}
-	\caption{'.Interfaccia.'InformationManager}\label{fig:model::InformationManager} 
+	\caption{Interfaccia InformationManager}\label{fig:model::InformationManager} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{\textit{InformationManager}};
@@ -1200,6 +1195,14 @@
 	\item[Descrizione:] Interfaccia che si occupa di esporre tutti i metodi utili per accedere ad informazioni trattate dai vari pacchetti del Model;
 	\item[Metodi:] \
 	\begin{itemize}
+		\item \texttt{+ \textit{downloadMapOfVisibleBeacons(remoteSearch : Boolean) : void}}\\
+		Metodo che permette di scaricare la mappa associata ai beacon visibili
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{remoteSearch : Boolean}\\
+				Booleano che indica se scaricare la mappa associata ai beacon visibili oppure no\end{itemize}
+		\end{description}
 		\item \texttt{+ \textit{getAllCategories() : Collection<String>}}\\
 		Metodo che ritorna tutte le categorie di POI all'interno dell'edificio
 		\item \texttt{+ \textit{getAllVisibleBeacons() : PriorityQueue<MyBeacon>}}\\
@@ -1236,6 +1239,14 @@
 		\end{description}
 		\item \texttt{+ \textit{startRecordingBeacons() : void}}\\
 		Metodo che permette di avviare il log delle informazioni dei beacon visibili
+		\item \texttt{+ \textit{updateMapOfVisibleBeacons(update : Boolean) : void}}\\
+		Metodo che permette di aggiornare la mappa associata ai beacon visibili
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{update : Boolean}\\
+				Booleano che indica se aggiornare la mappa associata ai beacon visibili oppure no\end{itemize}
+		\end{description}
 	\end{itemize}
 \end{description}
 
@@ -1244,7 +1255,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/InformationManagerImp.png}
-	\caption{'.Classe.'InformationManagerImp}\label{fig:model::InformationManagerImp} 
+	\caption{Classe InformationManagerImp}\label{fig:model::InformationManagerImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{InformationManagerImp};
@@ -1297,6 +1308,14 @@
 			\begin{itemize}
 				\item \texttt{listener : InformationListener}\\
 				Listener che deve essere aggiunto alla lista di InformationListener\end{itemize}
+		\end{description}
+		\item \texttt{+ downloadMapOfVisibleBeacons(remoteSearch : Boolean) : void}\\
+		\textbf{Override} Metodo che permette di scaricare la mappa associata ai beacon visibili
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{remoteSearch : Boolean}\\
+				Booleano che indica se scaricare la mappa associata ai beacon visibili oppure no	\end{itemize}
 		\end{description}
 		\item \texttt{+ getAllCategories() : Collection<String>}\\
 		\textbf{Override} Metodo che ritorna tutte le categorie di POI presenti all'interno dell'edificio
@@ -1354,6 +1373,14 @@
 		\end{description}
 		\item \texttt{+ startRecordingBeacons() : void}\\
 		\textbf{Override} Metodo che permette di avviare il log delle informazioni dei beacon visibili
+		\item \texttt{+ updateMapOfVisibleBeacons(update : Boolean) : void}\\
+		\textbf{Override} Metodo che permette di aggiornare la mappa associata ai beacon visibili
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{update : Boolean}\\
+				Booleano che indica se aggiornare la mappa associata ai beacon visibili oppure no\end{itemize}
+		\end{description}
 	\end{itemize}
 \end{description}
 
@@ -1362,7 +1389,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/Listener.png}
-	\caption{'.Interfaccia.'Listener}\label{fig:model::Listener} 
+	\caption{Interfaccia Listener}\label{fig:model::Listener} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{Listener};
@@ -1377,7 +1404,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/MessageSendType.png}
-	\caption{'.Classe.'MessageSendType}\label{fig:model::MessageSendType} 
+	\caption{Classe MessageSendType}\label{fig:model::MessageSendType} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{MessageSendType};
@@ -1392,7 +1419,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NavigationListener.png}
-	\caption{'.Interfaccia.'NavigationListener}\label{fig:model::NavigationListener} 
+	\caption{Interfaccia NavigationListener}\label{fig:model::NavigationListener} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{NavigationListener};
@@ -1425,7 +1452,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NavigationManager.png}
-	\caption{'.Interfaccia.'NavigationManager}\label{fig:model::NavigationManager} 
+	\caption{Interfaccia NavigationManager}\label{fig:model::NavigationManager} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{\textit{NavigationManager}};
@@ -1477,7 +1504,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NavigationManagerImp.png}
-	\caption{'.Classe.'NavigationManagerImp}\label{fig:model::NavigationManagerImp} 
+	\caption{Classe NavigationManagerImp}\label{fig:model::NavigationManagerImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{NavigationManagerImp};
@@ -1572,7 +1599,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NoBeaconSeenException.png}
-	\caption{'.Classe.'NoBeaconSeenException}\label{fig:model::NoBeaconSeenException} 
+	\caption{Classe NoBeaconSeenException}\label{fig:model::NoBeaconSeenException} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{NoBeaconSeenException};
@@ -1611,7 +1638,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/ServiceConnectionImp.png}
-	\caption{'.Classe.'ServiceConnectionImp}\label{fig:model::ServiceConnectionImp} 
+	\caption{Classe ServiceConnectionImp}\label{fig:model::ServiceConnectionImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{ServiceConnectionImp};
@@ -1651,7 +1678,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/BeaconManagerAdapter.png}
-	\caption{'.Classe.'BeaconManagerAdapter}\label{fig:model::beacon::BeaconManagerAdapter} 
+	\caption{Classe BeaconManagerAdapter}\label{fig:model::beacon::BeaconManagerAdapter} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{BeaconManagerAdapter};
@@ -1776,7 +1803,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/BeaconRanger.png}
-	\caption{'.Interfaccia.'BeaconRanger}\label{fig:model::beacon::BeaconRanger} 
+	\caption{Interfaccia BeaconRanger}\label{fig:model::beacon::BeaconRanger} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{BeaconRanger};
@@ -1817,7 +1844,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/LocalBinder.png}
-	\caption{'.Classe.'LocalBinder}\label{fig:model::beacon::LocalBinder} 
+	\caption{Classe LocalBinder}\label{fig:model::beacon::LocalBinder} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{LocalBinder};
@@ -1842,7 +1869,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/Logger.png}
-	\caption{'.Interfaccia.'Logger}\label{fig:model::beacon::Logger} 
+	\caption{Interfaccia Logger}\label{fig:model::beacon::Logger} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{Logger};
@@ -1894,7 +1921,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/LoggerImp.png}
-	\caption{'.Classe.'LoggerImp}\label{fig:model::beacon::LoggerImp} 
+	\caption{Classe LoggerImp}\label{fig:model::beacon::LoggerImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{LoggerImp};
@@ -1964,7 +1991,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/MyBeacon.png}
-	\caption{'.Interfaccia.'MyBeacon}\label{fig:model::beacon::MyBeacon} 
+	\caption{Interfaccia MyBeacon}\label{fig:model::beacon::MyBeacon} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{MyBeacon};
@@ -2000,7 +2027,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/MyBeaconImp.png}
-	\caption{'.Classe.'MyBeaconImp}\label{fig:model::beacon::MyBeaconImp} 
+	\caption{Classe MyBeaconImp}\label{fig:model::beacon::MyBeaconImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{MyBeaconImp};
@@ -2064,7 +2091,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/MyDistanceCalculator.png}
-	\caption{'.Classe.'MyDistanceCalculator}\label{fig:model::beacon::MyDistanceCalculator} 
+	\caption{Classe MyDistanceCalculator}\label{fig:model::beacon::MyDistanceCalculator} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{MyDistanceCalculator};
@@ -2096,7 +2123,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PeriodType.png}
-	\caption{'.Classe.'PeriodType}\label{fig:model::beacon::PeriodType} 
+	\caption{Classe PeriodType}\label{fig:model::beacon::PeriodType} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PeriodType};
@@ -2111,7 +2138,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/Compass.png}
-	\caption{'.Classe.'Compass}\label{fig:model::compass::Compass} 
+	\caption{Classe Compass}\label{fig:model::compass::Compass} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{Compass};
@@ -2199,7 +2226,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/BuildingContract.png}
-	\caption{'.Classe.'BuildingContract}\label{fig:model::dataaccess::dao::BuildingContract} 
+	\caption{Classe BuildingContract}\label{fig:model::dataaccess::dao::BuildingContract} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{BuildingContract};
@@ -2247,7 +2274,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/BuildingDao.png}
-	\caption{'.Interfaccia.'BuildingDao}\label{fig:model::dataaccess::dao::BuildingDao} 
+	\caption{Interfaccia BuildingDao}\label{fig:model::dataaccess::dao::BuildingDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{BuildingDao};
@@ -2316,7 +2343,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/BuildingTable.png}
-	\caption{'.Classe.'BuildingTable}\label{fig:model::dataaccess::dao::BuildingTable} 
+	\caption{Classe BuildingTable}\label{fig:model::dataaccess::dao::BuildingTable} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{BuildingTable};
@@ -2398,7 +2425,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/CategoryContract.png}
-	\caption{'.Classe.'CategoryContract}\label{fig:model::dataaccess::dao::CategoryContract} 
+	\caption{Classe CategoryContract}\label{fig:model::dataaccess::dao::CategoryContract} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{CategoryContract};
@@ -2425,7 +2452,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/CategoryDao.png}
-	\caption{'.Interfaccia.'CategoryDao}\label{fig:model::dataaccess::dao::CategoryDao} 
+	\caption{Interfaccia CategoryDao}\label{fig:model::dataaccess::dao::CategoryDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{CategoryDao};
@@ -2476,7 +2503,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/CategoryTable.png}
-	\caption{'.Classe.'CategoryTable}\label{fig:model::dataaccess::dao::CategoryTable} 
+	\caption{Classe CategoryTable}\label{fig:model::dataaccess::dao::CategoryTable} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{CategoryTable};
@@ -2516,7 +2543,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/CursorConverter.png}
-	\caption{'.Interfaccia.'CursorConverter}\label{fig:model::dataaccess::dao::CursorConverter} 
+	\caption{Interfaccia CursorConverter}\label{fig:model::dataaccess::dao::CursorConverter} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{CursorConverter};
@@ -2547,7 +2574,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/DaoFactoryHelper.png}
-	\caption{'.Classe.'DaoFactoryHelper}\label{fig:model::dataaccess::dao::DaoFactoryHelper} 
+	\caption{Classe DaoFactoryHelper}\label{fig:model::dataaccess::dao::DaoFactoryHelper} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{DaoFactoryHelper};
@@ -2585,7 +2612,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/EdgeContract.png}
-	\caption{'.Classe.'EdgeContract}\label{fig:model::dataaccess::dao::EdgeContract} 
+	\caption{Classe EdgeContract}\label{fig:model::dataaccess::dao::EdgeContract} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{EdgeContract};
@@ -2630,7 +2657,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/EdgeDao.png}
-	\caption{'.Interfaccia.'EdgeDao}\label{fig:model::dataaccess::dao::EdgeDao} 
+	\caption{Interfaccia EdgeDao}\label{fig:model::dataaccess::dao::EdgeDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{EdgeDao};
@@ -2689,7 +2716,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/EdgeTable.png}
-	\caption{'.Classe.'EdgeTable}\label{fig:model::dataaccess::dao::EdgeTable} 
+	\caption{Classe EdgeTable}\label{fig:model::dataaccess::dao::EdgeTable} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{EdgeTable};
@@ -2765,7 +2792,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/EdgeTypeContract.png}
-	\caption{'.Classe.'EdgeTypeContract}\label{fig:model::dataaccess::dao::EdgeTypeContract} 
+	\caption{Classe EdgeTypeContract}\label{fig:model::dataaccess::dao::EdgeTypeContract} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{EdgeTypeContract};
@@ -2792,7 +2819,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/EdgeTypeDao.png}
-	\caption{'.Interfaccia.'EdgeTypeDao}\label{fig:model::dataaccess::dao::EdgeTypeDao} 
+	\caption{Interfaccia EdgeTypeDao}\label{fig:model::dataaccess::dao::EdgeTypeDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{EdgeTypeDao};
@@ -2843,7 +2870,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/EdgeTypeTable.png}
-	\caption{'.Classe.'EdgeTypeTable}\label{fig:model::dataaccess::dao::EdgeTypeTable} 
+	\caption{Classe EdgeTypeTable}\label{fig:model::dataaccess::dao::EdgeTypeTable} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{EdgeTypeTable};
@@ -2883,7 +2910,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/MapsDbHelper.png}
-	\caption{'.Classe.'MapsDbHelper}\label{fig:model::dataaccess::dao::MapsDbHelper} 
+	\caption{Classe MapsDbHelper}\label{fig:model::dataaccess::dao::MapsDbHelper} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{MapsDbHelper};
@@ -2940,7 +2967,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PhotoContract.png}
-	\caption{'.Classe.'PhotoContract}\label{fig:model::dataaccess::dao::PhotoContract} 
+	\caption{Classe PhotoContract}\label{fig:model::dataaccess::dao::PhotoContract} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PhotoContract};
@@ -2970,7 +2997,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PhotoDao.png}
-	\caption{'.Interfaccia.'PhotoDao}\label{fig:model::dataaccess::dao::PhotoDao} 
+	\caption{Interfaccia PhotoDao}\label{fig:model::dataaccess::dao::PhotoDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PhotoDao};
@@ -3029,7 +3056,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PhotoTable.png}
-	\caption{'.Classe.'PhotoTable}\label{fig:model::dataaccess::dao::PhotoTable} 
+	\caption{Classe PhotoTable}\label{fig:model::dataaccess::dao::PhotoTable} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PhotoTable};
@@ -3075,7 +3102,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PointOfInterestContract.png}
-	\caption{'.Classe.'PointOfInterestContract}\label{fig:model::dataaccess::dao::PointOfInterestContract} 
+	\caption{Classe PointOfInterestContract}\label{fig:model::dataaccess::dao::PointOfInterestContract} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PointOfInterestContract};
@@ -3108,7 +3135,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PointOfInterestDao.png}
-	\caption{'.Interfaccia.'PointOfInterestDao}\label{fig:model::dataaccess::dao::PointOfInterestDao} 
+	\caption{Interfaccia PointOfInterestDao}\label{fig:model::dataaccess::dao::PointOfInterestDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PointOfInterestDao};
@@ -3167,7 +3194,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PointOfInterestTable.png}
-	\caption{'.Classe.'PointOfInterestTable}\label{fig:model::dataaccess::dao::PointOfInterestTable} 
+	\caption{Classe PointOfInterestTable}\label{fig:model::dataaccess::dao::PointOfInterestTable} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PointOfInterestTable};
@@ -3219,7 +3246,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RegionOfInterestContract.png}
-	\caption{'.Classe.'RegionOfInterestContract}\label{fig:model::dataaccess::dao::RegionOfInterestContract} 
+	\caption{Classe RegionOfInterestContract}\label{fig:model::dataaccess::dao::RegionOfInterestContract} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RegionOfInterestContract};
@@ -3252,7 +3279,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RegionOfInterestDao.png}
-	\caption{'.Interfaccia.'RegionOfInterestDao}\label{fig:model::dataaccess::dao::RegionOfInterestDao} 
+	\caption{Interfaccia RegionOfInterestDao}\label{fig:model::dataaccess::dao::RegionOfInterestDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RegionOfInterestDao};
@@ -3311,7 +3338,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RegionOfInterestTable.png}
-	\caption{'.Classe.'RegionOfInterestTable}\label{fig:model::dataaccess::dao::RegionOfInterestTable} 
+	\caption{Classe RegionOfInterestTable}\label{fig:model::dataaccess::dao::RegionOfInterestTable} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RegionOfInterestTable};
@@ -3363,7 +3390,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RemoteBuildingDao.png}
-	\caption{'.Classe.'RemoteBuildingDao}\label{fig:model::dataaccess::dao::RemoteBuildingDao} 
+	\caption{Classe RemoteBuildingDao}\label{fig:model::dataaccess::dao::RemoteBuildingDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RemoteBuildingDao};
@@ -3403,7 +3430,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RemoteCategoryDao.png}
-	\caption{'.Classe.'RemoteCategoryDao}\label{fig:model::dataaccess::dao::RemoteCategoryDao} 
+	\caption{Classe RemoteCategoryDao}\label{fig:model::dataaccess::dao::RemoteCategoryDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RemoteCategoryDao};
@@ -3443,7 +3470,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RemoteDaoFactory.png}
-	\caption{'.Classe.'RemoteDaoFactory}\label{fig:model::dataaccess::dao::RemoteDaoFactory} 
+	\caption{Classe RemoteDaoFactory}\label{fig:model::dataaccess::dao::RemoteDaoFactory} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RemoteDaoFactory};
@@ -3479,7 +3506,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RemoteEdgeDao.png}
-	\caption{'.Classe.'RemoteEdgeDao}\label{fig:model::dataaccess::dao::RemoteEdgeDao} 
+	\caption{Classe RemoteEdgeDao}\label{fig:model::dataaccess::dao::RemoteEdgeDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RemoteEdgeDao};
@@ -3519,7 +3546,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RemoteEdgeTypeDao.png}
-	\caption{'.Classe.'RemoteEdgeTypeDao}\label{fig:model::dataaccess::dao::RemoteEdgeTypeDao} 
+	\caption{Classe RemoteEdgeTypeDao}\label{fig:model::dataaccess::dao::RemoteEdgeTypeDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RemoteEdgeTypeDao};
@@ -3559,7 +3586,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RemotePhotoDao.png}
-	\caption{'.Classe.'RemotePhotoDao}\label{fig:model::dataaccess::dao::RemotePhotoDao} 
+	\caption{Classe RemotePhotoDao}\label{fig:model::dataaccess::dao::RemotePhotoDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RemotePhotoDao};
@@ -3583,14 +3610,8 @@
 	\begin{itemize}
 		\item \texttt{+ RemotePhotoDao()}\\
 		Costruttore di default per la classe RemotePhotoDao
-		\item \texttt{+ fromJSONToTable(object : JsonObject) : PhotoTable}\\
+		\item \texttt{+ fromJSONToTable() : PhotoTable}\\
 		Metodo utilizzato per la conversione di un oggetto JsonObject in un oggetto PhotoTable, che viene ritornato
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{object : JsonObject}\\
-				Oggetto JSON che rappresenta un oggetto di tipo PhotoTable\end{itemize}
-		\end{description}
 	\end{itemize}
 \end{description}
 
@@ -3599,7 +3620,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RemotePointOfInterestDao.png}
-	\caption{'.Classe.'RemotePointOfInterestDao}\label{fig:model::dataaccess::dao::RemotePointOfInterestDao} 
+	\caption{Classe RemotePointOfInterestDao}\label{fig:model::dataaccess::dao::RemotePointOfInterestDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RemotePointOfInterestDao};
@@ -3639,7 +3660,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RemoteRegionOfInterestDao.png}
-	\caption{'.Classe.'RemoteRegionOfInterestDao}\label{fig:model::dataaccess::dao::RemoteRegionOfInterestDao} 
+	\caption{Classe RemoteRegionOfInterestDao}\label{fig:model::dataaccess::dao::RemoteRegionOfInterestDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RemoteRegionOfInterestDao};
@@ -3679,7 +3700,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RemoteRoiPoiDao.png}
-	\caption{'.Classe.'RemoteRoiPoiDao}\label{fig:model::dataaccess::dao::RemoteRoiPoiDao} 
+	\caption{Classe RemoteRoiPoiDao}\label{fig:model::dataaccess::dao::RemoteRoiPoiDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RemoteRoiPoiDao};
@@ -3719,7 +3740,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RoiPoiContract.png}
-	\caption{'.Classe.'RoiPoiContract}\label{fig:model::dataaccess::dao::RoiPoiContract} 
+	\caption{Classe RoiPoiContract}\label{fig:model::dataaccess::dao::RoiPoiContract} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RoiPoiContract};
@@ -3746,7 +3767,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RoiPoiDao.png}
-	\caption{'.Interfaccia.'RoiPoiDao}\label{fig:model::dataaccess::dao::RoiPoiDao} 
+	\caption{Interfaccia RoiPoiDao}\label{fig:model::dataaccess::dao::RoiPoiDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RoiPoiDao};
@@ -3814,7 +3835,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RoiPoiTable.png}
-	\caption{'.Classe.'RoiPoiTable}\label{fig:model::dataaccess::dao::RoiPoiTable} 
+	\caption{Classe RoiPoiTable}\label{fig:model::dataaccess::dao::RoiPoiTable} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RoiPoiTable};
@@ -3854,7 +3875,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/SQLDao.png}
-	\caption{'.Classe.'SQLDao}\label{fig:model::dataaccess::dao::SQLDao} 
+	\caption{Classe SQLDao}\label{fig:model::dataaccess::dao::SQLDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{SQLDao};
@@ -3948,7 +3969,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/SQLiteBuildingDao.png}
-	\caption{'.Classe.'SQLiteBuildingDao}\label{fig:model::dataaccess::dao::SQLiteBuildingDao} 
+	\caption{Classe SQLiteBuildingDao}\label{fig:model::dataaccess::dao::SQLiteBuildingDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{SQLiteBuildingDao};
@@ -4040,7 +4061,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/SQLiteCategoryDao.png}
-	\caption{'.Classe.'SQLiteCategoryDao}\label{fig:model::dataaccess::dao::SQLiteCategoryDao} 
+	\caption{Classe SQLiteCategoryDao}\label{fig:model::dataaccess::dao::SQLiteCategoryDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{SQLiteCategoryDao};
@@ -4114,7 +4135,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/SQLiteDaoFactory.png}
-	\caption{'.Classe.'SQLiteDaoFactory}\label{fig:model::dataaccess::dao::SQLiteDaoFactory} 
+	\caption{Classe SQLiteDaoFactory}\label{fig:model::dataaccess::dao::SQLiteDaoFactory} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{SQLiteDaoFactory};
@@ -4162,7 +4183,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/SQLiteEdgeDao.png}
-	\caption{'.Classe.'SQLiteEdgeDao}\label{fig:model::dataaccess::dao::SQLiteEdgeDao} 
+	\caption{Classe SQLiteEdgeDao}\label{fig:model::dataaccess::dao::SQLiteEdgeDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{SQLiteEdgeDao};
@@ -4244,7 +4265,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/SQLiteEdgeTypeDao.png}
-	\caption{'.Classe.'SQLiteEdgeTypeDao}\label{fig:model::dataaccess::dao::SQLiteEdgeTypeDao} 
+	\caption{Classe SQLiteEdgeTypeDao}\label{fig:model::dataaccess::dao::SQLiteEdgeTypeDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{SQLiteEdgeTypeDao};
@@ -4318,7 +4339,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/SQLitePhotoDao.png}
-	\caption{'.Classe.'SQLitePhotoDao}\label{fig:model::dataaccess::dao::SQLitePhotoDao} 
+	\caption{Classe SQLitePhotoDao}\label{fig:model::dataaccess::dao::SQLitePhotoDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{SQLitePhotoDao};
@@ -4400,7 +4421,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/SQLitePointOfInterestDao.png}
-	\caption{'.Classe.'SQLitePointOfInterestDao}\label{fig:model::dataaccess::dao::SQLitePointOfInterestDao} 
+	\caption{Classe SQLitePointOfInterestDao}\label{fig:model::dataaccess::dao::SQLitePointOfInterestDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{SQLitePointOfInterestDao};
@@ -4480,7 +4501,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/SQLiteRegionOfInterestDao.png}
-	\caption{'.Classe.'SQLiteRegionOfInterestDao}\label{fig:model::dataaccess::dao::SQLiteRegionOfInterestDao} 
+	\caption{Classe SQLiteRegionOfInterestDao}\label{fig:model::dataaccess::dao::SQLiteRegionOfInterestDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{SQLiteRegionOfInterestDao};
@@ -4562,7 +4583,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/SQLiteRoiPoiDao.png}
-	\caption{'.Classe.'SQLiteRoiPoiDao}\label{fig:model::dataaccess::dao::SQLiteRoiPoiDao} 
+	\caption{Classe SQLiteRoiPoiDao}\label{fig:model::dataaccess::dao::SQLiteRoiPoiDao} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{SQLiteRoiPoiDao};
@@ -4653,7 +4674,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/BuildingService.png}
-	\caption{'.Classe.'BuildingService}\label{fig:model::dataaccess::service::BuildingService} 
+	\caption{Classe BuildingService}\label{fig:model::dataaccess::service::BuildingService} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{BuildingService};
@@ -4818,7 +4839,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/DatabaseService.png}
-	\caption{'.Interfaccia.'DatabaseService}\label{fig:model::dataaccess::service::DatabaseService} 
+	\caption{Interfaccia DatabaseService}\label{fig:model::dataaccess::service::DatabaseService} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{DatabaseService};
@@ -4890,7 +4911,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/EdgeService.png}
-	\caption{'.Classe.'EdgeService}\label{fig:model::dataaccess::service::EdgeService} 
+	\caption{Classe EdgeService}\label{fig:model::dataaccess::service::EdgeService} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{EdgeService};
@@ -5010,7 +5031,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PhotoService.png}
-	\caption{'.Classe.'PhotoService}\label{fig:model::dataaccess::service::PhotoService} 
+	\caption{Classe PhotoService}\label{fig:model::dataaccess::service::PhotoService} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PhotoService};
@@ -5098,7 +5119,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PointOfInterestService.png}
-	\caption{'.Classe.'PointOfInterestService}\label{fig:model::dataaccess::service::PointOfInterestService} 
+	\caption{Classe PointOfInterestService}\label{fig:model::dataaccess::service::PointOfInterestService} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PointOfInterestService};
@@ -5226,7 +5247,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RegionOfInterestService.png}
-	\caption{'.Classe.'RegionOfInterestService}\label{fig:model::dataaccess::service::RegionOfInterestService} 
+	\caption{Classe RegionOfInterestService}\label{fig:model::dataaccess::service::RegionOfInterestService} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RegionOfInterestService};
@@ -5317,14 +5338,8 @@
 				\item \texttt{id : int}\\
 				Identificativo numerico della RegionOfInterest da recuperare\end{itemize}
 		\end{description}
-		\item \texttt{- fromTableToBo(regionOfInterestTable : RegionOfInterestTable) : RegionOfInterest}\\
+		\item \texttt{- fromTableToBo() : RegionOfInterest}\\
 		Metodo per la costruzione di oggetto RegionOfInterest a partire da un RegionOfInterestTable
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{regionOfInterestTable : RegionOfInterestTable}\\
-				Oggetto contenente le informazioni della RegionOfInterest\end{itemize}
-		\end{description}
 		\item \texttt{+ getTracedRois() : Collection<RegionOfInterest>}\\
 		Metodo per recuperare le RegionOfInterest che sono già state associate ai POI vicini
 		\item \texttt{+ setTracedRois(tracedRois : Collection<RegionOfInterest>) : void}\\
@@ -5343,7 +5358,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/ServiceHelper.png}
-	\caption{'.Classe.'ServiceHelper}\label{fig:model::dataaccess::service::ServiceHelper} 
+	\caption{Classe ServiceHelper}\label{fig:model::dataaccess::service::ServiceHelper} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{ServiceHelper};
@@ -5371,7 +5386,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/BuildingInformation.png}
-	\caption{'.Classe.'BuildingInformation}\label{fig:model::navigator::BuildingInformation} 
+	\caption{Classe BuildingInformation}\label{fig:model::navigator::BuildingInformation} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{BuildingInformation};
@@ -5430,7 +5445,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/BuildingMap.png}
-	\caption{'.Interfaccia.'BuildingMap}\label{fig:model::navigator::BuildingMap} 
+	\caption{Interfaccia BuildingMap}\label{fig:model::navigator::BuildingMap} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{BuildingMap};
@@ -5488,7 +5503,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/BuildingMapImp.png}
-	\caption{'.Classe.'BuildingMapImp}\label{fig:model::navigator::BuildingMapImp} 
+	\caption{Classe BuildingMapImp}\label{fig:model::navigator::BuildingMapImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{BuildingMapImp};
@@ -5594,7 +5609,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NavigationExceptions.png}
-	\caption{'.Classe astratta.'NavigationExceptions}\label{fig:model::navigator::NavigationExceptions} 
+	\caption{Classe astratta NavigationExceptions}\label{fig:model::navigator::NavigationExceptions} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{\textit{NavigationExceptions}};
@@ -5619,7 +5634,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/Navigator.png}
-	\caption{'.Interfaccia.'Navigator}\label{fig:model::navigator::Navigator} 
+	\caption{Interfaccia Navigator}\label{fig:model::navigator::Navigator} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{Navigator};
@@ -5668,7 +5683,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NavigatorImp.png}
-	\caption{'.Classe.'NavigatorImp}\label{fig:model::navigator::NavigatorImp} 
+	\caption{Classe NavigatorImp}\label{fig:model::navigator::NavigatorImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{NavigatorImp};
@@ -5782,7 +5797,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NoGraphSetException.png}
-	\caption{'.Classe.'NoGraphSetException}\label{fig:model::navigator::NoGraphSetException} 
+	\caption{Classe NoGraphSetException}\label{fig:model::navigator::NoGraphSetException} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{NoGraphSetException};
@@ -5830,7 +5845,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NoNavigationInformationException.png}
-	\caption{'.Classe.'NoNavigationInformationException}\label{fig:model::navigator::NoNavigationInformationException} 
+	\caption{Classe NoNavigationInformationException}\label{fig:model::navigator::NoNavigationInformationException} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{NoNavigationInformationException};
@@ -5878,7 +5893,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PathException.png}
-	\caption{'.Classe.'PathException}\label{fig:model::navigator::PathException} 
+	\caption{Classe PathException}\label{fig:model::navigator::PathException} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PathException};
@@ -5926,7 +5941,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/ProcessedInformation.png}
-	\caption{'.Interfaccia.'ProcessedInformation}\label{fig:model::navigator::ProcessedInformation} 
+	\caption{Interfaccia ProcessedInformation}\label{fig:model::navigator::ProcessedInformation} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{ProcessedInformation};
@@ -5938,6 +5953,10 @@
 	\begin{itemize}
 		\item \texttt{+ \textit{getDetailedInstruction() : String}}\\
 		Metodo che ritorna le istruzioni dettagliate per superare un certo arco nel percorso calcolato.
+		\item \texttt{+ \textit{getDirection() : int}}\\
+		Metodo che ritorna la direzione verso cui dirigersi
+		\item \texttt{+ \textit{getDistance() : String}}\\
+		Metodo che ritorna la distanza da percorrere nell'arco in cui ci si trova
 		\item \texttt{+ \textit{getPhotoInstruction() : PhotoInformation}}\\
 		Metodo che ritorna un oggetto PhotoInformation con il quale è possibile accedere alle fotografie che ritraggono l'arco da superare nel percorso calcolato
 		\item \texttt{+ \textit{getProcessedBasicInstruction() : String}}\\
@@ -5950,7 +5969,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/ProcessedInformationImp.png}
-	\caption{'.Classe.'ProcessedInformationImp}\label{fig:model::navigator::ProcessedInformationImp} 
+	\caption{Classe ProcessedInformationImp}\label{fig:model::navigator::ProcessedInformationImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{ProcessedInformationImp};
@@ -5975,6 +5994,12 @@
 		
 		\item \texttt{- detailed : String}\\
 		Indicazioni dettagliate di un Edge
+		
+		\item \texttt{- direction : int}\\
+		La prossima direzione verso cui dirigersi
+		
+		\item \texttt{- distance : String}\\
+		La distanza da percorrere in un certo Edge
 		
 		\item \texttt{- photos : List<PhotoRef>}\\
 		Lista di foto di un Edge
@@ -6001,6 +6026,10 @@
 		\end{description}
 		\item \texttt{+ getDetailedInstruction() : String}\\
 		\textbf{Override} Metodo che ritorna le istruzioni dettagliate per superare un certo arco nel percorso calcolato
+		\item \texttt{+ getDirection() : int}\\
+		\textbf{Override} Metodo che ritorna la direzione verso cui dirigersi
+		\item \texttt{+ getDistance() : String}\\
+		\textbf{Override} Metodo che ritorna la distanza da percorrere nell'arco in cui ci si trova
 		\item \texttt{+ getPhotoInstruction() : PhotoInformation}\\
 		\textbf{Override} Metodo che ritorna un oggetto PhotoInformation con il quale è possibile accedere alle fotografie che ritraggono l'arco da superare nel percorso calcolato
 		\item \texttt{+ getProcessedBasicInstruction() : String}\\
@@ -6013,7 +6042,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/DijkstraPathFinder.png}
-	\caption{'.Classe.'DijkstraPathFinder}\label{fig:model::navigator::algorithm::DijkstraPathFinder} 
+	\caption{Classe DijkstraPathFinder}\label{fig:model::navigator::algorithm::DijkstraPathFinder} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{DijkstraPathFinder};
@@ -6047,7 +6076,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PathFinder.png}
-	\caption{'.Interfaccia.'PathFinder}\label{fig:model::navigator::algorithm::PathFinder} 
+	\caption{Interfaccia PathFinder}\label{fig:model::navigator::algorithm::PathFinder} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PathFinder};
@@ -6075,7 +6104,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/MapGraph.png}
-	\caption{'.Classe.'MapGraph}\label{fig:model::navigator::graph::MapGraph} 
+	\caption{Classe MapGraph}\label{fig:model::navigator::graph::MapGraph} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{MapGraph};
@@ -6143,7 +6172,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PointOfInterest.png}
-	\caption{'.Interfaccia.'PointOfInterest}\label{fig:model::navigator::graph::area::PointOfInterest} 
+	\caption{Interfaccia PointOfInterest}\label{fig:model::navigator::graph::area::PointOfInterest} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PointOfInterest};
@@ -6179,7 +6208,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PointOfInterestImp.png}
-	\caption{'.Classe.'PointOfInterestImp}\label{fig:model::navigator::graph::area::PointOfInterestImp} 
+	\caption{Classe PointOfInterestImp}\label{fig:model::navigator::graph::area::PointOfInterestImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PointOfInterestImp};
@@ -6241,7 +6270,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PointOfInterestInformation.png}
-	\caption{'.Classe.'PointOfInterestInformation}\label{fig:model::navigator::graph::area::PointOfInterestInformation} 
+	\caption{Classe PointOfInterestInformation}\label{fig:model::navigator::graph::area::PointOfInterestInformation} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PointOfInterestInformation};
@@ -6287,7 +6316,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RegionOfInterest.png}
-	\caption{'.Interfaccia.'RegionOfInterest}\label{fig:model::navigator::graph::area::RegionOfInterest} 
+	\caption{Interfaccia RegionOfInterest}\label{fig:model::navigator::graph::area::RegionOfInterest} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RegionOfInterest};
@@ -6333,7 +6362,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RegionOfInterestImp.png}
-	\caption{'.Classe.'RegionOfInterestImp}\label{fig:model::navigator::graph::area::RegionOfInterestImp} 
+	\caption{Classe RegionOfInterestImp}\label{fig:model::navigator::graph::area::RegionOfInterestImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RegionOfInterestImp};
@@ -6415,7 +6444,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/AbsEnrichedEdge.png}
-	\caption{'.Classe astratta.'AbsEnrichedEdge}\label{fig:model::navigator::graph::edge::AbsEnrichedEdge} 
+	\caption{Classe astratta AbsEnrichedEdge}\label{fig:model::navigator::graph::edge::AbsEnrichedEdge} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{\textit{AbsEnrichedEdge}};
@@ -6441,6 +6470,9 @@
 		
 		\item \texttt{- id : int \{readOnly\}}\\
 		Identificativo numerico di un arco
+		
+		\item \texttt{\# \underline{maxDistance : double}}\\
+		Distanza massima tra gli Edge istanziati. Valore di default: 0
 		
 		\item \texttt{- navInfo : NavigationInformation \{readOnly\}}\\
 		Informazioni associate ad un arco per il superamento dello stesso
@@ -6506,7 +6538,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/DefaultEdge.png}
-	\caption{'.Classe.'DefaultEdge}\label{fig:model::navigator::graph::edge::DefaultEdge} 
+	\caption{Classe DefaultEdge}\label{fig:model::navigator::graph::edge::DefaultEdge} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{DefaultEdge};
@@ -6547,7 +6579,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/Edge.png}
-	\caption{'.Interfaccia.'Edge}\label{fig:model::navigator::graph::edge::Edge} 
+	\caption{Interfaccia Edge}\label{fig:model::navigator::graph::edge::Edge} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{Edge};
@@ -6573,7 +6605,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/ElevatorEdge.png}
-	\caption{'.Classe.'ElevatorEdge}\label{fig:model::navigator::graph::edge::ElevatorEdge} 
+	\caption{Classe ElevatorEdge}\label{fig:model::navigator::graph::edge::ElevatorEdge} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{ElevatorEdge};
@@ -6620,7 +6652,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/EnrichedEdge.png}
-	\caption{'.Interfaccia.'EnrichedEdge}\label{fig:model::navigator::graph::edge::EnrichedEdge} 
+	\caption{Interfaccia EnrichedEdge}\label{fig:model::navigator::graph::edge::EnrichedEdge} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{EnrichedEdge};
@@ -6665,7 +6697,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/StairEdge.png}
-	\caption{'.Classe.'StairEdge}\label{fig:model::navigator::graph::edge::StairEdge} 
+	\caption{Classe StairEdge}\label{fig:model::navigator::graph::edge::StairEdge} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{StairEdge};
@@ -6712,7 +6744,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/BasicInformation.png}
-	\caption{'.Classe.'BasicInformation}\label{fig:model::navigator::graph::navigationinformation::BasicInformation} 
+	\caption{Classe BasicInformation}\label{fig:model::navigator::graph::navigationinformation::BasicInformation} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{BasicInformation};
@@ -6746,7 +6778,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/DetailedInformation.png}
-	\caption{'.Classe.'DetailedInformation}\label{fig:model::navigator::graph::navigationinformation::DetailedInformation} 
+	\caption{Classe DetailedInformation}\label{fig:model::navigator::graph::navigationinformation::DetailedInformation} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{DetailedInformation};
@@ -6780,7 +6812,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NavigationInformation.png}
-	\caption{'.Interfaccia.'NavigationInformation}\label{fig:model::navigator::graph::navigationinformation::NavigationInformation} 
+	\caption{Interfaccia NavigationInformation}\label{fig:model::navigator::graph::navigationinformation::NavigationInformation} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{NavigationInformation};
@@ -6804,7 +6836,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NavigationInformationImp.png}
-	\caption{'.Classe.'NavigationInformationImp}\label{fig:model::navigator::graph::navigationinformation::NavigationInformationImp} 
+	\caption{Classe NavigationInformationImp}\label{fig:model::navigator::graph::navigationinformation::NavigationInformationImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{NavigationInformationImp};
@@ -6855,7 +6887,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PhotoInformation.png}
-	\caption{'.Classe.'PhotoInformation}\label{fig:model::navigator::graph::navigationinformation::PhotoInformation} 
+	\caption{Classe PhotoInformation}\label{fig:model::navigator::graph::navigationinformation::PhotoInformation} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PhotoInformation};
@@ -6883,7 +6915,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PhotoRef.png}
-	\caption{'.Classe.'PhotoRef}\label{fig:model::navigator::graph::navigationinformation::PhotoRef} 
+	\caption{Classe PhotoRef}\label{fig:model::navigator::graph::navigationinformation::PhotoRef} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PhotoRef};
@@ -6923,7 +6955,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/Vertex.png}
-	\caption{'.Interfaccia.'Vertex}\label{fig:model::navigator::graph::vertex::Vertex} 
+	\caption{Interfaccia Vertex}\label{fig:model::navigator::graph::vertex::Vertex} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{Vertex};
@@ -6943,7 +6975,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/VertexImp.png}
-	\caption{'.Classe.'VertexImp}\label{fig:model::navigator::graph::vertex::VertexImp} 
+	\caption{Classe VertexImp}\label{fig:model::navigator::graph::vertex::VertexImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{VertexImp};
@@ -6982,7 +7014,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/DeveloperCodeManager.png}
-	\caption{'.Classe.'DeveloperCodeManager}\label{fig:model::usersetting::DeveloperCodeManager} 
+	\caption{Classe DeveloperCodeManager}\label{fig:model::usersetting::DeveloperCodeManager} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{DeveloperCodeManager};
@@ -7025,7 +7057,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/InstructionPreference.png}
-	\caption{'.Classe.'InstructionPreference}\label{fig:model::usersetting::InstructionPreference} 
+	\caption{Classe InstructionPreference}\label{fig:model::usersetting::InstructionPreference} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{InstructionPreference};
@@ -7059,7 +7091,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PathPreference.png}
-	\caption{'.Classe.'PathPreference}\label{fig:model::usersetting::PathPreference} 
+	\caption{Classe PathPreference}\label{fig:model::usersetting::PathPreference} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PathPreference};
@@ -7093,7 +7125,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/Setting.png}
-	\caption{'.Interfaccia.'Setting}\label{fig:model::usersetting::Setting} 
+	\caption{Interfaccia Setting}\label{fig:model::usersetting::Setting} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{Setting};
@@ -7141,7 +7173,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/SettingImp.png}
-	\caption{'.Classe.'SettingImp}\label{fig:model::usersetting::SettingImp} 
+	\caption{Classe SettingImp}\label{fig:model::usersetting::SettingImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{SettingImp};
@@ -7232,12 +7264,42 @@
 \end{description}
 \subsubsection{presenter}
 
+\paragraph{presenter::BlankHomeFragment}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/BlankHomeFragment.png}
+	\caption{Classe BlankHomeFragment}\label{fig:presenter::BlankHomeFragment} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{BlankHomeFragment};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Viene utilizzata nel caso di: Bluetooth non attivo, geolocalizzazione non attiva, nessun beacon conosciuto rilevato, beacon conosciuto rilevato ma nessuna connessione internet presente (e conseguente impossibilità di scaricare la mappa dell'edificio rilevato).;
+	\item[Descrizione:] Un BlankHomeFragment viene mostrato dalla HomeActivity in caso di errori nel processo di recupero delle informazioni dell'edificio;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ BlankHomeFragment()}\\
+		Costruttore di default
+		\item \texttt{+ onCreate(inflater : LayoutInflater, container : ViewGroup, savedInstanceState : Bundle) : View}\\
+		\textbf{Override} Metodo che viene chiamato per fare in modo che il Fragment istanzi la propria UI. Si occupa dell'infalte
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{inflater : LayoutInflater}\\
+				oggetto usato per eseguire l'inflate di qualsiasi view nel fragment.\item \texttt{container : ViewGroup}\\
+				Parent view a cui è associato il fragment\item \texttt{savedInstanceState : Bundle}\\
+				Eventuale stato precedentemente salvato del fragment\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
 \paragraph{presenter::Checker}
 \
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/Checker.png}
-	\caption{'.Classe.'Checker}\label{fig:presenter::Checker} 
+	\caption{Classe Checker}\label{fig:presenter::Checker} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{Checker};
@@ -7267,12 +7329,103 @@
 	\end{itemize}
 \end{description}
 
+\paragraph{presenter::CompleteHomeFragment}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/CompleteHomeFragment.png}
+	\caption{Classe CompleteHomeFragment}\label{fig:presenter::CompleteHomeFragment} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{CompleteHomeFragment};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] È utilizzata dalla HomeActivity per mostrare delle informazioni su di un edificio nel caso in cui si riesca a recuperarne le informazioni;
+	\item[Descrizione:] Un CompleteHomeFragment viene mostrato dalla HomeActivity se il processo di recupero delle informazioni dell'edificio è andato a buon fine;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- buildingAddress : TextView}\\
+		Riferimento al widget che mostra l'indirizzo dell'edificio rilevato
+		
+		\item \texttt{- buildingDescription : TextView}\\
+		Riferimento al widget che mostra gli orari di apertura al pubblico dell'edificio rilevato
+		
+		\item \texttt{- buildingName : TextView}\\
+		Riferimento al widget che mostra il nome dell'edificio rilevato
+		
+		\item \texttt{- buildingOpeningHours : TextView}\\
+		Riferimento al widget che mostra gli orari di apertura al pubblico dell'edificio rilevato
+		
+		\item \texttt{- poiCategories : ListView}\\
+		Riferimento al widget che mostra le categorie di POI presenti nell'edificio rilevato
+		
+		\item \texttt{- searchView : SearchView}\\
+		Riferimento al widget adibito a search box
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ CompleteHomeFragment()}\\
+		Costruttore di default
+		\item \texttt{+ onCreateView(inflater : LayoutInflater, container : ViewGroup, savedInstanceState : Bundle) : View}\\
+		\textbf{Override} Metodo che viene chiamato per fare in modo che il Fragment istanzi la propria UI. Si occupa dell'infalte
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{inflater : LayoutInflater}\\
+				Oggetto usato per eseguire l'inflate di qualsiasi view nel fragment\item \texttt{container : ViewGroup}\\
+				Parent view a cui è associato il fragment\item \texttt{savedInstanceState : Bundle}\\
+				L'eventuale stato precedentemente salvato del fragment\end{itemize}
+		\end{description}
+		\item \texttt{+ setBuildingAddress(address : String) : void}\\
+		Metodo che imposta l'indirizzo dell'edificio nel relativo widget
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{address : String}\\
+				Indirizzo dell'edificio\end{itemize}
+		\end{description}
+		\item \texttt{+ setBuildingDescription(description : String) : void}\\
+		Metodo che imposta la descrizione dell'edificio nel relativo widget
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{description : String}\\
+				descrizione dell'edificio\end{itemize}
+		\end{description}
+		\item \texttt{+ setBuildingName(name : String) : void}\\
+		Metodo che imposta il nome dell'edificio nel relativo widget
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{name : String}\\
+				nome dell'edificio\end{itemize}
+		\end{description}
+		\item \texttt{+ setBuildingOpeningHours(hours : String) : void}\\
+		Metodo che imposta le ore di apertura al pubblico dell'edificio, nel relativo widget
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{hours : String}\\
+				orario di apertura\end{itemize}
+		\end{description}
+		\item \texttt{+ setPoiCategoryListAdapter(list : List<String>) : void}\\
+		Metodo che si occupa del binding tra la List, contenente i nomi delle categorie di POI, ed il relativo ArrayAdapter
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{list : List<String>}\\
+				Lista contenente i nomi delle categorie di POI presenti nell'edificio\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
 \paragraph{presenter::DatabaseServiceManager}
 \
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/DatabaseServiceManager.png}
-	\caption{'.Classe.'DatabaseServiceManager}\label{fig:presenter::DatabaseServiceManager} 
+	\caption{Classe DatabaseServiceManager}\label{fig:presenter::DatabaseServiceManager} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{DatabaseServiceManager};
@@ -7303,7 +7456,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/DetailedInformationActivity.png}
-	\caption{'.Classe.'DetailedInformationActivity}\label{fig:presenter::DetailedInformationActivity} 
+	\caption{Classe DetailedInformationActivity}\label{fig:presenter::DetailedInformationActivity} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{DetailedInformationActivity};
@@ -7320,6 +7473,12 @@
 	\begin{itemize}
 		\item \texttt{- imgListFragment : ImageListFragment}\\
 		Contiene la lista di tutte le anteprime delle immagini associate ad un certo Edge
+		
+		\item \texttt{~ informationManager : InformationManager}\\
+		Riferimento utilizzato per accedere alle informazioni trattate dal Model
+		
+		\item \texttt{~ navigationManager : NavigationManager}\\
+		Riferimento utilizzato per accedere alle istruzioni di navigazione trattate dal Model
 		
 		\item \texttt{- processedInfo : ProcessedInformation}\\
 		ProcessedInformation associata all'Edge corrente
@@ -7350,7 +7509,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/DeveloperUnlockerActivity.png}
-	\caption{'.Classe.'DeveloperUnlockerActivity}\label{fig:presenter::DeveloperUnlockerActivity} 
+	\caption{Classe DeveloperUnlockerActivity}\label{fig:presenter::DeveloperUnlockerActivity} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{DeveloperUnlockerActivity};
@@ -7398,7 +7557,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/HelpActivity.png}
-	\caption{'.Classe.'HelpActivity}\label{fig:presenter::HelpActivity} 
+	\caption{Classe HelpActivity}\label{fig:presenter::HelpActivity} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{HelpActivity};
@@ -7435,11 +7594,16 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/HomeActivity.png}
-	\caption{'.Classe.'HomeActivity}\label{fig:presenter::HomeActivity} 
+	\caption{Classe HomeActivity}\label{fig:presenter::HomeActivity} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{HomeActivity};
 	\item[Tipo:] Classe;
+	\item[Implementa:] \
+	\begin{itemize}
+		\item \texttt{InformationListener}.
+		
+	\end{itemize}
 	\item[Componenti delle librerie utilizzate:] \
 	\begin{itemize}
 		\item \texttt{android.support.v7.app.AppCompatActivity (Android)}.
@@ -7459,8 +7623,14 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
+		\item \texttt{+ cannotRetrieveMapsDetails() : void}\\
+		\textbf{Override} Metodo che viene invocato dalla classe in cui l'oggetto si è registrato come listener nel caso in cui non sia possibile recuperare le informazioni riguardanti le mappe dal database remoto
 		\item \texttt{+ enableSuggestions() : void}\\
 		Metodo che permette di attivare la lista dei possibili POI raggiungibili a partire da una stringa
+		\item \texttt{+ noLastMapVersion() : boolean}\\
+		\textbf{Override} Metodo che viene invocato dalla classe in cui l'oggetto si è registrato come listener nel caso in cui la versione della mappa locale differisca dalla versione della mappa in remoto
+		\item \texttt{+ onBackPressed() : void}\\
+		\textbf{Override} Metodo che gestisce il tap dell'utente sul tasto Back. Implementato in modo che chiuda il Drawer se questo è aperto
 		\item \texttt{+ onCreate(bundle : Bundle) : void}\\
 		\textbf{Override} Metodo che inizializza la View associata e recupera un riferimento all'InformationManager
 		\begin{description}
@@ -7469,6 +7639,16 @@
 				\item \texttt{bundle : Bundle}\\
 				Componente per salvare lo stato dell'applicazione\end{itemize}
 		\end{description}
+		\item \texttt{+ onDatabaseLoaded() : void}\\
+		\textbf{Override} Metodo che viene invocato quando il database è stato caricaricato dalla classe in cui l'oggetto si è registrato come listener
+		\item \texttt{+ onDestroy() : void}\\
+		\textbf{Override} Metodo che viene invocato alla distruzione dell'oggetto
+		\item \texttt{+ onLocalMapNotFound() : boolean}\\
+		\textbf{Override} Metodo che viene invocato dalla classe in cui l'oggetto si è registrato come listener nel caso in cui non sia stata trovata una mappa nel database locale
+		\item \texttt{+ onRemoteMapNotFound() : void}\\
+		\textbf{Override} Metodo che viene invocato dalla classe in cui l'oggetto si è registrato come listener nel caso in cui non sia stata trovata un acerta mappa nel database remoto
+		\item \texttt{+ onResume() : void}\\
+		\textbf{Override} Recupera le informazioni dell'edificio dal database ed utilizza la View associata per mostrarle all'utente
 		\item \texttt{+ showExplorer() : void}\\
 		Metodo che viene invocato a seguito della richiesta di visualizzazione della modalità esplora
 		\item \texttt{+ showHelp() : void}\\
@@ -7511,7 +7691,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/ImageAdapter.png}
-	\caption{'.Classe.'ImageAdapter}\label{fig:presenter::ImageAdapter} 
+	\caption{Classe ImageAdapter}\label{fig:presenter::ImageAdapter} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{ImageAdapter};
@@ -7526,7 +7706,7 @@
 	\item[Descrizione:] Classe che estende FragmentStatePageAdapter per gestire la lista di immagini associate ad una certa istruzione di navigazione;
 	\item[Attributi:] \
 	\begin{itemize}
-		\item \texttt{- context : Context}\\
+		\item \texttt{- mContext : Context \{readOnly\}}\\
 		Contesto dell'applicativo
 		
 	\end{itemize}
@@ -7570,7 +7750,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/ImageDetailActivity.png}
-	\caption{'.Classe.'ImageDetailActivity}\label{fig:presenter::ImageDetailActivity} 
+	\caption{Classe ImageDetailActivity}\label{fig:presenter::ImageDetailActivity} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{ImageDetailActivity};
@@ -7585,9 +7765,6 @@
 	\item[Descrizione:] Classe che implementa AppCompcatActivity per la gestione dell'interazione tra ImageDetailView ed il model;
 	\item[Attributi:] \
 	\begin{itemize}
-		\item \texttt{- imgPgAdpt : ImagePageAdapter}\\
-		ImagePageAdapter per la gestione dello slideshow delle immagini relative ad una certa istruzione di navigazione
-		
 		\item \texttt{- listPhotos : List<String>}\\
 		Lista contenenti gli URI delle foto
 		
@@ -7600,6 +7777,8 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
+		\item \texttt{+ getListPhotos() : List<String>}\\
+		Metodo per recuperare la lista di foto
 		\item \texttt{+ onCreate(bundle : Bundle) : void}\\
 		\textbf{Override} Metodo che inizializza ImageDetailView
 		\begin{description}
@@ -7611,12 +7790,50 @@
 	\end{itemize}
 \end{description}
 
+\paragraph{presenter::ImageDetailFragment}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/ImageDetailFragment.png}
+	\caption{Classe ImageDetailFragment}\label{fig:presenter::ImageDetailFragment} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{ImageDetailFragment};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] È utilizzato per fornire le immagini relative ad un certo arco;
+	\item[Descrizione:] Una sottoclasse di Fragment che gestisce e mostra un immagine tra quelle relative ad una certa istruzione di navigazione;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- mImageView : mImageView}\\
+		Riferimento al widget usato per mostrare l'immagine
+		
+		\item \texttt{- nImageNum : int}\\
+		Numero dell'immagine, tra quelle associate ad una particolare istruzione di navigazione,  da mostrare
+		
+		\item \texttt{- photoUris : List<String>}\\
+		Riferimento alla lista di URI delle immagini associate all'istruzione scelta
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ \underline{newInstance(photoUris : ArrayList<String>) : ImageDetailFragment}}\\
+		Usato per costruire un Fragment attraverso il passaggio di parametri. Best practice consigliata dalla documentazione Android
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{photoUris : ArrayList<String>}\\
+				URI delle immagini associate all'istruzione scelta\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
 \paragraph{presenter::ImageListFragment}
 \
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/ImageListFragment.png}
-	\caption{'.Classe.'ImageListFragment}\label{fig:presenter::ImageListFragment} 
+	\caption{Classe ImageListFragment}\label{fig:presenter::ImageListFragment} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{ImageListFragment};
@@ -7668,55 +7885,16 @@
 				Layout della lista di anteprime\item \texttt{bundle : Bundle}\\
 				Componente per salvare lo stato dell'applicazione\end{itemize}
 		\end{description}
-		\item \texttt{+ onItemClick() : void}\\
+		\item \texttt{+ onItemClick(parent : AdapterView<?>, view : View, position : int, id : long) : void}\\
 		\textbf{Override} Metodo che viene invocato alla pressione di un bottone
-	\end{itemize}
-\end{description}
-
-\paragraph{presenter::ImagePageAdapter}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/ImagePageAdapter.png}
-	\caption{'.Classe.'ImagePageAdapter}\label{fig:presenter::ImagePageAdapter} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{ImagePageAdapter};
-	\item[Tipo:] Classe;
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{android.support.v4.app.FragmentStatePagerAdapter(Android)}.
-		
-	\end{itemize}
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] È utilizzata per la gestione dello slideshow delle immagini relative ad una certa indicazione di navigazione;
-	\item[Descrizione:] Classe che estende FragmentStatePagerAdapter per la gestione dello slideshow delle immagini relative ad una certa istruzione di navigazione;
-	\item[Attributi:] \
-	\begin{itemize}
-		\item \texttt{- size : int}\\
-		Numero di elementi della slideshow
-		
-	\end{itemize}
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ ImagePageAdapter(fm : FragmentManager, size : int)}\\
-		Costruttore della classe ImagePageAdapter
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{fm : FragmentManager}\\
-				Interfaccia che serve per l'interazione con un Fragment\item \texttt{size : int}\\
-				Numero di immagini passate\end{itemize}
-		\end{description}
-		\item \texttt{+ getCount() : int}\\
-		Metodo che fornisce il numero di elementi all'interno dello slideshow
-		\item \texttt{+ getItem(position : int) : Fragment}\\
-		Metodo che permette di ottenere un'immagine all'intero dello slideshow
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{position : int}\\
-				Intero che indica la posizione dell'immagine da recuperare all'interno dello slideshow\end{itemize}
+				\item \texttt{parent : AdapterView<?>}\\
+				!\item \texttt{view : View}\\
+				!\item \texttt{position : int}\\
+				!\item \texttt{id : long}\\
+				!\end{itemize}
 		\end{description}
 	\end{itemize}
 \end{description}
@@ -7726,7 +7904,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/InformationManagerPresenter.png}
-	\caption{'.Classe.'InformationManagerPresenter}\label{fig:presenter::InformationManagerPresenter} 
+	\caption{Classe InformationManagerPresenter}\label{fig:presenter::InformationManagerPresenter} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{InformationManagerPresenter};
@@ -7757,7 +7935,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/LocalMapActivity.png}
-	\caption{'.Classe.'LocalMapActivity}\label{fig:presenter::LocalMapActivity} 
+	\caption{Classe LocalMapActivity}\label{fig:presenter::LocalMapActivity} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{LocalMapActivity};
@@ -7810,7 +7988,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/LoggingActivity.png}
-	\caption{'.Classe.'LoggingActivity}\label{fig:presenter::LoggingActivity} 
+	\caption{Classe LoggingActivity}\label{fig:presenter::LoggingActivity} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{LoggingActivity};
@@ -7834,6 +8012,24 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
+		\item \texttt{+ getAllVisibleBeacons(visibleBeacons : PriorityQueue<MyBeacon>) : void}\\
+		\textbf{Override} Metodo invocato ogni volta che vengono rilevati beacon che consente di avere la lista aggiornata dei Beacon rilevati
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{visibleBeacons : PriorityQueue<MyBeacon>}\\
+				lista di beacon rilevati\end{itemize}
+		\end{description}
+		\item \texttt{+ onBackPressed() : void}\\
+		\textbf{Override} Redefinizione del comportamento di default del tasto upBack per fermare la registrazione di un log
+		\item \texttt{+ onOptionsItemSelected(item : MenuItem) : void}\\
+		\textbf{Override} Redefinizione del comportamento di default del tasto upBack per fermare la registrazione di un log
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{item : MenuItem}\\
+				Redefinizione del comportamento di default del tasto upBack per fermare la registrazione di un log\end{itemize}
+		\end{description}
 		\item \texttt{+ stopLogging() : void}\\
 		Metodo che viene utilizzato per interrompere l'attività di log
 	\end{itemize}
@@ -7844,7 +8040,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/LogInformationActivity.png}
-	\caption{'.Classe.'LogInformationActivity}\label{fig:presenter::LogInformationActivity} 
+	\caption{Classe LogInformationActivity}\label{fig:presenter::LogInformationActivity} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{LogInformationActivity};
@@ -7884,7 +8080,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/MainActivity.png}
-	\caption{'.Classe.'MainActivity}\label{fig:presenter::MainActivity} 
+	\caption{Classe MainActivity}\label{fig:presenter::MainActivity} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{MainActivity};
@@ -7897,12 +8093,6 @@
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per la gestione delle MainView;
 	\item[Descrizione:] Classe che implementa AppCompcatActivity per la gestione dell'interazione tra MainView ed il model;
-	\item[Attributi:] \
-	\begin{itemize}
-		\item \texttt{- view : MainView}\\
-		View associata a tale Activity
-		
-	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
 		\item \texttt{+ onCreate(bundle : Bundle) : void}\\
@@ -7921,7 +8111,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/MainDeveloperActivity.png}
-	\caption{'.Classe.'MainDeveloperActivity}\label{fig:presenter::MainDeveloperActivity} 
+	\caption{Classe MainDeveloperActivity}\label{fig:presenter::MainDeveloperActivity} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{MainDeveloperActivity};
@@ -7971,7 +8161,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/MainDeveloperPresenter.png}
-	\caption{'.Classe.'MainDeveloperPresenter}\label{fig:presenter::MainDeveloperPresenter} 
+	\caption{Classe MainDeveloperPresenter}\label{fig:presenter::MainDeveloperPresenter} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{MainDeveloperPresenter};
@@ -7979,12 +8169,24 @@
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per discriminare la visualizzazione delle funzionalità sviluppatore tra un utente sviluppatore ed un utente che non lo è;
 	\item[Descrizione:] Classe che estende AppCompactActivity e controlla utilizzando il model, se l'utente è sviluppatore o meno;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- userSetting : Setting}\\
+		Preferenze dell'utente
+		
+	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ MainDeveloperPresenter()}\\
-		Costruttore della classe MainDeveloperPresenter
 		\item \texttt{+ isDeveloper() : boolean}\\
 		Metodo che permette di verificare se un utente è sviluppatore
+		\item \texttt{+ onCreate(bundle : Bundle) : void}\\
+		\textbf{Override} !
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{bundle : Bundle}\\
+				!\end{itemize}
+		\end{description}
 		\item \texttt{+ startDeveloperOptions() : void}\\
 		Metodo che consente di avviare la gestione delle funzionalità sviluppatore
 		\item \texttt{+ startDeveloperUnlocker() : void}\\
@@ -7997,7 +8199,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/MapDownloaderActivity.png}
-	\caption{'.Classe.'MapDownloaderActivity}\label{fig:presenter::MapDownloaderActivity} 
+	\caption{Classe MapDownloaderActivity}\label{fig:presenter::MapDownloaderActivity} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{MapDownloaderActivity};
@@ -8037,7 +8239,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/MyApplication.png}
-	\caption{'.Classe.'MyApplication}\label{fig:presenter::MyApplication} 
+	\caption{Classe MyApplication}\label{fig:presenter::MyApplication} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{MyApplication};
@@ -8065,7 +8267,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NavigationActivity.png}
-	\caption{'.Classe.'NavigationActivity}\label{fig:presenter::NavigationActivity} 
+	\caption{Classe NavigationActivity}\label{fig:presenter::NavigationActivity} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{NavigationActivity};
@@ -8080,8 +8282,14 @@
 	\item[Descrizione:] Classe che estende AppCompactActivity per la gestione dell'interazione tra NavigationView ed il model;
 	\item[Attributi:] \
 	\begin{itemize}
+		\item \texttt{- informationManager : InformationManager}\\
+		Interfaccia che permette l'accesso alle informazioni trattate nel package "model"
+		
 		\item \texttt{- navigationAdapter : NavigationAdapter}\\
 		Consente di gestire l'insieme di funzioni per la navigazione
+		
+		\item \texttt{- navigationManager : NavigationManager}\\
+		Interfaccia che si occupa di esporre tutti i metodi utili alla navigazione
 		
 		\item \texttt{- view : NavigationView}\\
 		View associata a tale Activity
@@ -8089,6 +8297,14 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
+		\item \texttt{\# handleIntent(intent : Intent)}\\
+		\textbf{Override} !
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{intent : Intent}\\
+				!\end{itemize}
+		\end{description}
 		\item \texttt{+ informationUpdate(info : ProcessedInformation) : void}\\
 		Metodo che permette di aggiornare le informazioni
 		\begin{description}
@@ -8104,6 +8320,14 @@
 			\begin{itemize}
 				\item \texttt{bundle : Bundle}\\
 				Componente per salvare lo stato dell'applicazione\end{itemize}
+		\end{description}
+		\item \texttt{\# onNewIntent(intent : Intent) : void}\\
+		\textbf{Override} !
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{intent : Intent}\\
+				!\end{itemize}
 		\end{description}
 		\item \texttt{+ pathError() : void}\\
 		Metodo che viene invocato dal Model per segnalare un errore durante la navigazione
@@ -8125,7 +8349,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NavigationAdapter.png}
-	\caption{'.Classe.'NavigationAdapter}\label{fig:presenter::NavigationAdapter} 
+	\caption{Classe NavigationAdapter}\label{fig:presenter::NavigationAdapter} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{NavigationAdapter};
@@ -8138,8 +8362,26 @@
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per la gestione dell'interazione tra lista di indicazioni e le possibili azioni che è possibile effettuare su di esse;
 	\item[Descrizione:] Classe che estende BaseAdapter per la gestione della lista di istruzioni di navigazione;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- context : Context}\\
+		Context dell'applicazione
+		
+		\item \texttt{- navigationInformation : List<ProcessedInformation>}\\
+		Lista di informazioni necessarie a raggiungere la destinazione
+		
+	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
+		\item \texttt{+ NavigationAdapter(context : Context, navigationInformation : List<ProcessedInformation>)}\\
+		Costruttore della classe NavigationAdapter
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{context : Context}\\
+				Context dell'applicazione\item \texttt{navigationInformation : List<ProcessedInformation>}\\
+				Lista di informazioni necessarie a raggiungere la destinazione\end{itemize}
+		\end{description}
 		\item \texttt{+ NavigationAdapter()}\\
 		Costruttore della classe NavigationAdapter
 		\item \texttt{+ getCount() : int}\\
@@ -8178,7 +8420,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NavigationManagerPresenter.png}
-	\caption{'.Classe.'NavigationManagerPresenter}\label{fig:presenter::NavigationManagerPresenter} 
+	\caption{Classe NavigationManagerPresenter}\label{fig:presenter::NavigationManagerPresenter} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{NavigationManagerPresenter};
@@ -8209,7 +8451,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NearbyPoiActivity.png}
-	\caption{'.Classe.'NearbyPoiActivity}\label{fig:presenter::NearbyPoiActivity} 
+	\caption{Classe NearbyPoiActivity}\label{fig:presenter::NearbyPoiActivity} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{NearbyPoiActivity};
@@ -8224,6 +8466,9 @@
 	\item[Descrizione:] Classe che estende AppCompactActivity è gestisce tutte le possibili interazioni tra NearbyPoiView ed il model;
 	\item[Attributi:] \
 	\begin{itemize}
+		\item \texttt{- informationManager : InformationManager}\\
+		Interfaccia che permette l'accesso alle informazioni trattate nel package "model"
+		
 		\item \texttt{- pois : Collection<PointOfInterest>}\\
 		Insieme di POI rilevati nelle circostanze
 		
@@ -8249,7 +8494,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PoiCategoryActivity.png}
-	\caption{'.Classe.'PoiCategoryActivity}\label{fig:presenter::PoiCategoryActivity} 
+	\caption{Classe PoiCategoryActivity}\label{fig:presenter::PoiCategoryActivity} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PoiCategoryActivity};
@@ -8264,6 +8509,9 @@
 	\item[Descrizione:] Classe che implementa AppCompcatActivity per la gestione dell'interazione tra PoiCategoryView ed il model;
 	\item[Attributi:] \
 	\begin{itemize}
+		\item \texttt{- informationManager : InformationManager}\\
+		Interfaccia che permette l'accesso alle informazioni trattate nel package "model"
+		
 		\item \texttt{- poiList : List<PointOfInterest>}\\
 		Lista di POI associati ad una certa categoria
 		
@@ -8297,7 +8545,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PreferencesActivity.png}
-	\caption{'.Classe.'PreferencesActivity}\label{fig:presenter::PreferencesActivity} 
+	\caption{Classe PreferencesActivity}\label{fig:presenter::PreferencesActivity} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PreferencesActivity};
@@ -8336,7 +8584,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RemoteMapManagerActivity.png}
-	\caption{'.Classe.'RemoteMapManagerActivity}\label{fig:presenter::RemoteMapManagerActivity} 
+	\caption{Classe RemoteMapManagerActivity}\label{fig:presenter::RemoteMapManagerActivity} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RemoteMapManagerActivity};
@@ -8381,7 +8629,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/SearchSuggestionsProvider.png}
-	\caption{'.Classe.'SearchSuggestionsProvider}\label{fig:presenter::SearchSuggestionsProvider} 
+	\caption{Classe SearchSuggestionsProvider}\label{fig:presenter::SearchSuggestionsProvider} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{SearchSuggestionsProvider};
@@ -8455,7 +8703,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/SettingManager.png}
-	\caption{'.Classe.'SettingManager}\label{fig:presenter::SettingManager} 
+	\caption{Classe SettingManager}\label{fig:presenter::SettingManager} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{SettingManager};
@@ -8482,7 +8730,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/DetailedInformationView.png}
-	\caption{'.Interfaccia.'DetailedInformationView}\label{fig:view::DetailedInformationView} 
+	\caption{Interfaccia DetailedInformationView}\label{fig:view::DetailedInformationView} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{DetailedInformationView};
@@ -8493,20 +8741,20 @@
 	\item[Metodi:] \
 	\begin{itemize}
 		\item \texttt{+ \textit{setDetailedDescription(detailedInst : String) : void}}\\
-		Metodo utilizzato per visualizzare la descrizione dettagliata relativa ad una certa istruzione
+		Metodo che imposta una stringa formattata in HTML come testo della TextView dedicata a mostrare l'istruzione dettagliata
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
 				\item \texttt{detailedInst : String}\\
-				Descrizione dettagliata relativa ad una certa istruzione di navigazione\end{itemize}
+				Stringa contenente l'istruzione dettagliata formattata come HTML\end{itemize}
 		\end{description}
-		\item \texttt{+ \textit{setPhotos(photo : PhotoInformation) : void}}\\
+		\item \texttt{+ \textit{setPhoto(photo : PhotoInformation) : void}}\\
 		Metodo utilizzato per visualizzare la lista delle anteprime delle foto relative ad un certo POI
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
 				\item \texttt{photo : PhotoInformation}\\
-				Lista degli URI delle immagini relative ad un certo POI\end{itemize}
+				Oggetto che contiene la lista degli URI delle immagini relative ad un certo POI\end{itemize}
 		\end{description}
 	\end{itemize}
 \end{description}
@@ -8516,7 +8764,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/DetailedInformationViewImp.png}
-	\caption{'.Classe.'DetailedInformationViewImp}\label{fig:view::DetailedInformationViewImp} 
+	\caption{Classe DetailedInformationViewImp}\label{fig:view::DetailedInformationViewImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{DetailedInformationViewImp};
@@ -8528,7 +8776,7 @@
 	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] La lista di anteprime deve essere legata ad un oggetto anonimo di tipo AdapterView.OnItemClickListener, in modo che ogni item della lista possa reagire alla pressione su di esso. Per recuperare un riferimento alla lista è sufficiente utilizzare la classe R.id di Android;
-	\item[Descrizione:] Classe che si occupa di mostrare: le anteprime delle foto rappresentanti il prossimo POI, la descrizione dettagliata di una certa informazione di navigazione. La UI legata a questa classe permette all'utente di accedere alle foto rappresentanti il prossimo POI;
+	\item[Descrizione:] DetailedInformationViewImp si occupa di gestire direttamente i widget della UI deputati a mostrare le informazioni dettagliate rispetto ad una certa istruzione di navigazione. Tali informazioni comprendono le immagini del prossimo ROI da raggiungere ed i passi dettagliati da seguire;
 	\item[Attributi:] \
 	\begin{itemize}
 		\item \texttt{- presenter : DetailedInformationActivity}\\
@@ -8546,20 +8794,20 @@
 				Presenter della View che viene creata\end{itemize}
 		\end{description}
 		\item \texttt{+ setDetailedDescription(detailedInst : String) : void}\\
-		\textbf{Override} Metodo utilizzato per visualizzare la descrizione dettagliata relativa ad una certa istruzione
+		\textbf{Override} Metodo che imposta una stringa formattata in HTML come testo della TextView dedicata a mostrare l'istruzione dettagliata
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
 				\item \texttt{detailedInst : String}\\
-				Descrizione dettagliata relativa ad una certa istruzione di navigazione\end{itemize}
+				Stringa contenente l'istruzione dettagliata formattata come HTML\end{itemize}
 		\end{description}
-		\item \texttt{+ setPhotos(urls : List<String>) : void}\\
+		\item \texttt{+ setPhoto(photo : PhotoInformation) : void}\\
 		\textbf{Override} Metodo utilizzato per visualizzare la lista delle anteprime delle foto relative ad un certo POI
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{urls : List<String>}\\
-				Lista degli URI delle immagini relative ad un certo POI\end{itemize}
+				\item \texttt{photo : PhotoInformation}\\
+				Oggetto che contiene la lista degli URI delle immagini relative ad un certo POI\end{itemize}
 		\end{description}
 	\end{itemize}
 \end{description}
@@ -8569,7 +8817,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/DeveloperUnlockerView.png}
-	\caption{'.Interfaccia.'DeveloperUnlockerView}\label{fig:view::DeveloperUnlockerView} 
+	\caption{Interfaccia DeveloperUnlockerView}\label{fig:view::DeveloperUnlockerView} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{DeveloperUnlockerView};
@@ -8589,7 +8837,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/DeveloperUnlockerViewImp.png}
-	\caption{'.Classe.'DeveloperUnlockerViewImp}\label{fig:view::DeveloperUnlockerViewImp} 
+	\caption{Classe DeveloperUnlockerViewImp}\label{fig:view::DeveloperUnlockerViewImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{DeveloperUnlockerViewImp};
@@ -8605,17 +8853,14 @@
 	;
 	\item[Attributi:] \
 	\begin{itemize}
-		\item \texttt{- btnInsertCode : Button}\\
+		\item \texttt{- button : Button}\\
 		Bottone per confermare l'inserimento del codice sviluppatore
 		
-		\item \texttt{- plainTxtCode : EditText}\\
+		\item \texttt{- developerCode : EditText}\\
 		EditText in cui è possibile inserire il codice sviluppatore
 		
-		\item \texttt{- presenter : DeveloperUnlockerActivity}\\
+		\item \texttt{- developerUnlockerActivity : DeveloperUnlockerActivity}\\
 		Presenter della View
-		
-		\item \texttt{- txtInsertCode : TextView}\\
-		TextView all'interno della quale viene visualizzato un suggerimento per l'inserimento del codice sviluppatore
 		
 	\end{itemize}
 	\item[Metodi:] \
@@ -8638,7 +8883,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/HelpView.png}
-	\caption{'.Interfaccia.'HelpView}\label{fig:view::HelpView} 
+	\caption{Interfaccia HelpView}\label{fig:view::HelpView} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{HelpView};
@@ -8664,7 +8909,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/HelpViewImp.png}
-	\caption{'.Classe.'HelpViewImp}\label{fig:view::HelpViewImp} 
+	\caption{Classe HelpViewImp}\label{fig:view::HelpViewImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{HelpViewImp};
@@ -8720,7 +8965,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/HomeView.png}
-	\caption{'.Interfaccia.'HomeView}\label{fig:view::HomeView} 
+	\caption{Interfaccia HomeView}\label{fig:view::HomeView} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{HomeView};
@@ -8731,7 +8976,7 @@
 	\item[Metodi:] \
 	\begin{itemize}
 		\item \texttt{+ \textit{setBuildingAddress(address : String) : void}}\\
-		Metodo utilizzato per visualizzare l'indirizzo di un edificio
+		Imposta l'indirizzo dell'edificio all'interno del widget progettato per mostrarlo
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
@@ -8739,7 +8984,7 @@
 				Indirizzo dell'edificio\end{itemize}
 		\end{description}
 		\item \texttt{+ \textit{setBuildingDescription(description : String) : void}}\\
-		Metodo utilizzato per visualizzare la descrizione di un edificio
+		Imposta la descrizione dell'edificio all'interno del widget progettato per mostrarlo
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
@@ -8747,7 +8992,7 @@
 				Descrizione dell'edificio\end{itemize}
 		\end{description}
 		\item \texttt{+ \textit{setBuildingName(name : String) : void}}\\
-		Metodo utilizzato per visualizzare il nome di un edificio
+		Imposta il nome dell'edificio all'interno del widget progettato per mostrarlo
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
@@ -8755,20 +9000,20 @@
 				Nome dell'edificio\end{itemize}
 		\end{description}
 		\item \texttt{+ \textit{setBuildingOpeningHours(hours : String) : void}}\\
-		Metodo utilizzato per visualizzare gli orari di apertura di un edificio
+		Imposta la descrizione dell'edificio all'interno del widget progettato per mostrarlo
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
 				\item \texttt{hours : String}\\
 				Orari di apertura\end{itemize}
 		\end{description}
-		\item \texttt{+ \textit{setPoiCategoryListAdapter(adapter : ListAdapter) : void}}\\
-		Metodo utilizzato per visualizzare la lista di categorie dei POI dell'edificio
+		\item \texttt{+ \textit{setPoiCategoryListAdapter(poiCategoryList : List<String>) : void}}\\
+		Imposta la lista delle categorie di POI dell'edificio all'interno del widget progettato per mostrarlo
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{adapter : ListAdapter}\\
-				Collegamento tra la lista delle categorie di POI dell'edificio e la view in cui esse devono essere mostrate\end{itemize}
+				\item \texttt{poiCategoryList : List<String>}\\
+				Lista di categorie di POI dell'edificio\end{itemize}
 		\end{description}
 	\end{itemize}
 \end{description}
@@ -8778,7 +9023,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/HomeViewImp.png}
-	\caption{'.Classe.'HomeViewImp}\label{fig:view::HomeViewImp} 
+	\caption{Classe HomeViewImp}\label{fig:view::HomeViewImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{HomeViewImp};
@@ -8794,35 +9039,20 @@
 	\item[Descrizione:] Classe che si occupa di mostrare: informazioni relative all'edificio, categorie di POI presenti nell'edificio. La UI legata a questa classe permette all'utente di accedere alle sezioni principali dell'applicazione e alla lista dei POI che si trovano nelle vicinanze dell'utente;
 	\item[Attributi:] \
 	\begin{itemize}
-		\item \texttt{- buildingAddress : TextView}\\
-		TextView all'interno della quale viene visualizzato l'indirizzo dell'edificio
-		
-		\item \texttt{- buildingDescription : TextView}\\
-		TextView all'interno della quale viene visualizzata la descrizione dell'edificio
-		
-		\item \texttt{- buildingName : TextView}\\
-		TextView all'interno della quale viene visualizzato il nome dell'edificio
-		
-		\item \texttt{- buildingOpeningHours : TextView}\\
-		TextView all'interno della quale viene visualizzato l'orario di apertura dell'edificio
-		
 		\item \texttt{- drawer : DrawerLayout}\\
 		Permette di estrarre delle view dagli angoli dello schermo
 		
 		\item \texttt{- exploreButton : FloatingActionButton}\\
 		Bottone che permette di trovare i POI intorno all'utente
 		
-		\item \texttt{- navigationView : NavigationView}\\
-		View che gestisce la navigazione
+		\item \texttt{- fragmentManager : FragmentManager}\\
+		Riferimento al gestore dei Fragment
 		
-		\item \texttt{- poiCategories : ListView}\\
-		View che si occupa di mostrare tutte le categorie dei POI
-		
-		\item \texttt{- presenter : HomeActivity}\\
+		\item \texttt{- homeActivity : HomeActivity}\\
 		Presenter della View
 		
-		\item \texttt{- searchView : SearchView}\\
-		View che permette la ricerca delle destinazioni di navigazione
+		\item \texttt{- navigationView : NavigationView}\\
+		View che gestisce la navigazione
 		
 		\item \texttt{- toolbar : Toolbar}\\
 		Barra degli strumenti che permette la visualizzazione del menu
@@ -8830,16 +9060,24 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ HomeViewImp(presenter : HomeActivity)}\\
+		\item \texttt{+ HomeViewImp(homeActivity : HomeActivity)}\\
 		Costruttore della classe HomeViewImp
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{presenter : HomeActivity}\\
+				\item \texttt{homeActivity : HomeActivity}\\
 				Presenter della View che viene creata\end{itemize}
 		\end{description}
+		\item \texttt{+ onNavigationItemSelected(item : MenuItem) : boolean}\\
+		Gestisce i tap dell'utente nel Drawer: esegue l'azione appropriata rispetto alla voce di menù scelta dall'utente
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{item : MenuItem}\\
+				Voce del menù scelta dall'utente\end{itemize}
+		\end{description}
 		\item \texttt{+ setBuildingAddress(address : String) : void}\\
-		\textbf{Override} Metodo utilizzato per visualizzare l'indirizzo di un edificio
+		\textbf{Override} Imposta l'indirizzo dell'edificio all'interno del widget progettato per mostrarlo
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
@@ -8847,7 +9085,7 @@
 				Indirizzo dell'edificio\end{itemize}
 		\end{description}
 		\item \texttt{+ setBuildingDescription(description : String) : void}\\
-		\textbf{Override} Metodo utilizzato per visualizzare la descrizione di un edificio
+		\textbf{Override} Imposta la descrizione dell'edificio all'interno del widget progettato per mostrarlo
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
@@ -8855,7 +9093,7 @@
 				Descrizione dell'edificio\end{itemize}
 		\end{description}
 		\item \texttt{+ setBuildingName(name : String) : void}\\
-		\textbf{Override} Metodo utilizzato per visualizzare il nome di un edificio
+		\textbf{Override} Imposta il nome dell'edificio all'interno del widget progettato per mostrarlo
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
@@ -8863,20 +9101,20 @@
 				Nome dell'edificio\end{itemize}
 		\end{description}
 		\item \texttt{+ setBuildingOpeningHours(hours : String) : void}\\
-		\textbf{Override} Metodo utilizzato per visualizzare gli orari di apertura di un edificio
+		\textbf{Override} Imposta gli orari di apertura dell'edificio all'interno del widget progettato per mostrarli
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
 				\item \texttt{hours : String}\\
 				Orari di apertura dell'edificio\end{itemize}
 		\end{description}
-		\item \texttt{+ setPoiCategoryListAdapter(adapter : ListAdapter) : void}\\
-		\textbf{Override} Metodo utilizzato per visualizzare la lista di categorie dei POI dell'edificio
+		\item \texttt{+ setPoiCategoryListAdapter(poiCategoryList : List<String>) : void}\\
+		\textbf{Override} Imposta la lista delle categorie di POI dell'edificio all'interno del widget progettato per mostrarlo
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{adapter : ListAdapter}\\
-				Collegamento tra la lista delle categorie di POI dell'edificio e la view in cui esse devono essere mostrate\end{itemize}
+				\item \texttt{poiCategoryList : List<String>}\\
+				Lista di categorie di POI dell'edificio\end{itemize}
 		\end{description}
 	\end{itemize}
 \end{description}
@@ -8886,23 +9124,23 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/ImageDetailView.png}
-	\caption{'.Interfaccia.'ImageDetailView}\label{fig:view::ImageDetailView} 
+	\caption{Interfaccia ImageDetailView}\label{fig:view::ImageDetailView} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{ImageDetailView};
 	\item[Tipo:] Interfaccia;
 	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] È utilizzata per rendere indipendente l'implementazione della UI dalle modalità attraverso le quali è possibile aggiornarla;
-	\item[Descrizione:] Interfaccia che espone i metodi per aggiornare la UI contenente lo slideshow delle immagini relative ad un certo POI;
+	\item[Utilizzo:] Viene utilizzata per effettuare il binding della View con la lista di immagini relative ad una certa istruzione;
+	\item[Descrizione:] ImageDetailView espone i metodi utili al binding della View con la lista di immagini relative ad una certa istruzione;
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ \textit{setAdapter(adp : Adapter) : void}}\\
-		Metodo utilizzato per visualizzare una slideshow di immagini relative al POI da raggiungere
+		\item \texttt{+ \textit{setAdapter(listLength : int) : void}}\\
+		Collega l'Adapter appropriato alla View deputata a mostrare le immagini relative ad una certa istruzione di navigazione
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{adp : Adapter}\\
-				Collegamento tra la lista delle immagini e la view in cui esse devono essere mostrate\end{itemize}
+				\item \texttt{listLength : int}\\
+				Numero delle immagini da mostrare\end{itemize}
 		\end{description}
 	\end{itemize}
 \end{description}
@@ -8912,7 +9150,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/ImageDetailViewImp.png}
-	\caption{'.Classe.'ImageDetailViewImp}\label{fig:view::ImageDetailViewImp} 
+	\caption{Classe ImageDetailViewImp}\label{fig:view::ImageDetailViewImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{ImageDetailViewImp};
@@ -8923,12 +9161,12 @@
 		
 	\end{itemize}
 	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] Mantiene un riferimento all'elemento di layout utile per passare da una foto alla successiva. alla pressione su di esso.;
-	\item[Descrizione:] Classe che si occupa di mostrare una foto relativa ad un certo POI. La UI legata a questa classe permette all'utente di accedere a tutte le foto relative allo stesso POI;
+	\item[Utilizzo:] Viene utilizzata per eseguire il binding della View con la lista di immagini relative ad una certa istruzione;
+	\item[Descrizione:] La classe ImageDetailViewImp espone i metodi utili al binding della View con la lista di immagini relative ad una certa istruzione;
 	\item[Attributi:] \
 	\begin{itemize}
 		\item \texttt{- pager : ViewPager}\\
-		Manager del layout che permette di capovolgere la view
+		Riferimento al widget responsabile dello slideshow
 		
 		\item \texttt{- presenter : ImageDetailActivity}\\
 		Presenter della View
@@ -8944,92 +9182,13 @@
 				\item \texttt{presenter : ImageDetailActivity}\\
 				Presenter della View che viene creata\end{itemize}
 		\end{description}
-		\item \texttt{+ setAdapter(adp : Adapter) : void}\\
-		\textbf{Override} Metodo utilizzato per visualizzare una slideshow di immagini relative al POI da raggiungere
+		\item \texttt{+ setAdapter(listLength : int) : void}\\
+		\textbf{Override} Collega l'Adapter appropriato alla View deputata a mostrare le immagini relative ad una certa istruzione di navigazione
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{adp : Adapter}\\
-				Collegamento tra la lista delle immagini e la view in cui esse devono essere mostrate\end{itemize}
-		\end{description}
-	\end{itemize}
-\end{description}
-
-\paragraph{view::ImageListFragmentView}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/ImageListFragmentView.png}
-	\caption{'.Interfaccia.'ImageListFragmentView}\label{fig:view::ImageListFragmentView} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{ImageListFragmentView};
-	\item[Tipo:] Interfaccia;
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{android.widget.AdapterView.OnItemClickListener(Android)}.
-		
-	\end{itemize}
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] Utilizzata per visualizzare le immagini di un arco necessarie per passare dal nodo di partenza a quello di arrivo;
-	\item[Descrizione:] Interfaccia che espone i metodi per aggiornare la UI contenente le anteprime delle immagini relative al prossimo POI;
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ \textit{setImageAdapter(adp : Adapter) : void}}\\
-		Metodo utilizzato per visualizzare la lista delle anteprime delle immagine relative ad un certo POI
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{adp : Adapter}\\
-				Collegamento tra la lista delle immagini e la view in cui esse devono essere mostrate\end{itemize}
-		\end{description}
-	\end{itemize}
-\end{description}
-
-\paragraph{view::ImageListFragmentViewImp}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/ImageListFragmentViewImp.png}
-	\caption{'.Classe.'ImageListFragmentViewImp}\label{fig:view::ImageListFragmentViewImp} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{ImageListFragmentViewImp};
-	\item[Tipo:] Classe;
-	\item[Implementa:] \
-	\begin{itemize}
-		\item \texttt{ImageListFragmentView}.
-		
-	\end{itemize}
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] Mantiene i riferimenti all'elemento di layout che rappresenta la lista di immagini. La lista di immagini deve essere legata ad un oggetto anonimo di tipo AdapterView.OnItemClickListener, in modo che ogni item della lista di POI possa reagire alla pressione su di esso;
-	\item[Descrizione:] Classe che si occupa di mostrare la lista delle anteprime delle immagini relative ad un certo POI. La UI legata a questa classe permette all'utente di accedere alle immagini relative ad un certo POI;
-	\item[Attributi:] \
-	\begin{itemize}
-		\item \texttt{- listViewImages : ListView}\\
-		Lista delle anteprime delle foto
-		
-		\item \texttt{- presenter : ImageListFragment}\\
-		Presenter della View
-		
-	\end{itemize}
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ ImageListFragmentViewImp(presenter : ImageListFragment)}\\
-		Costruttore della classe ImageListFragmentViewImp
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{presenter : ImageListFragment}\\
-				Presenter della View che viene creata\end{itemize}
-		\end{description}
-		\item \texttt{+ setImageAdapter(adp : Adapter) : void}\\
-		\textbf{Override} Metodo utilizzato per visualizzare la lista delle anteprime delle immagine relative ad un certo POI
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{adp : Adapter}\\
-				Collegamento tra la lista delle informazioni e la view in cui esse devono essere mostrate\end{itemize}
+				\item \texttt{listLength : int}\\
+				Numero delle immagini da mostrare\end{itemize}
 		\end{description}
 	\end{itemize}
 \end{description}
@@ -9039,7 +9198,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/LocalMapManagerView.png}
-	\caption{'.Interfaccia.'LocalMapManagerView}\label{fig:view::LocalMapManagerView} 
+	\caption{Interfaccia LocalMapManagerView}\label{fig:view::LocalMapManagerView} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{LocalMapManagerView};
@@ -9067,7 +9226,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/LocalMapManagerViewImp.png}
-	\caption{'.Classe.'LocalMapManagerViewImp}\label{fig:view::LocalMapManagerViewImp} 
+	\caption{Classe LocalMapManagerViewImp}\label{fig:view::LocalMapManagerViewImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{LocalMapManagerViewImp};
@@ -9114,7 +9273,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/LoggingView.png}
-	\caption{'.Interfaccia.'LoggingView}\label{fig:view::LoggingView} 
+	\caption{Interfaccia LoggingView}\label{fig:view::LoggingView} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{LoggingView};
@@ -9124,12 +9283,12 @@
 	\item[Descrizione:] Interfaccia che espone i metodi per aggiornare la UI contenente gli identificativi dei beacon rilevati;
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ \textit{setBeaconListAdapter(adp : Adapter) : void}}\\
+		\item \texttt{+ \textit{setBeaconListAdapter(stringLogs : StringBuffer) : void}}\\
 		Metodo utilizzato per visualizzare la lista dei beacon rilevati 
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{adp : Adapter}\\
+				\item \texttt{stringLogs : StringBuffer}\\
 				Collegamento tra la lista dei beacon rilevati e la view in cui essi devono essere mostrati\end{itemize}
 		\end{description}
 	\end{itemize}
@@ -9140,7 +9299,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/LoggingViewImp.png}
-	\caption{'.Classe.'LoggingViewImp}\label{fig:view::LoggingViewImp} 
+	\caption{Classe LoggingViewImp}\label{fig:view::LoggingViewImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{LoggingViewImp};
@@ -9175,16 +9334,14 @@
 				\item \texttt{presenter : LoggingActivity}\\
 				Presenter della View che viene creata\end{itemize}
 		\end{description}
-		\item \texttt{+ setBeaconListAdapter(adp : Adapter) : void}\\
+		\item \texttt{+ setBeaconListAdapter(stringLogs : StringBUffer) : void}\\
 		\textbf{Override} Metodo utilizzato per visualizzare la lista dei beacon rilevati 
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{adp : Adapter}\\
+				\item \texttt{stringLogs : StringBUffer}\\
 				Collegamento tra la lista dei beacon rilevati e la view in cui essi devono essere mostrati\end{itemize}
 		\end{description}
-		\item \texttt{- showAlertDialog() : void}\\
-		Metodo utilizzato per confermare la rimozione di un log attraverso un dialog.
 	\end{itemize}
 \end{description}
 
@@ -9193,7 +9350,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/LogInformationView.png}
-	\caption{'.Interfaccia.'LogInformationView}\label{fig:view::LogInformationView} 
+	\caption{Interfaccia LogInformationView}\label{fig:view::LogInformationView} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{LogInformationView};
@@ -9219,7 +9376,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/LogInformationViewImp.png}
-	\caption{'.Classe.'LogInformationViewImp}\label{fig:view::LogInformationViewImp} 
+	\caption{Classe LogInformationViewImp}\label{fig:view::LogInformationViewImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{LogInformationViewImp};
@@ -9262,6 +9419,8 @@
 				\item \texttt{logInfo : String}\\
 				Collegamento tra la lista delle informazione dei log e la view in cui esse devono essere mostrate\end{itemize}
 		\end{description}
+		\item \texttt{- showAlertDialog() : void}\\
+		Metodo utilizzato per mostrare un dialog di conferma per poter cancellare un log
 	\end{itemize}
 \end{description}
 
@@ -9270,7 +9429,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/MainDeveloperView.png}
-	\caption{'.Interfaccia.'MainDeveloperView}\label{fig:view::MainDeveloperView} 
+	\caption{Interfaccia MainDeveloperView}\label{fig:view::MainDeveloperView} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{MainDeveloperView};
@@ -9296,7 +9455,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/MainDeveloperViewImp.png}
-	\caption{'.Classe.'MainDeveloperViewImp}\label{fig:view::MainDeveloperViewImp} 
+	\caption{Classe MainDeveloperViewImp}\label{fig:view::MainDeveloperViewImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{MainDeveloperViewImp};
@@ -9343,83 +9502,12 @@
 	\end{itemize}
 \end{description}
 
-\paragraph{view::MainView}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/MainView.png}
-	\caption{'.Interfaccia.'MainView}\label{fig:view::MainView} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{MainView};
-	\item[Tipo:] Interfaccia;
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] È utilizzata per rendere indipendente l'implementazione della UI dalle modalità attraverso le quali è possibile aggiornarla;
-	\item[Descrizione:] Interfaccia che espone i metodi per aggiornare la UI relativa alla schermata di avvio dell'applicazione;
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ \textit{setLoadingView(message : String) : void}}\\
-		Metodo utilizzato per visualizzare la schermata di caricamento dell'applicazione
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{message : String}\\
-				Messaggio di caricamento\end{itemize}
-		\end{description}
-	\end{itemize}
-\end{description}
-
-\paragraph{view::MainViewImp}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/MainViewImp.png}
-	\caption{'.Classe.'MainViewImp}\label{fig:view::MainViewImp} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{MainViewImp};
-	\item[Tipo:] Classe;
-	\item[Implementa:] \
-	\begin{itemize}
-		\item \texttt{MainView}.
-		
-	\end{itemize}
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] Questa classe viene utilizzata per eseguire tutte le operazioni CPU-intensive necessarie all'avvio dell'applicazione.;
-	\item[Descrizione:] Classe che si occupa di mostrare la schermata di caricamento dell'applicazione, eventuali operazioni CPU-intensive possono essere eseguite qui.;
-	\item[Attributi:] \
-	\begin{itemize}
-		\item \texttt{- presenter : MainActivity}\\
-		Presenter della View
-		
-	\end{itemize}
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ MainViewImp(presenter : MainActivity)}\\
-		Costruttore della classe MainViewImp
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{presenter : MainActivity}\\
-				Presenter della View che viene creata\end{itemize}
-		\end{description}
-		\item \texttt{+ setLoadingView(message : String) : void}\\
-		\textbf{Override} Metodo utilizzato per visualizzare la schermata di caricamento dell'applicazione
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{message : String}\\
-				Messaggio di caricamento\end{itemize}
-		\end{description}
-	\end{itemize}
-\end{description}
-
 \paragraph{view::MapDownloaderView}
 \
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/MapDownloaderView.png}
-	\caption{'.Interfaccia.'MapDownloaderView}\label{fig:view::MapDownloaderView} 
+	\caption{Interfaccia MapDownloaderView}\label{fig:view::MapDownloaderView} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{MapDownloaderView};
@@ -9453,7 +9541,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/MapDownloaderViewImp.png}
-	\caption{'.Classe.'MapDownloaderViewImp}\label{fig:view::MapDownloaderViewImp} 
+	\caption{Classe MapDownloaderViewImp}\label{fig:view::MapDownloaderViewImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{MapDownloaderViewImp};
@@ -9506,7 +9594,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NavigationView.png}
-	\caption{'.Interfaccia.'NavigationView}\label{fig:view::NavigationView} 
+	\caption{Interfaccia NavigationView}\label{fig:view::NavigationView} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{NavigationView};
@@ -9518,13 +9606,13 @@
 	\begin{itemize}
 		\item \texttt{+ \textit{refreshInstructions() : void}}\\
 		Metodo utilizzato per aggiornare la lista di istruzioni 
-		\item \texttt{+ \textit{setInstructionAdapter(adapter : NavigationAdapter) : void}}\\
-		Metodo utilizzato per visualizzare la lista di istruzioni utili a raggiungere un certo POI
+		\item \texttt{+ \textit{setInstructionAdapter(navigationInformation : List<ProcessedInformation>) : void}}\\
+		Collega l'Adapter appropriato alla View deputata a mostrare a lista di istruzioni di navigazione utili per raggiungere una certa destinazione
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{adapter : NavigationAdapter}\\
-				Collegamento tra la lista delle informazioni e la view in cui esse devono essere mostrate\end{itemize}
+				\item \texttt{navigationInformation : List<ProcessedInformation>}\\
+				Lista delle istruzioni di navigazione\end{itemize}
 		\end{description}
 	\end{itemize}
 \end{description}
@@ -9534,7 +9622,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NavigationViewImp.png}
-	\caption{'.Classe.'NavigationViewImp}\label{fig:view::NavigationViewImp} 
+	\caption{Classe NavigationViewImp}\label{fig:view::NavigationViewImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{NavigationViewImp};
@@ -9549,8 +9637,8 @@
 	\item[Descrizione:] Classe che si occupa di mostrare la lista di istruzioni di navigazione utili per raggiungere un determinato POI. La UI legata a questa classe permette all'utente di accedere alle descrizioni dettagliate delle varie istruzioni;
 	\item[Attributi:] \
 	\begin{itemize}
-		\item \texttt{- instrctionAdapter : Adapter}\\
-		Collegamento tra la lista delle informazioni e la view in cui esse devono essere mostrate
+		\item \texttt{- instructionAdapter : Adapter}\\
+		Riferimento al widget responsabile di mostrare la lista di istruzioni
 		
 		\item \texttt{- presenter : NavigationActivity}\\
 		Presenter della View
@@ -9568,13 +9656,13 @@
 		\end{description}
 		\item \texttt{+ refreshInstructions() : void}\\
 		\textbf{Override} Metodo utilizzato per aggiornare la lista di istruzioni
-		\item \texttt{+ setInstructionAdapter(adapter : NavigationAdapter) : void}\\
-		\textbf{Override} Metodo utilizzato per visualizzare la lista di istruzioni utili a raggiungere un certo POI
+		\item \texttt{+ setInstructionAdapter(navigationInformation : List<ProcessedInformation>) : void}\\
+		\textbf{Override} Collega l'Adapter appropriato alla View deputata a mostrare a lista di istruzioni di navigazione utili per raggiungere una certa destinazione
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{adapter : NavigationAdapter}\\
-				Collegamento tra la lista delle informazioni e la view in cui esse devono essere mostrate\end{itemize}
+				\item \texttt{navigationInformation : List<ProcessedInformation>}\\
+				Lista delle istruzioni di navigazione\end{itemize}
 		\end{description}
 	\end{itemize}
 \end{description}
@@ -9584,7 +9672,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NearbyPoiView.png}
-	\caption{'.Interfaccia.'NearbyPoiView}\label{fig:view::NearbyPoiView} 
+	\caption{Interfaccia NearbyPoiView}\label{fig:view::NearbyPoiView} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{NearbyPoiView};
@@ -9594,12 +9682,12 @@
 	\item[Descrizione:] Interfaccia che espone i metodi per aggiornare la UI contenente la lista dei POI nelle vicinanze dell'utente;
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ \textit{setAdapter(toDisplay : String[]) : void}}\\
+		\item \texttt{+ \textit{setAdapter(toDisplay : ArrayList<String>) : void}}\\
 		Metodo utilizzato per visualizzare tutti i POI nelle circostanze dell'utente
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{toDisplay : String[]}\\
+				\item \texttt{toDisplay : ArrayList<String>}\\
 				Array contenente le stringhe che rappresentano i nomi dei PointOfInterest circostanti l'utente\end{itemize}
 		\end{description}
 	\end{itemize}
@@ -9610,7 +9698,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/NearbyPoiViewImp.png}
-	\caption{'.Classe.'NearbyPoiViewImp}\label{fig:view::NearbyPoiViewImp} 
+	\caption{Classe NearbyPoiViewImp}\label{fig:view::NearbyPoiViewImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{NearbyPoiViewImp};
@@ -9642,12 +9730,12 @@
 				\item \texttt{presenter : NearbyPoiActivity}\\
 				Presenter della View che viene creata\end{itemize}
 		\end{description}
-		\item \texttt{+ setAdapter(toDisplay : String[]) : void}\\
+		\item \texttt{+ setAdapter(toDisplay : ArrayList<String>) : void}\\
 		\textbf{Override} Metodo utilizzato per visualizzare tutti i POI nelle circostanze dell'utente
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{toDisplay : String[]}\\
+				\item \texttt{toDisplay : ArrayList<String>}\\
 				Array contenente le stringhe che rappresentano i nomi dei PointOfInterest circostanti l'utente\end{itemize}
 		\end{description}
 	\end{itemize}
@@ -9658,7 +9746,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PoiCategoryView.png}
-	\caption{'.Interfaccia.'PoiCategoryView}\label{fig:view::PoiCategoryView} 
+	\caption{Interfaccia PoiCategoryView}\label{fig:view::PoiCategoryView} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PoiCategoryView};
@@ -9668,12 +9756,12 @@
 	\item[Descrizione:] Interfaccia che espone i metodi per aggiornare la UI contenente la lista dei POI appartenenti ad una data categoria;
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ \textit{setPoiListAdapter(toDisplay : String[]) : void}}\\
+		\item \texttt{+ \textit{setPoiListAdapter(toDisplay : List<String>) : void}}\\
 		Metodo utilizzato per visualizzare tutti i POI appartenenti ad una certa categoria
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{toDisplay : String[]}\\
+				\item \texttt{toDisplay : List<String>}\\
 				Array di stringhe che rappresentano le categorie che devono essere mostrate\end{itemize}
 		\end{description}
 	\end{itemize}
@@ -9684,7 +9772,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PoiCategoryViewImp.png}
-	\caption{'.Classe.'PoiCategoryViewImp}\label{fig:view::PoiCategoryViewImp} 
+	\caption{Classe PoiCategoryViewImp}\label{fig:view::PoiCategoryViewImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PoiCategoryViewImp};
@@ -9716,12 +9804,12 @@
 				\item \texttt{presenter : PoiCategoryActivity}\\
 				Presenter della View che viene creata\end{itemize}
 		\end{description}
-		\item \texttt{+ setPoiListAdapter(toDisplay : String[]) : void}\\
+		\item \texttt{+ setPoiListAdapter(toDisplay : List<String>) : void}\\
 		\textbf{Override} Metodo utilizzato per visualizzare tutti i POI appartenenti ad una certa categoria
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{toDisplay : String[]}\\
+				\item \texttt{toDisplay : List<String>}\\
 				Array di stringhe che rappresentano le categorie che devono essere mostrate\end{itemize}
 		\end{description}
 	\end{itemize}
@@ -9732,7 +9820,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PreferencesView.png}
-	\caption{'.Interfaccia.'PreferencesView}\label{fig:view::PreferencesView} 
+	\caption{Interfaccia PreferencesView}\label{fig:view::PreferencesView} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PreferencesView};
@@ -9766,7 +9854,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/PreferencesViewImp.png}
-	\caption{'.Classe.'PreferencesViewImp}\label{fig:view::PreferencesViewImp} 
+	\caption{Classe PreferencesViewImp}\label{fig:view::PreferencesViewImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{PreferencesViewImp};
@@ -9820,7 +9908,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RemoteMapManagerView.png}
-	\caption{'.Interfaccia.'RemoteMapManagerView}\label{fig:view::RemoteMapManagerView} 
+	\caption{Interfaccia RemoteMapManagerView}\label{fig:view::RemoteMapManagerView} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RemoteMapManagerView};
@@ -9846,7 +9934,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/RemoteMapManagerViewImp.png}
-	\caption{'.Classe.'RemoteMapManagerViewImp}\label{fig:view::RemoteMapManagerViewImp} 
+	\caption{Classe RemoteMapManagerViewImp}\label{fig:view::RemoteMapManagerViewImp} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{RemoteMapManagerViewImp};
@@ -9885,9 +9973,4 @@
 		\end{description}
 	\end{itemize}
 \end{description}
-
- 
- 
-	
-	
 \end{document}
