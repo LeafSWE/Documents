@@ -204,7 +204,7 @@ All'interno di questa fase\g, secondo quanto riportato nel documento \pianodipro
 				\caption{Copertura requisiti obbligatori al termine della fase PDRD}
 				\label{tab:copertura_requisiti_obbligatori}
 			\end{table}
-			I requisiti obbligatori non sono stati completamente implementati, perchè si sono riscontrati problemi durante il processo di codifica.L'origine di questi problemi può essere derivata dalla progettazione poco matura e dalla complessità del sistema Android\g.  
+			I requisiti obbligatori non sono stati completamente implementati, perché si sono riscontrati problemi durante il processo di codifica che hanno impattato sui tempi di codifica. L'origine di questi problemi può essere derivata dalla progettazione poco matura e dalla complessità del sistema Android\g.  
 			
 			\paragraph{Funzionalità desiderabili}
 				Il prodotto\g\ deve ricoprire tutte le funzionalità descritte nei requisiti desiderabili. Per monitorare lo stato di completamento delle funzionalità richieste, il gruppo ha pensato di rapportare i requisiti completati con quelli ancora da completare.
@@ -228,9 +228,9 @@ All'interno di questa fase\g, secondo quanto riportato nel documento \pianodipro
 					\toprule
 					\textbf{Metrica} & \textbf{Valore} & \textbf{Esito} \\
 					\midrule
-					Numero di statement per metodo & max 53 & Accettabile \\
-					Numero di parametri per metodo & max 9 & Accettabile \\
-					Numero di campi dati per classe & max 13 & Accettabile \\
+					Numero massimo di statement per metodo & 53 & Accettabile \\
+					Numero massimo di parametri per metodo & 9 & Accettabile \\
+					Numero massimo di campi dati per classe & 13 & Accettabile \\
 					Grado di accoppiamento medio & 9,41 & Accettabile \\
 					Cyclomatic number (medio) & 1,46 & Ottimale \\
 					Adequacy of variable names & 100\% & Ottimale \\
@@ -240,7 +240,7 @@ All'interno di questa fase\g, secondo quanto riportato nel documento \pianodipro
 				\caption{Risultati delle metriche per il codice durante la fase PDRD}
 				\label{tab:numero_statement_metodo}
 			\end{table}
-			La qualità del codice secondo le metriche prese in considerazione risulta essere relativamente buona. Nelle prime tre metriche il dato preso in considerazione è il massimo valore riscontrato, mentre nelle altre si usa il valore medio. Dalla penultima metrica si nota che la codifica segue di pari passo la progettazione e non vi sono particolari incongruenze tra le due. Si noti inoltre che ci sono alcuni valori che tendono al limite dell'accettabilità e sono: il "numero di statement per metodo", il "numero di parametri per metodo"  e il "grado di accoppiamento". Essi dovranno essere monitorati durante le prossime fasi.  
+			La qualità del codice secondo le metriche prese in considerazione risulta essere relativamente buona. Nelle prime tre metriche il dato preso in considerazione è il massimo valore riscontrato, mentre nelle altre si usa il valore medio. Dalla penultima metrica si nota che la codifica segue di pari passo la progettazione e non vi sono particolari incongruenze tra le due. Si noti inoltre che ci sono alcuni valori che tendono al limite dell'accettabilità e sono: il "numero massimo di statement per metodo", il "numero massimo di parametri per metodo"  e il "grado di accoppiamento". Essi dovranno essere monitorati durante le prossime fasi.  
 			
 			\paragraph{Copertura dei test richiesti}
 				Il prodotto\g\ deve essere testato in ogni sua parte per garantirne il funzionamento. I test presi in considerazioni sono quelli che testano le funzionalità previste dai requisiti.
@@ -254,7 +254,7 @@ All'interno di questa fase\g, secondo quanto riportato nel documento \pianodipro
 				\caption{Test passati al termine della fase PDRD}
 				\label{tab:copertura_test}
 			\end{table}
-			L'esito dato da questa metrica risulta negativo, perchè i test presi in considerazione riguardano tutte le tipologie. Al momento sono implementati e superati con successo circa il 98\% dei test di unità. 
+			L'esito dato da questa metrica risulta negativo, perché i test presi in considerazione riguardano tutte le tipologie. Al momento sono implementati e superati con successo circa il 98\% dei test di unità. 
 			
 			\paragraph{Robustezza}
 				Il prodotto\g\ deve essere robusto e non deve interrompere il suo funzionamento in seguito al verificarsi di situazioni anomale\g. Il prodotto\g\ deve essere in grado inoltre di gestire le situazioni di errore.
@@ -268,7 +268,7 @@ All'interno di questa fase\g, secondo quanto riportato nel documento \pianodipro
 				\caption{Failure avoidance al termine della fase PDRD}
 				\label{tab:failure_avoidance}
 			\end{table}
-			Il prodotto in seguito ai vari stress test eseguiti riesce ad evitare nel 80\% dei casi un'interruzione critica. L'esito risulta pertanto accettabile. 
+			In seguito ai vari stress test eseguiti, possiamo affermare che il prodotto riesce ad evitare nel 80\% dei casi un'interruzione critica. L'esito risulta pertanto accettabile. 
 			
 			\paragraph{Funzionamento senza interruzioni}
 				Il prodotto\g\ deve garantire un funzionamento senza interruzioni. Questo livello è considerato ottimale ma secondo la metrica scelta possono esserci al massimo il 20\% di interruzioni dovute al verificarsi di situazioni anomale\g.
@@ -282,8 +282,6 @@ All'interno di questa fase\g, secondo quanto riportato nel documento \pianodipro
 				\caption{Breakdown avoidance al termine della fase PDRD}
 				\label{tab:breakdown_avoidance}
 			\end{table}	
-			Il prodotto è in grado di gestire nel 80\% dei casi delle situazioni anomale e garantire il continuo e corretto funzionamento. Il valore riscontrato risulta pertanto accettabile.
-				
-	
+			Il prodotto è in grado di gestire nel 80\% dei casi delle situazioni anomale e garantire il continuo e corretto funzionamento. Il valore riscontrato risulta pertanto accettabile.	
 \end{appendices}
 \end{document}
