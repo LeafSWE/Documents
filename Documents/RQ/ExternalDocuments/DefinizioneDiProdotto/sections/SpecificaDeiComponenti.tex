@@ -647,11 +647,7 @@
 	\begin{itemize}
 		\item \texttt{BlankHomeFragment};
 		
-		\item \texttt{Checker};
-		
 		\item \texttt{CompleteHomeFragment};
-		
-		\item \texttt{DatabaseServiceManager};
 		
 		\item \texttt{DetailedInformationActivity};
 		
@@ -668,8 +664,6 @@
 		\item \texttt{ImageDetailFragment};
 		
 		\item \texttt{ImageListFragment};
-		
-		\item \texttt{InformationManagerPresenter};
 		
 		\item \texttt{LocalMapActivity};
 		
@@ -691,8 +685,6 @@
 		
 		\item \texttt{NavigationAdapter};
 		
-		\item \texttt{NavigationManagerPresenter};
-		
 		\item \texttt{NearbyPoiActivity};
 		
 		\item \texttt{PoiCategoryActivity};
@@ -701,9 +693,7 @@
 		
 		\item \texttt{RemoteMapManagerActivity};
 		
-		\item \texttt{SearchSuggestionsProvider};
-		
-		\item \texttt{SettingManager}.
+		\item \texttt{SearchSuggestionsProvider}.
 		
 	\end{itemize}
 \end{itemize}
@@ -1435,15 +1425,15 @@
 	\item[Metodi:] \
 	\begin{itemize}
 		\item \texttt{+ \textit{informationUpdate(info : ProcessedInformation) : void}}\\
-		!
+		Metodo che viene invocato quando c'è un aggiornamento nelle informazioni di navigazione
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
 				\item \texttt{info : ProcessedInformation}\\
-			\end{itemize}
+				Informazioni aggiornate\end{itemize}
 		\end{description}
-		\item \texttt{+ \textit{pathError()}}\\
-		!
+		\item \texttt{+ \textit{pathError() : void}}\\
+		Metodo che viene invocato in caso di errori di navigazione
 	\end{itemize}
 \end{description}
 
@@ -7294,41 +7284,6 @@
 	\end{itemize}
 \end{description}
 
-\paragraph{presenter::Checker}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/Checker.png}
-	\caption{Classe Checker}\label{fig:presenter::Checker} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{Checker};
-	\item[Tipo:] Classe;
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{android.bluetooth.BluetoothAdapter(Android)}.
-		
-	\end{itemize}
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] È utilizzata per effettuare controlli sullo stato del dispositivo e dell'applicativo;
-	\item[Descrizione:] Classe che utilizza BluetoothAdapter e permette di effettuare controlli sullo stato del dispositivo e dell'applicativo;
-	\item[Attributi:] \
-	\begin{itemize}
-		\item \texttt{- bluetoothAdapter : BluetoothAdapter}\\
-		Utilizzato per accedere al Bluetooth del dispositivo
-		
-	\end{itemize}
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ \underline{isBeaconDetected() : boolean}}\\
-		Metodo che controlla se sono stati rilevati dei beacon
-		\item \texttt{+ \underline{isBluetoothEnabled() : boolean}}\\
-		Metodo che controlla se è stato attivato il Bluetooth del dispositivo
-		\item \texttt{+ \underline{isTheBuildingMapInLocalDB() : boolean}}\\
-		Metodo che controlla se una mappa è presente sul database locale
-	\end{itemize}
-\end{description}
-
 \paragraph{presenter::CompleteHomeFragment}
 \
 \begin{figure}[H]
@@ -7417,37 +7372,6 @@
 				\item \texttt{list : List<String>}\\
 				Lista contenente i nomi delle categorie di POI presenti nell'edificio\end{itemize}
 		\end{description}
-	\end{itemize}
-\end{description}
-
-\paragraph{presenter::DatabaseServiceManager}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/DatabaseServiceManager.png}
-	\caption{Classe DatabaseServiceManager}\label{fig:presenter::DatabaseServiceManager} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{DatabaseServiceManager};
-	\item[Tipo:] Classe;
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{android.app.Application(Android)}.
-		
-	\end{itemize}
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] È utilizzata per fornire un riferimento al DatabaseService del model;
-	\item[Descrizione:] Classe che estende Application e recupera il riferimento al DatabaseService;
-	\item[Attributi:] \
-	\begin{itemize}
-		\item \texttt{- dbService : DatabaseService}\\
-		Riferimento per accedere al database locale
-		
-	\end{itemize}
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ \underline{getDatabaseService() : DatabaseService}}\\
-		Metodo che restituisce un riferimento al database locale
 	\end{itemize}
 \end{description}
 
@@ -7817,13 +7741,41 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ \underline{newInstance(photoUris : ArrayList<String>) : ImageDetailFragment}}\\
+		\item \texttt{+ \underline{newInstance(photoUris : ArrayList<String>, imageNum : int) : ImageDetailFragment}}\\
 		Usato per costruire un Fragment attraverso il passaggio di parametri. Best practice consigliata dalla documentazione Android
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
 				\item \texttt{photoUris : ArrayList<String>}\\
-				URI delle immagini associate all'istruzione scelta\end{itemize}
+				URI delle immagini associate all'istruzione scelta\item \texttt{imageNum : int}\\
+				Numero dell'immagine, tra quelle associate ad una particolare istruzione di navigazione, da mostrare\end{itemize}
+		\end{description}
+		\item \texttt{+ onCreate(savedInstanceState : Bundle) : void}\\
+		\textbf{Override} Metodo che viene invocato alla creazione dell'oggetto
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{savedInstanceState : Bundle}\\
+				se l'Actvity viene re-inizializzata dopo essere stata chiusa, allora questo Bundle contiene i dati più recenti forniti al metodo\end{itemize}
+		\end{description}
+		\item \texttt{+ onCreateView(inflater : LayoutInflater, container : ViewGroup, savedInstanceState : Bundle) : View}\\
+		\textbf{Override} Metodo che viene invocato alla creazione della view corrispondente
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{inflater : LayoutInflater}\\
+				oggetto LayoutInflater usato per eseguire l'inflate di qualsiasi view nel fragment\item \texttt{container : ViewGroup}\\
+				La parent view a cui è associato il fragment\item \texttt{savedInstanceState : Bundle}\\
+				L'eventuale stato precedentemente salvato del fragment\end{itemize}
+		\end{description}
+		\item \texttt{+ onItemClick(parent : AdapterView<?>, view : View) : void}\\
+		\textbf{Override} Metodo per gestire i tap dell'utente sulle thumbnail della lista, mostrando (a schermo intero) l'immagine relativa alla thumbnail scelta
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{parent : AdapterView<?>}\\
+				View contenitore della lista di thumbnail\item \texttt{view : View}\\
+				View relativa alla lista di thumnail\end{itemize}
 		\end{description}
 	\end{itemize}
 \end{description}
@@ -7891,42 +7843,11 @@
 			\item[Argomenti:] \
 			\begin{itemize}
 				\item \texttt{parent : AdapterView<?>}\\
-				!\item \texttt{view : View}\\
-				!\item \texttt{position : int}\\
-				!\item \texttt{id : long}\\
-				!\end{itemize}
+				View contenitore della lista di thumbnail\item \texttt{view : View}\\
+				View relativa alla lista di thumnail\item \texttt{position : int}\\
+				Posizione nella lista della thumbnail scelta\item \texttt{id : long}\\
+				ID della thumbnail scelta\end{itemize}
 		\end{description}
-	\end{itemize}
-\end{description}
-
-\paragraph{presenter::InformationManagerPresenter}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/InformationManagerPresenter.png}
-	\caption{Classe InformationManagerPresenter}\label{fig:presenter::InformationManagerPresenter} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{InformationManagerPresenter};
-	\item[Tipo:] Classe;
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{android.app.Application(Android)}.
-		
-	\end{itemize}
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] È utilizzata per restituire un riferimento al NavigationManager del model;
-	\item[Descrizione:] Classe che estende Application e recupera il riferimento a InformationManager del model;
-	\item[Attributi:] \
-	\begin{itemize}
-		\item \texttt{- informationManager : InformationManager}\\
-		Riferimento utilizzato per accedere alle informazioni trattate dal model
-		
-	\end{itemize}
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ getInformationManager() : InformationManager}\\
-		\textbf{Override} Metodo che restituisce un InformationManger per accedere alle informazioni del presenter
 	\end{itemize}
 \end{description}
 
@@ -8180,12 +8101,12 @@
 		\item \texttt{+ isDeveloper() : boolean}\\
 		Metodo che permette di verificare se un utente è sviluppatore
 		\item \texttt{+ onCreate(bundle : Bundle) : void}\\
-		\textbf{Override} !
+		\textbf{Override} Metodo che viene invocato alla creazione dell'oggetto
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
 				\item \texttt{bundle : Bundle}\\
-				!\end{itemize}
+				Stato dell'oggetto che è stato salvato\end{itemize}
 		\end{description}
 		\item \texttt{+ startDeveloperOptions() : void}\\
 		Metodo che consente di avviare la gestione delle funzionalità sviluppatore
@@ -8285,11 +8206,14 @@
 		\item \texttt{- informationManager : InformationManager}\\
 		Interfaccia che permette l'accesso alle informazioni trattate nel package "model"
 		
-		\item \texttt{- navigationAdapter : NavigationAdapter}\\
-		Consente di gestire l'insieme di funzioni per la navigazione
+		\item \texttt{- navigationInstruction : List<ProcessedInformation>}\\
+		Riferimento alla lista di istruzioni di navigazione
 		
 		\item \texttt{- navigationManager : NavigationManager}\\
 		Interfaccia che si occupa di esporre tutti i metodi utili alla navigazione
+		
+		\item \texttt{- poiId : int}\\
+		Id del POI che l'utente ha indicato come destinazione
 		
 		\item \texttt{- view : NavigationView}\\
 		View associata a tale Activity
@@ -8297,13 +8221,13 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{\# handleIntent(intent : Intent)}\\
-		\textbf{Override} !
+		\item \texttt{\# handleIntent(intent : Intent) : void}\\
+		\textbf{Override} Metodo che gestisce l'Intent lanciato dalla ricerca nominativa di un POI
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
 				\item \texttt{intent : Intent}\\
-				!\end{itemize}
+				Intent attraverso il quale è stata creata la corrente istanza di NavigationActivity\end{itemize}
 		\end{description}
 		\item \texttt{+ informationUpdate(info : ProcessedInformation) : void}\\
 		Metodo che permette di aggiornare le informazioni
@@ -8322,13 +8246,15 @@
 				Componente per salvare lo stato dell'applicazione\end{itemize}
 		\end{description}
 		\item \texttt{\# onNewIntent(intent : Intent) : void}\\
-		\textbf{Override} !
+		\textbf{Override} Metodo che viene invocato con un nuovo Intent
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
 				\item \texttt{intent : Intent}\\
-				!\end{itemize}
+				Intent con il quale è stata avviata al corrente Activity\end{itemize}
 		\end{description}
+		\item \texttt{+ onSaveInstanceState() : void}\\
+		\textbf{Override} Salva lo stato corrente dell'Activity, in modo da poterlo ripristinare in caso di interruzione coatta della stessa
 		\item \texttt{+ pathError() : void}\\
 		Metodo che viene invocato dal Model per segnalare un errore durante la navigazione
 		\item \texttt{+ showDetailedInformation(instructionPosition : int) : void}\\
@@ -8412,37 +8338,15 @@
 				Layout dell'istruzione recuperata\item \texttt{parent : ViewGroup}\\
 				Layout della lista di istruzioni\end{itemize}
 		\end{description}
-	\end{itemize}
-\end{description}
-
-\paragraph{presenter::NavigationManagerPresenter}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/NavigationManagerPresenter.png}
-	\caption{Classe NavigationManagerPresenter}\label{fig:presenter::NavigationManagerPresenter} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{NavigationManagerPresenter};
-	\item[Tipo:] Classe;
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{android.app.Application(Android)}.
-		
-	\end{itemize}
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] È utilizzata per fornire un riferimento al NavigationManager del model;
-	\item[Descrizione:] Classe che estende Application e recupera il riferimento al NavigationMager;
-	\item[Attributi:] \
-	\begin{itemize}
-		\item \texttt{- navigationManager : NavigationManager}\\
-		Oggetto del Model utilizzato per gestire la navigazione
-		
-	\end{itemize}
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ \underline{getNavigationManager() : NavigationManager}}\\
-		Metodo per ottenere l'oggetto NavigationManager
+		\item \texttt{+ setDirectionArrow(direction : int, image : ImageView) : void}\\
+		Metodo di utilità che associa la freccia corretta (Drawable) alla istruzione, in modo che ne indichi visivamente la direzione da seguire
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{direction : int}\\
+				Indicatore della direzione\item \texttt{image : ImageView}\\
+				View da aggiornare con l'immagine\end{itemize}
+		\end{description}
 	\end{itemize}
 \end{description}
 
@@ -8695,32 +8599,6 @@
 				Criterio da applicare per filtrare le righe del content provider\item \texttt{selectionArgs : String[]}\\
 				Insieme di argomenti su cui fare la selezione\end{itemize}
 		\end{description}
-	\end{itemize}
-\end{description}
-
-\paragraph{presenter::SettingManager}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/SettingManager.png}
-	\caption{Classe SettingManager}\label{fig:presenter::SettingManager} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{SettingManager};
-	\item[Tipo:] Classe;
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] È usata per fornire un punto di accesso alle impostazioni utente nel model;
-	\item[Descrizione:] È una classe che estende AppCompactActivity e consente di recuperare un riferimento verso le impostazioni utente nel model;
-	\item[Attributi:] \
-	\begin{itemize}
-		\item \texttt{- setting : Setting}\\
-		Le impostazioni e preferenze dell'utente
-		
-	\end{itemize}
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ \underline{getSetting() : Setting}}\\
-		Metodo che viene utilizzato per ottenere le impostazioni e le preferenze dell'utente
 	\end{itemize}
 \end{description}
 \subsubsection{view}
@@ -9875,13 +9753,12 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ PreferencesViewImp(presenter : PreferencesActivity, presenter : PreferencesActivity)}\\
+		\item \texttt{+ PreferencesViewImp(presenter : PreferencesActivity)}\\
 		Costruttore della classe PreferencesViewImp
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
 				\item \texttt{presenter : PreferencesActivity}\\
-				Presenter della View che viene creata\item \texttt{presenter : PreferencesActivity}\\
 				Presenter della View che viene creata\end{itemize}
 		\end{description}
 		\item \texttt{+ setInstructionPreferences(adp : Adapter) : void}\\
