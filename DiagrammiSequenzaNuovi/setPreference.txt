@@ -1,5 +1,0 @@
->>>>modifica delle preferenze
-Il diagramma in figura ### rappresenta il flusso generato dall’oggetto della classe SettingImp per la modifica delle preferenze sul percorso:
-- per prima viene aggiornato il campo dati dell'oggetto SettingImp, eguagliandolo all'oggetto PathPreference passato;
-- viene recuperata un'instanza di SharedPreferences.Editor per poter aggiornare le preferenze salvate nelle SharedPreferences
-- infine vengono aggiornate le SharedPreferences prima invocando il metodo putInt sull'oggetto SharedPreferences.Editor passando come argomenti la costante di classe PATH_PREFERENCES e l'intero che rappresenta l'oggetto PathPreference passato alla chiamata del metodo setPathPreference()
