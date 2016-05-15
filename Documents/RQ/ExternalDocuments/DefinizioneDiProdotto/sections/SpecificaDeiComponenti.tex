@@ -65,6 +65,22 @@
 	% componenti da esportare da Tracy
 \subsection{Componenti}
 
+\subsubsection{component}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/package/component.png}
+	\caption{Componente component}\label{fig:component} 
+\end{figure}
+\begin{itemize}
+	\item \textbf{Descrizione:} Questo package raggruppa le interfacce che permettono di eseguire la dependency injection;
+	\item \textbf{Interfacce Contenute}:
+	\begin{itemize}
+		\item \texttt{InfoComponent}.
+		
+	\end{itemize}
+\end{itemize}
+
 \subsubsection{di}
 
 \begin{figure}[H]
@@ -74,55 +90,6 @@
 \end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione:} Questo package ha il compito di raggruppare tutti i componenti che permettono di gestire la dependency injection;
-	\item \textbf{Package Contenuti}:
-	\begin{itemize}
-		\item \texttt{component};
-		
-		\item \texttt{module}.
-		
-	\end{itemize}
-\end{itemize}
-
-\subsubsection{di::\-component}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/package/component.png}
-	\caption{Componente di::\-component}\label{fig:di::component} 
-\end{figure}
-\begin{itemize}
-	\item \textbf{Descrizione:} Questo package raggruppa le interfacce che permettono di eseguire la dependency injection.;
-	\item \textbf{Padre:} \texttt{di};
-	\item \textbf{Interfacce Contenute}:
-	\begin{itemize}
-		\item \texttt{InfoComponent}.
-		
-	\end{itemize}
-\end{itemize}
-
-\subsubsection{di::\-module}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/package/module.png}
-	\caption{Componente di::\-module}\label{fig:di::module} 
-\end{figure}
-\begin{itemize}
-	\item \textbf{Descrizione:} Questo package raggruppa le classi che permettono di risolvere le dipendenze tra gli oggetti presenti nell'applicazione. Le classi presenti in questo package hanno inoltre il compito di definire la cardinalità delle istanze di un oggetto.;
-	\item \textbf{Padre:} \texttt{di};
-	\item \textbf{Classi Contenute}:
-	\begin{itemize}
-		\item \texttt{AppModule};
-		
-		\item \texttt{DatabaseModule};
-		
-		\item \texttt{InfoModule};
-		
-		\item \texttt{NavModule};
-		
-		\item \texttt{SettingModule}.
-		
-	\end{itemize}
 \end{itemize}
 
 \subsubsection{model}
@@ -634,6 +601,30 @@
 	\end{itemize}
 \end{itemize}
 
+\subsubsection{module}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/package/module.png}
+	\caption{Componente module}\label{fig:module} 
+\end{figure}
+\begin{itemize}
+	\item \textbf{Descrizione:} Questo package raggruppa le classi che permettono di risolvere le dipendenze tra gli oggetti presenti nell'applicazione. Le classi presenti in questo package hanno inoltre il compito di definire la cardinalità delle istanze di un oggetto;
+	\item \textbf{Classi Contenute}:
+	\begin{itemize}
+		\item \texttt{AppModule};
+		
+		\item \texttt{DatabaseModule};
+		
+		\item \texttt{InfoModule};
+		
+		\item \texttt{NavModule};
+		
+		\item \texttt{SettingModule}.
+		
+	\end{itemize}
+\end{itemize}
+
 \subsubsection{presenter}
 
 \begin{figure}[H]
@@ -775,14 +766,14 @@
 	\end{itemize}
 \end{itemize}
 \subsection{Classi}
-\subsubsection{di}
+\subsubsection{component}
 
-\paragraph{di::component::InfoComponent}
+\paragraph{component::InfoComponent}
 \
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/InfoComponent.png}
-	\caption{Interfaccia InfoComponent}\label{fig:di::component::InfoComponent} 
+	\caption{Interfaccia InfoComponent}\label{fig:component::InfoComponent} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{InfoComponent};
@@ -856,192 +847,17 @@
 				\item \texttt{logInformationActivity : LogInformationActivity}\\
 				Oggetto in cui devono essere iniettate le dipendenze\end{itemize}
 		\end{description}
-	\end{itemize}
-\end{description}
-
-\paragraph{di::module::AppModule}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/AppModule.png}
-	\caption{Classe AppModule}\label{fig:di::module::AppModule} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{AppModule};
-	\item[Tipo:] Classe;
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per rendere il Context e l'Application Singleton e risolvere le dipendenze;
-	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo Context e Application;
-	\item[Attributi:] \
-	\begin{itemize}
-		\item \texttt{- mApplication : MyApplication \{readOnly\}}\\
-		Applicazione in esecuzione nella quale ci sono oggetti in cui fare la dependency injection
-		
-	\end{itemize}
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ AppModule(application : MyApplication)}\\
-		Costruttore della classe AppModule
+		\item \texttt{+ inject(loggingActivity : LoggingActivity) : void}\\
+		Metodo che permette di iniettare i campi annotati con Inject negli oggetti di tipo LoggingActivity
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{application : MyApplication}\\
-				Applicazione in esecuzione nella quale ci sono oggetti in cui fare la dependency injection\end{itemize}
-		\end{description}
-		\item \texttt{+ providesApplication() : Application}\\
-		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo Application. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
-		\item \texttt{+ providesContext() : Context}\\
-		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo Context. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
-	\end{itemize}
-\end{description}
-
-\paragraph{di::module::DatabaseModule}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/DatabaseModule.png}
-	\caption{Classe DatabaseModule}\label{fig:di::module::DatabaseModule} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{DatabaseModule};
-	\item[Tipo:] Classe;
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per rendere DatabaseService Singleton e risolvere le dipendenze;
-	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo SQliteDaoFactory,
-	RemoteDaoFactory e DatabaseService;
-	\item[Attributi:] \
-	\begin{itemize}
-		\item \texttt{- remoteURL : String}\\
-		Stringa che rappresenta l'URL del database remoto
-		
-	\end{itemize}
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ DatabaseModule(remoteURL : String)}\\
-		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo SQLiteDaoFactory. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{remoteURL : String}\\
-				Stringa che rappresenta l'URL del database remoto\end{itemize}
-		\end{description}
-		\item \texttt{+ provideRemoteDaoFactory() : RemoteDaoFactory}\\
-		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo DatabaseService ritornando un oggetto di tipo BuildingServiceImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
-		\item \texttt{+ provideSQLiteDaoFactory(context : Context) : SQLiteDaoFactory}\\
-		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo SQLiteDaoFactory. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{context : Context}\\
-				Contesto di esecuzione dell'applicazione\end{itemize}
-		\end{description}
-		\item \texttt{+ providesDatabaseService(sqLiteDaoFactory : SQLiteDaoFactory, remoteDaoFactory : RemoteDaoFactory) : DatabaseService}\\
-		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo DatabaseService ritornando un oggetto di tipo BuildingServiceImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{sqLiteDaoFactory : SQLiteDaoFactory}\\
-				Factory che permette di costruire oggetti con cui accedere ai dati salvati nel databse locale\item \texttt{remoteDaoFactory : RemoteDaoFactory}\\
-				Factory che permette di costruire oggetti scaricati dal database remoto\end{itemize}
+				\item \texttt{loggingActivity : LoggingActivity}\\
+				Oggetto in cui devono essere iniettate le dipendenze\end{itemize}
 		\end{description}
 	\end{itemize}
 \end{description}
-
-\paragraph{di::module::InfoModule}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/InfoModule.png}
-	\caption{Classe InfoModule}\label{fig:di::module::InfoModule} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{InfoModule};
-	\item[Tipo:] Classe;
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per rendere la classe DatabaseService Singleton e risolvere le dipendenze;
-	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo InformationManager;
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ providesInformationManager(service : DatabaseService, context : Context) : InformationManager}\\
-		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo InformationManager ritornando un oggetto di tipo InformationManagerImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{service : DatabaseService}\\
-				Oggetto che permette di accedere al database sia locale che remoto\item \texttt{context : Context}\\
-				Contesto di esecuzione dell'applicazione\end{itemize}
-		\end{description}
-	\end{itemize}
-\end{description}
-
-\paragraph{di::module::NavModule}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/NavModule.png}
-	\caption{Classe NavModule}\label{fig:di::module::NavModule} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{NavModule};
-	\item[Tipo:] Classe;
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per risolvere le dipendenze verso NavigationManager e MapGraph;
-	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo NavigationManager;
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ provideMapGraph(informationManager : InformationManager) : MapGraph}\\
-		Metodo che permette di risolvere le dipendenze verso gli oggetti della classe MapGraph
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{informationManager : InformationManager}\\
-				Riferimento all'oggetto che gestisce le informazioni provenienti dal database\end{itemize}
-		\end{description}
-		\item \texttt{+ providesNavigationManager(mapGraph : MapGraph, context : Context) : NavigationManager}\\
-		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo NavigationManager ritornando un oggetto di tipo NavigationManagerImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{mapGraph : MapGraph}\\
-				Oggetto che rappresenta il grafo tramite la classe MapGraph\item \texttt{context : Context}\\
-				Contesto di esecuzione dell'applicazione\end{itemize}
-		\end{description}
-	\end{itemize}
-\end{description}
-
-\paragraph{di::module::SettingModule}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/SettingModule.png}
-	\caption{Classe SettingModule}\label{fig:di::module::SettingModule} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{SettingModule};
-	\item[Tipo:] Classe;
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per rendere la classe Setting Singleton e risolvere le dipendenze;
-	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo Setting;
-	\item[Attributi:] \
-	\begin{itemize}
-		\item \texttt{- context : Context \{readOnly\}}\\
-		Contesto di esecuzione dell'applicazione
-		
-	\end{itemize}
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ SettingModule(context : Context)}\\
-		Costruttore della classe SettingModule
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{context : Context}\\
-				Contesto di esecuzione dell'applicazione\end{itemize}
-		\end{description}
-		\item \texttt{+ providesSetting() : Setting}\\
-		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo Setting ritornando un oggetto di tipo SettingImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo.
-	\end{itemize}
-\end{description}
+\subsubsection{di}
 \subsubsection{model}
 
 \paragraph{model::AbsBeaconReceiverManager}
@@ -1054,10 +870,6 @@
 \begin{description}
 	\item[Nome:] \texttt{\textit{AbsBeaconReceiverManager}};
 	\item[Tipo:] Classe astratta;
-	\item[Estende:] \
-	\begin{itemize}
-		\item \texttt{ServiceConnectionImp}.
-	\end{itemize}
 	\item[Componenti delle librerie utilizzate:] \
 	\begin{itemize}
 		\item \texttt{android.content.BroadcastReceiver (Android)};
@@ -1120,8 +932,15 @@
 				Periodo di scansione dei beacon da scansionare\item \texttt{type : periodType}\\
 				Parametro per decidere se cambiare il periodo di scansione in Foreground o in Background, di scansione o di non scansione\end{itemize}
 		\end{description}
-		\item \texttt{+ \textit{onReceive() : void}}\\
+		\item \texttt{+ \textit{onReceive(context : Context, intent : Intent) : void}}\\
 		Metodo astratto che permette di eseguire delle azioni alla ricezione di una PriorityQueue<MyBeacon> contenente l'insieme dei beacon visibili in un determinato momento
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{context : Context}\\
+				Contesto dell'applicazione\item \texttt{intent : Intent}\\
+				Intent contenente le informazioni del messaggio\end{itemize}
+		\end{description}
 		\item \texttt{\# removeListener(listener : Listener) : void}\\
 		Metodo che permette la rimozione di un listener precedentemente registrato
 		\begin{description}
@@ -1159,6 +978,14 @@
 	\begin{itemize}
 		\item \texttt{+ cannotRetrieveRemoteMapsDetails() : void}\\
 		Metodo che viene invocato dalla classe in cui l'oggetto si è registrato come listener nel caso in cui non sia possibile recuperare le informazioni riguardanti le mappe dal database remoto
+		\item \texttt{+ getAllVisibleBeacons(visibleBeacons : PriorityQueue<MyBeacon>) : void}\\
+		Metodo che viene invocato ogni volta che vengono rilevatio dei beacon, passando la coda di beacon trovati
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{visibleBeacons : PriorityQueue<MyBeacon>}\\
+				Coda dei beacon rilevati ordinata per potenza\end{itemize}
+		\end{description}
 		\item \texttt{+ noLastMapVersion() : boolean}\\
 		Metodo che viene invocato dalla classe in cui l'oggetto si è registrato come listener nel caso in cui la versione della mappa locale differisca dalla versione della mappa in remoto
 		\item \texttt{+ onDatabaseLoaded() : void}\\
@@ -1218,6 +1045,14 @@
 			\begin{itemize}
 				\item \texttt{filename : String}\\
 				Nome del file da rimuovere\end{itemize}
+		\end{description}
+		\item \texttt{+ \textit{removeListener(listener : InformationListener) : void}}\\
+		Metodo che permette di rimuovere un listener
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{listener : InformationListener}\\
+				Listener che deve essere rimosso dalla lista di InformationListener\end{itemize}
 		\end{description}
 		\item \texttt{+ \textit{saveRecordedBeaconInformation(filename : String) : void}}\\
 		Metodo che permette di salvare il log delle informazioni dei beacon visibili su file
@@ -1327,8 +1162,15 @@
 		\textbf{Override} Metodo che ritorna l'insieme di POI associati al beacon rilevato con il segnale più potente. Viene lanciata una eccezione di tipo NoBeaconSeenException nel caso in cui venga invocato il metodo ma non è stato rilevato ancora alcun beacon
 		\item \texttt{- loadMap() : void}\\
 		Metodo che permette di recuperare una mappa dal database in base al major dei beacon rilevati
-		\item \texttt{+ onReceive() : void}\\
+		\item \texttt{+ onReceive(context : Context, intent : Intent) : void}\\
 		\textbf{Override} Metodo che si occupa di settare il campo dati lastBeaconsSeen con la PriorityQueue<MyBeacon> contenente gli ultimi beacon rilevati. Nel caso in cui non sia stata ancora caricata una mappa dal database locale si occupa di caricare la mappa dell'edificio che contiene I beacon rilevati
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{context : Context}\\
+				Contesto dell'applicazione\item \texttt{intent : Intent}\\
+				Intent contenente le informazioni del messaggio\end{itemize}
+		\end{description}
 		\item \texttt{+ removeBeaconInformationFile(filename : String) : void}\\
 		\textbf{Override} Metodo che permette di rimuovere un log delle informazioni dei beacon visibili
 		\begin{description}
@@ -1549,13 +1391,14 @@
 		\textbf{Override} Metodo che permette di recuperare tutte le istruzioni di navigazione per un percorso calcolato. Viene lanciata una eccezione di tipo NoNavigationInformationException nel caso in cui venga richiamato questo metodo senza aver prima avviato la navigazione
 		\item \texttt{+ getNextInstruction() : ProcessedInformation}\\
 		\textbf{Override} Metodo che permette di recuperare tutte le istruzioni di navigazione per un percorso calcolato in base al beacon più potente ricavato dalla PriorityQueue<MyBeacon> passata come argomento. Viene lanciata una eccezione di tipo NoNavigationInformationException nel caso in cui venga richiamato questo metodo senza aver prima avviato la navigazione.
-		\item \texttt{+ onReceive(endPOI : PointOfInterest) : void}\\
+		\item \texttt{+ onReceive(context : Context, intent : Intent) : void}\\
 		\textbf{Override} Metodo che si occupa di settare il campo dati lastBeaconsSeen con la PriorityQueue<MyBeacon> contenente gli ultimi beacon rilevati e di aggiornare tutti I listeners con le ultime istruzioni di navigazione
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{endPOI : PointOfInterest}\\
-				POI da raggiungere tramite navigazione\end{itemize}
+				\item \texttt{context : Context}\\
+				Contesto dell'applicazione\item \texttt{intent : Intent}\\
+				Intent contenente le informazioni del messaggio\end{itemize}
 		\end{description}
 		\item \texttt{+ removeListener(listener : NavigationListener) : void}\\
 		\textbf{Override} Metodo che permette di rimuovere un listener
@@ -1929,7 +1772,7 @@
 		\item \texttt{- data : StringBuffer}\\
 		Rappresenta il contenuto di un log
 		
-		\item \texttt{- \underline{directory : String \{readOnly\}}}\\
+		\item \texttt{- \underline{DIRECTORY : String \{readOnly\}}}\\
 		Path della directory in cui vengono salvati i log
 		
 	\end{itemize}
@@ -2037,7 +1880,7 @@
 	\item[Descrizione:] Classe che implementa l'interfaccia MyBeacon. Offre tutti i metodi per accedere alle informazioni di un beacon. Estende la classe org.altbeacon.beacon.Beacon;
 	\item[Attributi:] \
 	\begin{itemize}
-		\item \texttt{- \underline{CREATOR : List<NavigationInformationImp,Parcelable.Creator<MyBeaconImp> \{readOnly\}}}\\
+		\item \texttt{- \underline{CREATOR : Parcelable.Creator<MyBeacon> \{readOnly\}}}\\
 		Attributo richiesto per rendere la classe Parcelable
 		
 	\end{itemize}
@@ -7252,6 +7095,191 @@
 		\end{description}
 	\end{itemize}
 \end{description}
+\subsubsection{module}
+
+\paragraph{module::AppModule}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/AppModule.png}
+	\caption{Classe AppModule}\label{fig:module::AppModule} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{AppModule};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per rendere il Context e l'Application Singleton e risolvere le dipendenze;
+	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo Context e Application;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- mApplication : MyApplication \{readOnly\}}\\
+		Applicazione in esecuzione nella quale ci sono oggetti in cui fare la dependency injection
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ AppModule(application : MyApplication)}\\
+		Costruttore della classe AppModule
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{application : MyApplication}\\
+				Applicazione in esecuzione nella quale ci sono oggetti in cui fare la dependency injection\end{itemize}
+		\end{description}
+		\item \texttt{+ providesApplication() : Application}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo Application. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
+		\item \texttt{+ providesContext() : Context}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo Context. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
+	\end{itemize}
+\end{description}
+
+\paragraph{module::DatabaseModule}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/DatabaseModule.png}
+	\caption{Classe DatabaseModule}\label{fig:module::DatabaseModule} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{DatabaseModule};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per rendere DatabaseService Singleton e risolvere le dipendenze;
+	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo SQliteDaoFactory,
+	RemoteDaoFactory e DatabaseService;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- remoteURL : String}\\
+		Stringa che rappresenta l'URL del database remoto
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ DatabaseModule(remoteURL : String)}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo SQLiteDaoFactory. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{remoteURL : String}\\
+				Stringa che rappresenta l'URL del database remoto\end{itemize}
+		\end{description}
+		\item \texttt{+ provideRemoteDaoFactory() : RemoteDaoFactory}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo DatabaseService ritornando un oggetto di tipo BuildingServiceImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
+		\item \texttt{+ provideSQLiteDaoFactory(context : Context) : SQLiteDaoFactory}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo SQLiteDaoFactory. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{context : Context}\\
+				Contesto di esecuzione dell'applicazione\end{itemize}
+		\end{description}
+		\item \texttt{+ providesDatabaseService(sqLiteDaoFactory : SQLiteDaoFactory, remoteDaoFactory : RemoteDaoFactory) : DatabaseService}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo DatabaseService ritornando un oggetto di tipo BuildingServiceImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{sqLiteDaoFactory : SQLiteDaoFactory}\\
+				Factory che permette di costruire oggetti con cui accedere ai dati salvati nel databse locale\item \texttt{remoteDaoFactory : RemoteDaoFactory}\\
+				Factory che permette di costruire oggetti scaricati dal database remoto\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{module::InfoModule}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/InfoModule.png}
+	\caption{Classe InfoModule}\label{fig:module::InfoModule} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{InfoModule};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per rendere la classe DatabaseService Singleton e risolvere le dipendenze;
+	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo InformationManager;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ providesInformationManager(service : DatabaseService, context : Context) : InformationManager}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo InformationManager ritornando un oggetto di tipo InformationManagerImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{service : DatabaseService}\\
+				Oggetto che permette di accedere al database sia locale che remoto\item \texttt{context : Context}\\
+				Contesto di esecuzione dell'applicazione\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{module::NavModule}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/NavModule.png}
+	\caption{Classe NavModule}\label{fig:module::NavModule} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{NavModule};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per risolvere le dipendenze verso NavigationManager e MapGraph;
+	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo NavigationManager;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ provideMapGraph(informationManager : InformationManager) : MapGraph}\\
+		Metodo che permette di risolvere le dipendenze verso gli oggetti della classe MapGraph
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{informationManager : InformationManager}\\
+				Riferimento all'oggetto che gestisce le informazioni provenienti dal database\end{itemize}
+		\end{description}
+		\item \texttt{+ providesNavigationManager(mapGraph : MapGraph, context : Context) : NavigationManager}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo NavigationManager ritornando un oggetto di tipo NavigationManagerImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{mapGraph : MapGraph}\\
+				Oggetto che rappresenta il grafo tramite la classe MapGraph\item \texttt{context : Context}\\
+				Contesto di esecuzione dell'applicazione\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{module::SettingModule}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/SettingModule.png}
+	\caption{Classe SettingModule}\label{fig:module::SettingModule} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{SettingModule};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per rendere la classe Setting Singleton e risolvere le dipendenze;
+	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo Setting;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- context : Context \{readOnly\}}\\
+		Contesto di esecuzione dell'applicazione
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ SettingModule(context : Context)}\\
+		Costruttore della classe SettingModule
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{context : Context}\\
+				Contesto di esecuzione dell'applicazione\end{itemize}
+		\end{description}
+		\item \texttt{+ providesSetting() : Setting}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo Setting ritornando un oggetto di tipo SettingImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo.
+	\end{itemize}
+\end{description}
 \subsubsection{presenter}
 
 \paragraph{presenter::BlankHomeFragment}
@@ -7271,7 +7299,7 @@
 	\begin{itemize}
 		\item \texttt{+ BlankHomeFragment()}\\
 		Costruttore di default
-		\item \texttt{+ onCreate(inflater : LayoutInflater, container : ViewGroup, savedInstanceState : Bundle) : View}\\
+		\item \texttt{+ onCreateView(inflater : LayoutInflater, container : ViewGroup, savedInstanceState : Bundle) : View}\\
 		\textbf{Override} Metodo che viene chiamato per fare in modo che il Fragment istanzi la propria UI. Si occupa dell'infalte
 		\begin{description}
 			\item[Argomenti:] \
@@ -7551,6 +7579,14 @@
 		\textbf{Override} Metodo che viene invocato dalla classe in cui l'oggetto si è registrato come listener nel caso in cui non sia possibile recuperare le informazioni riguardanti le mappe dal database remoto
 		\item \texttt{+ enableSuggestions() : void}\\
 		Metodo che permette di attivare la lista dei possibili POI raggiungibili a partire da una stringa
+		\item \texttt{+ getAllVisibleBeacons(visibleBeacons : PriorityQueue<MyBeacon>) : void}\\
+		\textbf{Override} Metodo che viene invocato ogni volta che vengono rilevatio dei beacon, passando la coda di beacon trovati
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{visibleBeacons : PriorityQueue<MyBeacon>}\\
+				Coda dei beacon rilevati ordinata per potenza\end{itemize}
+		\end{description}
 		\item \texttt{+ noLastMapVersion() : boolean}\\
 		\textbf{Override} Metodo che viene invocato dalla classe in cui l'oggetto si è registrato come listener nel caso in cui la versione della mappa locale differisca dalla versione della mappa in remoto
 		\item \texttt{+ onBackPressed() : void}\\
@@ -7636,8 +7672,14 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ ImageAdapter()}\\
+		\item \texttt{+ ImageAdapter(mContext : Context)}\\
 		Costruttore della classe ImageAdapter
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{mContext : Context}\\
+				Contesto di esecuzione dell'applicazione\end{itemize}
+		\end{description}
 		\item \texttt{+ getCount() : int}\\
 		\textbf{Override} Metodo che viene utilizzato per ottenere il numero di immagini relative a quel POI
 		\item \texttt{+ getItem(position : int) : Object}\\
@@ -7741,6 +7783,8 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
+		\item \texttt{+ ImageDetailFragment()}\\
+		Costruttore di default della classe ImageDetailFragment
 		\item \texttt{+ \underline{newInstance(photoUris : ArrayList<String>, imageNum : int) : ImageDetailFragment}}\\
 		Usato per costruire un Fragment attraverso il passaggio di parametri. Best practice consigliata dalla documentazione Android
 		\begin{description}
@@ -7749,6 +7793,14 @@
 				\item \texttt{photoUris : ArrayList<String>}\\
 				URI delle immagini associate all'istruzione scelta\item \texttt{imageNum : int}\\
 				Numero dell'immagine, tra quelle associate ad una particolare istruzione di navigazione, da mostrare\end{itemize}
+		\end{description}
+		\item \texttt{+ onActivityCreated(savedInstanceState : Bundle) : void}\\
+		\textbf{Override} Metodo che viene invovato quando l'Activity è stata creata e il Fragment è stato istanziato. È utilizzato per la creazione delle anteprime delle fotografie
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{savedInstanceState : Bundle}\\
+				Eventuale stato precedentemente salvato del fragment\end{itemize}
 		\end{description}
 		\item \texttt{+ onCreate(savedInstanceState : Bundle) : void}\\
 		\textbf{Override} Metodo che viene invocato alla creazione dell'oggetto
@@ -7768,15 +7820,6 @@
 				La parent view a cui è associato il fragment\item \texttt{savedInstanceState : Bundle}\\
 				L'eventuale stato precedentemente salvato del fragment\end{itemize}
 		\end{description}
-		\item \texttt{+ onItemClick(parent : AdapterView<?>, view : View) : void}\\
-		\textbf{Override} Metodo per gestire i tap dell'utente sulle thumbnail della lista, mostrando (a schermo intero) l'immagine relativa alla thumbnail scelta
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{parent : AdapterView<?>}\\
-				View contenitore della lista di thumbnail\item \texttt{view : View}\\
-				View relativa alla lista di thumnail\end{itemize}
-		\end{description}
 	\end{itemize}
 \end{description}
 
@@ -7792,7 +7835,9 @@
 	\item[Tipo:] Classe;
 	\item[Componenti delle librerie utilizzate:] \
 	\begin{itemize}
-		\item \texttt{android.app.Fragment(Android)}.
+		\item \texttt{android.app.Fragment(Android)};
+		
+		\item \texttt{android.widget.AdapterView.OnItemClickListener(Android)}.
 		
 	\end{itemize}
 	\item[Visibilità:] \texttt{public};
@@ -7914,6 +7959,11 @@
 \begin{description}
 	\item[Nome:] \texttt{LoggingActivity};
 	\item[Tipo:] Classe;
+	\item[Implementa:] \
+	\begin{itemize}
+		\item \texttt{InformationListener}.
+		
+	\end{itemize}
 	\item[Componenti delle librerie utilizzate:] \
 	\begin{itemize}
 		\item \texttt{android.support.v7.app.AppCompatActivity (Android)}.
@@ -7943,6 +7993,14 @@
 		\end{description}
 		\item \texttt{+ onBackPressed() : void}\\
 		\textbf{Override} Redefinizione del comportamento di default del tasto upBack per fermare la registrazione di un log
+		\item \texttt{+ onCreate(savedInstanceState : Bundle)}\\
+		\textbf{Override} Metodo che viene chiamato quando si sta avviando l'activity. Questo metodo si occupa di inizializzare i campi dati.
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{savedInstanceState : Bundle}\\
+				Stato precedente dell'Activity\end{itemize}
+		\end{description}
 		\item \texttt{+ onOptionsItemSelected(item : MenuItem) : void}\\
 		\textbf{Override} Redefinizione del comportamento di default del tasto upBack per fermare la registrazione di un log
 		\begin{description}
@@ -8056,6 +8114,8 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
+		\item \texttt{+ onBackPressed() : void}\\
+		\textbf{Override} Metodo utilizzato per modificare il comportamento di default del tasto back
 		\item \texttt{+ onCreate(bundle : Bundle) : void}\\
 		\textbf{Override} Metodo che inizializza MainDeveloperView
 		\begin{description}
@@ -8370,7 +8430,7 @@
 	\item[Descrizione:] Classe che estende AppCompactActivity è gestisce tutte le possibili interazioni tra NearbyPoiView ed il model;
 	\item[Attributi:] \
 	\begin{itemize}
-		\item \texttt{- informationManager : InformationManager}\\
+		\item \texttt{~ informationManager : InformationManager}\\
 		Interfaccia che permette l'accesso alle informazioni trattate nel package "model"
 		
 		\item \texttt{- pois : Collection<PointOfInterest>}\\
@@ -8938,13 +8998,14 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ HomeViewImp(homeActivity : HomeActivity)}\\
+		\item \texttt{+ HomeViewImp(homeActivity : HomeActivity, fragmentManager : FragmentManager)}\\
 		Costruttore della classe HomeViewImp
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
 				\item \texttt{homeActivity : HomeActivity}\\
-				Presenter della View che viene creata\end{itemize}
+				Presenter della View che viene creata\item \texttt{fragmentManager : FragmentManager}\\
+				Gestore dei fragment dell'oggetto\end{itemize}
 		\end{description}
 		\item \texttt{+ onNavigationItemSelected(item : MenuItem) : boolean}\\
 		Gestisce i tap dell'utente nel Drawer: esegue l'azione appropriata rispetto alla voce di menù scelta dall'utente
