@@ -79,7 +79,7 @@
 		
 		\newpage
 		\subsubsection{Presenter}
-			Il compito del presenter per questa funzionalità è affidato all'oggetto \PoiCategoryActivity\ che comunica con la vista \PoiCategoryViewImp\ attraverso l'interfaccia \HomeView\ e \NavigationActivity\ che comunica con la vista \NavigationViewImp\ attraverso l'interfaccia \NavigationView\. \PoiCategoryActivity\ comunica con le componenti del model \InformationManager\ attraverso la dependency injection mentre \NavigationActivity\ comunica con le componenti del model \InformationManager\ e \NavigationManager\ sempre attraverso l'uso della dependency injection.
+			Il compito del presenter per questa funzionalità è affidato all'oggetto \PoiCategoryActivity\ che comunica con la vista \PoiCategoryViewImp\ attraverso l'interfaccia \HomeView\ e \NavigationActivity\ che comunica con la vista \NavigationViewImp\ attraverso l'interfaccia \NavigationView. \PoiCategoryActivity\ comunica con le componenti del model \InformationManager\ attraverso la dependency injection mentre \NavigationActivity\ comunica con le componenti del model \InformationManager\ e \NavigationManager\ sempre attraverso l'uso della dependency injection.
 		
 			\paragraph*{Componenti interne}
 			\begin{itemize}
@@ -109,10 +109,10 @@
 					
 		
 		\subsubsection{Calcolo percorso}
-			La classe \NavigationManagerImp\ richiede il calcolo del percorso a \Navigator\ implementata dalla classe \NavigatorImp. Perché \NavigatorImp\ funzioni come si deve devono essere effettuate tali operazioni in questo ordine (non vengono scritti i parametri, si faccia riferimento alla javadoc):
+			La classe \NavigationManagerImp\ richiede il calcolo del percorso a \Navigator\ implementata dalla classe \NavigatorImp. Affinché \NavigatorImp\ funzioni devono essere effettuate alcune operazioni nel giusto ordine qui riportato (\textbf{nota:} non vengono riportati i parametri, per essi si faccia riferimento alla javadoc):
 			\begin{enumerate}
 				\item eseguire la chiamata del metodo \lstinline|setGraph()| settare il grafo dell'edificio rilevato;
-				\item eseguire la chiamata del metodo \lstinline|calculatePath()| per far sì che \NavigatorImp\ calcoli il percorso dal punto in cui si è (\lstinline|startROI| )alla destinazione scelta (\lstinline|endPOI|)
+				\item eseguire la chiamata del metodo \lstinline|calculatePath()| per far sì che \NavigatorImp\ calcoli il percorso dal punto in cui si è (\lstinline|startROI|) alla destinazione scelta (\lstinline|endPOI|)
 				\item utilizzare uno o entrambi i metodi che ritornano informazioni incapsulate in \ProcessedInformation:
 				\begin{itemize}
 					\item \lstinline|getAllInstruction()| per recuperare immediatamente tutte le informazioni per raggiungere la destinazione;
@@ -150,7 +150,7 @@
 		
 		
 		\subsubsection{Bussola}
-			La classe \Compass\ permette all'applicazione di ricevere dati dai sensori hardware del device gestiti grazie alla classe \Sensor. \Compass\ rende disponibili i metodi per registrare i listener ai sensori e per rimuoverla. Poiché i sensori comunicano attraverso eventi tramite interfaccia \SensorEventListener\ i dati recuperati della bussola non corrispondono all'istante in cui sono recuperati.
+			La classe \Compass\ permette all'applicazione di ricevere dati dai sensori hardware del device gestiti grazie alla classe \Sensor. \Compass\ rende disponibili i metodi per registrare i listener ai sensori e per disattivarli. Poiché i sensori comunicano attraverso eventi tramite interfaccia \SensorEventListener\ i dati recuperati della bussola non corrispondono all'istante in cui sono recuperati.
 		
 			\paragraph*{Componenti interne}
 			\begin{itemize}
@@ -207,7 +207,7 @@
 				
 			\end{itemize}
 			
-			Nel package \navigator vengono lanciate delle eccezioni per far sì che chiunque le utilizzi rispetti un particolare ordine. Tale ordine coinvolge le seguenti operazioni:
+			Nel package \navigator\ vengono lanciate delle eccezioni per far sì che chiunque le utilizzi rispetti un particolare ordine. Tale ordine coinvolge le seguenti operazioni:
 			\begin{itemize}
 				\item Set del grafo in \NavigatorImp;
 				\item Calcolo del percorso attraverso \NavigatorImp;
