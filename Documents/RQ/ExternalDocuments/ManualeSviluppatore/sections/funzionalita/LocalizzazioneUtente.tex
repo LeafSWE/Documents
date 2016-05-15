@@ -120,10 +120,8 @@ nel database locale;
 			
 			
 		\subsubsection{Rilevamento beacon}
-			La classe \BeaconManagerAdapter\ estende un bind \Service\ (vedi appendice \ref{sec:FondamentiDiAndroid}) ed ha il compito di effettuare il \gls{ranging} e il \gls{monitoring} dei \gls{beacon} circostanti. Il \gls{ranging}\ 
-è l'operazione svolta in background per riconoscere i \gls{beacon}\ 
-circostanti senza eccessiva precisione mentre il \gls{monitoring}\ 
-è l'operazione che segue in cui i beacon vengono invece rilevati con tutte le informazioni e con più precisamente.
+			La classe \BeaconManagerAdapter\ estende un bind \Service\ (vedi appendice \ref{sec:FondamentiDiAndroid}) ed ha il compito di effettuare il \gls{ranging} e il \gls{monitoring} dei \gls{beacon} circostanti. Il \gls{monitoring} è l'operazione svolta in background per riconoscere i \gls{beacon} 
+circostanti senza eccessiva precisione mentre il \gls{ranging} è l'operazione che segue. Con il \gls{ranging} infatti i beacon vengono rilevati con più dettaglio e precisione con conseguente consumo di maggiore risorse, soprattutto energetiche.
 			La comunicazione dei \gls{beacon} rilevati dal \model\ avviene attraverso l'uso degli oggetti \MyBeacon\ inviati tramite \Intent\ per cui serializzati. Gli \Intent\ vengono recuperati tramite \BroadcastReceiver\ implementato in altre classi.
 			
 			\paragraph*{Componenti interne}
@@ -166,13 +164,13 @@ circostanti senza eccessiva precisione mentre il \gls{monitoring}\
 			
 			
 		\subsubsection{Costruzione BuildingMap}
-			L'oggetto \InformationManagerImp\ comunica a \DatabaseService\ la necessità di costruire l'oggetto \BuildingMap. \DatabaseService\ costruisce tale oggetto incaricando \PointOfInterestService, \RegionOfInterestService, \EdgeService, \PhotoService di costruire le componenti di \BuildingMap ossia:
+			L'oggetto \InformationManagerImp\ comunica a \DatabaseService\ la necessità di costruire l'oggetto \BuildingMap. \DatabaseService\ costruisce tale oggetto incaricando \PointOfInterestService, \RegionOfInterestService, \EdgeService, \PhotoService\ di costruire le componenti di \BuildingMap ossia:
 			\begin{itemize}
 				\item \PointOfInterest;
 				\item \RegionOfInterest;
 				\item \EnrichedEdge;
 			\end{itemize}
-			Tali componenti sono prelevate e costruite facendo uso di semplici oggetti data grazie alle classi con suffisso \textit{Dao}. Questi oggetti semplici sono descritti da un nome riferito all'elemento all'interno di una tabella del database locale e con il suffisso \textit{Table}. 
+			Tali componenti sono prelevate e costruite facendo uso di semplici oggetti contenitori di dati grazie alle classi con suffisso \textit{Dao}. Questi oggetti semplici sono descritti da un nome riferito all'elemento all'interno di una tabella del database locale e con il suffisso \textit{Table}. 
 			Le operazioni eseguite per costruire \BuildingMap\ si distinguono in due casi:
 			\begin{itemize}
 				\item I dati necessari per la costruzione di \BuildingMap\ sono nel database locale. A questo punto se la versione dei dati in locale corrispondono alla versione in remoto l'\InformationManagerImp\ incarica \DatabaseService\ di costruire l'oggetto \BuildingMap\ come spiegato in precedenza, altrimenti si effettuano le operazioni descritte nel caso successivo;

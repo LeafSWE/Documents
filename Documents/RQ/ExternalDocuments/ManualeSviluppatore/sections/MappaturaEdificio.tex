@@ -2,7 +2,7 @@
 
 \begin{document}
 \section{Mappatura edificio}
-	Nella presente sezione si vuole fornire una descrizione della soluzione implementata per effettuare una \gls{navigazione indoor}.
+	Nella presente sezione si vuole fornire una descrizione della soluzione implementata per effettuare \gls{navigazione indoor}.
 	
 	Per \textbf{mappatura edificio} si intende la costruzione teorica di un \textbf{grafo pesato} che rappresenta l'edificio in cui abilitare la funzionalità di navigazione offerta dall'applicazione.
 	
@@ -12,7 +12,7 @@
 		\item Archi.
 	\end{itemize}
 	
-	\subsection{Vertici: Region of Interest \& Point of Interest}
+	\subsection{Vertici: Region of Interest e Point of Interest}
 	
 	I \textbf{vertici} rappresentano le aree coperte dal segnale di un singolo \gls{beacon}, definite Region Of Interest (\gls{ROI}).
 	Ogni ROI, identificata da un unico \gls{beacon}, è definita come un insieme di possibili destinazioni da raggiungere all'interno dell'edificio da mappare. Tali destinazioni sono definite Point Of Interest (\gls{POI}) e rappresentano nella realtà tutti i punti di interesse di un utente.
@@ -24,9 +24,9 @@
 		\label{fig:ROIePOI}
 	\end{figure}
 	
-	Una ROI e quindi un \gls{beacon} rappresenta più POI per soddisfare l'obiettivo di \textbf{massimizzare l'area da coprire} e \textbf{minimizzare il numero di beacon} da utilizzare.
+	Una ROI e quindi un \gls{beacon}, rappresenta più POI per soddisfare gli obiettivi di \textbf{massimizzare l'area da coprire} e \textbf{minimizzare il numero di beacon} da utilizzare.
 	
-	Poiché un POI può essere che abbia più punti d'accesso, si pensi ad una stanza con più di una porta d'accesso, è previsto che un singolo POI possa appartenere a più ROI. Il risultato è una relazione N a N tra ROI e POI. Nella figura \ref{fig:ROIePOI-NtoN} si vede come il POI al centro appartiene sia alla ROI$_1$ sia alla ROI$_2$.
+	Poiché è possibile che un POI abbia più punti d'accesso (si pensi ad una stanza con più porte d'accesso) è previsto che un singolo POI possa appartenere a più ROI. Il risultato è una relazione N a N tra ROI e POI. Nella figura \ref{fig:ROIePOI-NtoN} si illustra graficamente come un POI possa appartenere a più ROI, nel caso rappresentato il POI al centro appartiene sia alla ROI$_1$ sia alla ROI$_2$.
 	
 	\begin{figure} [h]
 		\centering
@@ -51,7 +51,7 @@
 	\subsection{Percorso}
 	Un POI è una possibile destinazione dell'utente ossia il punto d'arrivo di un possibile percorso mentre una ROI è l'area in cui l'utente si trova, grazie al rilevamento dei \gls{beacon}. Gli Edge e i ROI tra queste due entità rappresentano il percorso da percorrere.
 	
-	Dato quindi un punto di partenza e uno di arrivo abbiamo la necessità di calcolare il percorso più corto per raggiungere il punto di arrivo. Poiché lavoriamo rappresentando gli spazi interni dell'edificio in un grafo possiamo sfruttare tutta la conoscenza matematica su questi.
+	Dato quindi un punto di partenza e uno di arrivo abbiamo la necessità di calcolare il percorso più corto per raggiungere il punto di arrivo. Poiché lavoriamo identificando gli spazi interni dell'edificio con elementi di un grafo, possiamo sfruttare tutta la conoscenza matematica su questi.
 	Implementando l'algoritmo di Dijkstra otteniamo il percorso più corto da una ROI ad un'altra.
 	
 	Poiché il punto di destinazione è un POI e questo può appartenere a diverse ROI nel calcolo del percorso bisogna identificare il percorso migliore tra la ROI di partenza e le ROI di cui il POI fa parte.
@@ -60,7 +60,7 @@
 	
 	\subsection{Mappare più piani}
 	
-		Se consideriamo ogni piano di un edificio un grafo possiamo connettere tali grafi con nuovi Edge nei punti reali in cui questi piani si collegano, scale e ascensori. Otteniamo così da due grafi un grafo più grande.
+		Se consideriamo ogni piano di un edificio come un grafo possiamo connettere tali grafi con nuovi Edge nei punti reali in cui questi piani si collegano, scale e ascensori. Otteniamo così da due grafi un grafo più grande.
 		
 		\begin{figure} [h]
 			\centering
@@ -73,17 +73,17 @@
 	\subsection{Configurazione beacon}
 		Per gestire questa soluzione teorica i beacon fanno da ROI del grafico ossia i vertici. La scelta della loro posizione è di fondamentale importanza per il corretto funzionamento della navigazione e della user experience. 
 
-		I dati trasmessi dal \gls{beacon} sono Major e Minor, si tratta di due stringhe di cinque caratteri numerici. Nella soluzione presentata sono utilizzati:
+		I dati trasmessi dal \gls{beacon} sono il Major e il Minor, ovvero due stringhe composte da cinque caratteri numerici. Nella soluzione presentata sono così utilizzati:
 		\begin{description}
 			\item[Major:] identificativo dell'edificio supportato dall'applicazione;
 			\item[Minor:] le prime due cifre identificano il piano mentre le ultime tre la ROI.
 		\end{description}			
 		
-		Di seguito si elencano quali sono le pratiche da seguire individuate dal team \leaf per ottenere un risultato ottimale:
+		Di seguito si elencano quali sono le pratiche da seguire individuate dal team \leaf\ per ottenere un risultato ottimale:
 		\begin{itemize}
 			\item gli spazi interni dell'edificio devono essere il più possibile coperti dal segnale dei \gls{beacon} evitando il più possibile sovrapposizioni tra questi;
 			\item ogni ROI e quindi ogni \gls{beacon} si consiglia di posizionarlo in tutti gli incroci di un edificio e nei luoghi di accesso di ogni stanza o punto di interesse (POI);
-			\item il collegamento reale (Edge teoricamente) tra due ROI deve essere il più possibile una linea retta. Ciò perché l'applicazione calcola alcune indicazioni da dare sulla base della coordinata magnetica/orientamento da un ROI ad un altro;
+			\item il collegamento reale (Edge teoricamente) tra due ROI deve essere il più possibile una linea retta. L'applicazione infatti calcola alcune indicazioni da dare sulla base della coordinata magnetica/orientamento da una ROI ad un altro;
 		\end{itemize}
 
 
@@ -95,11 +95,11 @@
 			\item raggruppare i POI vicini in ROI garantendo che:
 			\begin{itemize}
 				\item tutto l'edificio sia coperto dal segnale dei beacon;
-				\item non ci sia eccessiva distanza tra una ROI all'altra;
-				\item una ROI non contenga troppi POI;
+				\item non ci sia eccessiva distanza tra una ROI e un'altra;
+				%\item una ROI non contenga troppi POI;
 			\end{itemize}
 			\item collegare ogni ROI alle ROI raggiungibili da essa senza passare per altre ROI e identificando la tipologia di Edge (normale, scale, ascensori\dots). \textbf{NOTA:} se da un ROI posso raggiungere un'altra ROI e viceversa dovrò necessariamente documentare due Edge distinti.
-			\item per ogni Edge identificato rilevare le informazioni necessarie per descriverlo in toto. 
+			\item per ogni Edge identificato rilevare le informazioni necessarie per descriverlo in toto:
 			\begin{itemize}
 				\item distanza;
 				\item coordinata magnetica;
@@ -110,7 +110,7 @@
 			\end{itemize}
 			Tali informazioni saranno fondamentali perché l'applicazione offra il maggior numero di informazioni all'utente;
 			\item assegnare ai \gls{beacon} da utilizzare un Major univoco che identifica l'edificio che si sta mappando;
-			\item assegnare ad ogni \gls{beacon} un Minor in cui le premi due cifre identificano il numero del piano e le ultime tre identificano la ROI in quel piano;
+			\item assegnare ad ogni \gls{beacon} un Minor in cui le prime due cifre identificano il numero del piano e le ultime tre identificano la ROI in quel piano;
 			\item inserire nel server delle mappe tali informazioni. Per ulteriori informazioni su quest'ultimo punto si rimanda alla sezione \ref{sec:PersistenzaDeiDati}.
 		\end{enumerate}
 		

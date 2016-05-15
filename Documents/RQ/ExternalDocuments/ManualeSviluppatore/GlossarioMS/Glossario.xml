@@ -852,7 +852,7 @@ GUI (Graphical UI), ossia un'interfaccia composta da oggetti grafici
 			Wrapper
 		</termine>
 		<descrizione>
-			Modulo software che ne avvolge un altro per evitare le dipendenze su quest'ultimo.
+			Modulo software che ne avvolge un altro per evitare le dipendenze su quest'ultimo
 		</descrizione>
 	</voce>
 	
