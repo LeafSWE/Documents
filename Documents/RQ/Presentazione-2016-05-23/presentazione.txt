@@ -1,0 +1,10 @@
+Promuovere quello che abbiamo fatto (più qualità rispetto agli altri)
+
+Presentazione dei manuali (Javadoc,Sito download apk)
+Video delle funzionalità (Esempio pratico)
+Soluzioni implementative (Algoritmo peso-archi)
+Come abbiamo mappato
+Area sviluppatore (funzionalità e implementazione)
+Metriche (Copertura requisiti)
+Strumenti e implementazione test (Frammentazione android causa problemi nei test, Travis CI)
+Consuntivo
