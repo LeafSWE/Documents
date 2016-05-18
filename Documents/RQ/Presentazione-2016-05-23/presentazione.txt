@@ -1,10 +1,24 @@
 Promuovere quello che abbiamo fatto (più qualità rispetto agli altri)
 
-Presentazione dei manuali (Javadoc,Sito download apk)
-Video delle funzionalità (Esempio pratico)
-Soluzioni implementative (Algoritmo peso-archi)
-Come abbiamo mappato
-Area sviluppatore (funzionalità e implementazione)
-Metriche (Copertura requisiti)
-Strumenti e implementazione test (Frammentazione android causa problemi nei test, Travis CI)
-Consuntivo
+
+Video delle funzionalità per l'utente generico 
+(Esempio pratico (NO AREA SVILUPPATORE) ANDREA - 3 min
+
+Come abbiamo mappato la torre archimede
+(come mappare un edificio, linee guida) DAVIDE - 3 min
+
+Area sviluppatore 
+(funzionalità e implementazione) OSCAR - 2 min
+
+Soluzioni implementative 
+(Algoritmo peso-archi) MARCO - 2 min
+
+Presentazione dei manuali (Javadoc, Sito download apk) EDUARD - 2 min
+
+Metriche 
+(Copertura requisiti, mostrare principalmentee i risultati positivi) CRISTIAN - 2 min
+
+Strumenti e implementazione test 
+(Frammentazione android causa problemi nei test, Travis CI)
+
+Consuntivo FEDERICO - 2 min
