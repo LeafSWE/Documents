@@ -1,0 +1,59 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{leaf}
+\setcounter{table}{-1}
+\usepackage{float}
+\restylefloat{table}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue
+}
+
+\titlepage{}
+
+\author{}
+\date{9/12/2015}
+\intestazioni{Sperimentazioni pratiche}
+\pagenumbering{gobble}
+\begin{document}
+	\begin{titlepage}
+		\centering
+		{\huge\bfseries CLIPS\par}
+	Communication \& Localization with Indoor Positioning Systems \\*
+	\line(1,0){350} \\
+	{\scshape\LARGE Università di Padova \par}
+	\vspace{1cm}
+	{\scshape\Large Sperimentazioni pratiche v1.00\par}
+	\logo
+	\newpage
+		\begin{tabular}{c|c}
+			{\hfill \textbf{Versione}} 		& 1.00				\\
+			{\hfill\textbf{Data Redazione}} 	& 2016-05-25	  		\\
+			{\hfill\textbf{Redazione}}		& ??? 		\\
+			{\hfill\textbf{Verifica}} 		& ???		\\
+			{\hfill\textbf{Approvazione}} 		& ???		\\
+			{\hfill\textbf{Uso}} 			& Esterno			\\
+			{\hfill\textbf{Distribuzione}} 		& Prof. Vardanega Tullio 	\\
+								& Prof. Cardin Riccardo 	\\
+								& Miriade S.p.A. 		\\
+		\end{tabular}
+	\end{titlepage}
+	\newpage
+		\pagestyle{myfront}
+		\include{diarioModificheS}
+
+	\newpage
+		\tableofcontents
+	\newpage
+		\listoftables
+	\newpage
+		\listoffigures
+	\label{LastFrontPage}
+
+	\newpage
+	\pagestyle{mymain}
+		\subfile{sections/ProvePratiche}
+		
+	\label{LastPage}
+
+\end{document}
