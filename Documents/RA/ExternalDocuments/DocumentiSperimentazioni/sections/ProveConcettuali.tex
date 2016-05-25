@@ -1,0 +1,506 @@
+\documentclass[../Sperimentazione.tex]{subfiles}
+
+\begin{document}
+	
+\section{Prove concettuali}
+	Nella presente sezione si raccolgono i modelli concettuali di prove che verranno effettuate successivamente sul campo. Ogni modello di \textbf{prova} è strutturata nelle seguenti sottosezioni:
+	\begin{itemize}
+		\item \textbf{Prova} \verb|num_id|, dove \verb|num_id| rappresenta un numero intero positivo che identifica univocamente la prova;
+		\item \textbf{Obiettivo}, in cui si descrive lo scopo della prova;
+		\item \textbf{Test di sistema}, in cui si elencano i test di sistema associati a tale prova, se tale prova è soddisfatta anche i test di sistema associati sono considerati soddisfatti;
+		\item \textbf{Procedura}, in cui si elencano i passaggi da eseguire in ordine per la corretta esecuzione della prova;
+		\item \textbf{Output attesi}, in cui si elencano i risultati dell'esecuzione della \textbf{procedura}.
+	\end{itemize}
+	
+\subsubsection{Variabili}
+	Per rappresentare le prove come modelli concettuali si è fatto uso di variabili identificabili dal simbolo \verb|$| come prefisso, seguite da un nome identificativo in caratteri \textbf{maiuscolo} e, se necessario, da un suffisso numerico se esistono più variabili simili con stesso nome identificativo.
+
+	L'uso delle variabili consente di effettuare la stessa prova con diverse configurazioni con diversi input, ossia diversi valori assegnati alle variabili di ingresso.
+	
+	Le variabili in \textbf{output} sono sempre identificate dalla variabile \verb|$RESULT| che può essere seguita da un suffisso numerico se i risultati sono più di uno.
+	
+
+
+\subsubsection{Precondizioni generali}
+	La seguente lista contiene tutte le precondizioni da rispettare in ogni prova elencata successivamente. Queste precondizioni sono valide se e solo se all'interno della prova stessa non ne sono specificate altre che vanno in contraddizione.
+	\begin{itemize}
+		\item Il dispositivo utilizzato ha il Bluetooth BLE 4.0 attivo;
+		\item Il dispositivo utilizzato ha il servizio di geolocalizzazione attivo;
+		\item Il dispositivo utilizzato ha una connessione Internet (connessione Wi-fi o connessione dati);
+		\item Il dispositivo utilizzato ha almeno 10 MB di spazio libero nella memoria principale;
+		\item Il dispositivo utilizzato opera all'interno dell'edificio Torre Archimede (soddisfatti TS22, TS22.1 e TS22.2);
+		\item Il dispositivo utilizzato è nelle vicinanze di un beacon che identifica una Region Of Interest (ROI) dell'edificio;
+		\item L'area sviluppatore dell'applicazione \textit{Clips} è già sbloccata tramite l'inserimento dell'apposita password.
+	\end{itemize}
+
+
+
+\newpage
+\subsection{Prova 1} % lista indicazioni e ricerca categorie
+\label{subsec:Prova1}	
+	
+	\subsubsection{Obiettivo}
+		Visualizzare dall'applicazione le indicazioni attese per raggiungere la destinazione \verb|$END|.
+		
+	\subsubsection{Test di sistema}
+		TS1, TS1.8,
+		TS1.14, TS1.14.1,
+		TS14.1,
+		TS1.1.3,
+		TS22.1;
+		
+	\subsubsection{Procedura}
+		\begin{enumerate}
+		\item Avviare l'applicazione \textit{Clips};
+		\item Seleziona la categoria  \verb|$CAT|;
+		\item Seleziona la destinazione  \verb|$END|.
+		\end{enumerate}
+	
+	\subsubsection{Output attesi}
+		\begin{itemize}
+		\item Al punto 2 l'applicazione deve mostrare la lista dei POI seguente:  \verb|$RESULT|
+		\item L'applicazione una volta selezionata la destinazione  \verb|$END| deve mostrare il percorso composto dai passi  \verb|$RESULT|.
+		\end{itemize}
+		
+	
+\newpage		
+\subsection{Prova 2} % preferenze
+\label{subsec:Prova2}
+	
+	\subsubsection{Obiettivo}
+		Visualizzare dall'applicazione le indicazioni attese per raggiungere la destinazione  \verb|$END| con impostate le preferenze  \verb|$PREF|
+		
+	\subsubsection{Test di sistema}
+		TS1.1, TS1.1.1, TS1.1.2,
+		TS14, TS14.6, TS14.7, TS14.8;
+		
+		
+	\subsubsection{Procedura}
+		\begin{enumerate}
+		\item Posizionarsi nell'area \verb|$START|;
+		\item Avviare l'applicazione \textit{Clips};
+		\item Dal menu dell'applicazione accedere a preferenze;
+		\item Impostare le preferenze  \verb|$PREF1|;
+		\item Dalla schermata principale si seleziona la categoria  \verb|CAT|;
+		\item Si seleziona la destinazione  \verb|$END|.
+		\end{enumerate}
+		
+	\subsubsection{Output attesi}
+		\begin{itemize}
+		\item L'applicazione una volta selezionata la destinazione  \verb|$END| deve mostrare il percorso composta dai passi  \verb|$RESULT| che prevedono l'uso delle \verb|$PREF| precedentemente impostate.
+		\end{itemize}
+		
+	
+	
+\newpage
+\subsection{Prova 3} % Ricalcolo percorso
+\label{subsec:Prova3}
+	
+	\subsubsection{Obiettivo}
+		Visualizzare l'avviso ricalcolo percorso quando intenzionalmente si procede per una direzione diversa da quella prevista dall'applicazione.
+		
+	\subsubsection{Test di sistema}
+		TS1.4;
+		
+	\subsubsection{Procedura}
+		\begin{enumerate}
+		\item Posizionarsi in  \verb|$START|;
+		\item Avviare l'applicazione \textit{Clips};
+		\item Inserire nella search box la destinazione  \verb|$END| e premere \textit{Invio};
+		\item Seguire le indicazioni fino al punto  \verb|$CHANGE|;
+		\item Dal punto \verb|$CHANGE| prendere.
+		\end{enumerate}
+		
+	\subsubsection{Output attesi}
+		\begin{itemize}
+		\item L'applicazione una volta presa la direzione opposta deve mostrare un avviso di ricalcolo percorso e mostrare le nuove indicazioni previste:  \verb|$RESULT|.
+		\end{itemize}
+		
+	
+	
+\newpage		
+\subsection{Prova 4} % indicazioni estese e immagini
+\label{subsec:Prova4}
+	
+	\subsubsection{Obiettivo}
+		Visualizzare le indicazioni testuali estese e le immagini di un'area da raggiungere per poi continuare verso la destinazione scelta.
+		
+	\subsubsection{Test di sistema}
+		TS1.6, TS1.7;
+		
+	\subsubsection{Procedura}
+		\begin{enumerate}
+		\item Posizionarsi nell'area  \verb|$START|;
+		\item Avviare l'applicazione \textit{Clips};
+		\item Inserire la destinazione  \verb|$END| nella search box e premere \textit{Invio};
+		\item Selezionare indicazione  \verb|$INST|.
+		\end{enumerate}
+
+	\subsubsection{Output attesi}
+		\begin{itemize}
+		\item L'applicazione una volta selezionata un'indicazione del percorso mostrato deve mostrare informazioni testuali  \verb|$INFO|;
+		\item L'applicazione una volta selezionata un'indicazione del percorso mostrato deve mostrare le due immagini previste di tale area:  \verb|$IMG1| e  \verb|$IMG2|.
+		\end{itemize}
+		
+	
+	
+\newpage		
+\subsection{Prova 5} % annullare la navigazione
+\label{subsec:Prova5}
+	
+	\subsubsection{Obiettivo}
+		Annullare la navigazione avviata precedentemente.
+		
+	\subsubsection{Test di sistema}
+		TS1.9;
+		
+	\subsubsection{Procedura}
+		\begin{enumerate}
+		\item Posizionarsi nell'area  \verb|$START|;
+		\item Avviare l'applicazione \textit{Clips};
+		\item Inserire la destinazione  \verb|$END| nella search box e premere 'Invio';
+		\item Selezionare pulsante \textit{Back}.
+		\end{enumerate}
+		
+	\subsubsection{Output attesi}
+		\begin{itemize}
+		\item L'applicazione in seguito alla pressione del pulsante \textit{Back} deve annullare la navigazione in corso e ritornare alla schermata principale.
+		\end{itemize}	
+		
+	
+	
+\newpage
+\subsection{Prova 6} % avviso mappa non aggiornata
+\label{subsec:Prova6}
+	
+	\subsubsection{Obiettivo}
+		Visualizzare avviso: \textit{"mappa non aggiornata"}.
+		
+	\subsubsection{Test di sistema}
+		TS1.11;
+		
+	\subsubsection{Precondizioni}
+		\begin{itemize}
+			\item Assicurarsi di avere una mappa installata con versione inferiore rispetto quella disponibile nel database remoto
+		\end{itemize}
+	
+	\subsubsection{Procedura}	
+	
+		\begin{enumerate}
+		\item Avviare l'applicazione
+		\end{enumerate}
+		
+	\subsubsection{Output attesi}
+		\begin{itemize}
+		\item Dopo l'avvio l'applicazione deve mostrare un messaggio di avviso se la mappa dell'edificio in cui il dispositivo si trova salvata in locale non ha la versione uguale a quella disponibile nel database remoto.
+		\end{itemize}
+	
+	
+	
+\newpage	
+\subsection{Prova 7} % avviso mappa non scaricata
+\label{subsec:Prova7}	
+	
+	\subsubsection{Obiettivo}
+		Visualizzare avviso: \textit{"mappa non scaricata"}.
+		
+	\subsubsection{Test di sistema}
+		TS1.12;
+		
+	\subsubsection{Precondizioni}
+		\begin{itemize}
+			\item Qualsiasi dato salvato precedentemente dall'applicazione è eliminato.
+		\end{itemize}
+		
+	\subsubsection{Procedura}
+		\begin{enumerate}
+		\item Avviare l'applicazione \textit{Clips}.
+		\end{enumerate}
+		
+	\subsubsection{Output attesi}
+		\begin{itemize}
+		\item Dopo l'avvio l'applicazione deve mostrare un messaggio di avviso se la mappa dell'edificio in cui il dispositivo si trova non è salvata in locale.
+		\end{itemize}
+	
+	
+	
+
+\newpage	
+\subsection{Prova 8} % attivazione sensori
+\label{subsec:Prova8}
+	
+	\subsubsection{Obiettivo}
+		Visualizzare avvisi per l'attivazione dei sensori richiesti per il funzionamento dell'applicazione
+		
+	\subsubsection{Test di sistema}
+		TS2, TS2.1, TS2.2, TS2.3;
+		
+	\subsubsection{Precondizioni}
+		\begin{itemize}
+			\item Il sensore bluetooth del device è spento;
+			\item Il servizio di geolocalizzazione del device è spento;
+			\item Il GPS del device è spento.
+		\end{itemize}
+		
+	\subsubsection{Procedura}
+		\begin{enumerate}
+		\item Si avvia l'applicazione \textit{Clips}.
+		\end{enumerate}
+		
+	\subsubsection{Output attesi}
+		\begin{itemize}
+		\item Dopo l'avvio l'applicazione richiede con un messaggio d'avviso di attivare il sensore bluetooth e in seguito il servizio di geolocalizzazione;
+		\item Se il sistema operativo in uso nel device è la versione Lollipop 5.0 o superiore l'applicazione richiede con un ulteriore messaggio d'avviso di attivare il GPS del dispositivo.
+		\end{itemize}
+		
+
+\newpage	
+\subsection{Prova 9} % gestire un log
+\label{subsec:Prova9}	
+	
+	\subsubsection{Obiettivo}
+		Reperire e visualizzare UUID di beacon, major, minor, livello di potenza, livello di batteria, distanza approssimativa dal dispositivo, formato del beacon e area coperta dal beacon.
+		
+	\subsubsection{Test di sistema}
+		TS18, TS18.1, TS18.2, TS18.3, TS18.4, TS18.5, TS18.6, TS18.7, TS18.8,
+		TS18.9, TS18.9.1, TS18.9.2, TS18.9.3, TS18.9.5,
+		TS3.2, TS3.4, TS3.5, TS3.6;
+		
+	\subsubsection{Precondizioni}
+		\begin{itemize}
+			\item Durante la rilevazione non esistono altri beacon all'infuori di beacon che compongono la mappatura dell'edificio.
+		\end{itemize}				
+		
+	\subsubsection{Procedura}
+		\begin{enumerate}
+		\item Posizionarsi nell'area \verb|$POS|;
+		\item Avviare l'applicazione;
+		\item Dal menu accedere sezione area sviluppatore;
+		\item Dalla schermata \textit{I tuoi log} selezionare il pulsante \textit{Nuovo log};
+		\item Dopo 5 secondi selezionare il pulsante \textit{Stop}  che salverà il log in corso;
+		\item Selezionare il log posizionato più in basso della lista.
+		\end{enumerate}
+		
+	\subsubsection{Output attesi}
+		\begin{itemize}
+		\item \verb|$BEACONREAD|:
+			\begin{itemize}
+				\item \verb|$UUID|
+			 	\item \verb|$Major|
+			 	\item \verb|$Minor|
+			 	\item \verb|$RSSI|
+			 	\item \verb|$TXPOWER|
+			 	\item \verb|$BATTERY|
+			 	\item \verb|$DISTANCE|
+			 	\item \verb|$BEACONTYPE|
+			 	\item \verb|$BLUETOOTHADDRESS|
+			\end{itemize}
+			 
+		\end{itemize}
+		
+
+
+\newpage	
+\subsection{Prova 11} % search box
+\label{subsec:Prova11}
+	
+	\subsubsection{Obiettivo}
+		Ottenere l'avviso \textit{"Nessun risultato trovato"} dopo avere inserito nella search box  \verb|$STRINGNULL| e successivamente ottenere le informazioni per raggiungere la destinazione  \verb|$END| selezionata nel menu a tendina dopo aver inserito  \verb|$STRING| nella search box.
+		
+	\subsubsection{Test di sistema}
+		TS1.13, TS1.13.1,
+		TS19,
+		TS1.15, TS1.16;
+		
+	\subsubsection{Precondizioni}
+		\begin{itemize}
+			\item Il dispositivo non deve essere mosso durante la prova
+		\end{itemize}
+		
+	\subsubsection{Procedura}
+		\begin{enumerate}
+		
+		
+		\item Posizionarsi 
+		\item Avvia applicazione
+		\item Dalla schermata principale selezionare la search box in alto
+		\item Inserire la stringa  \verb|$STRINGNULL|
+		\item Premere \textit{Invio}
+		\item Selezionare pulsante \textit{Back}
+		\item Selezionare nuovamente la search box in alto
+		\item Inserire la stringa  \verb|$STRING|
+		\item Dal menu a tendina selezionare la destinazione  \verb|$END|
+		\end{enumerate}
+		
+	\subsubsection{Output attesi}
+		\begin{itemize}
+		\item Al punto 3 l'applicazione deve mostrare nel menu a tendina le alternative:  \verb|$RESULT1|;
+		\item Al punto 4 l'applicazione deve mostrare una schermata con l'avviso: \textit{"Nessun risultato"};
+		\item Al punto 7 l'applicazione deve mostrare nel menu a tendina i seguenti Output:  \verb|$RESULT2|;
+		\item Al punto 8 l'applicazione deve mostrare la lista di indicazioni composta da tali passi:  \verb|$RESULT3|.
+		\end{itemize}
+
+	
+
+
+\newpage	
+\subsection{Prova 12} % tutti i POI edificio
+\label{subsec:Prova12}
+	
+	\subsubsection{Obiettivo}
+		Visualizzare una lista di tutti i POI all'interno dell'edificio mappato  \verb|$BUILDING| e visualizzare i dettagli del POI  \verb|$SELECT| contenuto in essa.
+		
+	\subsubsection{Test di sistema}
+		TS9, TS9.1,
+		TS10, TS10.1, TS10.2,
+		TS3.1.1;
+
+	\subsubsection{Procedura}
+		\begin{enumerate}
+		\item Avviare l'applicazione;
+		\item Dalla schermata principale selezionare il pulsante ??? (Non esiste) per accedere a tutta la lista dei POI (FLoatingActionButton);
+		\item Selezionare il POI  \verb|$SELECT|.
+		\end{enumerate}
+		
+	\subsubsection{Output attesi}
+		\begin{itemize}
+		\item Al punto 2 la schermata fornisce la seguente lista di POI:  \verb|$RESULT1|;
+		\item Al punto 3 è possibile accedere al nome e informazioni:  \verb|$RESULT2| del POI  \verb|$SELECT| selezionato.
+		\end{itemize}
+	
+
+	
+\newpage	
+\subsection{Prova 13} % esplora POI circostanti
+\label{subsec:Prova13}
+	
+	\subsubsection{Obiettivo}
+		Visualizzare la lista di POI appartenenti alla ROI in cui si trova l'utente.
+		
+	\subsubsection{Test di sistema}
+		TS11,
+		TS3.1.2;
+		
+	\subsubsection{Procedura}
+		\begin{enumerate}
+		\item Posizionarsi nell'area \verb|$POS|;
+		\item Avviare l'applicazione;
+		\item Dalla schermata principale selezionare il pulsante ??? (FLoatingActionButton).
+		\end{enumerate}
+		
+	\subsubsection{Output attesi}
+		\begin{itemize}
+		\item La lista dei POI mostrata deve contenere tali POI: \verb|$RESULT|.
+		\end{itemize}
+		
+	
+		
+\newpage	
+\subsection{Prova 14} % immagini non disponibili per assenza internet
+\label{subsec:Prova14}
+	
+	\subsubsection{Obiettivo}
+		Visualizzare un messaggiio di avviso che la connessione Internet non è attiva ed è impossibile scaricare le immagini della istruzione  \verb|$INST| selezionata.
+		
+	\subsubsection{Test di sistema}
+		TS1.17;
+		
+	\subsubsection{Procedura}
+		\begin{enumerate}
+		\item PRE - Qualsiasi tipo di connessione a internet del dispositivo viene disattivata;
+		
+		\item Avviare l'applicazione \textit{Clips};
+		\item Inserire nella search box la destinazine  \verb|$END| e premere \textit{Invio};
+		\item Selezionare indicazione  \verb|$INST|;
+		\item Selezionare un'immagine disponibile (???).
+		\end{enumerate}
+
+	\subsubsection{Output attesi}
+		\begin{itemize}
+		\item L'applicazione una volta selezionata un'immagine della ROI da attraversare mostra un avviso \textit{"Connessione a Internet assente, impossibile scaricare le mappe"}.
+		\end{itemize}
+
+%-----------------
+% Navigazione 2.0
+%-----------------
+
+\newpage	
+\subsection{Prova 15} % navigazione guidata dinamicamente a passo lento
+\label{subsec:Prova15}
+	
+	\subsubsection{Obiettivo}
+		Verificare che l'applicazione guidi istruzione per istruzione l'utente evidenziando le prossime indicazioni da seguire.
+		
+	\subsubsection{Test di sistema}
+		N.D.
+		
+	\subsubsection{Procedura}
+		\begin{enumerate}
+		\item Posizionare il dispositivo nella ROI  \verb|$START|;
+		\item Avviare l'applicazione \textit{Clips};
+		\item Inserire nella search box la destinazione  \verb|$END| e premere \textit{Invio};
+		\item A passo lento, seguire tutte le istruzioni fino a raggiungere la destinazione scelta.
+		\end{enumerate}
+		
+	\subsubsection{Output attesi}
+		\begin{itemize}
+		\item All'attraversamento della ROI  \verb|$INST1|, l'istruzione relativa al suo raggiungimento viene evidenziata.
+		\end{itemize}
+	
+	
+		
+		
+\newpage	
+\subsection{Prova 16} % navigazione guidata dinamicamente a passo veloce
+\label{subsec:Prova16}	
+	
+	\subsubsection{Obiettivo}
+		Verificare che l'applicazione guidi istruzione per istruzione l'utente evidenziando le prossime istruzioni da seguire.
+		
+	\subsubsection{Test di sistema}
+		Nessuno.
+		
+	\subsubsection{Procedura}
+		\begin{enumerate}
+		\item Posizionare il dispositivo nella ROI  \verb|$START|;
+		\item Avviare l'applicazione \textit{Clips};
+		\item Inserire nella serach box la destinazione  \verb|$END| e premere \textit{Invio};
+		\item A passo veloce, seguire tutte le istruzioni fino a raggiungere la destinazione scelta.
+		\end{enumerate}
+		
+	\subsubsection{Output attesi}
+		\begin{itemize}
+		\item All'attraversamento della ROI  \verb|$INST1| l'istruzione relativa al suo raggiungimento viene evidenziata.
+		\end{itemize}
+
+	
+		
+\newpage	
+\subsection{Prova 17} % indicazioni della bussola
+\label{subsec:Prova17}	
+	
+	\subsubsection{Obiettivo}
+		Visualizzare la corretta direzione da seguire associata ad ogni istruzione.
+		
+	\subsubsection{Test di sistema}
+		Nessuno.
+		
+	\subsubsection{Procedura}
+		\begin{enumerate}
+		\item Posizionare il dispositivo nella ROI \verb|$START| rivolgendolo verso la prossima ROI  \verb|$NEXT| da raggiungere;
+		\item Avviare l'applicazione \textit{Clips};
+		\item Inserire nella search box la destinazione  \verb|$END| e premere \textit{Invio};
+		\item Girare il dispositivo di  \verb|$GRADE| gradi.
+		\end{enumerate}
+		
+	\subsubsection{Output attesi}
+		\begin{itemize}
+			\item La prima istruzione contiene l'indicazione di direzione  \verb|$DIRECTION|.
+		\end{itemize}
+
+	
+	% Tabella prove totali
+	
+		
+	
+\end{document}
