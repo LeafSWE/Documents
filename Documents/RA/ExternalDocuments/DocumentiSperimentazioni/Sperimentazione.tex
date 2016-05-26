@@ -1,6 +1,13 @@
 \documentclass[a4paper,12pt]{article}
 
 \usepackage{leaf}
+\usepackage[inline]{enumitem}
+\usepackage{lipsum}
+\usepackage[many]{tcolorbox}
+\usepackage{xcolor}
+
+
+
 \setcounter{table}{-1}
 \usepackage{float}
 \restylefloat{table}
@@ -29,7 +36,8 @@
 		\begin{tabular}{c|c}
 			{\hfill \textbf{Versione}} 		& 1.00				\\
 			{\hfill\textbf{Data Redazione}} 	& 2016-05-25	  		\\
-			{\hfill\textbf{Redazione}}		& ??? 		\\
+			{\hfill\textbf{Redazione}}		& Eduard Bicego \\
+											&  Andrea Tombolato 		\\
 			{\hfill\textbf{Verifica}} 		& ???		\\
 			{\hfill\textbf{Approvazione}} 		& ???		\\
 			{\hfill\textbf{Uso}} 			& Esterno			\\
@@ -40,7 +48,7 @@
 	\end{titlepage}
 	\newpage
 		\pagestyle{myfront}
-		\include{diarioModificheSS}
+		\include{diarioModificheS}
 
 	\newpage
 		\tableofcontents
@@ -55,18 +63,21 @@
 		\subfile{sections/Introduzione}		
 		
 	\newpage
-		\subfile{sections/AllestimentoImpianto}
+		\subfile{sections/AllestimentoImpianti}
 		
 	\newpage
-		\subfile{sections/Applicazione}
+		%\subfile{sections/Applicazione}
 		
 	\newpage
-		\subfile{sections/InterazioneUtente}		
+		%\subfile{sections/InterazioneUtente}		
 		
 	\newpage
 		\subfile{sections/ProveConcettuali}
 		
 	% Parte pratica
+	
+	\newpage
+		\subfile{sections/SperimentazioneTemplateCompleto}
 	
 	%\newpage
 		%\subfile{sections/SperimentazioneDATA}

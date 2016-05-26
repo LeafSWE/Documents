@@ -9,8 +9,8 @@ SPERIMENTAZIONE PRATICA data
 		qual è e come abbiamo scelto di simulare le condizioni realistiche
 		
 	Il software/ L'applicazione (MARCO)
-		Bussola come e perché
 		Algoritmo di navigazione
+		Bussola come e perché
 		indichiamo scelte fatte nel software (link manuale sviluppatore)
 		
 	Interazione utente (ANDREA)
@@ -26,7 +26,9 @@ SPERIMENTAZIONE PRATICA data
 	
 	Sperimentazione $DATA
 	
-		Configurazione dispositivi di prova (telefoni)
+		Impianto
+	
+		Dispositivi di prova (telefoni)
 			Dispositivo 1
 			Dispositivo 2
 	
@@ -34,6 +36,9 @@ SPERIMENTAZIONE PRATICA data
 			Prova n
 				Risultati attesi
 				Risultati riscontrati
+				Analisi risultati -> se fallito
+					Considerazioni
+					Possibili miglioramenti
 			...
 		
 		Problematiche individuate
@@ -41,9 +46,8 @@ SPERIMENTAZIONE PRATICA data
 			Software
 			User Experience (ANDREA)
 	
-		Conclusioni
-			considerazioni finali -> se considerato fallito
-			Possibili miglioramenti
+		Conclusioni sperimentazione
+
 			
 			
 	Sperimentazione $DATA++
@@ -58,6 +62,9 @@ SPERIMENTAZIONE PRATICA data
 			Prova n
 				Risultati attesi
 				Risultati riscontrati
+				Analisi risultati -> se fallito
+					Considerazioni
+					Possibili miglioramenti
 			...
 		
 		Problematiche individuate
@@ -65,7 +72,5 @@ SPERIMENTAZIONE PRATICA data
 			Software
 			User Experience (ANDREA)
 	
-		Conclusioni
-			considerazioni finali -> se considerato fallito
-			Possibili miglioramenti
+		Conclusioni sperimentazione
 		

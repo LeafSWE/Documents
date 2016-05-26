@@ -12,7 +12,7 @@
 		\item \textbf{Output attesi}, in cui si elencano i risultati dell'esecuzione della \textbf{procedura}.
 	\end{itemize}
 	
-\subsubsection{Variabili}
+\subsection{Variabili}
 	Per rappresentare le prove come modelli concettuali si è fatto uso di variabili identificabili dal simbolo \verb|$| come prefisso, seguite da un nome identificativo in caratteri \textbf{maiuscolo} e, se necessario, da un suffisso numerico se esistono più variabili simili con stesso nome identificativo.
 
 	L'uso delle variabili consente di effettuare la stessa prova con diverse configurazioni con diversi input, ossia diversi valori assegnati alle variabili di ingresso.
@@ -21,7 +21,7 @@
 	
 
 
-\subsubsection{Precondizioni generali}
+\subsection{Precondizioni generali}
 	La seguente lista contiene tutte le precondizioni da rispettare in ogni prova elencata successivamente. Queste precondizioni sono valide se e solo se all'interno della prova stessa non ne sono specificate altre che vanno in contraddizione.
 	\begin{itemize}
 		\item Il dispositivo utilizzato ha il Bluetooth BLE 4.0 attivo;
@@ -58,8 +58,8 @@
 	
 	\subsubsection{Output attesi}
 		\begin{itemize}
-		\item Al punto 2 l'applicazione deve mostrare la lista dei POI seguente:  \verb|$RESULT|
-		\item L'applicazione una volta selezionata la destinazione  \verb|$END| deve mostrare il percorso composto dai passi  \verb|$RESULT|.
+		\item Al punto 2 l'applicazione deve mostrare la lista dei POI seguente:  \verb|$RESULT1|
+		\item L'applicazione una volta selezionata la destinazione  \verb|$END| deve mostrare il percorso composto dai passi  \verb|$RESULT2|.
 		\end{itemize}
 		
 	
@@ -262,9 +262,9 @@
 		Reperire e visualizzare UUID di beacon, major, minor, livello di potenza, livello di batteria, distanza approssimativa dal dispositivo, formato del beacon e area coperta dal beacon.
 		
 	\subsubsection{Test di sistema}
-		TS18, TS18.1, TS18.2, TS18.3, TS18.4, TS18.5, TS18.6, TS18.7, TS18.8,
+		TS18, TS18.1, TS18.2, TS18.3, TS18.4, TS18.5, TS18.6, TS18.7,
 		TS18.9, TS18.9.1, TS18.9.2, TS18.9.3, TS18.9.5,
-		TS3.2, TS3.4, TS3.5, TS3.6;
+		TS3.2, TS3.4, TS3.5;
 		
 	\subsubsection{Precondizioni}
 		\begin{itemize}
@@ -298,6 +298,30 @@
 			 
 		\end{itemize}
 		
+\newpage
+\subsection{Prova 10} % visualizzare i beacon nella planimetria
+\label{subsec:Prova10}
+
+	\subsubsection{Obiettivo}
+		Visualizzare nella planimetria la circonferenza del beacon che identifica l'area \verb|$AREA|.
+	
+	\subsubsection{Test di sistema}
+		TS3.6, TS18.8;
+	
+	\subsubsection{Procedura}
+		\begin{enumerate}
+		\item Avviare l'applicazione \textit{Clips};
+		\item Dal menu dell'applicazione selezionare \textit{Area sviluppatore};
+		\item Aprire il menu in alto a destra;
+		\item Selezionare \textit{Beacon Power Adapter};
+		\item Selezionare il pulsante \textit{play}.
+		\end{enumerate}
+		
+	\subsubsection{Output attesi}
+		\begin{itemize}
+			\item L'applicazione deve mostrare una planimetria dell'edificio Torre Archimede in cui si evidenzia una circonferenza nel punto \verb|$RESULT|.
+		\end{itemize}
+
 
 
 \newpage	
@@ -305,7 +329,7 @@
 \label{subsec:Prova11}
 	
 	\subsubsection{Obiettivo}
-		Ottenere l'avviso \textit{"Nessun risultato trovato"} dopo avere inserito nella search box  \verb|$STRINGNULL| e successivamente ottenere le informazioni per raggiungere la destinazione  \verb|$END| selezionata nel menu a tendina dopo aver inserito  \verb|$STRING| nella search box.
+		Ottenere l'avviso \textit{"Nessun risultato"} dopo avere inserito nella search box  \verb|$WRONGSTRING| e successivamente ottenere le informazioni per raggiungere la destinazione  \verb|$END| selezionata nel menu a tendina dopo aver inserito  \verb|$STRING| nella search box.
 		
 	\subsubsection{Test di sistema}
 		TS1.13, TS1.13.1,
@@ -314,30 +338,29 @@
 		
 	\subsubsection{Precondizioni}
 		\begin{itemize}
-			\item Il dispositivo non deve essere mosso durante la prova
+			\item Il dispositivo non deve essere mosso durante la prova.
 		\end{itemize}
 		
 	\subsubsection{Procedura}
 		\begin{enumerate}
-		
-		
-		\item Posizionarsi 
-		\item Avvia applicazione
-		\item Dalla schermata principale selezionare la search box in alto
-		\item Inserire la stringa  \verb|$STRINGNULL|
-		\item Premere \textit{Invio}
-		\item Selezionare pulsante \textit{Back}
-		\item Selezionare nuovamente la search box in alto
-		\item Inserire la stringa  \verb|$STRING|
-		\item Dal menu a tendina selezionare la destinazione  \verb|$END|
+		\item Posizionarsi in \verb|$START|;
+		\item Avviare l'applicazione;
+		\item Dalla schermata principale selezionare la search box in alto;
+		\item Inserire la stringa  \verb|$WRONGSTRING|;
+		\item Premere \textit{Invio};
+		\item Selezionare pulsante \textit{Back};
+		\item Selezionare nuovamente la search box in alto;
+		\item Inserire la stringa  \verb|$STRING|;
+		\item Premere \textit{Invio}; % Non dovrebbe accadere nulla
+		\item Dal menu a tendina selezionare la destinazione  \verb|$END|;
 		\end{enumerate}
 		
 	\subsubsection{Output attesi}
 		\begin{itemize}
-		\item Al punto 3 l'applicazione deve mostrare nel menu a tendina le alternative:  \verb|$RESULT1|;
-		\item Al punto 4 l'applicazione deve mostrare una schermata con l'avviso: \textit{"Nessun risultato"};
-		\item Al punto 7 l'applicazione deve mostrare nel menu a tendina i seguenti Output:  \verb|$RESULT2|;
-		\item Al punto 8 l'applicazione deve mostrare la lista di indicazioni composta da tali passi:  \verb|$RESULT3|.
+		\item Al punto 4 l'applicazione deve mostrare nel menu a tendina le alternative:  \verb|$RESULT1|;
+		\item Al punto 5 l'applicazione deve mostrare una schermata con l'avviso \verb|$RESULT2|;
+		\item Al punto 8 l'applicazione deve mostrare nel menu a tendina i seguenti risultati:  \verb|$RESULT3|;
+		\item Al punto 10 l'applicazione deve mostrare la lista di indicazioni composta da tali passi:  \verb|$RESULT4|.
 		\end{itemize}
 
 	
@@ -348,7 +371,7 @@
 \label{subsec:Prova12}
 	
 	\subsubsection{Obiettivo}
-		Visualizzare una lista di tutti i POI all'interno dell'edificio mappato  \verb|$BUILDING| e visualizzare i dettagli del POI  \verb|$SELECT| contenuto in essa.
+		Visualizzare una lista di tutti i POI all'interno dell'edificio e visualizzare i dettagli del POI \verb|$SELECT| contenuto in essa.
 		
 	\subsubsection{Test di sistema}
 		TS9, TS9.1,
@@ -358,8 +381,8 @@
 	\subsubsection{Procedura}
 		\begin{enumerate}
 		\item Avviare l'applicazione;
-		\item Dalla schermata principale selezionare il pulsante ??? (Non esiste) per accedere a tutta la lista dei POI (FLoatingActionButton);
-		\item Selezionare il POI  \verb|$SELECT|.
+		\item Dalla schermata principale selezionare il pulsante identificato con un'icona di un edificio per accedere a tutta la lista dei POI;
+		\item Selezionare il POI \verb|$SELECT|.
 		\end{enumerate}
 		
 	\subsubsection{Output attesi}
@@ -385,7 +408,7 @@
 		\begin{enumerate}
 		\item Posizionarsi nell'area \verb|$POS|;
 		\item Avviare l'applicazione;
-		\item Dalla schermata principale selezionare il pulsante ??? (FLoatingActionButton).
+		\item Dalla schermata principale selezionare il pulsante \textit{Esplora} identificato dall'icona posizione. 
 		\end{enumerate}
 		
 	\subsubsection{Output attesi}
@@ -400,59 +423,37 @@
 \label{subsec:Prova14}
 	
 	\subsubsection{Obiettivo}
-		Visualizzare un messaggiio di avviso che la connessione Internet non è attiva ed è impossibile scaricare le immagini della istruzione  \verb|$INST| selezionata.
+		Visualizzare un messaggio di avviso che la connessione Internet non è attiva ed è impossibile scaricare le immagini della istruzione  \verb|$INST| selezionata.
 		
 	\subsubsection{Test di sistema}
 		TS1.17;
 		
+	\subsubsection{Precondizioni}
+		\begin{itemize}
+			\item Qualsiasi tipo di connessione a internet del dispositivo viene disattivata;
+		\end{itemize}				
+		
 	\subsubsection{Procedura}
 		\begin{enumerate}
-		\item PRE - Qualsiasi tipo di connessione a internet del dispositivo viene disattivata;
-		
+		\item Posizionarsi nell'area \verb|$START|;
 		\item Avviare l'applicazione \textit{Clips};
 		\item Inserire nella search box la destinazine  \verb|$END| e premere \textit{Invio};
 		\item Selezionare indicazione  \verb|$INST|;
-		\item Selezionare un'immagine disponibile (???).
+		\item Selezionare un'immagine disponibile tra quelle disponibili.
 		\end{enumerate}
 
 	\subsubsection{Output attesi}
 		\begin{itemize}
-		\item L'applicazione una volta selezionata un'immagine della ROI da attraversare mostra un avviso \textit{"Connessione a Internet assente, impossibile scaricare le mappe"}.
+		\item L'applicazione una volta selezionata un'immagine della ROI da attraversare mostra un avviso \textit{"Connessione a Internet assente, impossibile scaricare l'immagine"}.
 		\end{itemize}
 
 %-----------------
 % Navigazione 2.0
-%-----------------
-
-\newpage	
-\subsection{Prova 15} % navigazione guidata dinamicamente a passo lento
-\label{subsec:Prova15}
-	
-	\subsubsection{Obiettivo}
-		Verificare che l'applicazione guidi istruzione per istruzione l'utente evidenziando le prossime indicazioni da seguire.
-		
-	\subsubsection{Test di sistema}
-		N.D.
-		
-	\subsubsection{Procedura}
-		\begin{enumerate}
-		\item Posizionare il dispositivo nella ROI  \verb|$START|;
-		\item Avviare l'applicazione \textit{Clips};
-		\item Inserire nella search box la destinazione  \verb|$END| e premere \textit{Invio};
-		\item A passo lento, seguire tutte le istruzioni fino a raggiungere la destinazione scelta.
-		\end{enumerate}
-		
-	\subsubsection{Output attesi}
-		\begin{itemize}
-		\item All'attraversamento della ROI  \verb|$INST1|, l'istruzione relativa al suo raggiungimento viene evidenziata.
-		\end{itemize}
-	
-	
-		
+%-----------------				
 		
 \newpage	
-\subsection{Prova 16} % navigazione guidata dinamicamente a passo veloce
-\label{subsec:Prova16}	
+\subsection{Prova 15} % navigazione guidata dinamicamente a passo veloce
+\label{subsec:Prova15}	
 	
 	\subsubsection{Obiettivo}
 		Verificare che l'applicazione guidi istruzione per istruzione l'utente evidenziando le prossime istruzioni da seguire.
@@ -464,20 +465,20 @@
 		\begin{enumerate}
 		\item Posizionare il dispositivo nella ROI  \verb|$START|;
 		\item Avviare l'applicazione \textit{Clips};
-		\item Inserire nella serach box la destinazione  \verb|$END| e premere \textit{Invio};
-		\item A passo veloce, seguire tutte le istruzioni fino a raggiungere la destinazione scelta.
+		\item Inserire nella search box la destinazione  \verb|$END| e premere \textit{Invio};
+		\item A \verb|$SPEED|, seguire tutte le istruzioni fino a raggiungere la destinazione scelta.
 		\end{enumerate}
 		
 	\subsubsection{Output attesi}
 		\begin{itemize}
-		\item All'attraversamento della ROI  \verb|$INST1| l'istruzione relativa al suo raggiungimento viene evidenziata.
+		\item All'attraversamento della ROI  \verb|$RESULT| l'istruzione relativa al suo raggiungimento viene evidenziata.
 		\end{itemize}
 
 	
 		
 \newpage	
-\subsection{Prova 17} % indicazioni della bussola
-\label{subsec:Prova17}	
+\subsection{Prova 16} % indicazioni della bussola
+\label{subsec:Prova16}	
 	
 	\subsubsection{Obiettivo}
 		Visualizzare la corretta direzione da seguire associata ad ogni istruzione.
@@ -495,7 +496,7 @@
 		
 	\subsubsection{Output attesi}
 		\begin{itemize}
-			\item La prima istruzione contiene l'indicazione di direzione  \verb|$DIRECTION|.
+			\item La prima istruzione contiene l'indicazione di direzione  \verb|$RESULT|.
 		\end{itemize}
 
 	

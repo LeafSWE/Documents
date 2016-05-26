@@ -1,4 +1,10 @@
 
+Correggi prova 11
+
+Finisci prova 1D.1
+
+-----------------------------------
+
 Traciamento: cambiati test 1.9.1, 1.9.2, 1.9.3 ora il padre è TS2
 
 -----------------------------------
@@ -8,6 +14,12 @@ Traciamento: cambiati test 1.9.1, 1.9.2, 1.9.3 ora il padre è TS2
 **PRECONDIZIONI: bluetooth accesso, GPS acceso, connesso a Internet via Wi-fi, ha almeno 10 MB liberi nella memoria principale, il device su cui viene avviata l'applicazione sono all'interno della Torre Archimede e nelle vicinanze di un beacon, L'area sviluppatore è già sbloccata tramite password
 		TS4: precondizione altrimenti nessuna prova può essere effettuata
 ** 
+
+**
+N.S. significa non supportato
+N.R. significa non richiesti
+N.D. significa non disponibile
+NULL significa che il risultato non deve contenere nulla
 
 
 #Prova 1: lista indicazioni e ricerca categorie
