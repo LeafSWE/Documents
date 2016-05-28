@@ -25,7 +25,7 @@
 		\begin{figure} [h]
 			\centering
 			\subfloat[][Pulsante per accedere alla lista di aree d'interesse vicine]
-			{\includegraphics[width=0.33\textwidth]{img/PulsanteEsplora}
+			{\includegraphics[width=0.40\textwidth]{img2/Esplora-PulsanteEsplora}
 			\label{fig:PulsanteEsplora}} \quad
 			\hspace{1.5cm}
 			\subfloat[][Lista di possibili aree d'interesse ottenuta dopo la procedura]
@@ -33,32 +33,92 @@
 			\label{fig:ListaNearbyPoi}} \\
 			\caption{Utilizzare la funzionalità esplora area}
 		\end{figure}
+	
+	% -------------------------------------------------	
+	
+	\newpage
+	\subsection{Esplora luoghi edificio}
+		L'applicazione offre anche la possibilità di visualizzare la lista di tutti i luoghi accessibili presenti nell'edificio in cui ci si trova.
+		Per accedere a tale funzionalità:
+		\begin{enumerate}
+			\item attiva il \textbf{bluetooth};
+			\item attiva una \textbf{connessione dati} oppure una \textbf{connessione Wi-fi} e assicurati che lo smartphone sia connesso ad Internet;
+			\item \textbf{avvia l'applicazione} selezionando l'icona \includegraphics[scale=0.4]{img/LogoApp};
+			\item assicurati di essere in un \textbf{edifico supportato} dall'applicazione. Per assicurarsi di ciò basta accertarsi che dalla schermata principale dell'applicazione siano visibili le informazioni dell'edificio;
+			\item seleziona il pulsante segnalato in figura \ref{fig:PulsanteTuttiLuoghi} per visualizzare una lista di tutti i luoghi accessibili dell'edificio;
+			
+		\begin{figure} [h]
+			\centering
+			\includegraphics[width=0.50\textwidth]{img2/Tutti-PulsanteTuttiLuoghi}
+			\caption{Pulsante per accedere alla lista di aree d'interesse dell'edificio}
+			\label{fig:PulsanteTuttiLuoghi}
+		\end{figure}					
+			
+			\item seleziona un luogo dalla lista in figura \ref{fig:ListaLuoghi} per accedere alle sue informazioni dettagliate (figura \ref{fig:DettaglioLuogo}).
+		\end{enumerate}
 		
-\iffalse % non implementata e non stampata nel \gls{PDF}\ 
-	%\newpage
+		\begin{figure} [p]
+			\centering
+			\subfloat[][Lista di possibili aree d'interesse ottenuta dopo la procedura]
+			{\includegraphics[width=0.33\textwidth]{img2/Tutti-ListaLuoghi}
+			\label{fig:ListaLuoghi}} \quad
+			\hspace{1.5cm}
+			\subfloat[][Dettaglio luogo precedentemente selezionato]
+			{\includegraphics[width=0.33\textwidth]{img2/Tutti-DettaglioLuogo}
+			\label{fig:DettaglioLuogo}} \\
+			\caption{Utilizzare la funzionalità esplora luoghi edificio}
+		\end{figure}
+	
+	% --------------------------------------------------
+		
+	\newpage
 	\subsection{Preferenze}
 		È possibile configurare la navigazione attraverso l'impostazione di determinate preferenze. Tali preferenze impatteranno nel calcolo del percorso nella navigazione.
 		Le preferenze disponibili sono:
 			\begin{itemize}
-				\item ???;
-				\item ???.
+				\item \textit{Percorso veloce} (impostazione predefinita);
+				\item \textit{Percorso accessibile}: il percorso calcolato sarà privo di barriere architettoniche come ad esempio le scale;
+				\item \textit{Percorso senza ascensori}: il percorso calcolato eviterà l'uso degli ascensori.
 			\end{itemize}
 		
 		Per impostare le proprie preferenze:
 		\begin{enumerate}
-			\item apri il menu dell'applicazione selezionando l'icona $\equiv$;
-			\item seleziona \textbf{Preferenze};
-			\item seleziona ??? per ???;
-			\item seleziona ??? per ???.
+			\item apri il menu dell'applicazione selezionando l'icona $\equiv$ (figura: \ref{fig:MenuApp});
+			\item seleziona \textit{Preferenze};
+			\item seleziona \textit{Preferenze di percorso} (figura \ref{fig:ListaPreferenze});
+			
+	\begin{framed}
+	\textbf{Nota:} attualmente le uniche preferenze disponibili sono le \textit{Preferenze di percorso}. Nuove versioni dell'applicazione potrebbero aggiungerne altre.
+	\end{framed}			
+			
+			\item scegli la preferenza oppure seleziona \textit{Annulla} per lasciare la preferenza già impostata (figura \ref{fig:SceltaPercorso}).
 		\end{enumerate}
 
 	\begin{framed} 
 	\textbf{Nota:} una volta impostate le preferenze, esse saranno attive solo dalla prossima navigazione avviata.
 	\end{framed}
-\fi	
+	
+	\begin{figure} [p]
+			\centering
+			\subfloat[][Menu dell'applicazione]
+			{\includegraphics[width=0.33\textwidth]{img2/MenuApp}
+			\label{fig:MenuApp}} \quad
+			\hspace{1.5cm}
+			\subfloat[][Lista preferenze dell'applicazione]
+			{\includegraphics[width=0.33\textwidth]{img2/Preferenze-ListaPreferenze}
+			\label{fig:ListaPreferenze}} \\
+			
+			\subfloat[][Scelta delle preferenze di percorso]
+			{\includegraphics[width=0.33\textwidth]{img2/Preferenze-SceltaPercorso}
+			\label{fig:SceltaPercorso}} \\
+			\caption{Accedere all'area Preferenze e impostare le proprie preferenze di percorso}
+	\end{figure}
+
+
 	%\newpage
 	%\subsection{Gestire le mappe}	
 		
+	% --------------------------------------
 		
 	\newpage
 	\subsection{Area sviluppatore}
