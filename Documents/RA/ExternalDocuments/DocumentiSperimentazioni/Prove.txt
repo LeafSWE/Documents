@@ -1,11 +1,8 @@
 
-Correggi prova 11
 
 Finisci prova 1D.1
 
 -----------------------------------
-
-Traciamento: cambiati test 1.9.1, 1.9.2, 1.9.3 ora il padre è TS2
 
 -----------------------------------
 
