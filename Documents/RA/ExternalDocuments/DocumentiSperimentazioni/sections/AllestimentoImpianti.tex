@@ -9,11 +9,11 @@
 	
 	\begin{table} [h]
 		\centering
-		\begin{tabular}{l|cc}
+		\begin{tabular}{lcc}
 			\toprule
 			\textbf{Identificativo} & \textbf{Edificio} & \textbf{Numero Piani}		\\
 			\toprule
-			Impianto1 & Torre Archimede & 2 \\
+			\hyperref[subsec:Impianto1]{Impianto1} & Torre Archimede & 2 \\
 			\bottomrule
 		\end{tabular}
 		\caption{Registro degli impianti}
@@ -23,6 +23,7 @@
 	
 	\newpage
 	\subsection{Impianto1}
+	\label{subsec:Impianto1}
 		L'\textbf{Impianto1} identifica l'impostazione dei beacon nel piano terra e nel primo piano dell'edificio \textbf{Torre Archimede} situato in Via Trieste, 63 - 35121 Padova.
 		
 		\subsubsection{Configurazione beacon}
@@ -307,7 +308,8 @@
 		
 		
 		\newpage
-		\subsubsection{Planimetrie}
+		\subsubsection{Planimetrie e posizionamento}
+			Ogni beacon è stato posizionato sul soffitto nel primo piano dell'edificio nei punti indicati dalla planimetria \ref{fig:PrimoPiano} mentre per il piano terra \ref{fig:PianoTerra} i beacon sono stati posizionanti sulla parete ad altezza 2,30 metri. Per attaccarli è stato utilizzato del normale nastro adesivo in carta.
 			
 			\begin{figure}[h]
 				\includegraphics[width=\textwidth]{img/PianoTerra}
@@ -315,14 +317,12 @@
 				\label{fig:PianoTerra}
 			\end{figure}						
 
-			\begin{figure}[h]
+			\begin{figure}[p]
 				\includegraphics[width=\textwidth]{img/PrimoPiano}
 				\caption{Mappatura primo piano Torre Archimede}
 				\label{fig:PrimoPiano}
 			\end{figure}
 			
-		\subsubsection{Posizionamento}
-			Ogni beacon è stato posizionato sul soffitto nel primo piano dell'edificio nei punti indicati dalla planimetria \ref{fig:PrimoPiano} mentre per il piano terra i beacon sono stati posizionanti sulla parete ad altezza 2,30 metri. Per attaccarli è stato utilizzato del normale nastro adesivo in carta.
 	
 
 \end{document}
