@@ -114,9 +114,72 @@
 			\caption{Accedere all'area Preferenze e impostare le proprie preferenze di percorso}
 	\end{figure}
 
+	% -----------------------------------------
 
-	%\newpage
-	%\subsection{Gestire le mappe}	
+	\newpage
+	\subsection{Gestire le mappe}
+		L'applicazione offre la possibilità di scaricare, aggiornare o rimuovere o semplicemente reperire informazioni le mappe supportate dall'applicazione.
+		Per accedere a tale funzionalità:
+		\begin{enumerate}
+			\item apri il menu dell'applicazione selezionando l'icona $\equiv$;
+			\item seleziona \textit{Le tue mappe} come mostra la figura \ref{fig:GestioneMappe-Menu};
+			\item la schermata ora aperta mostra le mappe scaricate e installate nello smartphone (figura \ref{fig:GestioneMappe-ListaMappeScaricate}). Ogni mappa mostra le seguenti informazioni (partendo dall'alto da destra a sinistra):
+			\begin{itemize}
+				\item l'indirizzo dell'edificio;
+				\item la versione della mappa installata (maggiore è la versione più la mappa ha subito modifiche e cambiamenti per migliorarla);
+				\item il nome dell'edificio;
+				\item una breve descrizione dell'edificio;
+				\item la dimensione in KB della mappa installata;
+				\item l'avviso se la mappa è già aggiornata o richiede un aggiornamento, nell'ultimo caso sarà segnalato con il testo in rosso (figura \ref{fig:GestioneMappe-MappaDaAggiornare});
+				\item due pulsanti per eliminarla e richiedere l'aggiornamento.
+			\end{itemize}
+
+		\begin{framed}
+			\textbf{Nota:} nella schermata \ref{fig:GestioneMappe-ListaMappeScaricate} sono elencate anche le mappe scaricate automaticamente per permettere la navigazione all'interno di edifici rilevati e identificati dall'applicazione stessa. Tuttavia prima di effettuare il download di tali mappe l'applicazione ti avvisa con un messaggio per procedere.
+		\end{framed}
+		
+			\item se desideri eliminare definitivamente la mappa dal tuo dispositivo premi il pulsante \includegraphics[scale=0.5]{img2/GestioneMappe-EliminaMappaPulsante} sotto alla descrizione dell'edificio interessato;
+			\item se desideri aggiornare una mappa installata nel tuo dispositivo premi il pulsante \includegraphics[scale=0.5]{img2/GestioneMappe-AggiornaMappaPulsante} sotto alla descrizione dell'edificio interessato, se la mappa è già aggiornata ti verrà segnalato con un avviso;
+			\item premi il pulsante \includegraphics[scale=0.3]{img2/GestioneMappe-DownloadMappePulsante} per accedere alla lista di mappe degli edifici supportati dall'applicazione (figura \ref{fig:GestioneMappe-DownloadMappe}).
+		\end{enumerate}
+		
+
+			\begin{figure} [h]
+				\centering
+				\subfloat[][Menu dell'applicazione con la selezione di \textit{Le tue mappe} per accedere a tale area]
+				{\includegraphics[width=0.33\textwidth]{img2/GestioneMappe-Menu}
+				\label{fig:GestioneMappe-Menu}} \quad
+				\hspace{1.5cm}
+				\subfloat[][Lista delle mappe scaricate e installate nel dispositivo accompagnate da descrizione]
+				{\includegraphics[width=0.33\textwidth]{img2/GestioneMappe-ListaMappeScaricate}
+				\label{fig:GestioneMappe-ListaMappeScaricate}} \\
+				\caption{Gestire le mappe}
+			\end{figure}		
+		
+		\subsubsection{Scaricare una mappa}
+		Se desideri scaricare una mappa da Internet:
+		\begin{enumerate}
+			\item assicurati di avere una connessione a Internet attiva;
+			\item accedi alla sezione \textit{Le tue mappe} seguendo l'elenco precedente a questo;
+			\item premi il pulsante \includegraphics[scale=0.3]{img2/GestioneMappe-DownloadMappePulsante} per accedere alla lista di mappe degli edifici supportati dall'applicazione (figura \ref{fig:GestioneMappe-DownloadMappe});
+			\item nella schermata con la lista delle mappe seleziona il pulsante \includegraphics[scale=0.5]{img2/GestioneMappe-ScaricaMappaPulsante}. Se la mappa è già stata scaricata ti verrà mostrato l'avviso come in figura \ref{fig:GestioneMappe-MappaGiaScaricata}.
+		\end{enumerate}		
+		
+		
+		\begin{figure} [p]
+				\centering
+				\subfloat[][Lista delle mappe installate con la segnalazione tramite testo rosso di aggiornare una mappa]
+				{\includegraphics[width=0.33\textwidth]{img2/GestioneMappe-MappaDaAggiornare}
+				\label{fig:GestioneMappe-MappaDaAggiornare}} \quad
+				\hspace{1.5cm}
+				\subfloat[][Lista delle mappe supportate e disponibili per il download]
+				{\includegraphics[width=0.33\textwidth]{img2/GestioneMappe-DownloadMappe} 
+				\label{fig:GestioneMappe-DownloadMappe}} \\
+				\subfloat[][Avviso se si tenta il download di una mappa già installata]
+				{\includegraphics[width=0.33\textwidth]{img2/GestioneMappe-MappaGiaScaricata}
+				\label{fig:GestioneMappe-MappaGiaScaricata}} \\
+				\caption{Scaricare e installare una mappa}
+			\end{figure}
 		
 	% --------------------------------------
 		
