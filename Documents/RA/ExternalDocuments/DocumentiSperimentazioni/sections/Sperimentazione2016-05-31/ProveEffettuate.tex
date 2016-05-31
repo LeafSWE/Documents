@@ -1,4 +1,4 @@
-\documentclass[../../Sperimentazione.tex]{subfiles}
+\documentclass[../../SperimentazioniPratiche.tex]{subfiles}
 
 \begin{document}
 
@@ -142,13 +142,13 @@
 								colback=white, 
 								colframe=white!60!black]
 								
-				\begin{description}%[leftmargin=0.7cm,labelwidth=!]
+				\begin{description}
 				
 					\item[Input] \ \par 
         				\begin{itemize}
+        					\item \verb|$START| = Entrata torre B
         					\item \verb|$CAT| = Aule
 							\item \verb|$END| = 1C150
-							\item \verb|$START| = Entrata torre B
         				\end{itemize}
         				
         			\tcbline 
@@ -165,6 +165,7 @@
         						\item Sali 1 piano di scale
 								\item Apri la porta di fronte a te e svolta a sinistra
 								\item Raggiungi la porta antincendio in fondo al corridoio
+								\item destinazione raggiunta
         					\end{enumerate}
         					\}
         					
@@ -198,80 +199,7 @@
 				\end{description}  
 				
 			\end{tcolorbox}
-
-	
-	\newpage
-			\paragraph*{}
-			\label{2Prova1A.2}	
-			\begin{tcolorbox}[fonttitle=\bfseries, 
-								adjusted title={\Large Prova 1A.2}, 
-								breakable, 
-								sharp corners=south,
-								colback=white, 
-								colframe=white!60!black]
-								
-				\begin{description}[leftmargin=0.7cm,labelwidth=!]
-				
-					\item[Input] \ \par 
-        				\begin{itemize}
-        					\item \verb|$START| = Entrata torre B
-        					\item \verb|$CAT| = Aule
-							\item \verb|$END| = 1C150
-        				\end{itemize}
-        				
-        			\tcbline 
-        				
-        			\item[Output atteso] \ \par
-        				\begin{itemize}
-        				
-        					\item \verb|$RESULT1| = \{
-        						1AD100, 1A150, 1BC45, 1BC50, 1C150
-        					\}
-        				
-        					\item \verb|$RESULT2| = \{
-        					\begin{enumerate}
-        						\item Sali 1 piano di scale
-								\item Apri la porta di fronte a te e svolta a sinistra
-								\item Raggiungi la porta antincendio in fondo al corridoio
-								
-        					\end{enumerate}
-        					\}
-        					
-        					
-        					
-        				\end{itemize}
-
-					\tcbline        				
-        				
-        			\item[Output riscontrato] \ \par
-        				\begin{description}
-        				
-        					\item[\dispositivoA] \ \par
-        					\begin{itemize}
-        						\item \verb|$RESULT1| = \ok
-        						\item \verb|$RESULT2| = \ok
-        					\end{itemize}      					
-        					
-        					\item[\dispositivoB] \ \par
-        					\begin{itemize}
-        						\item \verb|$RESULT1| = \ok
-        						\item \verb|$RESULT2| = \ok
-        					\end{itemize}
-        					
-        					\item[\dispositivoC] \ \par
-        					\begin{itemize}
-        						\item \verb|$RESULT1| = \ok
-        						\item \verb|$RESULT2| = \ok
-        					\end{itemize}
-        					
-        				\end{description}
-        				
-				\end{description}  
-				
-			\end{tcolorbox}
-
-
-
+			
 	
 	\newpage
 			\paragraph*{}
@@ -306,6 +234,7 @@
         						\item Raggiungi entrata della Torre A
 								\item Sali 1 piano di scale
 								\item Apri la porta di fronte a te e svolta a destra
+								\item destinazione raggiunta
         					\end{enumerate}
         					\}
         					       					
@@ -377,6 +306,7 @@
         						\item Raggiungi entrata della Torre A
 								\item Sali 1 piano di scale
 								\item Apri la porta di fronte a te e svolta a destra
+								\item destinazione raggiunta
         					\end{enumerate}
         					\}
         				\end{itemize}
@@ -426,6 +356,89 @@
 				
 					\item[Input] \ \par 
         				\begin{itemize}
+							\item \verb|$START| = 1AD100 (ROI = 01000) 
+        					\item \verb|$CAT| = Aule
+							\item \verb|$END| = 1BC45
+        				\end{itemize}
+        				
+        			\tcbline 
+        				
+        			\item[Output atteso] \ \par
+        				\begin{itemize}
+        				
+        					\item \verb|$RESULT1| = \{
+        						1A150, 1C150, 1AD100, 1BC50, 1BC45
+        					\}
+        				
+        					\item \verb|$RESULT2| = \{
+        					\begin{enumerate}
+        						\item Oltrepassa la porta antincendio più vicina , svolta a sinistra ed oltrepassa la seconda porta
+        						\item Scendi 1 piano di scale
+        						\item Raggiungi l'entrata della torre B
+        						\item Sali 1 piano di scale
+        						\item Apri la porta di fronte a te e svolta a sinistra
+        						\item Raggiungi la porta antincendio in fondo al corridoio
+        						\item destinazione raggiunta
+        					\end{enumerate}
+        					\}
+        					
+        				\end{itemize}
+
+					\tcbline				
+        				
+        			\item[Output riscontrato] \ \par
+        				\begin{description}
+        				
+        					\item[\dispositivoA] \ \par
+        					\begin{itemize}
+        						\item \verb|$RESULT1| = \ok
+        						\item \verb|$RESULT2| = \ok
+        					\end{itemize}      					
+        					
+        					\item[\dispositivoB] \ \par
+        					\begin{itemize}
+        						\item \verb|$RESULT1| = \ok
+        						\item \verb|$RESULT2| = crash dell'applicazione
+        					\end{itemize}
+        					
+        					\item[\dispositivoC] \ \par
+        					\begin{itemize}
+        						\item \verb|$RESULT1| = \ok
+        						\item \verb|$RESULT2| = crash
+        					\end{itemize}
+        					
+        				\end{description}
+        				
+        				\tcbline
+        			
+        			\item[Analisi risultati] \ \par
+        				\begin{description}
+        					\item[Considerazioni] \ \par
+        						Il dispositivo B dopo pochi secondi dopo aver mostrato la schermata con le istruzioni rileva un crash dell'applicazione. Sembra che ciò sia dovuto alla componente bussola. Tuttavia tale malfunzionamento si è verificato solo con la versione 5.01
+        					
+        					\item[Possibili miglioramenti] \ \par 
+        						
+        				\end{description}
+        				
+				\end{description}  
+				
+			\end{tcolorbox}
+			
+	\newpage
+	\paragraph*{}
+	\label{2Prova1C.2}
+			
+			\begin{tcolorbox}[fonttitle=\bfseries, 
+								adjusted title={\Large Prova 1C.2}, 
+								breakable, 
+								sharp corners=south,
+								colback=white, 
+								colframe=white!60!black]
+								
+				\begin{description}%[leftmargin=0.7cm,labelwidth=!]
+				
+					\item[Input] \ \par 
+        				\begin{itemize}
         					\item \verb|$CAT| = Aule
 							\item \verb|$END| = 1BC45
 							\item \verb|$START| = 1AD100 (Minor = 01000)
@@ -448,6 +461,7 @@
         						\item Sali 1 piano di scale
         						\item Apri la porta di fronte a te e svolta a sinistra
         						\item Raggiungi la porta antincendio in fondo al corridoio
+        						\item Destinazione raggiunta
         					\end{enumerate}
         					\}
         					
@@ -467,15 +481,26 @@
         					\item[\dispositivoB] \ \par
         					\begin{itemize}
         						\item \verb|$RESULT1| = \ok
-        						\item \verb|$RESULT2| = \ok
+        						\item \verb|$RESULT2| = crash dell'applicazione
         					\end{itemize}
         					
         					\item[\dispositivoC] \ \par
         					\begin{itemize}
         						\item \verb|$RESULT1| = \ok
-        						\item \verb|$RESULT2| = \ok
+        						\item \verb|$RESULT2| = crash
         					\end{itemize}
         					
+        				\end{description}
+        				
+        				\tcbline
+        			
+        			\item[Analisi risultati] \ \par
+        				\begin{description}
+        					\item[Considerazioni] \ \par
+        						Il dispositivo B ancora crasha dopo aver calcolato il percorso
+        					
+        					\item[Possibili miglioramenti] \ \par 
+        						
         				\end{description}
         				
 				\end{description}  
@@ -496,9 +521,9 @@
 				
 					\item[Input] \ \par 
         				\begin{itemize}
-        					\item \verb|$CAT| = Aule
-							\item \verb|$END| = 1A100
 							\item \verb|$START| = 1BC45
+        					\item \verb|$CAT| = Aule
+							\item \verb|$END| = 1AD100
         				\end{itemize}
         				
         			\tcbline 
@@ -512,7 +537,12 @@
         				
         					\item \verb|$RESULT2| = \{
         					\begin{enumerate}
-        						\item ???
+        						\item Oltrepassa la porta antincendio più vicina, svolta a sinistra ed oltrepassa la seconda porta
+        						\item Scendi 1 piano di scale
+        						\item Raggiungi l'entrata della torre D
+        						\item Sali 1 piano di scale
+        						\item Apri la porta di fronte a te e svolta a sinistra 
+        						\item Destinazione raggiunta
         					\end{enumerate}
         					\}
         					
@@ -550,7 +580,7 @@
 	
 	\newpage
 			\paragraph*{}	
-			\label{2Prova2A.1}	
+			\label{2Prova2A.1}
 			\begin{tcolorbox}[fonttitle=\bfseries, 
 								adjusted title={\Large Prova 2A.1}, 
 								breakable, 
@@ -576,6 +606,7 @@
         						\begin{enumerate}
         							\item Prendi l'ascensore e sali 1 piano
 									\item Raggiungi la porta antincendio in fondo al corridoio
+									\item Destinazione raggiunta
         						\end{enumerate}
         					\}
         				\end{itemize}
@@ -648,6 +679,7 @@
         					\begin{enumerate}
         						\item Raggiungi entrata della Torre A
         						\item Prendi l'ascensore e sali 1 piano
+        						\item Destinazione raggiunta
         					\end{enumerate}
         					\}
         				\end{itemize}
@@ -718,7 +750,8 @@
         					\item \verb|$RESULT| = \{
         					\begin{enumerate}
         						\item Apri la porta di fronte a te e svolta a sinistra
-        						\item Raggiungi la porta antincendio in fondo al corridoio"
+        						\item Raggiungi la porta antincendio in fondo al corridoio
+        						\item Destinazione raggiunta
         					\end{enumerate}
         					\}
         					\item \verb|$RESULT2| = Visualizzato avviso errore
@@ -1120,7 +1153,7 @@
 
 	
 	\newpage	
-			\paragraph*{}	
+			\paragraph*{}
 			\label{2Prova10A.1}
 			\begin{tcolorbox}[fonttitle=\bfseries, 
 								adjusted title={\Large Prova 10A.1}, 
@@ -1133,14 +1166,17 @@
 				
 					\item[Input] \ \par 
         				\begin{itemize}
-        					\item \verb|$AREA| = 1C150
+        					\item \verb|$AREA| = 1A150 (ROI = 01000)
         				\end{itemize}
         				
         			\tcbline 
         				
         			\item[Output atteso] \ \par
         				\begin{itemize}
-        					\item \verb|$RESULT| = ???
+        					\item \verb|$RESULT| = (l'area circolare può variare)
+        					\begin{center}
+        						\includegraphics[scale=0.3]{img/ResultProva10A}
+        					\end{center}
         				\end{itemize}
 
 					\tcbline        				
@@ -1150,12 +1186,12 @@
         				
         					\item[\dispositivoA] \ \par
         					\begin{itemize}
-        						\item \verb|$RESULT| = \ns
+        						\item \verb|$RESULT| = \ok
         					\end{itemize}      					
         					
         					\item[\dispositivoB] \ \par
         					\begin{itemize}
-        						\item \verb|$RESULT| = \ns
+        						\item \verb|$RESULT| = \ok
         					\end{itemize}
         					
         					\item[\dispositivoC] \ \par
@@ -1163,17 +1199,6 @@
         						\item \verb|$RESULT| = \ok
         					\end{itemize}
         					
-        				\end{description}
-        				
-        			\tcbline
-        			
-        			\item[Analisi risultati] \ \par
-        				\begin{description}
-        					\item[Considerazioni] \ \par
-        						Tale funzionalità non è presente nella versione del prototipo testato.
-        					
-        					\item[Possibili miglioramenti] \ \par 
-        						Nella successiva fase si implementerà tale funzionalità.
         				\end{description}
         				
 				\end{description}  
@@ -1208,7 +1233,7 @@
         			\item[Output atteso] \ \par
         				\begin{itemize}
         					\item \verb|$RESULT1| = NULL
-        					\item \verb|$RESULT2| = Visualizzato avviso Nessun risultato
+        					\item \verb|$RESULT2| = Visualizzato avviso \textit{Nessun risultato}
         					\item \verb|$RESULT3| = \{
         						Entrata torre A, Entrata torre B, Entrata torre C, Entrata torre D
         						\}
@@ -1228,51 +1253,33 @@
         				
         					\item[\dispositivoA] \ \par
         					\begin{itemize}
-        						\item \verb|$RESULT1| = \ns
-        						\item \verb|$RESULT2| = \ns
-        						\item \verb|$RESULT3| = \ns
-        						\item \verb|$RESULT4| = \{
-        								\begin{enumerate}
-        									\item Oltrepassa la porta antincendio più vicina, svolta a sinistra ed oltrepassa la seconda porta
-        									\item Scendi 1 piano di scale
-        									\item Raggiungi l'entrata della torre D
-        								\end{enumerate}
-        							\}
+        						\item \verb|$RESULT1| = \ok
+        						\item \verb|$RESULT2| = \ok
+        						\item \verb|$RESULT3| = \ok
+        						\item \verb|$RESULT4| = \ok
         					\end{itemize}      					
         					
         					\item[\dispositivoB] \ \par
         					\begin{itemize}
-        						\item \verb|$RESULT1| = \ns
-        						\item \verb|$RESULT2| = \ns
-        						\item \verb|$RESULT3| = \ns
-        						\item \verb|$RESULT4| = ???
+        						\item \verb|$RESULT1| = \ok
+        						\item \verb|$RESULT2| = \ok
+        						\item \verb|$RESULT3| = \ok
+        						\item \verb|$RESULT4| = \ok
         					\end{itemize}
         					
         					\item[\dispositivoC] \ \par
         					\begin{itemize}
-        						\item \verb|$RESULT1| = \ns
-        						\item \verb|$RESULT2| = \ns
-        						\item \verb|$RESULT3| = \ns
-        						\item \verb|$RESULT4| = ???
+        						\item \verb|$RESULT1| = \ok
+        						\item \verb|$RESULT2| = \ok
+        						\item \verb|$RESULT3| = \ok
+        						\item \verb|$RESULT4| = \ok
         					\end{itemize}
         					
-        				\end{description}
-        				
-        			\tcbline
-        			
-        			\item[Analisi risultati] \ \par
-        				\begin{description}
-        					\item[Considerazioni] \ \par
-        						La funzionalità del menu a tendina non è presente nella versione del prototipo testato. Tuttavia si riscontra che con l'inserimento della stringa 'Entrata' si ottiene un percorso con una destinazione impostata scelta dall'applicazione stessa.
-        					
-        					\item[Possibili miglioramenti] \ \par 
-        						Nella successiva fase si implementerà il menu a tendina e l'avviso di \textit{Nessun risultato} e si risolverà il problema relativo al calcolo del percorso con una stringa non specificata correttamente.
         				\end{description}
         				
 				\end{description}  
 				
 			\end{tcolorbox}
-
 
 
 	
@@ -1299,13 +1306,23 @@
         				\begin{itemize}
         					\item \verb|$RESULT1| = \{
         					\begin{itemize}
-        						\item ???
-        						\item 1C150
-        						\item ???
+        						\item 1A150
+								\item 1AD100
+								\item 1BC45
+								\item 1BC50
+								\item 1C150
+								\item Entrata torre A
+								\item Entrata torre B
+								\item Entrata torre C
+								\item Entrata torre D
+								\item Toilette donne 1AD
+								\item Toilette donne 1BC
+								\item Toilette uomini 1AD
+								\item Toilette uomini 1BC
         					\end{itemize}
         					\}
         					\item \verb|$RESULT2| = \{
-        						Aula 1C150, info 1C150  ???
+        						1\degree\ piano, Aule, Posti disponibili:45. 
         					\}
         				\end{itemize}
 
@@ -1490,16 +1507,16 @@
 				
 					\item[Input] \ \par 
         				\begin{itemize}
-        					\item \verb|$START| = 1C150
+        					\item \verb|$START| = 1C150 (ROI = 01002)
         					\item \verb|$SPEED| = a passo lento
-							\item \verb|$END| = Toilette donne 1BC
+							\item \verb|$END| = Toilette donne 1AD
         				\end{itemize}
         				
         			\tcbline 
         				
         			\item[Output atteso] \ \par
         				\begin{itemize}
-        					\item \verb|$RESULT| = Istruzione ???
+        					\item \verb|$RESULT| = ???
         				\end{itemize}
 
 					\tcbline        				
