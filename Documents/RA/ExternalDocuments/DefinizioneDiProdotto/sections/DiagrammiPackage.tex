@@ -35,7 +35,7 @@
 
 \begin{figure}[h]
 	\includegraphics[width=\textwidth]{img/RelationPackage/graph}
-	\caption{Package model::navigator::graph e relazioni con gli altri package}
+	\caption{Package model::navigator::graph e relazioni con il package esterno model}
 	\label{graphPackage}
 \end{figure}
 
@@ -47,7 +47,7 @@
 
 \begin{figure}[h]
 	\includegraphics[width=\textwidth]{img/RelationPackage/navigator}
-	\caption{Package model::navigator e relazioni con gli altri package}
+	\caption{Package model::navigator e relazioni con i package interni graph e algorithm e con il package esterno model}
 	\label{navigatorPackage}
 \end{figure}
 
@@ -60,7 +60,7 @@
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.6]{img/RelationPackage/compass}
-	\caption{Package model::compass e relazioni con gli altri package}
+	\caption{Package model::compass e relazioni con il package presenter}
 	\label{compassPackage}
 \end{figure}
 
@@ -73,7 +73,7 @@
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.6]{img/RelationPackage/usersetting}
-	\caption{Package model::usersetting e relazioni con gli altri package}
+	\caption{Package model::usersetting e relazioni con il package esterno model}
 	\label{usersettingPackage}
 \end{figure}
 
@@ -84,7 +84,7 @@
 
 \begin{figure}[h]
 	\includegraphics[width=\textwidth]{img/RelationPackage/beacon}
-	\caption{Package model::beacon e relazioni con gli altri package}
+	\caption{Package model::beacon e relazioni con package model e librerie esterne}
 	\label{beaconPackage}
 \end{figure}
 
@@ -101,28 +101,56 @@
 
 \newpage
 	\subsection{presenter}
+		Il package \verb|presenter| contiene tutte le componenti intermedie per la comunicazione tra package \verb|model| e \verb|view|. Nel diagramma \ref{presenterPackage} si mostrano le relazioni interne al package mentre nel diagramma \ref{presenter-model} si mostrano le relazioni tra le classi tra \verb|model| e \verb|presenter|.
+		
+		Per mantenere la leggibilità sono state rimosse relazioni con alcune componenti di Android SDK, leggendo il diagramma si tenga conto che:
+		\begin{itemize}
+			\item Tutte le classi con il suffisso Adapter estendono la classe esterna \verb|BaseAdapter|;
+			\item Tutte le classi con il suffisso Activity estendono la classe esterna \verb|Activity| (anche MainDeveloperPresenter la estende);
+			\item Tutte le classi con il suffisso Fragment estendono la classe esterna \verb|Fragment|;
+			\item Ogni relazione tra le classi all'interno del package \verb|presenter| e il package \verb|model| (diagramma \ref{presenter-model}) sono risolte con la dependency injection (diagramma \ref{diPackage});
+			\item Non sono mostrate le relazioni con le classi esterne \verb|Context| e \verb|Intent| perché coinvolgono pressoché tutte le classi.
+		\end{itemize}
 	
-	
-\begin{figure}[h]
+\begin{figure}[p]
 	\centering
-	\includegraphics[height=0.9\textheight, width=\textwidth, keepaspectratio]{diagrams/ModelCompleteNoMethods/PNGpackage/presenter}
-	\caption{Package presenter e relazioni con le componenti del package view}
+	\includegraphics[height=0.9\textheight, width=\textwidth, keepaspectratio]{img/RelationPackage/presenter}
+	\caption{Package presenter}
 	\label{presenterPackage}
+\end{figure}
+
+\begin{figure}[p]
+	\centering
+	\includegraphics[width=\textwidth, keepaspectratio]{img/RelationPackage/presenter-model}
+	\caption{Relazioni tra il package model e il package presenter}
+	\label{presenter-model}
 \end{figure}
 
 
 \newpage
 	\subsection{view}
-		Il package
+		Il package \verb|view| è incaricato di contenere tutte le componenti coinvolte nella realizzazioni di elementi visualizzabili con cui l'utente potrà interagire. Per chiarezza il diagramma è stato diviso in due figure \ref{viewPackage1} e \ref{viewPackage2}. Inoltre non sono state presentate relazioni con componenti esterne offerte da Android SDK per mantenere la leggibilità del diagramma.
 
-\begin{figure}[h]
+\begin{figure}[p]
 	\centering
-	\includegraphics[height=0.9\textheight, width=\textwidth, keepaspectratio]{diagrams/ModelCompleteNoMethods/PNGpackage/view}
-	\caption{Package view e relazioni con le componenti del package presenter}
-	\label{viewPackage}
+	\includegraphics[scale=0.4, keepaspectratio]{img/RelationPackage/view1}
+	\caption{Package view e relazioni con le componenti del package presenter (parte 1)}
+	\label{viewPackage1}
+\end{figure}
+
+\begin{figure}[p]
+	\centering
+	\includegraphics[height=0.9\textheight, width=\textwidth, keepaspectratio]{img/RelationPackage/view2}
+	\caption{Package view e relazioni con le componenti del package presenter (parte 2)}
+	\label{viewPackage2}
 \end{figure}
 
 
+\newpage
+	\subsection{di (dependency injection)}
+		Nella figura della pagina seguente si mostra come siano integrate le componenti di Dagger per implementare la dependency injection. Sempre nella figura si mostrano le relazioni tra le classi coinvolte dei package \verb|model| e \verb|presenter| rispetto al package \verb|di| il quale attraverso le classi con suffisso Module e l'utilizzo della classe amministratrice \verb|InfoComponent| permettono l'iniezione dei riferimenti delle classi del package \verb|model| nelle classi del package \verb|presenter|.
+	
+	
 \begin{figure}[p]
 	\centering
 	\includegraphics[height=19cm,width=\textwidth]{diagrams/ModelCompleteNoMethods/PNGpackage/di}

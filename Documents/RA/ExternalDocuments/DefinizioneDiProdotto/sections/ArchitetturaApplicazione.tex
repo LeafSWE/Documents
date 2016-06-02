@@ -22,8 +22,26 @@
 	\begin{figure} [h]
 		\centering
 		\includegraphics[scale=0.4]{img/LayeredArchitecture}
-		\caption{Architettura a layer adottata nell'applicazione}
+		\caption{Architettura a layer}
 		\label{fig:LayerArchitecture}
+	\end{figure}
+	
+	\newpage
+	\subsection{Implementazione nell'applicativo}
+		Seguendo il pattern presentato in precedenza si mostra nel diagramma in figura \ref{fig:multi-tier} quali package che compongono l'applicazione corrispondono ai layer prima presentati.
+		\begin{description}
+			\item[Presentation layer:] comprende i package \verb|view| e \verb|presenter|;
+			\item[Business layer:] comprende i package interni al package \verb|model| ossia \verb|navigator|, \verb|compass|, \verb|usersetting| e \verb|compass|;
+			\item[Service layer:] comprende il package \verb|service| contenuto nel package \verb|dataaccess|;
+			\item[Persistence layer:] comprende il package \verb|dao| contenuto nel package \verb|dataaccess|;
+			\item[Database layer:] è il database SQLite.
+		\end{description}
+		
+	\begin{figure} [h]
+		\centering
+		\includegraphics[scale=0.45]{img/package/multi-tier}
+		\caption{Architettura a layer implementata nell'applicazione}
+		\label{fig:multi-tier}
 	\end{figure}
 
 \end{document}
