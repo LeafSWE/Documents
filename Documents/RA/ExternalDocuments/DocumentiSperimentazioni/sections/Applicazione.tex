@@ -1,0 +1,34 @@
+\documentclass[../SperimentazioniPratiche.tex]{subfiles}
+
+\begin{document}
+
+\section{L'applicativo}
+	\subsection{Algoritmo di navigazione}
+		L'algoritmo di navigazione implementato è basato sul rilevamento della potenza del segnale ricevuto. In base a questa informazione infatti viene individuato il beacon più potente ed in base a ciò viene effettuata l'assunzione che tale beacon sia inoltre il più vicino all'utente. Tale assunzione può essere fatta sia per come sono posizionati i beacon, sia per come sono stati impostati, ovvero con una potenza di trasmissione molto bassa. \\ All'avvio della navigazione viene calcolato un percorso sulla base della posizione dell'utente e sulla base della destinazione scelta:
+		\begin{itemize} 
+			\item per posizione dell'utente si considera il nodo nel grafo che rappresenta l'edificio che è associato al beacon più potente rilevato dal dispositivo dell'utente;
+			\item per destinazioni vengono considerati in prima battuta tutti i nodi che sono associati al luogo che l'utente vuole raggiungere: infatti i luoghi che un utente può scegliere come destinazione di navigazione e i nodi del grafo che rappresentano luoghi fisici differenti.
+		\end{itemize}
+		Successivamente vengono calcolati i pesi di tutti i percorsi che collegano il nodo associato alla posizione dell'utente e i nodi associati alla destinazione scelta. Infine, tra questi cammini, viene scelto quello con peso inferiore. Il calcolo di ogniuno di questi cammini viene effettuato utilizzando l'algoritmo di Dijkstra per il calcolo del cammino minimo. Tale scelta è stata fatta poichè si voleva sfruttare l'algoritmo più efficiente possibile per effettuare tale calcolo. L'algoritmo necessita quindi che tutti gli archi del grafo abbiano peso positivo. Questa condizione risulta sempre soddisfatta poichè per archi che rappresentano corridoi il peso è pari alla lunghezza (calcolata anche approssimativamente) del corridoio stesso in metri, mentre invece per archi che contengono scale o ascensori il calcolo del peso è regolato da due funzioni sempre positive. Tali funzioni sono:
+		\begin{itemize}
+			\item peso di archi che contengono ascensori: \[fe(x) = e^{x-k}\]
+			\item peso di archi che contengono scale: \[fs(x) = e^{-(x-k)}\]
+		\end{itemize}
+		In queste funzioni \textit{x} rappresenta il numero di piani attraversato dall'arco, mentre \textit{k} è una costante che rappresenta il numero di piani che mediamente, per un utente, comporta una spesa in termini di sforzo fisico e di tempo pressochè uguale. Nella nostra implementazione abbiamo fissato \textit{k = 1.9999}. Ciò vuol dire che per la nostra implementazione dell'algoritmo attraversare due piani con le scale o con l'ascensore è pressochè uguale, con preferenza per l'utilizzo dell'ascensore per arrivare al secondo piano.
+		La scelta di un numero decimale per \textit{k} fa inoltre si che ad un utente, a partire da un certo punto in un piano, per arrivare in una qualsiasi destinazione in un piano differente venga sempre presentato un percorso o che contiene scale o che contiene ascensori, evitando così che per due destinazioni in uno stesso piano vengano presentati per una un percorso che prevede scale, per l'altra un percorso che prevede ascensori. \\
+		Mentre l'utente avanza nel percorso presentato all'utente l'algoritmo si occupa di controllare i progressi dell'utente in base ai beacon rilevati. L'algoritmo prevede tre possibilità:
+		\begin{itemize}
+			\item il beacon rilevato è il beacon associato al nodo previsto dal percorso calcolato;
+			\item il beacon rilevato è associato ad un beacon previsto dal percorso calcolato, precedente o successivo al prossimo beacon che ci si aspettava di incontrare;
+			\item il beacon rilevato non è associato ad alcun nodo nel percorso calcolato.
+		\end{itemize}
+		Nei primi due casi l'algoritmo non prevede segnalazioni particolari, se non fornire l'informazione associata all'arco da percorrere, mentre nell'ultimo caso viene segnalato un errore poichè il percorso seguito è errato.
+
+	\subsection{Utilizzo della bussola}
+		L'algoritmo ha un problema: non riesce a fare assunzioni sulla direzione dell'utente. Tale problema è amplificato alla partenza dove è più difficile supporre in che verso sia rivolto l'utente rispetto la prossima Region Of Interest da raggiungere. Insieme all'algoritmo è utilizzata anche la bussola del telefono. In questo modo è possibile monitorare anche la direzione in cui è rivolto l'utente: facendo questo è possibile anche dare un'indicazione più o meno esatta della direzione in cui deve voltarsi per raggiungere un certo luogo. Tale indicazione per l'algoritmo non è considerata bloccante: infatti è permesso all'utente di navigare anche se la direzione in cui è rivolto è sbagliata. Tale scelta è stata fatta perchè:
+		\begin{itemize}
+			\item la precisione fornita dalla bussola di un cellulare non è perfetta;
+			\item i dati rilevati dipendono da molti fattori(come campi magnetici esterni e posizione del cellulare);
+			\item l'utente può voler tenere il telefono non in linea con il percorso da seguire.
+		\end{itemize}
+		
