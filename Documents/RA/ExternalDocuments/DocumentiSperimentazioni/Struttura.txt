@@ -6,7 +6,7 @@ SPERIMENTAZIONE PRATICA data
 	Allestimento impianto (l'impostazione dell'impianto è una e una sola per tutte le prove effettuate)
 		planimetrie
 		disposizione beacon
-		qual è e come abbiamo scelto di simulare le condizioni realistiche
+		qual è e come abbiamo scelto di simulare le condizioni realistiche !!!
 		
 	Il software/ L'applicazione (MARCO)
 		Algoritmo di navigazione

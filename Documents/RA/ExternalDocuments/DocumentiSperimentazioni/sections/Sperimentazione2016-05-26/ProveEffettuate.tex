@@ -1053,7 +1053,10 @@
         				
         			\item[Output atteso] \ \par
         				\begin{itemize}
-        					\item \verb|$RESULT| = ???
+        					\item \verb|$RESULT| = (l'area circolare può variare)
+        					\begin{center}
+        						\includegraphics[scale=0.3]{img/ResultProva10A}
+        					\end{center}
         				\end{itemize}
 
 					\tcbline        				
@@ -1153,7 +1156,13 @@
         						\item \verb|$RESULT1| = \ns
         						\item \verb|$RESULT2| = \ns
         						\item \verb|$RESULT3| = \ns
-        						\item \verb|$RESULT4| = ???
+        						\item \verb|$RESULT4| = \{
+        								\begin{enumerate}
+        									\item Oltrepassa la porta antincendio più vicina, svolta a sinistra ed oltrepassa la seconda porta
+        									\item Scendi 1 piano di scale
+        									\item Raggiungi l'entrata della torre D
+        								\end{enumerate}
+        							\}
         					\end{itemize}
         					
         				\end{description}
@@ -1199,9 +1208,19 @@
         				\begin{itemize}
         					\item \verb|$RESULT1| = \{
         					\begin{itemize}
-        						\item ???
-        						\item 1C150
-        						\item ???
+        						\item 1A150
+								\item 1AD100
+								\item 1BC45
+								\item 1BC50
+								\item 1C150
+								\item Entrata torre A
+								\item Entrata torre B
+								\item Entrata torre C
+								\item Entrata torre D
+								\item Toilette donne 1AD
+								\item Toilette donne 1BC
+								\item Toilette uomini 1AD
+								\item Toilette uomini 1BC
         					\end{itemize}
         					\}
         					\item \verb|$RESULT2| = \{
@@ -1315,7 +1334,7 @@
         				\begin{itemize}
         					\item \verb|$START| = Entrata torre C
         					\item \verb|$END| = 1C150
-							\item \verb|$INST| = Sali le scale ???
+							\item \verb|$INST| = Sali un piano di scale
         				\end{itemize}
         				
         			\tcbline 
@@ -1374,7 +1393,7 @@
 				
 					\item[Input] \ \par 
         				\begin{itemize}
-        					\item \verb|$START| = 1C150
+        					\item \verb|$START| = 1C150 (ROI = 1003)
         					\item \verb|$SPEED| = a passo lento
 							\item \verb|$END| = Toilette donne 1BC
         				\end{itemize}
@@ -1383,7 +1402,7 @@
         				
         			\item[Output atteso] \ \par
         				\begin{itemize}
-        					\item \verb|$RESULT| = Istruzione ???
+        					\item \verb|$RESULT| = Sali un piano di scale
         				\end{itemize}
 
 					\tcbline        				
@@ -1444,7 +1463,7 @@
         				
         			\item[Output atteso] \ \par
         				\begin{itemize}
-        					\item \verb|$RESULT| = Istruzione ???
+        					\item \verb|$RESULT| = Sali un piano di scale
         				\end{itemize}
 
 					\tcbline        				
@@ -1506,7 +1525,7 @@
         				
         			\item[Output atteso] \ \par
         				\begin{itemize}
-        					\item \verb|$RESULT| = Inst ???
+        					\item \verb|$RESULT| = "Voltati"
         				\end{itemize}
 
 					\tcbline        				
