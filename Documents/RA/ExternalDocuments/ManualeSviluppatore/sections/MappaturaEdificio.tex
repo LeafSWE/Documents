@@ -71,15 +71,20 @@
 	
 		
 	\subsection{Configurazione beacon}
+	\label{subsec:ConfigurazioneBeacon}
 		Per gestire questa soluzione teorica i beacon fanno da ROI del grafico ossia i vertici. La scelta della loro posizione è di fondamentale importanza per il corretto funzionamento della navigazione e della user experience. 
 
-		I dati trasmessi dal \gls{beacon} sono il Major e il Minor, ovvero due stringhe composte da cinque caratteri numerici. Nella soluzione presentata sono così utilizzati:
+		I dati trasmessi dal \gls{beacon} sono l'UUID, il Major e il Minor, ovvero un codice in esadecimale per identificarli e due stringhe composte da cinque caratteri numerici. Nella soluzione presentata sono così utilizzati:
 		\begin{description}
+			\item[UUID:] Attualmente l'UUID dei beacon riconosciuti dall'applicazione Clips è il seguente:
+				\begin{quote}
+					\verb|19235dd2-574a-4702-a42e-caccac06e325|
+				\end{quote}
 			\item[Major:] identificativo dell'edificio supportato dall'applicazione;
 			\item[Minor:] le prime due cifre identificano il piano mentre le ultime tre la ROI.
 		\end{description}			
 		
-		Di seguito si elencano quali sono le pratiche da seguire individuate dal team \leaf\ per ottenere un risultato ottimale:
+		Mentre il primo dato è fisso (salvo modifiche all'applicazione) gli altri due rappresentano dati da impostare in base all'edificio da mappare. Di seguito si elencano quali sono le pratiche da seguire individuate dal team \leaf\ per ottenere un risultato ottimale:
 		\begin{itemize}
 			\item gli spazi interni dell'edificio devono essere il più possibile coperti dal segnale dei \gls{beacon} evitando il più possibile sovrapposizioni tra questi;
 			\item ogni ROI e quindi ogni \gls{beacon} si consiglia di posizionarlo in tutti gli incroci di un edificio e nei luoghi di accesso di ogni stanza o punto di interesse (POI);

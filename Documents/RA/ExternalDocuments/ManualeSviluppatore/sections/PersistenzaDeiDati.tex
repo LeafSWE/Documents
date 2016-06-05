@@ -5,6 +5,7 @@
 \label{sec:PersistenzaDeiDati}
 
 	\subsection{Database locale e remoto}
+	\label{subsec:Database}
 		L'applicazione è costituita da un database locale in SQLite che in base alle necessità dell'utente si sincronizza con quello remoto in PostgreSQL attraverso un RESTful server. Il database contiene tutti i dati necessari a comporre i grafi degli edifici supportati. L'applicazione, ossia la parte client della comunicazione, effettua solo richieste GET dal server, nessun'altra operazione può essere effettuata (DELETE, POST e PUT) dall'applicazione. 
 	
 		\subsection{Diagramma ER}
