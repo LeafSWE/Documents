@@ -65,22 +65,6 @@
 	% componenti da esportare da Tracy
 \subsection{Componenti}
 
-\subsubsection{component}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/package/component.png}
-	\caption{Componente component}\label{fig:component} 
-\end{figure}
-\begin{itemize}
-	\item \textbf{Descrizione:} Questo package raggruppa le interfacce che permettono di eseguire la dependency injection;
-	\item \textbf{Interfacce Contenute}:
-	\begin{itemize}
-		\item \texttt{InfoComponent}.
-		
-	\end{itemize}
-\end{itemize}
-
 \subsubsection{di}
 
 \begin{figure}[H]
@@ -90,6 +74,55 @@
 \end{figure}
 \begin{itemize}
 	\item \textbf{Descrizione:} Questo package ha il compito di raggruppare tutti i componenti che permettono di gestire la dependency injection;
+	\item \textbf{Package Contenuti}:
+	\begin{itemize}
+		\item \texttt{component};
+		
+		\item \texttt{module}.
+		
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{di::\-component}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/package/component.png}
+	\caption{Componente di::\-component}\label{fig:di::component} 
+\end{figure}
+\begin{itemize}
+	\item \textbf{Descrizione:} Questo package raggruppa le interfacce che permettono di eseguire la dependency injection;
+	\item \textbf{Padre:} \texttt{di};
+	\item \textbf{Interfacce Contenute}:
+	\begin{itemize}
+		\item \texttt{InfoComponent}.
+		
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{di::\-module}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/package/module.png}
+	\caption{Componente di::\-module}\label{fig:di::module} 
+\end{figure}
+\begin{itemize}
+	\item \textbf{Descrizione:} Questo package raggruppa le classi che permettono di risolvere le dipendenze tra gli oggetti presenti nell'applicazione. Le classi presenti in questo package hanno inoltre il compito di definire la cardinalità delle istanze di un oggetto;
+	\item \textbf{Padre:} \texttt{di};
+	\item \textbf{Classi Contenute}:
+	\begin{itemize}
+		\item \texttt{AppModule};
+		
+		\item \texttt{DatabaseModule};
+		
+		\item \texttt{InfoModule};
+		
+		\item \texttt{NavModule};
+		
+		\item \texttt{SettingModule}.
+		
+	\end{itemize}
 \end{itemize}
 
 \subsubsection{model}
@@ -193,6 +226,11 @@
 	\item \textbf{Classi Contenute}:
 	\begin{itemize}
 		\item \texttt{Compass}.
+		
+	\end{itemize}
+	\item \textbf{Interfacce Contenute}:
+	\begin{itemize}
+		\item \texttt{CompassListener}.
 		
 	\end{itemize}
 \end{itemize}
@@ -380,6 +418,8 @@
 		\item \texttt{BuildingInformation};
 		
 		\item \texttt{BuildingMapImp};
+		
+		\item \texttt{NavigationDirection};
 		
 		\item \texttt{NavigationExceptions};
 		
@@ -601,30 +641,6 @@
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{module}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/package/module.png}
-	\caption{Componente module}\label{fig:module} 
-\end{figure}
-\begin{itemize}
-	\item \textbf{Descrizione:} Questo package raggruppa le classi che permettono di risolvere le dipendenze tra gli oggetti presenti nell'applicazione. Le classi presenti in questo package hanno inoltre il compito di definire la cardinalità delle istanze di un oggetto;
-	\item \textbf{Classi Contenute}:
-	\begin{itemize}
-		\item \texttt{AppModule};
-		
-		\item \texttt{DatabaseModule};
-		
-		\item \texttt{InfoModule};
-		
-		\item \texttt{NavModule};
-		
-		\item \texttt{SettingModule}.
-		
-	\end{itemize}
-\end{itemize}
-
 \subsubsection{presenter}
 
 \begin{figure}[H]
@@ -636,6 +652,12 @@
 	\item \textbf{Descrizione:} Package per il componente Presenter del pattern architetturale MVP;
 	\item \textbf{Classi Contenute}:
 	\begin{itemize}
+		\item \texttt{BeaconPos};
+		
+		\item \texttt{BeaconPowerAreaActivity};
+		
+		\item \texttt{BeaconPowerPos};
+		
 		\item \texttt{BlankHomeFragment};
 		
 		\item \texttt{CompleteHomeFragment};
@@ -658,6 +680,8 @@
 		
 		\item \texttt{LocalMapActivity};
 		
+		\item \texttt{LocalMapAdapter};
+		
 		\item \texttt{LoggingActivity};
 		
 		\item \texttt{LogInformationActivity};
@@ -668,8 +692,6 @@
 		
 		\item \texttt{MainDeveloperPresenter};
 		
-		\item \texttt{MapDownloaderActivity};
-		
 		\item \texttt{MyApplication};
 		
 		\item \texttt{NavigationActivity};
@@ -678,11 +700,19 @@
 		
 		\item \texttt{NearbyPoiActivity};
 		
+		\item \texttt{NoInternetAlert};
+		
+		\item \texttt{PoiActivity};
+		
 		\item \texttt{PoiCategoryActivity};
+		
+		\item \texttt{PoiDescriptionActivity};
 		
 		\item \texttt{PreferencesActivity};
 		
 		\item \texttt{RemoteMapManagerActivity};
+		
+		\item \texttt{RemoteMapManagerAdapter};
 		
 		\item \texttt{SearchSuggestionsProvider}.
 		
@@ -700,6 +730,12 @@
 	\item \textbf{Descrizione:} Package per il componente View del pattern architetturale MVP. Questo pacchetto contiene tutte le classi che compongono l'application logic;
 	\item \textbf{Classi Contenute}:
 	\begin{itemize}
+		\item \texttt{BeaconPowerArea};
+		
+		\item \texttt{BeaconPowerAreaViewImp};
+		
+		\item \texttt{DescriptionViewImp};
+		
 		\item \texttt{DetailedInformationViewImp};
 		
 		\item \texttt{DeveloperUnlockerViewImp};
@@ -718,13 +754,13 @@
 		
 		\item \texttt{MainDeveloperViewImp};
 		
-		\item \texttt{MapDownloaderViewImp};
-		
 		\item \texttt{NavigationViewImp};
 		
 		\item \texttt{NearbyPoiViewImp};
 		
 		\item \texttt{PoiCategoryViewImp};
+		
+		\item \texttt{PoiViewImp};
 		
 		\item \texttt{PreferencesViewImp};
 		
@@ -733,6 +769,10 @@
 	\end{itemize}
 	\item \textbf{Interfacce Contenute}:
 	\begin{itemize}
+		\item \texttt{BeaconPowerAreaView};
+		
+		\item \texttt{DescriptionView};
+		
 		\item \texttt{DetailedInformationView};
 		
 		\item \texttt{DeveloperUnlockerView};
@@ -751,13 +791,13 @@
 		
 		\item \texttt{MainDeveloperView};
 		
-		\item \texttt{MapDownloaderView};
-		
 		\item \texttt{NavigationView};
 		
 		\item \texttt{NearbyPoiView};
 		
 		\item \texttt{PoiCategoryView};
+		
+		\item \texttt{PoiView};
 		
 		\item \texttt{PreferencesView};
 		
@@ -766,19 +806,20 @@
 	\end{itemize}
 \end{itemize}
 \subsection{Classi}
-\subsubsection{component}
+\subsubsection{di}
 
-\paragraph{component::InfoComponent}
+\paragraph{di::component::InfoComponent}
 \
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\maxwidth]{img/InfoComponent.png}
-	\caption{Interfaccia InfoComponent}\label{fig:component::InfoComponent} 
+	\caption{Interfaccia InfoComponent}\label{fig:di::component::InfoComponent} 
 \end{figure}
 \begin{description}
 	\item[Nome:] \texttt{InfoComponent};
 	\item[Tipo:] Interfaccia;
 	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Interfaccia che viene utilizzata da Dagger 2 per eseguire le iniezioni;
 	\item[Descrizione:] Interfaccia che viene implementata in autonomia da Dagger2 nella quale devono essere dichiarati
 	i metodi inject che richiedono come parametro la classe in cui sono presenti campi dati annotati con Inject. Con l'annotazione Component devono essere dichiarate le classi annotate con l'annotazione Module che permettono di risolvere le dipendenze;
 	\item[Metodi:] \
@@ -855,9 +896,269 @@
 				\item \texttt{loggingActivity : LoggingActivity}\\
 				Oggetto in cui devono essere iniettate le dipendenze\end{itemize}
 		\end{description}
+		\item \texttt{+ \textit{inject(detailedInformationActivity : DetailedInformationActivity) : void}}\\
+		Metodo che permette di iniettare i campi annotati con Inject negli oggetti di tipo DetailedInformationActivity
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{detailedInformationActivity : DetailedInformationActivity}\\
+				Oggetto in cui devono essere iniettate le dipendenze\end{itemize}
+		\end{description}
+		\item \texttt{+ \textit{inject(localMapActivity : LocalMapActivity) : void}}\\
+		Metodo che permette di iniettare i campi annotati con Inject negli oggetti di tipo LocalMapActvity
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{localMapActivity : LocalMapActivity}\\
+				Oggetto in cui devono essere iniettate le dipendenze\end{itemize}
+		\end{description}
+		\item \texttt{+ \textit{inject(preferenceActivity : PreferencesActivity) : void}}\\
+		Metodo che permette di iniettare i campi annotati con Inject negli oggetti di tipo PreferencesActivity
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{preferenceActivity : PreferencesActivity}\\
+				Oggetto in cui devono essere iniettate le dipendenze\end{itemize}
+		\end{description}
+		\item \texttt{+ \textit{inject(searchSuggestionsProvider : SearchSuggestionsProvider) : void}}\\
+		Metodo che permette di iniettare i campi annotati con Inject negli oggetti di tipo SearchSuggestionsProvider
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{searchSuggestionsProvider : SearchSuggestionsProvider}\\
+				Oggetto in cui devono essere iniettate le dipendenze\end{itemize}
+		\end{description}
+		\item \texttt{+ inject(poiActivity : PoiActivity) : void}\\
+		Metodo che permette di iniettare i campi annotati con Inject negli oggetti di tipo PoiActivity
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{poiActivity : PoiActivity}\\
+				Oggetto in cui devono essere iniettate le dipendenze\end{itemize}
+		\end{description}
+		\item \texttt{+ \textit{inject(remoteMapManagerActivity : RemoteMapManagerActivity) : void}}\\
+		Metodo che permette di iniettare i campi annotati con Inject negli oggetti di tipo RemoteMapManagerActivity
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{remoteMapManagerActivity : RemoteMapManagerActivity}\\
+				Oggetto in cui devono essere iniettate le dipendenze\end{itemize}
+		\end{description}
+		\item \texttt{+ \textit{inject(poiDescriptionActivity : PoiDescriptionActivity) : void}}\\
+		Metodo che permette di iniettare i campi annotati con Inject negli oggetti di tipo PoiDescriptionActivity
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{poiDescriptionActivity : PoiDescriptionActivity}\\
+				Oggetto in cui devono essere iniettate le dipendenze\end{itemize}
+		\end{description}
+		\item \texttt{+ \textit{inject(navigationManagerImp : NavigationManagerImp) : void}}\\
+		Metodo che permette di iniettare i campi annotati con Inject negli oggetti di tipo NavigationManagerImp
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{navigationManagerImp : NavigationManagerImp}\\
+				Oggetto in cui devono essere iniettate le dipendenze\end{itemize}
+		\end{description}
+		\item \texttt{+ \textit{inject(beaconPowerAreaActivity : BeaconPowerAreaActivity) : void}}\\
+		Metodo che permette di iniettare i campi annotati con Inject negli oggetti di tipo BeaconPowerAreaActivity
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{beaconPowerAreaActivity : BeaconPowerAreaActivity}\\
+				Oggetto in cui devono essere iniettate le dipendenze\end{itemize}
+		\end{description}
 	\end{itemize}
 \end{description}
-\subsubsection{di}
+
+\paragraph{di::module::AppModule}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/AppModule.png}
+	\caption{Classe AppModule}\label{fig:di::module::AppModule} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{AppModule};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per rendere il Context e l'Application Singleton e risolvere le dipendenze;
+	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo Context e Application;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- compass : Compass \{readOnly\}}\\
+		Riferimento ad un oggetto Compass per la lettura dei dati della bussola
+		
+		\item \texttt{- mApplication : MyApplication \{readOnly\}}\\
+		Applicazione in esecuzione nella quale ci sono oggetti in cui fare la dependency injection
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ AppModule(application : MyApplication)}\\
+		Costruttore della classe AppModule
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{application : MyApplication}\\
+				Applicazione in esecuzione nella quale ci sono oggetti in cui fare la dependency injection\end{itemize}
+		\end{description}
+		\item \texttt{+ providesApplication() : Application}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo Application. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
+		\item \texttt{+ providesCompass() : Compass}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo Compass. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo.
+		\item \texttt{+ providesContext() : Context}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo Context. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
+	\end{itemize}
+\end{description}
+
+\paragraph{di::module::DatabaseModule}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/DatabaseModule.png}
+	\caption{Classe DatabaseModule}\label{fig:di::module::DatabaseModule} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{DatabaseModule};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per rendere DatabaseService Singleton e risolvere le dipendenze;
+	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo SQliteDaoFactory,
+	RemoteDaoFactory e DatabaseService;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- remoteURL : String}\\
+		Stringa che rappresenta l'URL del database remoto
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ DatabaseModule(remoteURL : String)}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo SQLiteDaoFactory. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{remoteURL : String}\\
+				Stringa che rappresenta l'URL del database remoto\end{itemize}
+		\end{description}
+		\item \texttt{+ provideRemoteDaoFactory() : RemoteDaoFactory}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo DatabaseService ritornando un oggetto di tipo BuildingServiceImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
+		\item \texttt{+ provideSQLiteDaoFactory(context : Context) : SQLiteDaoFactory}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo SQLiteDaoFactory. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{context : Context}\\
+				Contesto di esecuzione dell'applicazione\end{itemize}
+		\end{description}
+		\item \texttt{+ providesDatabaseService(sqLiteDaoFactory : SQLiteDaoFactory, remoteDaoFactory : RemoteDaoFactory) : DatabaseService}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo DatabaseService ritornando un oggetto di tipo BuildingServiceImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{sqLiteDaoFactory : SQLiteDaoFactory}\\
+				Factory che permette di costruire oggetti con cui accedere ai dati salvati nel databse locale\item \texttt{remoteDaoFactory : RemoteDaoFactory}\\
+				Factory che permette di costruire oggetti scaricati dal database remoto\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{di::module::InfoModule}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/InfoModule.png}
+	\caption{Classe InfoModule}\label{fig:di::module::InfoModule} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{InfoModule};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per rendere la classe DatabaseService Singleton e risolvere le dipendenze;
+	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo InformationManager;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ providesInformationManager(service : DatabaseService, context : Context) : InformationManager}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo InformationManager ritornando un oggetto di tipo InformationManagerImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{service : DatabaseService}\\
+				Oggetto che permette di accedere al database sia locale che remoto\item \texttt{context : Context}\\
+				Contesto di esecuzione dell'applicazione\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{di::module::NavModule}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/NavModule.png}
+	\caption{Classe NavModule}\label{fig:di::module::NavModule} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{NavModule};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per risolvere le dipendenze verso NavigationManager e MapGraph;
+	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo NavigationManager;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ provideMapGraph(informationManager : InformationManager) : MapGraph}\\
+		Metodo che permette di risolvere le dipendenze verso gli oggetti della classe MapGraph
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{informationManager : InformationManager}\\
+				Riferimento all'oggetto che gestisce le informazioni provenienti dal database\end{itemize}
+		\end{description}
+		\item \texttt{+ providesNavigationManager(mapGraph : MapGraph, context : Context) : NavigationManager}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo NavigationManager ritornando un oggetto di tipo NavigationManagerImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{mapGraph : MapGraph}\\
+				Oggetto che rappresenta il grafo tramite la classe MapGraph\item \texttt{context : Context}\\
+				Contesto di esecuzione dell'applicazione\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{di::module::SettingModule}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/SettingModule.png}
+	\caption{Classe SettingModule}\label{fig:di::module::SettingModule} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{SettingModule};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per rendere la classe Setting Singleton e risolvere le dipendenze;
+	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo Setting;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- context : Context \{readOnly\}}\\
+		Contesto di esecuzione dell'applicazione
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ SettingModule(context : Context)}\\
+		Costruttore della classe SettingModule
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{context : Context}\\
+				Contesto di esecuzione dell'applicazione\end{itemize}
+		\end{description}
+		\item \texttt{+ providesSetting() : Setting}\\
+		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo Setting ritornando un oggetto di tipo SettingImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo.
+	\end{itemize}
+\end{description}
 \subsubsection{model}
 
 \paragraph{model::AbsBeaconReceiverManager}
@@ -1012,6 +1313,14 @@
 	\item[Descrizione:] Interfaccia che si occupa di esporre tutti i metodi utili per accedere ad informazioni trattate dai vari pacchetti del Model;
 	\item[Metodi:] \
 	\begin{itemize}
+		\item \texttt{+ \textit{addListener(listener : InformationListener) : void}}\\
+		Metodo che permette di registrare un listener
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{listener : InformationListener}\\
+				Listener che deve essere aggiunto alla lista di InformationListener\end{itemize}
+		\end{description}
 		\item \texttt{+ \textit{downloadMapOfVisibleBeacons(remoteSearch : Boolean) : void}}\\
 		Metodo che permette di scaricare la mappa associata ai beacon visibili
 		\begin{description}
@@ -1038,6 +1347,14 @@
 		\end{description}
 		\item \texttt{+ \textit{getNearbyPOIs() : Collection<PointOfInterest>}}\\
 		Metodo che ritorna l'insieme di POI associati al beacon rilevato con il segnale più potente. Viene lanciata una eccezione di tipo NoBeaconSeenException nel caso in cui venga invocato il metodo ma non è stato rilevato ancora alcun beacon
+		\item \texttt{+ \textit{getPOIsByCategory(category : String) : Collection<PointOfInterest>}}\\
+		Metodo che ritorna tutti i PointOfInterest appartenenti ad una certa categoria
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{category : String}\\
+				Nome della categoria di cui si vogliono recuperare tutti i PointOfInterest\end{itemize}
+		\end{description}
 		\item \texttt{+ \textit{removeBeaconInformationFile(filename : String) : void}}\\
 		Metodo che permette di rimuovere un log delle informazioni dei beacon visibili
 		\begin{description}
@@ -1111,6 +1428,9 @@
 		\item \texttt{- map : BuildingMap}\\
 		Mappa dell'edificio di cui sono stati rilevati I beacon
 		
+		\item \texttt{- proc : boolean}\\
+		Variabile che rappresenta se è già in download una mappa oppure no
+		
 		\item \texttt{- shouldLog : boolean}\\
 		Variabile booleana che indica se debba essere effettuato o meno il log dei beacon rilevati
 		
@@ -1160,6 +1480,16 @@
 		\end{description}
 		\item \texttt{+ getNearbyPOIs() : Collection<PointOfInterest>}\\
 		\textbf{Override} Metodo che ritorna l'insieme di POI associati al beacon rilevato con il segnale più potente. Viene lanciata una eccezione di tipo NoBeaconSeenException nel caso in cui venga invocato il metodo ma non è stato rilevato ancora alcun beacon
+		\item \texttt{+ getPOIsByCategory(category : String) : Collection<PointOfInterest>}\\
+		\textbf{Override} Metodo che ritorna tutti i PointOfInterest appartenenti ad una certa categoria
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{category : String}\\
+				Nome della categoria di cui si vogliono recupoerare tutti i PointOfInterest\end{itemize}
+		\end{description}
+		\item \texttt{- isDeveloper() : boolean}\\
+		Metodo che permette di verificare se un utente è sviluppatore oppure no
 		\item \texttt{- loadMap() : void}\\
 		Metodo che permette di recuperare una mappa dal database in base al major dei beacon rilevati
 		\item \texttt{+ onReceive(context : Context, intent : Intent) : void}\\
@@ -1304,8 +1634,10 @@
 		\end{description}
 		\item \texttt{+ \textit{getAllNavigationInstruction() : List<ProcessedInformation>}}\\
 		Metodo che permette di recuperare tutte le istruzioni di navigazione per un percorso calcolato. Viene lanciata una eccezione di tipo NoNavigationInformationException nel caso in cui venga richiamato questo metodo senza aver prima avviato la navigazione
+		\item \texttt{+ \textit{getGraph() : MapGraph}}\\
+		Metodo che permette di accedere al grafo che rappresenta l'edificio
 		\item \texttt{+ \textit{getNextInstruction() : ProcessedInformation}}\\
-		Metodo che permette di recuperare tutte le istruzioni di navigazione per un percorso calcolato in base al beacon più potente ricavato dalla PriorityQueue<MyBeacon> passata come argomento. Viene lanciata una eccezione di tipo NoNavigationInformationException nel caso in cui venga richiamato questo metodo senza aver prima avviato la navigazione.
+		Metodo che permette di recuperare tutte le istruzioni di navigazione per un percorso calcolato in base al beacon più potente recuperato da una PriorityQueue<MyBeacon>.  Viene lanciata una eccezione di tipo NoNavigationInformationException nel caso in cui venga richiamato questo metodo senza aver prima avviato la navigazione.
 		\item \texttt{+ \textit{removeListener(listener : NavigationListener) : void}}\\
 		Metodo che permette di rimuovere un listener
 		\begin{description}
@@ -1355,14 +1687,11 @@
 	\item[Descrizione:] Classe che si occupa della gestione della navigazione;
 	\item[Attributi:] \
 	\begin{itemize}
-		\item \texttt{- compass : Compass \{readOnly\}}\\
+		\item \texttt{~ compass : Compass}\\
 		Oggetto che permette di recuperare I dati della bussola
 		
 		\item \texttt{- graph : MapGraph \{readOnly\}}\\
 		Grafo rappresentante la mappa dell'edificio
-		
-		\item \texttt{- lastBeaconsSeen : PriorityQueue<MyBeacon>}\\
-		PriorityQueue, eventualmente vuota, contenente gli ultimi beacon rilevati
 		
 		\item \texttt{- navigator : Navigator}\\
 		Oggetto per la navigazione
@@ -1389,8 +1718,10 @@
 		\end{description}
 		\item \texttt{+ getAllNavigationInstruction() : List<ProcessedInformation>}\\
 		\textbf{Override} Metodo che permette di recuperare tutte le istruzioni di navigazione per un percorso calcolato. Viene lanciata una eccezione di tipo NoNavigationInformationException nel caso in cui venga richiamato questo metodo senza aver prima avviato la navigazione
+		\item \texttt{+ getGraph() : MapGraph}\\
+		\textbf{Override} Metodo che permette di accedere al grafo che rappresenta l'edificio
 		\item \texttt{+ getNextInstruction() : ProcessedInformation}\\
-		\textbf{Override} Metodo che permette di recuperare tutte le istruzioni di navigazione per un percorso calcolato in base al beacon più potente ricavato dalla PriorityQueue<MyBeacon> passata come argomento. Viene lanciata una eccezione di tipo NoNavigationInformationException nel caso in cui venga richiamato questo metodo senza aver prima avviato la navigazione.
+		\textbf{Override} Metodo che permette di recuperare tutte le istruzioni di navigazione per un percorso calcolato in base al beacon più potente recuperato da una PriorityQueue<MyBeacon>. Viene lanciata una eccezione di tipo NoNavigationInformationException nel caso in cui venga richiamato questo metodo senza aver prima avviato la navigazione.
 		\item \texttt{+ onReceive(context : Context, intent : Intent) : void}\\
 		\textbf{Override} Metodo che si occupa di settare il campo dati lastBeaconsSeen con la PriorityQueue<MyBeacon> contenente gli ultimi beacon rilevati e di aggiornare tutti I listeners con le ultime istruzioni di navigazione
 		\begin{description}
@@ -1532,7 +1863,7 @@
 	\item[Attributi:] \
 	\begin{itemize}
 		\item \texttt{- \underline{beaconLayout : String}}\\
-		Rappresenta una stringa che identifica la marca del Beacon o del protocollo
+		Rappresenta una stringa che identifica la marca del Beacon o del protocollo. Tale campo dati è fissato come statico poichè necessario a tutte le istanze della classe per decifrare in modo eguale le informazioni del segnale dei beacon da riconoscere
 		
 		\item \texttt{- beaconManager : BeaconManager}\\
 		Riferimento alla classe che permette di gestire il rilevamento dei beacon
@@ -1880,7 +2211,7 @@
 	\item[Descrizione:] Classe che implementa l'interfaccia MyBeacon. Offre tutti i metodi per accedere alle informazioni di un beacon. Estende la classe org.altbeacon.beacon.Beacon;
 	\item[Attributi:] \
 	\begin{itemize}
-		\item \texttt{- \underline{CREATOR : Parcelable.Creator<MyBeacon> \\ \{readOnly\}}}\\
+		\item \texttt{- \underline{CREATOR : Parcelable.Creator<MyBeacon> \{readOnly\}}}\\
 		Attributo richiesto per rendere la classe Parcelable
 		
 	\end{itemize}
@@ -1936,8 +2267,7 @@
 	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per calcolare la distanza di un beacon dal dispositivo che lo ho rilevato;
-	\item[Descrizione:] Classe che implementa l'interfaccia org.altbeacon.beacon.\\
-	distance.DistanceCaluclator;
+	\item[Descrizione:] Classe che implementa l'interfaccia org.altbeacon.beacon.distance.DistanceCaluclator;
 	\item[Metodi:] \
 	\begin{itemize}
 		\item \texttt{+ calculateDistance(i : int, v : double) : double}\\
@@ -2006,6 +2336,9 @@
 		\item \texttt{- lastMagnetometerSet : boolean}\\
 		variabile di guardia per accertarsi il reperimento di almeno un dato dal magnetometro
 		
+		\item \texttt{- listeners : Collection<CompassListener>}\\
+		Collezione dei listener dei valori della bussola
+		
 		\item \texttt{- magnetometer : Sensor}\\
 		Sensore che misura il campo magnetico per i tre assi fisici
 		
@@ -2029,6 +2362,14 @@
 				\item \texttt{sensorManager : SensorManager}\\
 				Classe Android che permette di ottenere i riferimenti dei sensori del device\end{itemize}
 		\end{description}
+		\item \texttt{+ addListener(listener : CompassListener) : void}\\
+		Metodo che permette di aggiungere un listener sui valori della bussola
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{listener : CompassListener}\\
+				Listener per i valori della bussola\end{itemize}
+		\end{description}
 		\item \texttt{+ getLastCoordinate() : float}\\
 		Metodo che restituisce l'ultimo dato calcolato dai dati ricavati dai sensori che indica l'orientamento del dispositivo.
 		\item \texttt{+ onAccuracyChanged(sensor : Sensor, accuracy : int) : void}\\
@@ -2050,8 +2391,47 @@
 		\end{description}
 		\item \texttt{+ registerListener() : void}\\
 		Metodo che permette all'oggetto Compass di ricevere dati dai sensori e quindi accenderli
+		\item \texttt{+ removeListener(listener : CompassListener) : void}\\
+		Metodo che permette di rimuovere un listener sui valori della bussola
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{listener : CompassListener}\\
+				Listener da rimuovere dalla collezione di listener dei valori della bussola\end{itemize}
+		\end{description}
 		\item \texttt{+ unregisterListener() : void}\\
 		Metodo che permette all'oggetto Compass di smettere di ricevere dati dai sensori e quindi spegnerli
+	\end{itemize}
+\end{description}
+
+\paragraph{model::compass::CompassListener}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/CompassListener.png}
+	\caption{Interfaccia CompassListener}\label{fig:model::compass::CompassListener} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{\textit{CompassListener}};
+	\item[Tipo:] Interfaccia;
+	\item[Estende:] \
+	\begin{itemize}
+		\item \texttt{Listener}.
+		
+	\end{itemize}
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Interfaccia utilizzata dalle classi per poter ricevere le informazioni relative alla bussola;
+	\item[Descrizione:] Interfaccia base che deve essere implementata dalle classi che vogliono leggere i cambiamenti della bussola;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ \textit{changed(orientation : float) : void}}\\
+		Metodo che viene invocato ad ogni cambiamento della bussola
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{orientation : float}\\
+				Gradazione rilevata dalla bussola\end{itemize}
+		\end{description}
 	\end{itemize}
 \end{description}
 
@@ -2987,7 +3367,7 @@
 				\item \texttt{id : int}\\
 				Identificativo del POI di cui rimuovere le informazioni dal database locale\end{itemize}
 		\end{description}
-		\item \texttt{+ \textit{findAllPointsWithMajor(major : int) \\ : Collection<PointOfInterestTable>}}\\
+		\item \texttt{+ \textit{findAllPointsWithMajor(major : int) : Collection<PointOfInterestTable>}}\\
 		Metodo che viene utilizzato per recuperare le informazioni di tutti gli edifici presenti nella tabella "POI" del database locale
 		\begin{description}
 			\item[Argomenti:] \
@@ -3131,7 +3511,7 @@
 				\item \texttt{id : int}\\
 				Identificativo della RegionOfInterest di cui rimuovere le informazioni dal database locale\end{itemize}
 		\end{description}
-		\item \texttt{+ \textit{findAllRegionsWithMajor(major : int) : \\ Collection<RegionOfInterestTable>}}\\
+		\item \texttt{+ \textit{findAllRegionsWithMajor(major : int) : Collection<RegionOfInterestTable>}}\\
 		Metodo che viene utilizzato per recuperare le informazioni di tutte le RegionOfInterest associato ad certo edificio, dato il major dell'edificio
 		\begin{description}
 			\item[Argomenti:] \
@@ -4294,7 +4674,7 @@
 				\item \texttt{id : int}\\
 				Identificativo del POI di cui rimuovere le informazioni dal database locale\end{itemize}
 		\end{description}
-		\item \texttt{+ findAllPointsWithMajor(major : int) \\ : Collection<PointOfInterestTable>}\\
+		\item \texttt{+ findAllPointsWithMajor(major : int) : Collection<PointOfInterestTable>}\\
 		\textbf{Override} Metodo che viene utilizzato per recuperare le informazioni di tutti gli edifici presenti nella tabella "POI" del database locale
 		\begin{description}
 			\item[Argomenti:] \
@@ -4376,7 +4756,7 @@
 				\item \texttt{id : int}\\
 				Identificativo della RegionOfInterest di cui rimuovere le informazioni dal database locale\end{itemize}
 		\end{description}
-		\item \texttt{+ findAllRegionsWithMajor(major : int) \\ : Collection<RegionOfInterestTable>}\\
+		\item \texttt{+ findAllRegionsWithMajor(major : int) : Collection<RegionOfInterestTable>}\\
 		\textbf{Override} Metodo che viene utilizzato per recuperare le informazioni di tutte le RegionOfInterest associato ad certo edificio, dato il major dell'edificio
 		\begin{description}
 			\item[Argomenti:] \
@@ -4556,7 +4936,7 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ BuildingService(dbURL : String, sqliteBuilding : SQLiteBuildingDao,\\ remoteBuilding : RemoteBuildingDao, roiService : \\ RegionOfInterestService, poiService : PointOfInterestService, \\ edgeService : EdgeService)}\\
+		\item \texttt{+ BuildingService(dbURL : String, sqliteBuilding : SQLiteBuildingDao, remoteBuilding : RemoteBuildingDao, roiService : RegionOfInterestService, poiService : PointOfInterestService, edgeService : EdgeService)}\\
 		Costruttore della classe BuildingService
 		\begin{description}
 			\item[Argomenti:] \
@@ -5041,7 +5421,7 @@
 				\item \texttt{id : int}\\
 				Identificativo numerico del PointOfInterest da rimuovere\end{itemize}
 		\end{description}
-		\item \texttt{+ findAllPointsWithMajor(major : int) \\ : Collection<PointOfInterest>}\\
+		\item \texttt{+ findAllPointsWithMajor(major : int) : Collection<PointOfInterest>}\\
 		Metodo per recuperare le informazioni di tutti i PointOfInterest di un edificio, dato il major dell'edificio
 		\begin{description}
 			\item[Argomenti:] \
@@ -5202,7 +5582,7 @@
 	\item[Descrizione:] Classe che rappresenta un aiutante per la costruzione di un DatabaseService;
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ \underline{getService(sqliteDaoFactory : SQLiteDaoFactory,} \\ \underline{remoteDaoFactory : RemoteDaoFactory, dbURL : String)} \\ \underline{ : DatabaseService}}\\
+		\item \texttt{+ \underline{getService(sqliteDaoFactory : SQLiteDaoFactory, remoteDaoFactory : RemoteDaoFactory, dbURL : String) : DatabaseService}}\\
 		Metodo che viene utilizzato per ottenere un'istanza di DatabaseService
 		\begin{description}
 			\item[Argomenti:] \
@@ -5381,7 +5761,7 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ BuildingMapImp(edges : Collection<EnrichedEdge>, id : \\ int, version : int, pois : Collection<PointOfInterest>, \\ rois : Collection<RegionOfInterest>, buildingInfo : \\BuildingInformation, size : String)}\\
+		\item \texttt{+ BuildingMapImp(edges : Collection<EnrichedEdge>, id : int, version : int, pois : Collection<PointOfInterest>, rois : Collection<RegionOfInterest>, buildingInfo : BuildingInformation, size : String)}\\
 		Costruttore della classe BuildingMapImp
 		\begin{description}
 			\item[Argomenti:] \
@@ -5438,6 +5818,51 @@
 	\end{itemize}
 \end{description}
 
+\paragraph{model::navigator::NavigationDirection}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/NavigationDirection.png}
+	\caption{Classe NavigationDirection}\label{fig:model::navigator::NavigationDirection} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{NavigationDirection};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Classe utilizzata dalla funzionalità di navigazione per poter rappresentare le varie direzioni;
+	\item[Descrizione:] Classe per rappresentare le direzioni di navigazione;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- \underline{DESTINATION : int}}\\
+		Rappresenta l'arrivo ad una destinazione
+		
+		\item \texttt{+ \underline{ELEVATOR\_DOWN : int}}\\
+		Rappresenta la direzione che indica di scendere un piano con l'ascensore
+		
+		\item \texttt{+ \underline{ELEVATOR\_UP : int}}\\
+		Rappresenta la direzione che indica di salire un piano con l'ascensore
+		
+		\item \texttt{+ \underline{LEFT : int}}\\
+		Rappresenta la direzione che indica di girare a sinistra
+		
+		\item \texttt{+ \underline{RIGHT : int}}\\
+		Rappresenta la direzione che indica di girare a destra
+		
+		\item \texttt{+ \underline{STAIR\_DOWN : int}}\\
+		Rappresenta la direzione che indica di scendere un piano di scale
+		
+		\item \texttt{+ \underline{STAIR\_UP : int}}\\
+		Rappresenta la direzione che indica di salire un piano di scale
+		
+		\item \texttt{- \underline{STRAIGHT : int}}\\
+		Rappresenta la direzione che indica di proseguire dritti
+		
+		\item \texttt{+ \underline{TURN : int}}\\
+		Rappresenta l'azione di tornare indietro
+		
+	\end{itemize}
+\end{description}
+
 \paragraph{model::navigator::NavigationExceptions}
 \
 \begin{figure}[H]
@@ -5478,7 +5903,7 @@
 	\item[Descrizione:] Interfaccia che espone i metodi per accedere alle funzionalità di navigazione;
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ \textit{calculatePath(startRoi : RegionOfInterest, \\ endPoi : PointOfInterest) : void}}\\
+		\item \texttt{+ \textit{calculatePath(startRoi : RegionOfInterest, endPoi : PointOfInterest) : void}}\\
 		Metodo che calcola un percorso tra due RegionOfInterest viste come vertici di un grafo MapGraph utilizzando un oggetto PathFinder. Il punto di partenza e il punto di arrivo sono i parametri richiesti in input dal metodo mentre il grafo è un campo dati. Viene lanciata un eccezione di tipo NoGraphSetException nel caso in cui non sia settato alcun grafo.
 		\begin{description}
 			\item[Argomenti:] \
@@ -5552,6 +5977,9 @@
 		\item \texttt{- progress : Iterator<EnrichedEdge>}\\
 		Iteratore rappresentante il punto che è stato raggiunto durante la navigazione
 		
+		\item \texttt{- setting : Setting}\\
+		Oggetto che rappresenta le impostazioni dell'applicazione
+		
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
@@ -5563,7 +5991,7 @@
 				\item \texttt{compass : Compass}\\
 				Sensore di tipo Compass utilizzato durante la navigazione\end{itemize}
 		\end{description}
-		\item \texttt{+ calculatePath(startRoi : RegionOfInterest, \\ endPoi : PointOfInterest) : void}\\
+		\item \texttt{+ calculatePath(startRoi : RegionOfInterest, endPoi : PointOfInterest) : void}\\
 		\textbf{Override} Metodo che calcola un percorso tra due RegionOfInterest viste come vertici di un grafo MapGraph utilizzando un oggetto PathFinder. Il punto di partenza e il punto di arrivo sono i parametri richiesti in input dal metodo mentre il grafo è un campo dati. Viene lanciata un eccezione di tipo NoGraphSetException nel caso in cui non sia settato alcun grafo
 		\begin{description}
 			\item[Argomenti:] \
@@ -5787,7 +6215,7 @@
 	\begin{itemize}
 		\item \texttt{+ \textit{getDetailedInstruction() : String}}\\
 		Metodo che ritorna le istruzioni dettagliate per superare un certo arco nel percorso calcolato.
-		\item \texttt{+ \textit{getDirection() : int}}\\
+		\item \texttt{+ \textit{getDirection() : NavigationDirection}}\\
 		Metodo che ritorna la direzione verso cui dirigersi
 		\item \texttt{+ \textit{getDistance() : String}}\\
 		Metodo che ritorna la distanza da percorrere nell'arco in cui ci si trova
@@ -5829,7 +6257,7 @@
 		\item \texttt{- detailed : String}\\
 		Indicazioni dettagliate di un Edge
 		
-		\item \texttt{- direction : int}\\
+		\item \texttt{- direction : NavigationDirection}\\
 		La prossima direzione verso cui dirigersi
 		
 		\item \texttt{- distance : String}\\
@@ -5841,6 +6269,8 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
+		\item \texttt{+ ProcessedInformationImp()}\\
+		Costruttore della classe ProcessedInformationImp
 		\item \texttt{+ ProcessedInformationImp(edge : EnrichedEdge)}\\
 		Costruttore della classe ProcessedInformationImp
 		\begin{description}
@@ -5849,18 +6279,26 @@
 				\item \texttt{edge : EnrichedEdge}\\
 				Edge da cui devono essere estratte le informazioni\end{itemize}
 		\end{description}
-		\item \texttt{+ ProcessedInformationImp(edge : EnrichedEdge, starterInformation : String)}\\
+		\item \texttt{+ ProcessedInformationImp(edge : EnrichedEdge, starterInformation : int)}\\
 		Costruttore della classe ProcessedInformationImp
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
 				\item \texttt{edge : EnrichedEdge}\\
-				Edge da cui devono essere estratte le informazioni\item \texttt{starterInformation : String}\\
+				Edge da cui devono essere estratte le informazioni\item \texttt{starterInformation : int}\\
 				Informazioni aggiuntive per costruire le informazioni associate ad un arco del percorso per superarlo\end{itemize}
+		\end{description}
+		\item \texttt{+ equals(o : Object) : boolean}\\
+		\textbf{Override} Metodo che permette di comparare un oggetto con una istanza della classe ProcessedInformationImp
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{o : Object}\\
+				Oggetto da comparare\end{itemize}
 		\end{description}
 		\item \texttt{+ getDetailedInstruction() : String}\\
 		\textbf{Override} Metodo che ritorna le istruzioni dettagliate per superare un certo arco nel percorso calcolato
-		\item \texttt{+ getDirection() : int}\\
+		\item \texttt{+ getDirection() : NavigationDirection}\\
 		\textbf{Override} Metodo che ritorna la direzione verso cui dirigersi
 		\item \texttt{+ getDistance() : String}\\
 		\textbf{Override} Metodo che ritorna la distanza da percorrere nell'arco in cui ci si trova
@@ -5886,7 +6324,7 @@
 		\item \texttt{PathFinder}.
 	\end{itemize}
 	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] È utilizzata per calcolare il percorso di navigazione sfruttando l'algoritmo di Dijkstra. Per fare questo utilizza la classe org.jgrapht.\\alg.DijkstraShortestPath<V,E>;
+	\item[Utilizzo:] È utilizzata per calcolare il percorso di navigazione sfruttando l'algoritmo di Dijkstra. Per fare questo utilizza la classe org.jgrapht.alg.DijkstraShortestPath<V,E>;
 	\item[Descrizione:] Classe che rappresenta un algoritmo per il calcolo del percorso di navigazione;
 	\item[Metodi:] \
 	\begin{itemize}
@@ -5944,7 +6382,7 @@
 	\item[Nome:] \texttt{MapGraph};
 	\item[Tipo:] Classe;
 	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] È utilizzata per rappresentare un grafo sul quale applicare un algoritmo per il calcolo di un percorso nel package algorithm. Al suo interno per la rappresentazione del grafo utilizza la classe org.jgrapht.graph.\\SimpleDirectedWeightedGraph;
+	\item[Utilizzo:] È utilizzata per rappresentare un grafo sul quale applicare un algoritmo per il calcolo di un percorso nel package algorithm. Al suo interno per la rappresentazione del grafo utilizza la classe org.jgrapht.graph.SimpleDirectedWeightedGraph;
 	\item[Descrizione:] Classe che rappresenta un grafo da utilizzare per il calcolo del percorso di navigazione;
 	\item[Attributi:] \
 	\begin{itemize}
@@ -5988,7 +6426,7 @@
 				\item \texttt{roi : RegionOfInterest}\\
 				RegionOfInterest da aggiungere al grafo che rappresenta l'edificio\end{itemize}
 		\end{description}
-		\item \texttt{+ getGraph() : SimpleDirectedWeightedGraph<RegionOfInterest,\\EnrichedEdge>}\\
+		\item \texttt{+ getGraph() : SimpleDirectedWeightedGraph<RegionOfInterest,EnrichedEdge>}\\
 		Metodo che permette di restituire il grafo che rappresenta la distribuzione degli oggetti RegionOfInterest ed EnrichedEdge
 		\item \texttt{+ setSettingAllEdge(setting : Setting) : void}\\
 		Metodo che permette di impostare le setting passate come parametro a tutti gli edge all'interno del graph
@@ -6454,7 +6892,7 @@
 	\item[Attributi:] \
 	\begin{itemize}
 		\item \texttt{- \underline{NO\_ELEVATOR\_FACTOR : int \{readOnly\}}}\\
-		Fattore da aggiungere al peso dell'arco in base alle preferenze di navigazione
+		Fattore da aggiungere al peso dell'arco in base alle preferenze di navigazione uguale per tutti gli oggetti ElevatorEdge
 		
 	\end{itemize}
 	\item[Metodi:] \
@@ -6546,7 +6984,7 @@
 	\item[Attributi:] \
 	\begin{itemize}
 		\item \texttt{- \underline{NO\_STAIR\_FACTOR : int \{readOnly\}}}\\
-		Fattore da aggiungere al peso dell'arco in base alle preferenze di navigazione
+		Fattore da aggiungere al peso dell'arco in base alle preferenze di navigazione uguale per tutti gli oggetti StairEdge
 		
 	\end{itemize}
 	\item[Metodi:] \
@@ -6641,7 +7079,7 @@
 	\end{itemize}
 \end{description}
 
-\paragraph{model::navigator::graph::navigationinformation \\ ::NavigationInformation}
+\paragraph{model::navigator::graph::navigationinformation::NavigationInformation}
 \
 \begin{figure}[H]
 	\centering
@@ -6665,7 +7103,7 @@
 	\end{itemize}
 \end{description}
 
-\paragraph{model::navigator::graph::navigationinformation::\newline NavigationInformationImp}
+\paragraph{model::navigator::graph::navigationinformation::NavigationInformationImp}
 \
 \begin{figure}[H]
 	\centering
@@ -6902,7 +7340,7 @@
 	\item[Metodi:] \
 	\begin{itemize}
 		\item \texttt{+ \underline{fromInt(i : int) : InstructionPreference}}\\
-		Metodo per convertire un intero ad una InstructionPreference
+		Metodo per convertire un intero ad una InstructionPreference. Tale metodo è utilizzato per poter recuperare il numero salvato nella memoria del dispositivo che rappresenta la preferenza dell'utente
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
@@ -6910,7 +7348,7 @@
 				Intero da convertire ad una InstructionPreference\end{itemize}
 		\end{description}
 		\item \texttt{+ \underline{toInt(instructionPreference : InstructionPreference) : int}}\\
-		Metodo per convertire una InstructionPreference in un intero
+		Metodo per convertire una InstructionPreference in un intero. Tale metodo è utilizzato per rappresentare una preferenze utente in intero per poter essere salvata sulla memoria del dispositivo
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
@@ -6936,7 +7374,7 @@
 	\item[Metodi:] \
 	\begin{itemize}
 		\item \texttt{+ \underline{fromInt(i : int) : PathPreference}}\\
-		Metodo per convertire un intero ad una PathPreference
+		Metodo per convertire un intero ad una PathPreference. Tale metodo è utilizzato per poter recuperare il numero salvato nella memoria del dispositivo che rappresenta la preferenza dell'utente
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
@@ -6944,7 +7382,7 @@
 				Intero da convertire a PathPreference\end{itemize}
 		\end{description}
 		\item \texttt{+ \underline{toInt(pathPreference : PathPreference) : int}}\\
-		Metodo per convertire una PathPreference ad un intero
+		Metodo per convertire una PathPreference ad un intero. Tale metodo è utilizzato per rappresentare una preferenze utente in intero per poter essere salvata sulla memoria del dispositivo
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
@@ -6975,7 +7413,7 @@
 		Metodo che ritorna le preferenze di percorso
 		\item \texttt{+ \textit{isDeveloper() : booolean}}\\
 		Metodo che verifica se è stato inserito in precedenza un codice sviluppatore valido
-		\item \texttt{+ \textit{setInstructionPreference(instructionPreference \\ : InstructionPreference) : void}}\\
+		\item \texttt{+ \textit{setInstructionPreference(instructionPreference : InstructionPreference) : void}}\\
 		Metodo che permette di modificare le impostazioni riguardanti le preferenze di fruizione delle istruzioni di navigazione
 		\begin{description}
 			\item[Argomenti:] \
@@ -7070,7 +7508,7 @@
 		\textbf{Override} Metodo che ritorna le preferenze di percorso
 		\item \texttt{+ isDeveloper() : boolean}\\
 		\textbf{Override} Metodo che verifica se è stato inserito in precedenza un codice sviluppatore valido
-		\item \texttt{+ setInstructionPreference(instructionPreference \\ : InstructionPreference) : void}\\
+		\item \texttt{+ setInstructionPreference(instructionPreference : InstructionPreference) : void}\\
 		\textbf{Override} Metodo che permette di modificare le impostazioni riguardanti le preferenze di fruizione delle istruzioni di navigazione
 		\begin{description}
 			\item[Argomenti:] \
@@ -7096,192 +7534,185 @@
 		\end{description}
 	\end{itemize}
 \end{description}
-\subsubsection{module}
-
-\paragraph{module::AppModule}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/AppModule.png}
-	\caption{Classe AppModule}\label{fig:module::AppModule} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{AppModule};
-	\item[Tipo:] Classe;
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per rendere il Context e l'Application Singleton e risolvere le dipendenze;
-	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo Context e Application;
-	\item[Attributi:] \
-	\begin{itemize}
-		\item \texttt{- mApplication : MyApplication \{readOnly\}}\\
-		Applicazione in esecuzione nella quale ci sono oggetti in cui fare la dependency injection
-		
-	\end{itemize}
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ AppModule(application : MyApplication)}\\
-		Costruttore della classe AppModule
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{application : MyApplication}\\
-				Applicazione in esecuzione nella quale ci sono oggetti in cui fare la dependency injection\end{itemize}
-		\end{description}
-		\item \texttt{+ providesApplication() : Application}\\
-		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo Application. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
-		\item \texttt{+ providesContext() : Context}\\
-		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo Context. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
-	\end{itemize}
-\end{description}
-
-\paragraph{module::DatabaseModule}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/DatabaseModule.png}
-	\caption{Classe DatabaseModule}\label{fig:module::DatabaseModule} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{DatabaseModule};
-	\item[Tipo:] Classe;
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per rendere DatabaseService Singleton e risolvere le dipendenze;
-	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo SQliteDaoFactory,
-	RemoteDaoFactory e DatabaseService;
-	\item[Attributi:] \
-	\begin{itemize}
-		\item \texttt{- remoteURL : String}\\
-		Stringa che rappresenta l'URL del database remoto
-		
-	\end{itemize}
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ DatabaseModule(remoteURL : String)}\\
-		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo SQLiteDaoFactory. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{remoteURL : String}\\
-				Stringa che rappresenta l'URL del database remoto\end{itemize}
-		\end{description}
-		\item \texttt{+ provideRemoteDaoFactory() : RemoteDaoFactory}\\
-		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo DatabaseService ritornando un oggetto di tipo BuildingServiceImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
-		\item \texttt{+ provideSQLiteDaoFactory(context : Context) : SQLiteDaoFactory}\\
-		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo SQLiteDaoFactory. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{context : Context}\\
-				Contesto di esecuzione dell'applicazione\end{itemize}
-		\end{description}
-		\item \texttt{+ providesDatabaseService(sqLiteDaoFactory : SQLiteDaoFactory, remoteDaoFactory : RemoteDaoFactory) : DatabaseService}\\
-		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo DatabaseService ritornando un oggetto di tipo BuildingServiceImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{sqLiteDaoFactory : SQLiteDaoFactory}\\
-				Factory che permette di costruire oggetti con cui accedere ai dati salvati nel databse locale\item \texttt{remoteDaoFactory : RemoteDaoFactory}\\
-				Factory che permette di costruire oggetti scaricati dal database remoto\end{itemize}
-		\end{description}
-	\end{itemize}
-\end{description}
-
-\paragraph{module::InfoModule}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/InfoModule.png}
-	\caption{Classe InfoModule}\label{fig:module::InfoModule} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{InfoModule};
-	\item[Tipo:] Classe;
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per rendere la classe DatabaseService Singleton e risolvere le dipendenze;
-	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo InformationManager;
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ providesInformationManager(service : DatabaseService, context : Context) : InformationManager}\\
-		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo InformationManager ritornando un oggetto di tipo InformationManagerImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{service : DatabaseService}\\
-				Oggetto che permette di accedere al database sia locale che remoto\item \texttt{context : Context}\\
-				Contesto di esecuzione dell'applicazione\end{itemize}
-		\end{description}
-	\end{itemize}
-\end{description}
-
-\paragraph{module::NavModule}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/NavModule.png}
-	\caption{Classe NavModule}\label{fig:module::NavModule} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{NavModule};
-	\item[Tipo:] Classe;
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per risolvere le dipendenze verso NavigationManager e MapGraph;
-	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo NavigationManager;
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ provideMapGraph(informationManager : InformationManager) : MapGraph}\\
-		Metodo che permette di risolvere le dipendenze verso gli oggetti della classe MapGraph
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{informationManager : InformationManager}\\
-				Riferimento all'oggetto che gestisce le informazioni provenienti dal database\end{itemize}
-		\end{description}
-		\item \texttt{+ providesNavigationManager(mapGraph : MapGraph, context : Context) : NavigationManager}\\
-		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo NavigationManager ritornando un oggetto di tipo NavigationManagerImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{mapGraph : MapGraph}\\
-				Oggetto che rappresenta il grafo tramite la classe MapGraph\item \texttt{context : Context}\\
-				Contesto di esecuzione dell'applicazione\end{itemize}
-		\end{description}
-	\end{itemize}
-\end{description}
-
-\paragraph{module::SettingModule}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/SettingModule.png}
-	\caption{Classe SettingModule}\label{fig:module::SettingModule} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{SettingModule};
-	\item[Tipo:] Classe;
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] Viene utilizzata dalle classi implementate automaticamente da Dagger2 per rendere la classe Setting Singleton e risolvere le dipendenze;
-	\item[Descrizione:] Classe nella quale vengono dichiarate le dipendenze verso oggetti di tipo Setting;
-	\item[Attributi:] \
-	\begin{itemize}
-		\item \texttt{- context : Context \{readOnly\}}\\
-		Contesto di esecuzione dell'applicazione
-		
-	\end{itemize}
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ SettingModule(context : Context)}\\
-		Costruttore della classe SettingModule
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{context : Context}\\
-				Contesto di esecuzione dell'applicazione\end{itemize}
-		\end{description}
-		\item \texttt{+ providesSetting() : Setting}\\
-		Metodo che permette di risolvere le dipendenze verso campi dati annotati con Inject e di tipo Setting ritornando un oggetto di tipo SettingImp. L'istanza ritornata sarà sempre la stessa utilizzando lo stesso modulo.
-	\end{itemize}
-\end{description}
 \subsubsection{presenter}
+
+\paragraph{presenter::BeaconPos}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/BeaconPos.png}
+	\caption{Classe BeaconPos}\label{fig:presenter::BeaconPos} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{BeaconPos};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Classe usata per rappresentare la posizione di un Beacon;
+	\item[Descrizione:] Classe che permette di rappresentare la posizione di un Beacon in base al minor;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- minor : int}\\
+		Rappresenta il minor di un Beacon
+		
+		\item \texttt{- position : float[]}\\
+		Rappresenta la posizione di un Beacon
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{~ BeaconPos(pos : float[], minor : int)}\\
+		Costruttore della classe
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{pos : float[]}\\
+				posizione del Beacon\item \texttt{minor : int}\\
+				minor del Beacon\end{itemize}
+		\end{description}
+		\item \texttt{+ getMinor() : int}\\
+		Metodo che ritorna il minor del Beacon
+		\item \texttt{+ getPosition() : float[]}\\
+		Metodo che ritorna la posizione del Beacon
+		\item \texttt{+ setMinor(minor : int) : void}\\
+		Metodo che permette di impostare il minor desiderato
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{minor : int}\\
+				minor del Beacon che deve essere impostato\end{itemize}
+		\end{description}
+		\item \texttt{+ setPosition(position : float[]) : void}\\
+		Metodo che permette di settare la posizione del Beacon
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{position : float[]}\\
+				posizione del Beacon che deve essere impostata\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{presenter::BeaconPowerAreaActivity}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/BeaconPowerAreaActivity.png}
+	\caption{Classe BeaconPowerAreaActivity}\label{fig:presenter::BeaconPowerAreaActivity} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{BeaconPowerAreaActivity};
+	\item[Tipo:] Classe;
+	\item[Implementa:] \
+	\begin{itemize}
+		\item \texttt{InformationListener}.
+		
+	\end{itemize}
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Classe utilizzata per visualizzare l'area coperta dai beacon in base al segnale rssi;
+	\item[Descrizione:] Classe che permette di creare un'Activity che è in grado di rilevare il segnale emesso dai Beacon e visualizzarlo a video. Il segnale preso in considerazione è l'RSSI;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{~ infoManager : InformationManager}\\
+		Oggetto del Model per la gestione delle informazioni
+		
+		\item \texttt{- map : Collection<BeaconPowerPos>}\\
+		Mappa dei Beacon con relativo segnale e posizione
+		
+		\item \texttt{- scan : boolean}\\
+		Rappresenta lo stato di scansione. Il valore true indica che la scansione è attiva, false non è attiva
+		
+		\item \texttt{- view : BeaconPowerAreaView}\\
+		View associata a tale Activity
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ buildMap() : void}\\
+		Metodo che permette di creare la mappa dei Beacon
+		\item \texttt{+ cannotRetrieveRemoteMapDetails() : void}\\
+		\textbf{Override} Metodo che viene invocato nel caso in cui non si possano recuperare le informazioni di una mappa in remoto. Non implementato
+		\item \texttt{+ getAllVisibleBeacons(visibleBeacons : PriorityQueue<MyBeacon>) : void}\\
+		\textbf{Override} Metodo che permette di ottenere tutti i beacon rilevati e di creare una mappa che contiene i Beacon rilevati e i relativi segnali
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{visibleBeacons : PriorityQueue<MyBeacon>}\\
+				lista di beacon rilevati\end{itemize}
+		\end{description}
+		\item \texttt{+ isScanning() : boolean}\\
+		Metodo che permette di controllare lo stato della scansione. Se true indica che la scansione è attiva, false indica che la scansione non è attiva
+		\item \texttt{+ noLastMapVersion() : false}\\
+		\textbf{Override} Metodo che viene invocato nel caso in cui la mappa presenta in locale non sia aggiornata. Non implementato
+		\item \texttt{\# onCreate(savedInstanceState : Bundle) : void}\\
+		\textbf{Override} Metodo che viene invocato alla creazione dell'oggetto
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{savedInstanceState : Bundle}\\
+				Metodo che viene invocato alla creazione dell'oggetto\end{itemize}
+		\end{description}
+		\item \texttt{+ onDatabaseLoaded() : void}\\
+		\textbf{Override} Metodo che viene invocato al caricamento del database. Non implementato
+		\item \texttt{+ onLocalMapNotFound() : boolean}\\
+		\textbf{Override} Metodo che viene invocato nel caso in cui la mappa non venga trovata in locale. Non implementato
+		\item \texttt{+ onPause() : void}\\
+		\textbf{Override} Metodo che permette di fermare la scansione ogni volta che l'Activity entra nello stato onPause(). Questo metodo viene chiamato ogni qualvolta viene richiamata un'altra Activity o viene premuto il tasto di blocco del dispositivo
+		\item \texttt{+ onRemoteMapNotFound() : void}\\
+		Metodo che viene invocato nel caso in cui la mappa non venga trovata nel database remoto. Non implementato
+		
+		\item \texttt{+ startScan() : void}\\
+		Metodo che permette di avviare la scansione del segnale dei Beacon
+		\item \texttt{+ stopScan() : void}\\
+		Metodo che permette di terminare la scansione del segnale dei Beacon
+	\end{itemize}
+\end{description}
+
+\paragraph{presenter::BeaconPowerPos}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/BeaconPowerPos.png}
+	\caption{Classe BeaconPowerPos}\label{fig:presenter::BeaconPowerPos} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{BeaconPowerPos};
+	\item[Tipo:] Classe;
+	\item[Estende:] \
+	\begin{itemize}
+		\item \texttt{BeaconPos}.
+	\end{itemize}
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Classe usata per rappresentare la posizione e la potenza di un Beacon;
+	\item[Descrizione:] Classe che permette di rapperentare un Beacon con posizione,minor e valore RSSI associato;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- rssi : int}\\
+		Valore RSSI associato. Valore di default 0
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ BeaconPowerPos(pos : float, minor : int)}\\
+		Costruttore della classe
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{pos : float}\\
+				Posizione del Beacon\item \texttt{minor : int}\\
+				Minor del Bracon\end{itemize}
+		\end{description}
+		\item \texttt{+ getRssi() : int}\\
+		Metodo che permette di ottenere il valore RSSI del Beacon
+		\item \texttt{+ setRssi(rssi : int) : void}\\
+		Metodo che permette di impostare il valore RSSI associato ad un Beacon
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{rssi : int}\\
+				Valore RSSI da impostare\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
 
 \paragraph{presenter::BlankHomeFragment}
 \
@@ -7294,9 +7725,10 @@
 	\item[Nome:] \texttt{BlankHomeFragment};
 	\item[Tipo:] Classe;
 	\item[Componenti delle librerie utilizzate:] \
-\begin{itemize}
-\item \texttt{android.app.Fragment (Android)}.
-\end{itemize}
+	\begin{itemize}
+		\item \texttt{android.app.Fragment (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Viene utilizzata nel caso di: Bluetooth non attivo, geolocalizzazione non attiva, nessun beacon conosciuto rilevato, beacon conosciuto rilevato ma nessuna connessione internet presente (e conseguente impossibilità di scaricare la mappa dell'edificio rilevato).;
 	\item[Descrizione:] Un BlankHomeFragment viene mostrato dalla HomeActivity in caso di errori nel processo di recupero delle informazioni dell'edificio;
@@ -7328,9 +7760,10 @@
 	\item[Nome:] \texttt{CompleteHomeFragment};
 	\item[Tipo:] Classe;
 	\item[Componenti delle librerie utilizzate:] \
-\begin{itemize}
-\item \texttt{android.app.Fragment (Android)}.
-\end{itemize}
+	\begin{itemize}
+		\item \texttt{android.app.Fragment (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata dalla HomeActivity per mostrare delle informazioni su di un edificio nel caso in cui si riesca a recuperarne le informazioni;
 	\item[Descrizione:] Un CompleteHomeFragment viene mostrato dalla HomeActivity se il processo di recupero delle informazioni dell'edificio è andato a buon fine;
@@ -7450,6 +7883,8 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
+		\item \texttt{+ checkConnection() : boolean}\\
+		Controlla che sia disponibile una connessione ad Internet
 		\item \texttt{+ onCreate(bundle : Bundle) : void}\\
 		\textbf{Override} Metodo che inizializza la DetailedInformationView
 		\begin{description}
@@ -7458,6 +7893,8 @@
 				\item \texttt{bundle : Bundle}\\
 				Componente per salvare lo stato dell'applicazione\end{itemize}
 		\end{description}
+		\item \texttt{+ onSupportNavigateUp() : boolean}\\
+		\textbf{Override} Metodo che viene invocato alla pressione del tasto indietro in alto
 		\item \texttt{+ updateDetailedDescription() : void}\\
 		Metodo che aggiorna le informazioni testuali estese visualizzate sulla View
 		\item \texttt{+ updatePhoto() : void}\\
@@ -7533,12 +7970,17 @@
 	\item[Descrizione:] È una classe che estende AppCompactActivity che gestisce consente di gestire l'interazione tra HelpView ed il model;
 	\item[Attributi:] \
 	\begin{itemize}
+		\item \texttt{- \underline{helpUrl : String \{readOnly\}}}\\
+		Stringa che rappresenta l'URL a cui è possibile recuperare la guida
+		
 		\item \texttt{- view : HelpView}\\
 		View associata a tale Activity
 		
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
+		\item \texttt{- checkInternetConnection() : void}\\
+		Metodo che permette di controllare se la connessione internet è attiva. In caso affermativo interroga la view per mostrare la guida, altrimenti viene mostrato un Alert che informa che la connessione internet non è attiva
 		\item \texttt{+ onCreate(bundle : Bundle) : void}\\
 		\textbf{Override} Metodo che inizializza la HelpView
 		\begin{description}
@@ -7578,6 +8020,9 @@
 		\item \texttt{- informationManager : InformationManager}\\
 		Riferimento utilizzato per accedere alle informazioni trattate dal model
 		
+		\item \texttt{- noInternetConnection : AlertDialog}\\
+		Alert da mostrare nel caso in cui non sia presente connessione internet
+		
 		\item \texttt{- view : HomeView}\\
 		View associata a tale Activity
 		
@@ -7586,8 +8031,12 @@
 	\begin{itemize}
 		\item \texttt{+ cannotRetrieveMapsDetails() : void}\\
 		\textbf{Override} Metodo che viene invocato dalla classe in cui l'oggetto si è registrato come listener nel caso in cui non sia possibile recuperare le informazioni riguardanti le mappe dal database remoto
-		\item \texttt{+ enableSuggestions() : void}\\
-		Metodo che permette di attivare la lista dei possibili POI raggiungibili a partire da una stringa
+		\item \texttt{+ checkBluetoothConnectio() : void}\\
+		Controlla che la connettività Bluetooth sia attiva. In caso negativo chiede il permesso di attivarla.
+		\item \texttt{+ checkLocationService() : void}\\
+		Controlla che i servizi di Localizzazione siano attivi. In caso negativo chiede all'utente di attivarli.
+		\item \texttt{+ checkStoragePermissions() : void}\\
+		Controlla che i servizi di Localizzazione siano attivi. In caso negativo chiede all'utente di attivarli
 		\item \texttt{+ getAllVisibleBeacons(visibleBeacons : PriorityQueue<MyBeacon>) : void}\\
 		\textbf{Override} Metodo che viene invocato ogni volta che vengono rilevatio dei beacon, passando la coda di beacon trovati
 		\begin{description}
@@ -7618,6 +8067,14 @@
 		\textbf{Override} Metodo che viene invocato dalla classe in cui l'oggetto si è registrato come listener nel caso in cui non sia stata trovata un acerta mappa nel database remoto
 		\item \texttt{+ onResume() : void}\\
 		\textbf{Override} Recupera le informazioni dell'edificio dal database ed utilizza la View associata per mostrarle all'utente
+		\item \texttt{\# onResumeFragments() : void}\\
+		\textbf{Override} Recupera le informazioni dell'edificio dal database ed utilizza la View associata per mostrarle all'utente.
+		\item \texttt{\# onStart() : void}\\
+		\textbf{Override} Si occupa di controllare che Bluetooth e servizi di Localizzazione siano attivati sul dispositivo
+		\item \texttt{+ showAllPois() : void}\\
+		Avvia l'Activity deputata a mostrare al lista di tutti i POI dell'edificio
+		\item \texttt{+ showDeveloper() : void}\\
+		Avvia l'Activity deputata alla gestione delle funzionalità sviluppatore
 		\item \texttt{+ showExplorer() : void}\\
 		Metodo che viene invocato a seguito della richiesta di visualizzazione della modalità esplora
 		\item \texttt{+ showHelp() : void}\\
@@ -7776,9 +8233,10 @@
 	\item[Nome:] \texttt{ImageDetailFragment};
 	\item[Tipo:] Classe;
 	\item[Componenti delle librerie utilizzate:] \
-\begin{itemize}
-\item \texttt{android.app.Fragment (Android)}.
-\end{itemize}
+	\begin{itemize}
+		\item \texttt{android.app.Fragment (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzato per fornire le immagini relative ad un certo arco;
 	\item[Descrizione:] Una sottoclasse di Fragment che gestisce e mostra un immagine tra quelle relative ad una certa istruzione di navigazione;
@@ -7848,7 +8306,7 @@
 	\item[Tipo:] Classe;
 	\item[Componenti delle librerie utilizzate:] \
 	\begin{itemize}
-		\item \texttt{android.app.Fragment(Android)};
+		\item \texttt{android.app.Fragment (Android)};
 		
 		\item \texttt{android.widget.AdapterView.OnItemClickListener(Android)}.
 		
@@ -7929,19 +8387,26 @@
 	\item[Descrizione:] Classe che estende AppCompactActivity e per la gestione dell'interazione tra LocalMapView ed il model;
 	\item[Attributi:] \
 	\begin{itemize}
+		\item \texttt{- databaseService : DatabaseService}\\
+		Riferimento al model per poter accedere alla gestione delle mappe
+		
 		\item \texttt{- view : LocalMapManagerView}\\
 		View associata a tale Activity
 		
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ deleteMap(mapPosition : int) : void}\\
+		\item \texttt{+ DownloadNewMap() : void}\\
+		Metodo utilizzato per poter avviare l'activity che si occupa della gestione delle mappe remote
+		\item \texttt{- LoadMaps() : void}\\
+		Meotodo utilizzato per leggere le mappe dal database e aggiornare la view
+		\item \texttt{+ deleteMap(major : int) : void}\\
 		Metodo che permettere di rimuovere una mappa del database locale
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{mapPosition : int}\\
-				Posizione occupata dalla mappa da rimuovere\end{itemize}
+				\item \texttt{major : int}\\
+				Major della mappa da rimuovere\end{itemize}
 		\end{description}
 		\item \texttt{+ onCreate(bundle : Bundle) : void}\\
 		\textbf{Override} Metodo che inizializza la View associata a tale Activity
@@ -7951,14 +8416,82 @@
 				\item \texttt{bundle : Bundle}\\
 				Componente per salvare lo stato dell'applicazione\end{itemize}
 		\end{description}
-		\item \texttt{+ updateMap(mapPosition : int) : void}\\
+		\item \texttt{\# onResume() : void}\\
+		\textbf{Override} Override del metodo onResume per ricaricare le mappe dopo che l'activy è passata in background
+		\item \texttt{+ updateMap(major : int) : void}\\
 		Metodo che permette di aggiornare una mappa del database locale
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{mapPosition : int}\\
-				Posizione della mappa da aggiornare\end{itemize}
+				\item \texttt{major : int}\\
+				Major della mappa da aggiornare\end{itemize}
 		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{presenter::LocalMapAdapter}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/LocalMapAdapter.png}
+	\caption{Classe LocalMapAdapter}\label{fig:presenter::LocalMapAdapter} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{LocalMapAdapter};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] È utilizzata per la gestione dell'interazione tra le mappe installate in locale e le possibili azioni che è possibile effettuare su di esse;
+	\item[Descrizione:] Si occupa del binding tra le informazioni di navigazione fornite dal Model e la View deputata a mostrarle;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- collectionBuildingTable : Collection<BuildingTable>}\\
+		Collezione di BuildingTable contenente tutte le informazioni associate ad una certa mappa
+		
+		\item \texttt{- mapVersionStatus : Boolean []}\\
+		Array contenente lo stato di ogni mappa installata. Se vero allora la mappa è da aggiornare, se falso non lo è
+		
+		\item \texttt{- presenter : LocalMapActivity}\\
+		Riferimentio all'activity che si occupa della sua gestione
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ LocalMapAdapter(presenter : LocalMapActivity , collectionBuildingTable : Collection<BuildingTable>, mapsVersionStatus : boolean [] )}\\
+		Costruttore della classe LocalMapAdapter
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{presenter : LocalMapActivity }\\
+				Riferimento al model utile per avere anche il contesto dell'applicazione\item \texttt{collectionBuildingTable : Collection<BuildingTable>}\\
+				Insieme di mappe installate sul dispositivo\item \texttt{mapsVersionStatus : boolean [] }\\
+				Array contenente lo stato delle mappe\end{itemize}
+		\end{description}
+		\item \texttt{+ getCount() : int}\\
+		\textbf{Override} Restituisce il numero di mappe installate nel telefono
+		\item \texttt{+ getItem(position : int) : Object}\\
+		\textbf{Override} Restituisce la mappa della collezione che si trova nella posizione fornita come parametro
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{position : int}\\
+				Posizione della mappa\end{itemize}
+		\end{description}
+		\item \texttt{+ getItemId() : long}\\
+		\textbf{Override} Restituisce l'id della mappa della collezione che si trova nella posizione fornita come parametro fornita come parametro
+		\item \texttt{+ getView(position : int, convertView : View, parent : ViewGroup) : View}\\
+		\textbf{Override} Metodo che viene utilizzare per recuperare la view di una mappa in una certa posizione
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{position : int}\\
+				Posizione delle view da recuperare\item \texttt{convertView : View}\\
+				View dalla quale recuperare la mappa cercata\item \texttt{parent : ViewGroup}\\
+				Layout della lista di mappe\end{itemize}
+		\end{description}
+		\item \texttt{- showNoUpdateDialog() : void}\\
+		Metodo utilizzato per mostrare il dialog che indica che la mappa è già aggiornata
+		\item \texttt{- showUpdateDialog() : void}\\
+		Metodo utilizzato per mostrare un dialog che chiede la conferma dell'utente per aggiornare la mappa
 	\end{itemize}
 \end{description}
 
@@ -8161,9 +8694,10 @@
 	\item[Nome:] \texttt{MainDeveloperPresenter};
 	\item[Tipo:] Classe;
 	\item[Componenti delle librerie utilizzate:] \
-\begin{itemize}
-\item \texttt{android.support.v7.app.AppCompatActivity (Android)}.
-\end{itemize}
+	\begin{itemize}
+		\item \texttt{android.support.v7.app.AppCompatActivity (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per discriminare la visualizzazione delle funzionalità sviluppatore tra un utente sviluppatore ed un utente che non lo è;
 	\item[Descrizione:] Classe che estende AppCompactActivity e controlla utilizzando il model, se l'utente è sviluppatore o meno;
@@ -8192,46 +8726,6 @@
 	\end{itemize}
 \end{description}
 
-\paragraph{presenter::MapDownloaderActivity}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/MapDownloaderActivity.png}
-	\caption{Classe MapDownloaderActivity}\label{fig:presenter::MapDownloaderActivity} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{MapDownloaderActivity};
-	\item[Tipo:] Classe;
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{android.support.v7.app.AppCompatActivity (Android)}.
-		
-	\end{itemize}
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] È utilizzata per gestire il download o l'aggiornamento di una mappa. Gestisce anche tutte le possibili richieste effettuate da MapDowloaderView;
-	\item[Descrizione:] È una classe che estende AppCompactActivity che consente di gestire il download o l'aggiornamento delle mappe
-	;
-	\item[Attributi:] \
-	\begin{itemize}
-		\item \texttt{- view : MapDownloaderView}\\
-		View associata a tale Activity
-		
-	\end{itemize}
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ downloadFinished() : void}\\
-		Metodo che gestisce la View per visualizzare il completamento del download di una mappa
-		\item \texttt{+ onCreate(bundle : Bundle) : void}\\
-		\textbf{Override} Metodo che inizializza la View associata
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{bundle : Bundle}\\
-				Componente per salvare lo stato dell'applicazione\end{itemize}
-		\end{description}
-	\end{itemize}
-\end{description}
-
 \paragraph{presenter::MyApplication}
 \
 \begin{figure}[H]
@@ -8243,21 +8737,22 @@
 	\item[Nome:] \texttt{MyApplication};
 	\item[Tipo:] Classe;
 	\item[Componenti delle librerie utilizzate:] \
-\begin{itemize}
-\item \texttt{android.app.Application (Android)}.
-\end{itemize}
+	\begin{itemize}
+		\item \texttt{android.app.Application (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Viene utilizzata per gestire l'inizializzazione della dependency injection;
 	\item[Descrizione:] Classe derivata da Application. Essa permette di ridefinire il comportamento dell'applicazione al momento della creazione tramite il metodo onCreate;
 	\item[Attributi:] \
 	\begin{itemize}
-		\item \texttt{- infoComponent : InfoComponent}\\
+		\item \texttt{- \underline{infoComponent : InfoComponent}}\\
 		Riferimento all'oggetto di tipo InfoComponent che permette di risolvere le dipendenze tra i tipi presenti nell'applicazione
 		
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ getInfoComponent() : InfoComponent}\\
+		\item \texttt{+ \underline{getInfoComponent() : InfoComponent}}\\
 		Metodo getter che permette di recuperare il riferimento a infoComponent. Questo metodo è utile per poter eseguire il metodo inject nella classi richieste
 		\item \texttt{+ onCreate() : void}\\
 		\textbf{Override} Metodo di callback che permette di ridefinire il comportamento dell'applicazione al momento della creazione. Il metodo viene ridefinito per poter gestire la creazione dell'oggetto di tipo InfoComponent utile alla gestione della dependency injection
@@ -8284,6 +8779,12 @@
 	\item[Descrizione:] Classe che estende AppCompactActivity per la gestione dell'interazione tra NavigationView ed il model;
 	\item[Attributi:] \
 	\begin{itemize}
+		\item \texttt{- builder : AlertDialog.Builder}\\
+		Oggetto che si occupa della creazione dell'alert di avviso in caso di percorso errato
+		
+		\item \texttt{- dialogPathError : AlertDialog}\\
+		Alert che viene mostrato nel caso un cui l'utente sbagli percorso
+		
 		\item \texttt{- informationManager : InformationManager}\\
 		Interfaccia che permette l'accesso alle informazioni trattate nel package "model"
 		
@@ -8292,6 +8793,9 @@
 		
 		\item \texttt{- navigationManager : NavigationManager}\\
 		Interfaccia che si occupa di esporre tutti i metodi utili alla navigazione
+		
+		\item \texttt{- noInternetConnection : AlertDialog}\\
+		Alert da mostrare nel caso in cui non sia presente connessione internet
 		
 		\item \texttt{- poiId : int}\\
 		Id del POI che l'utente ha indicato come destinazione
@@ -8326,6 +8830,8 @@
 				\item \texttt{bundle : Bundle}\\
 				Componente per salvare lo stato dell'applicazione\end{itemize}
 		\end{description}
+		\item \texttt{\# onDestory()}\\
+		\textbf{Override} Metodo che viene invocato alla distruzione dell'Activity
 		\item \texttt{\# onNewIntent(intent : Intent) : void}\\
 		\textbf{Override} Metodo che viene invocato con un nuovo Intent
 		\begin{description}
@@ -8419,7 +8925,15 @@
 				Layout dell'istruzione recuperata\item \texttt{parent : ViewGroup}\\
 				Layout della lista di istruzioni\end{itemize}
 		\end{description}
-		\item \texttt{+ setDirectionArrow(direction : int, image : ImageView) : void}\\
+		\item \texttt{+ isEnabled(position : int) : boolean}\\
+		\textbf{Override} Metodo che permette di verificare se un certo elemento della lista è attivo oppure no
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{position : int}\\
+				Posizione dell'elemento\end{itemize}
+		\end{description}
+		\item \texttt{- setDirectionArrow(direction : int, image : ImageView) : void}\\
 		Metodo di utilità che associa la freccia corretta (Drawable) alla istruzione, in modo che ne indichi visivamente la direzione da seguire
 		\begin{description}
 			\item[Argomenti:] \
@@ -8470,6 +8984,102 @@
 			\begin{itemize}
 				\item \texttt{bundle : Bundle}\\
 				Componente per salvare lo stato dell'applicazione\end{itemize}
+		\end{description}
+		\item \texttt{+ showDescription(selectedPoi : int) : void}\\
+		Metodo che recupera l'id del POI scelto e lo passa a DescriptionPoiActivity, in modo che essa
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{selectedPoi : int}\\
+				POI di cui visualizzare la descrizione\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{presenter::NoInternetAlert}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/NoInternetAlert.png}
+	\caption{Classe NoInternetAlert}\label{fig:presenter::NoInternetAlert} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{NoInternetAlert};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Utilizzata per visualizzare l'avviso di connessione mancante all'utente;
+	\item[Descrizione:] Classe per creare alert che avvisano che non è disponibile la connessione internet;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{- alertSetUp(activity : Activity) : AlertDialog}\\
+		Metodo che si occupoa della creazione dell'Alert da mostrare
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{activity : Activity}\\
+				Contesto in cui deve essere mostrato l'Alert\end{itemize}
+		\end{description}
+		\item \texttt{+ show(activity : Activity) : void}\\
+		Metodo che permette di mostrare l'Alert senza controllare se la connessione internet sia attiva
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{activity : Activity}\\
+				Contesto in cui deve essere mostrato l'alert\end{itemize}
+		\end{description}
+		\item \texttt{+ showIfNoConnection(activity : Activity) : void}\\
+		Metodo che controlla se presente la connessione internet. Se non presente viene mostrato un Alert
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{activity : Activity}\\
+				Contesto in cui deve essere mostrato l'Alert\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{presenter::PoiActivity}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/PoiActivity.png}
+	\caption{Classe PoiActivity}\label{fig:presenter::PoiActivity} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{PoiActivity};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Utilizzata per la visualizzazione dei POI;
+	\item[Descrizione:] PoiCategoryActivity si occupa di gestire le categorie di POI presenti nell'edificio, in modo che l'utente possa effettuare la ricerca della destinazione per categoria;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{~ informationManager : InformationManager}\\
+		Riferimento utilizzato per accedere alle informazioni trattate dal model
+		
+		\item \texttt{- poiList : List<PointOfInterest>}\\
+		Lista di POI associati ad una certa categoria
+		
+		\item \texttt{- view : PoiView}\\
+		View associata a tale Activity 
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{\# onCreate(savedInstanceState : Bundle)}\\
+		\textbf{Override} Chiamato quando si sta avviando l'activity. Questo metodo si occupa di inizializzare i campi dati.
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{savedInstanceState : Bundle}\\
+				se l'Actvity viene re-inizializzata dopo essere stata chiusa, allora questo Bundle contiene i dati più recenti forniti al metodo\end{itemize}
+		\end{description}
+		\item \texttt{+ showDescription(selectedPoi : int) : void}\\
+		Metodo che recupera l'id del POI scelto e lo passa a DescriptionPoiActivity, in modo che essa possa visualizzare la descrizione del Poi scelto.
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{selectedPoi : int}\\
+				POI di cui visualizzare la descrizione\end{itemize}
 		\end{description}
 	\end{itemize}
 \end{description}
@@ -8525,6 +9135,43 @@
 	\end{itemize}
 \end{description}
 
+\paragraph{presenter::PoiDescriptionActivity}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/PoiDescriptionActivity.png}
+	\caption{Classe PoiDescriptionActivity}\label{fig:presenter::PoiDescriptionActivity} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{PoiDescriptionActivity};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Utilizzata per la gestione della descrizione dei POI circostanti;
+	\item[Descrizione:] PoiDescriptionActivity è la classe che si occupa di gestire la descrizione di un POI presente nell'edificio associato al beacon rilevato, in modo che vengano fornite all'utente le informazioni presenti nel database associate a quello specifico POI;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- informationManager : InformationManager}\\
+		Riferimento utilizzato per accedere alle informazioni trattate dal Mode
+		
+		\item \texttt{- view : DescriptionView}\\
+		Riferimento alla relativa View
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{\# onCreate(savedInstanceState : Bundle) : void}\\
+		\textbf{Override} Chiamato quando si sta avviando l'activity. Questo metodo si occupa di inizializzare i campi dati
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{savedInstanceState : Bundle}\\
+				Se l'Actvity viene re-inizializzata dopo essere stata chiusa, allora questo Bundle contiene i dati più recenti forniti al metodo\end{itemize}
+		\end{description}
+		\item \texttt{+ onNavigateUp() : boolean}\\
+		\textbf{Override} Metodo che ridefinisce il comportamento del bottone di navigazione
+	\end{itemize}
+\end{description}
+
 \paragraph{presenter::PreferencesActivity}
 \
 \begin{figure}[H]
@@ -8545,6 +9192,9 @@
 	\item[Descrizione:] È una classe che estende AppCompactActivity che consente di gestire le preferenze utente recuperandole dal model;
 	\item[Attributi:] \
 	\begin{itemize}
+		\item \texttt{~ setting : Setting}\\
+		Riferimento alle preferenze utente
+		
 		\item \texttt{- view : PreferencesView}\\
 		View associata a tale Activity
 		
@@ -8559,6 +9209,8 @@
 				\item \texttt{bundle : Bundle}\\
 				Componente per salvare lo stato dell'applicazione\end{itemize}
 		\end{description}
+		\item \texttt{\# onResume() : void}\\
+		\textbf{Override} Metodo che viene invocato ogni volta che si accede all'activity. Ha il compito di impostare le preferenze sulla view
 		\item \texttt{+ savePreferences() : void}\\
 		Metodo che permette di salvare le preferenze utente
 	\end{itemize}
@@ -8584,19 +9236,22 @@
 	\item[Descrizione:] È una classe che estende AppCompactActivity che recupera tutte le mappe in remoto dal model e gestisce RemoteMapManagerView;
 	\item[Attributi:] \
 	\begin{itemize}
+		\item \texttt{- databaseService : DatabaseService}\\
+		Riferimento al model per poter accedere alla gestione delle mappe
+		
 		\item \texttt{- view : RemoteMapManagerView}\\
 		View associata a tale Activity
 		
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ downloadMap(mapPosition : int) : void}\\
+		\item \texttt{+ downloadMap(major : int) : void}\\
 		Metodo che permette di eseguire il download di una mappa da un database remoto
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{mapPosition : int}\\
-				Posizione della mappa di cui fare il download\end{itemize}
+				\item \texttt{major : int}\\
+				Major della mappa di cui fare il download\end{itemize}
 		\end{description}
 		\item \texttt{+ onCreate(bundle : Bundle) : void}\\
 		\textbf{Override} Metodo che inizializza la View associata
@@ -8605,6 +9260,71 @@
 			\begin{itemize}
 				\item \texttt{bundle : Bundle}\\
 				Componente per salvare lo stato dell'applicazione\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{presenter::RemoteMapManagerAdapter}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/RemoteMapManagerAdapter.png}
+	\caption{Classe RemoteMapManagerAdapter}\label{fig:presenter::RemoteMapManagerAdapter} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{RemoteMapManagerAdapter};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] È utilizzata per la gestione dell'interazione tra le mappe installate disponibili e le possibili azioni che è possibile effettuare su di esse;
+	\item[Descrizione:] Si occupa del binding tra le mappe fornite dal Model e la View deputata a mostrarle
+	;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- buildingTables : Collection<BuildingTable>}\\
+		Collezione di BuildingTable contenente tutte le informazioni associate ad una certa mappa
+		
+		\item \texttt{- presenter : RemoteMapManagerActivity}\\
+		Riferimentio all'activity che si occupa della sua gestione
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ RemoteMapManagerAdapter(presenter : RemoteMapManagerActivity, buildingTables : Collection<BuildingTable> )}\\
+		Costruttore della classe RemoteMapAdapter
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{presenter : RemoteMapManagerActivity}\\
+				Riferimento al presenter utile per avere anche il contesto dell'applicazione\item \texttt{buildingTables : Collection<BuildingTable> }\\
+				Insieme di mappe disponibili\end{itemize}
+		\end{description}
+		\item \texttt{+ getCount() : int}\\
+		\textbf{Override} Restituisce il numero di mappe disponibili
+		\item \texttt{+ getItem(position : int) : Object}\\
+		\textbf{Override} Restituisce la mappa della collezione che si trova nella posizione fornita come parametro
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{position : int}\\
+				Posizione della mappa\end{itemize}
+		\end{description}
+		\item \texttt{+ getItemId(position : int) : Object}\\
+		\textbf{Override} Restituisce l'id della mappa della collezione che si trova nella posizione fornita come parametro fornita come parametro
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{position : int}\\
+				Posizione della mappa\end{itemize}
+		\end{description}
+		\item \texttt{+ getView(position : int, convertView : View, parent : ViewGroup) : View}\\
+		\textbf{Override} Metodo che viene utilizzare per recuperare la view di una mappa in una certa posizione
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{position : int}\\
+				Posizione delle view da recuperare\item \texttt{convertView : View}\\
+				View dalla quale recuperare la mappa cercata	\item \texttt{parent : ViewGroup}\\
+				Layout della view cercata\end{itemize}
 		\end{description}
 	\end{itemize}
 \end{description}
@@ -8621,7 +9341,7 @@
 	\item[Tipo:] Classe;
 	\item[Componenti delle librerie utilizzate:] \
 	\begin{itemize}
-		\item \texttt{android.content.ContentProvider(Android)}.
+		\item \texttt{android.content.ContentProvider (Android)}.
 		
 	\end{itemize}
 	\item[Visibilità:] \texttt{public};
@@ -8632,12 +9352,25 @@
 		\item \texttt{- \underline{COLUMNS : String \{readOnly\}}}\\
 		Identifica la struttura di un singolo suggerimento
 		
-		\item \texttt{- homeActivity : HomeActivity}\\
-		Riferimento all'activity che gestisce la ricerca dei POI in base al nome
+		\item \texttt{~ informationManager : InformationManager}\\
+		Riferimento utilizzato per accedere alle informazioni trattate dal model
+		
+		\item \texttt{- pois : Collection<PointOfInterest>}\\
+		Insieme di tutti i PointOfInterest di un edificio
 		
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
+		\item \texttt{+ delete(uri : Uri, selection : String, selectionArgs : String[]) : int}\\
+		\textbf{Override} Metodo che serve per eliminare elementi dal Content Provider
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{uri : Uri}\\
+				URI su cui fare la query\item \texttt{selection : String}\\
+				Criterio da applicare per filtrare le righe del content provider\item \texttt{selectionArgs : String[]}\\
+				Insieme di argomenti su cui fare la selezione\end{itemize}
+		\end{description}
 		\item \texttt{+ getType(uri : Uri) : String}\\
 		\textbf{Override} Metodo che ritorna il MIME type associato al parametro passato
 		\begin{description}
@@ -8655,7 +9388,7 @@
 				URI in cui fare l'inserimento\item \texttt{values : ContentValues}\\
 				Insieme di coppie nome-colonna/valore da inserire nel content provider \end{itemize}
 		\end{description}
-		\item \texttt{+ onCreate() : void}\\
+		\item \texttt{+ onCreate() : boolean}\\
 		\textbf{Override} Metodo che inizializza un oggetto di tipo SearchSuggestionProvider
 		\item \texttt{+ query(uri : Uri, projection : String[], selection : String, selectionArgs : String[], sortOrder : String) : Cursor}\\
 		\textbf{Override} Metodo che serve per popolare i suggerimenti della SearchView in base al testo inserito
@@ -8683,6 +9416,289 @@
 	\end{itemize}
 \end{description}
 \subsubsection{view}
+
+\paragraph{view::BeaconPowerArea}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/BeaconPowerArea.png}
+	\caption{Classe BeaconPowerArea}\label{fig:view::BeaconPowerArea} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{BeaconPowerArea};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Classe utilizzata per la visualizzazione dei segnali dei Beacon all'interno di una mappa;
+	\item[Descrizione:] Classe ausiliaria che permette definire una View in grado di aggiornarsi in tempo reale attraverso
+	l'aiuto dei Canvas. La classe in questione permette di visualizzare una mappa dell'edificio sotto forma di immagine e i Beacon con i relativi segnali.;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- background : boolean}\\
+		Booleano che indica se la mappa dell'edificio è stata caricata
+		
+		\item \texttt{- \underline{map : Collection<BeaconPowerPos>}}\\
+		Mappa dei Beacon
+		
+		\item \texttt{- \underline{updateMap : Collection<BeaconPowerPos>}}\\
+		Mappa dei Beacon con valore del segnale rssi aggiornato
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ BeaconPowerArea(contex : Contex)}\\
+		Costruttore della classe BeaconPowerArea
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{contex : Contex}\\
+				Contesto dell'applicazione\end{itemize}
+		\end{description}
+		\item \texttt{+ BeaconPowerArea(contex : Contex, attrs : AttributeSet)}\\
+		Costruttore della class BeaconPowerArea
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{contex : Contex}\\
+				Contesto dell'applicazione\item \texttt{attrs : AttributeSet}\\
+				Attribiuti che permettono di configurare la View\end{itemize}
+		\end{description}
+		\item \texttt{+ drawBeacon(canvas : Canvas) : void}\\
+		Metodo che permette di disegnare i Beacon sulla View
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{canvas : Canvas}\\
+				Oggetto Canvas che fornisce le primitive per poter disegnare\end{itemize}
+		\end{description}
+		\item \texttt{+ drawBeaconPower(canvas : Canvas) : void}\\
+		Metodo che permette di disegnare l'area del segnale rssi coperta da ogni Beacon
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{canvas : Canvas}\\
+				Oggetto Canvas che fornisce le primitive per poter disegnare\end{itemize}
+		\end{description}
+		\item \texttt{\# onDraw(canvas : Canvas) : void}\\
+		\textbf{Override} Metodo che permette di definire il comportamento dell'aggiornamento della View
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{canvas : Canvas}\\
+				Oggetto Canvas fornito dall'Applicazione\end{itemize}
+		\end{description}
+		\item \texttt{+ \underline{setMap(map : Collection<BeaconPowerPos>) : void}}\\
+		Metodo che permette di settare la mappa dei Beacon
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{map : Collection<BeaconPowerPos>}\\
+				mappa dei Beacon\end{itemize}
+		\end{description}
+		\item \texttt{+ \underline{setUpdateMap(updateMap : Collection<BeaconPowerPos>) : void}}\\
+		Metodo che permette di settare la mappa dei Beacon con il segnale rssi rilevato
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{updateMap : Collection<BeaconPowerPos>}\\
+				Mappa dei Beacon rilevati con il relativo segnale rssi\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{view::BeaconPowerAreaView}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/BeaconPowerAreaView.png}
+	\caption{Interfaccia BeaconPowerAreaView}\label{fig:view::BeaconPowerAreaView} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{BeaconPowerAreaView};
+	\item[Tipo:] Interfaccia;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Interfaccia utilizzata per settare i dati della view a cui fa riferimento;
+	\item[Descrizione:] Interfaccia che espone i metodi per poter aggiornare la mappa dei Beacon con il segnale rssi rilevato;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ setBeaconMap(map : Collection<BeaconPowerPos>) : void}\\
+		Metodo che permette di impostare la mappa dei Beacon
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{map : Collection<BeaconPowerPos>}\\
+				Mappa dei Beacon\end{itemize}
+		\end{description}
+		\item \texttt{+ setBeaconPowerMap(updateMap : Collection<BeaconPowerPos>) : void}\\
+		Metodo che permette di impostare la mappa dei Beacon rilevati con il segnale rssi aggiornato
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{updateMap : Collection<BeaconPowerPos>}\\
+				Mappa dei Beacon rilevati con valore rssi aggiornato\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{view::BeaconPowerAreaViewImp}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/BeaconPowerAreaViewImp.png}
+	\caption{Classe BeaconPowerAreaViewImp}\label{fig:view::BeaconPowerAreaViewImp} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{BeaconPowerAreaViewImp};
+	\item[Tipo:] Classe;
+	\item[Implementa:] \
+	\begin{itemize}
+		\item \texttt{BeaconPowerAreaView}.
+		
+	\end{itemize}
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Classe utilizzata per la visualizzazione della mappa dei Beacon con relativa potenza;
+	\item[Descrizione:] Classe che implementa BeaconPowerView e fornisce una vista alla classe BeaconPowerActivity. Essa è in grado di rappresentare una mappa dell'edificio in cui si sta navigando e l'area coperta dal segnale dei beacon sotto forma di cerchio.;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- fab : FloatingActionButton}\\
+		Bottone per avviare o interrompere la scansione del segnale dei Beacon
+		
+		\item \texttt{- presenter : BeaconPowerAreaActivity}\\
+		Presenter della View
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ BeaconPowerAreaViewImp(presenter : BeaconPowerAreaActivity)}\\
+		Costruttore della classe BeaconPowerAreaViewImp
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{presenter : BeaconPowerAreaActivity}\\
+				Presenter della View che viene creata\end{itemize}
+		\end{description}
+		\item \texttt{+ changeIcon(c : int) : void}\\
+		Metodo che permette di cambiare l'icona del pulsante che permette l'avvio o l'interruzione della scansione dei Beacon
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{c : int}\\
+				Intero che rappresenta lo stato del bottone FAB\end{itemize}
+		\end{description}
+		\item \texttt{+ setBeaconMap(map : Collection<BeaconPowerPos>) : void}\\
+		\textbf{Override} Metodo che permette di impostare la mappa dei Beacon
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{map : Collection<BeaconPowerPos>}\\
+				Mappa dei Beacon\end{itemize}
+		\end{description}
+		\item \texttt{+ setBeaconPowerMap(updateMap : Collection<BeaconPowerPos>) : void}\\
+		\textbf{Override} Metodo che permette di impostare la mappa dei Beacon rilevati con il segnale rssi aggiornato
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{updateMap : Collection<BeaconPowerPos>}\\
+				Mappa dei Beacon rilevati con valore rssi aggiornato\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{view::DescriptionView}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/DescriptionView.png}
+	\caption{Interfaccia DescriptionView}\label{fig:view::DescriptionView} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{DescriptionView};
+	\item[Tipo:] Interfaccia;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Utilizzata per le informazioni riguardanti un singolo POI;
+	\item[Descrizione:] DescriptionView espone i metodi utili per aggiornare la UI con le informazioni riguardanti un singolo POI.;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ setCategory(category : String) : void}\\
+		Imposta la categoria del POI nel widget deputato a mostrarlo
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{category : String}\\
+				Categoria del POI\end{itemize}
+		\end{description}
+		\item \texttt{+ setDescription(description : String) : void}\\
+		Imposta la descrizione del POI nel widget deputato a mostrarla
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{description : String}\\
+				Descrizione del POI\end{itemize}
+		\end{description}
+		\item \texttt{+ setGround(ground : String) : void}\\
+		Imposta l'identificativo del piano nel widget deputato a mostrarlo
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{ground : String}\\
+				Identificativo del piano\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{view::DescriptionViewImp}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/DescriptionViewImp.png}
+	\caption{Classe DescriptionViewImp}\label{fig:view::DescriptionViewImp} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{DescriptionViewImp};
+	\item[Tipo:] Classe;
+	\item[Implementa:] \
+	\begin{itemize}
+		\item \texttt{DescriptionView}.
+		
+	\end{itemize}
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Classe utilizzata per la visualizzazione della descrizione dei POI;
+	\item[Descrizione:] DescriptionView espone i metodi utili per aggiornare la UI con le informazioni riguardanti un singolo POI;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- presenter : PoiDescriptionActivity}\\
+		Riferimento al presenter
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ DescriptionViewImp()}\\
+		Costruttore della classe DescriptionViewImp
+		\item \texttt{+ setCategory(category : String) : void}\\
+		\textbf{Override} Imposta la categoria del POI nel widget deputato a mostrarlo
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{category : String}\\
+				Categoria del POI\end{itemize}
+		\end{description}
+		\item \texttt{+ setDescription(description : String) : void}\\
+		\textbf{Override} Imposta la descrizione del POI nel widget deputato a mostrarla
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{description : String}\\
+				Descrizione del POI\end{itemize}
+		\end{description}
+		\item \texttt{+ setGround(ground : String) : void}\\
+		\textbf{Override} Imposta l'identificativo del piano nel widget deputato a mostrarlo
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{ground : String}\\
+				Identificativo del piano\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
 
 \paragraph{view::DetailedInformationView}
 \
@@ -9168,14 +10184,13 @@
 	\item[Descrizione:] Interfaccia che espone i metodi per aggiornare la UI contenente le mappe salvate nel database locale. ;
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ \textit{refreshMaps() : void}}\\
-		Metodo che aggiorna la lista delle mappe salvate nel database locale
-		\item \texttt{+ \textit{setAdapter(adp : Adapter) : void}}\\
+		\item \texttt{+ \textit{setAdapter(mapsVersionStatus : boolean [] , buildingTables : Collection<BuildingTable>) : void}}\\
 		Metodo utilizzato per visualizzare la lista delle mappe salvate nel database locale
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{adp : Adapter}\\
+				\item \texttt{mapsVersionStatus : boolean [] }\\
+				Array contenente lo stato di ogni mappa installata. Se vero allora la mappa è da aggiornare, se falso non lo è\item \texttt{buildingTables : Collection<BuildingTable>}\\
 				Collegamento tra la lista delle mappe salvate nel database locale e la view in cui esse devono essere mostrate\end{itemize}
 		\end{description}
 	\end{itemize}
@@ -9215,14 +10230,13 @@
 				\item \texttt{presenter : LocalMapActivity}\\
 				Presenter della View che viene creata\end{itemize}
 		\end{description}
-		\item \texttt{+ refreshMaps() : void}\\
-		\textbf{Override} Metodo che aggiorna la lista delle mappe salvate nel database locale
-		\item \texttt{+ setAdapter(adp : Adapter) : void}\\
+		\item \texttt{+ setAdapter(mapsVersionStatus : boolean [] , buildingTables : Collection<BuildingTable>) : void}\\
 		\textbf{Override} Metodo utilizzato per visualizzare la lista delle mappe salvate nel database locale
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{adp : Adapter}\\
+				\item \texttt{mapsVersionStatus : boolean [] }\\
+				Array contenente lo stato di ogni mappa installata. Se vero allora la mappa è da aggiornare, se falso non lo è\item \texttt{buildingTables : Collection<BuildingTable>}\\
 				Collegamento tra la lista delle mappe salvate nel database locale e la view in cui esse devono essere mostrate\end{itemize}
 		\end{description}
 	\end{itemize}
@@ -9462,93 +10476,6 @@
 	\end{itemize}
 \end{description}
 
-\paragraph{view::MapDownloaderView}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/MapDownloaderView.png}
-	\caption{Interfaccia MapDownloaderView}\label{fig:view::MapDownloaderView} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{MapDownloaderView};
-	\item[Tipo:] Interfaccia;
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] È utilizzata per rendere indipendente l'implementazione della UI dalle modalità attraverso le quali è possibile aggiornarla;
-	\item[Descrizione:] Interfaccia che espone i metodi per aggiornare la UI che mostra il progresso durante il download della mappa di un edificio dal server;
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ \textit{setDowloadingMap(adp : Adapter) : void}}\\
-		Metodo utilizzato per visualizzare la mappa che si sta scaricando
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{adp : Adapter}\\
-				Collegamento tra la mappa che si sta scaricando e la view in cui essa deve essere mostrata\end{itemize}
-		\end{description}
-		\item \texttt{+ \textit{setProgressDowload(prg : int) : void}}\\
-		Metodo utilizzato per visualizzare il progresso nel download di una mappa
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{prg : int}\\
-				Attuale progresso del download\end{itemize}
-		\end{description}
-	\end{itemize}
-\end{description}
-
-\paragraph{view::MapDownloaderViewImp}
-\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\maxwidth]{img/MapDownloaderViewImp.png}
-	\caption{Classe MapDownloaderViewImp}\label{fig:view::MapDownloaderViewImp} 
-\end{figure}
-\begin{description}
-	\item[Nome:] \texttt{MapDownloaderViewImp};
-	\item[Tipo:] Classe;
-	\item[Implementa:] \
-	\begin{itemize}
-		\item \texttt{MapDownloaderView}.
-		
-	\end{itemize}
-	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] I dettagli della mappa in download ed il progresso del download stesso possono essere mostrati utilizzando i metodi esposti da questa classe;
-	\item[Descrizione:] Classe che si occupa di mostrare il progresso del download di una mappa.;
-	\item[Attributi:] \
-	\begin{itemize}
-		\item \texttt{- presenter : MapDowloaderActivity}\\
-		Presenter della View
-		
-	\end{itemize}
-	\item[Metodi:] \
-	\begin{itemize}
-		\item \texttt{+ MapDownloaderViewImp(presenter : MapDowloaderActivity)}\\
-		Costruttore della classe MapDownloaderViewImp
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{presenter : MapDowloaderActivity}\\
-				Presenter della View che viene creata\end{itemize}
-		\end{description}
-		\item \texttt{+ setDowloadingMap(adp : Adapter) : void}\\
-		\textbf{Override} Metodo utilizzato per visualizzare la mappa che si sta scaricando
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{adp : Adapter}\\
-				Collegamento tra la mappa che si sta scaricando e la view in cui essa deve essere mostrata\end{itemize}
-		\end{description}
-		\item \texttt{+ setProgressDowload(prg : int) : void}\\
-		\textbf{Override} Metodo utilizzato per visualizzare il progresso nel download di una mappa
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{prg : int}\\
-				Attuale progresso del download\end{itemize}
-		\end{description}
-	\end{itemize}
-\end{description}
-
 \paragraph{view::NavigationView}
 \
 \begin{figure}[H]
@@ -9564,15 +10491,33 @@
 	\item[Descrizione:] Interfaccia che espone i metodi per aggiornare la UI contenente le istruzioni di navigazione per raggiungere una certa destinazione;
 	\item[Metodi:] \
 	\begin{itemize}
+		\item \texttt{+ noResult() : void}\\
+		Metodo che viene invocato nel caso in cui non siano presenti risultati
+		\item \texttt{+ refreshInstructions(i : int) : void}\\
+		Ricarica le istruzioni
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{i : int}\\
+				Intero che rappresenta l'istruzione da aggiornare\end{itemize}
+		\end{description}
 		\item \texttt{+ \textit{refreshInstructions() : void}}\\
 		Metodo utilizzato per aggiornare la lista di istruzioni 
-		\item \texttt{+ \textit{setInstructionAdapter(navigationInformation : \\ List<ProcessedInformation>) : void}}\\
+		\item \texttt{+ \textit{setInstructionAdapter(navigationInformation : List<ProcessedInformation>) : void}}\\
 		Collega l'Adapter appropriato alla View deputata a mostrare a lista di istruzioni di navigazione utili per raggiungere una certa destinazione
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
 				\item \texttt{navigationInformation : List<ProcessedInformation>}\\
 				Lista delle istruzioni di navigazione\end{itemize}
+		\end{description}
+		\item \texttt{+ updateArrow(direction : NavigationDirection) : void}\\
+		Metodo che permette di aggiornare la direzione della freccia per la navigazione
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{direction : NavigationDirection}\\
+				Direzione in cui la freccia deve puntare\end{itemize}
 		\end{description}
 	\end{itemize}
 \end{description}
@@ -9614,15 +10559,33 @@
 				\item \texttt{presenter : NavigationActivity}\\
 				Presenter della View che viene creata\end{itemize}
 		\end{description}
+		\item \texttt{+ noResult() : void}\\
+		\textbf{Override} Metodo che viene invocato nel caso in cui non siano presenti risultati
+		\item \texttt{+ refreshInstructions(i : int) : void}\\
+		\textbf{Override} Ricarica le istruzioni
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{i : int}\\
+				Intero che rappresenta l'istruzione da aggiornare\end{itemize}
+		\end{description}
 		\item \texttt{+ refreshInstructions() : void}\\
 		\textbf{Override} Metodo utilizzato per aggiornare la lista di istruzioni
-		\item \texttt{+ setInstructionAdapter(navigationInformation : \\ List<ProcessedInformation>) : void}\\
+		\item \texttt{+ setInstructionAdapter(navigationInformation : List<ProcessedInformation>) : void}\\
 		\textbf{Override} Collega l'Adapter appropriato alla View deputata a mostrare a lista di istruzioni di navigazione utili per raggiungere una certa destinazione
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
 				\item \texttt{navigationInformation : List<ProcessedInformation>}\\
 				Lista delle istruzioni di navigazione\end{itemize}
+		\end{description}
+		\item \texttt{+ updateArrow(direction : NavigationDirection) : void}\\
+		\textbf{Override} Metodo che permette di aggiornare la direzione della freccia per la navigazione
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{direction : NavigationDirection}\\
+				Direzione in cui la freccia deve puntare\end{itemize}
 		\end{description}
 	\end{itemize}
 \end{description}
@@ -9775,6 +10738,80 @@
 	\end{itemize}
 \end{description}
 
+\paragraph{view::PoiView}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/PoiView.png}
+	\caption{Interfaccia PoiView}\label{fig:view::PoiView} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{PoiView};
+	\item[Tipo:] Interfaccia;
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Utilizzata per visualizzare i POI di un ediificio;
+	\item[Descrizione:] Interfaccia che espone i metodi per aggiornare la UI contenente la lista dei POI appartenenti ad una data categoria;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ setPoiListAdapter(poiList : List<String>) : void}\\
+		Metodo utilizzato per visualizzare tutti i POI
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{poiList : List<String>}\\
+				lista di stringhe che rappresentano tutti i POI\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{view::PoiViewImp}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/PoiViewImp.png}
+	\caption{Classe PoiViewImp}\label{fig:view::PoiViewImp} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{PoiViewImp};
+	\item[Tipo:] Classe;
+	\item[Implementa:] \
+	\begin{itemize}
+		\item \texttt{PoiView}.
+		
+	\end{itemize}
+	\item[Visibilità:] \texttt{public};
+	\item[Utilizzo:] Utilizzata per visualizzare le informazioni associate ad un certo POI;
+	\item[Descrizione:] Classe che si occupa di mostrare la lista dei POI relativi ad una certa categoria. La UI legata a questa classe permette all'utente di accedere alle informazioni di un certo POI appartenente alla categoria.;
+	\item[Attributi:] \
+	\begin{itemize}
+		\item \texttt{- pois : ListView}\\
+		View che permette di visualizzare la lista delle categorie di POI
+		
+		\item \texttt{- presenter : PoiActivity}\\
+		Presenter della View
+		
+	\end{itemize}
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ PoiViewImp(presenter : PoiActivity)}\\
+		Costruttore della classe PoiViewImp
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{presenter : PoiActivity}\\
+				Presenter della View che viene creata\end{itemize}
+		\end{description}
+		\item \texttt{+ setPoiListAdapter(poiList : List<String>)}\\
+		\textbf{Override} Metodo utilizzato per visualizzare tutti i POI
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{poiList : List<String>}\\
+				Lista di stringhe che rappresentano tutti i POI\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
 \paragraph{view::PreferencesView}
 \
 \begin{figure}[H]
@@ -9790,21 +10827,13 @@
 	\item[Descrizione:] Interfaccia che espone i metodi per aggiornare la UI contenente le preferenze dell'utente rispetto al percorso consigliato e alla modalità di fruizione delle istruzioni di navigazione;
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ \textit{setInstructionPreferences(adp : Adapter) : void}}\\
-		Metodo utilizzato per visualizzare le preferenze dell'utente riguardo la fruizione delle istruzioni di navigazione
+		\item \texttt{+ setPreferences(xmlPreferenceResource : int) : void}\\
+		Metodo utilizzato per visualizzare le preferenze dell'applicazione
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{adp : Adapter}\\
-				Collegamento tra le preferenze riguardanti la fruizione delle istruzioni di navigazione e la view in cui esse devono essere mostrate\end{itemize}
-		\end{description}
-		\item \texttt{+ \textit{setPathPreferences(adp : Adapter) : void}}\\
-		Metodo utilizzato per visualizzare le preferenze dell'utente relative al percorso proposto
-		\begin{description}
-			\item[Argomenti:] \
-			\begin{itemize}
-				\item \texttt{adp : Adapter}\\
-				Collegamento tra le preferenze riguardanti le preferenze del percorso di navigazione e la view in cui esse devono essere mostrate\end{itemize}
+				\item \texttt{xmlPreferenceResource : int}\\
+				Risorsa XML che contiene tutte le preferenze impostabili\end{itemize}
 		\end{description}
 	\end{itemize}
 \end{description}
@@ -9829,6 +10858,9 @@
 	\item[Descrizione:] Classe che si occupa di mostrare la UI utile alla modifica delle preferenze dell'utente;
 	\item[Attributi:] \
 	\begin{itemize}
+		\item \texttt{- preferenceFragment : PreferenceFragment}\\
+		Fragment per mostrare le preferenze
+		
 		\item \texttt{- presenter : PreferencesActivity}\\
 		Presenter della View
 		
@@ -9843,21 +10875,22 @@
 				\item \texttt{presenter : PreferencesActivity}\\
 				Presenter della View che viene creata\end{itemize}
 		\end{description}
-		\item \texttt{+ setInstructionPreferences(adp : Adapter) : void}\\
-		\textbf{Override} Metodo utilizzato per visualizzare le preferenze dell'utente riguardo la fruizione delle istruzioni di navigazione
+		\item \texttt{+ onSharedPreferenceChanged(sharedPreferences : SharedPreferences, key : String) : void}\\
+		\textbf{Override} Metodo che viene invocato ad ogni cambio di preferenza. Tale cambio viene propagato al presenter che ha il compito di salvarlo.
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{adp : Adapter}\\
-				Collegamento tra le preferenze riguardanti la fruizione delle istruzioni di navigazione e la view in cui esse devono essere mostrate\end{itemize}
+				\item \texttt{sharedPreferences : SharedPreferences}\\
+				Mappa chiave-valore dove vengono salvate le preferenze\item \texttt{key : String}\\
+				Preferenza che viene cambiata\end{itemize}
 		\end{description}
-		\item \texttt{+ setPathPreferences(adp : Adapter) : void}\\
-		\textbf{Override} Metodo utilizzato per visualizzare le preferenze dell'utente relative al percorso proposto
+		\item \texttt{+ setPreferences(xmlPreferenceResource : int)}\\
+		\textbf{Override} Metodo utilizzato per visualizzare le preferenze dell'applicazione
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{adp : Adapter}\\
-				Collegamento tra le preferenze riguardanti le preferenze del percorso di navigazione e la view in cui esse devono essere mostrate\end{itemize}
+				\item \texttt{xmlPreferenceResource : int}\\
+				Risorsa XML che contiene tutte le preferenze impostabili\end{itemize}
 		\end{description}
 	\end{itemize}
 \end{description}
@@ -9877,14 +10910,17 @@
 	\item[Descrizione:] Interfaccia che espone i metodi per aggiornare la UI contenente le mappe delle quali è possibile effettuare il download dal server;
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ \textit{setRemoteMaps(adp : Adapter) : void}}\\
+		\item \texttt{+ \textit{setRemoteMaps(buildingTables : Collection<BuildingTable>) : void}}\\
 		Metodo utilizzate per visualizzare le mappe che è possibile scaricare da un server remoto
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{adp : Adapter}\\
+				\item \texttt{buildingTables : Collection<BuildingTable>}\\
 				Collegamento tra la lista delle mappe che è possibile scaricare e la view in cui esse devono essere mostrate\end{itemize}
 		\end{description}
+		\item \texttt{+ showMapAlreadyPresent() : void}\\
+		Metodo utilizzato per infomrmare l'utente che la mappa selezionata è già installata sul dispositivo
+		
 	\end{itemize}
 \end{description}
 
@@ -9922,14 +10958,16 @@
 				\item \texttt{presenter : RemoteMapManagerActivity}\\
 				Presenter della View che viene creata\end{itemize}
 		\end{description}
-		\item \texttt{+ setRemoteMaps(adp : Adapter) : void}\\
+		\item \texttt{+ setRemoteMaps(buildingTables : Collection<BuildingTable>) : void}\\
 		\textbf{Override} Metodo utilizzate per visualizzare le mappe che è possibile scaricare da un server remoto
 		\begin{description}
 			\item[Argomenti:] \
 			\begin{itemize}
-				\item \texttt{adp : Adapter}\\
+				\item \texttt{buildingTables : Collection<BuildingTable>}\\
 				Collegamento tra la lista delle mappe che è possibile scaricare e la view in cui esse devono essere mostrate\end{itemize}
 		\end{description}
+		\item \texttt{+ showMapAlreadyPresent() : void}\\
+		\textbf{Override} Metodo utilizzato per infomrare l'utente che la mappa selezionata è già installata sul dispositivo
 	\end{itemize}
 \end{description}
 \end{document}
