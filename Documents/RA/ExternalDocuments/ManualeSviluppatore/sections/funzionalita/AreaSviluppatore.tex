@@ -136,5 +136,34 @@
 					\item[] \SharedPreferences, \Log;
 				\end{itemize}
 			\end{itemize}
+			
+	\newpage
+		\subsection{Area potenza beacon}
+			Dall'area amministratore è possibile visualizzare la mappa dell'edificio rilevato con segnalata l'area di potenza dei beacon circostanti. Tale mappa è costruita tramite le classi \BeaconPowerArea, tale classe appoggia la view principale \BeaconPowerAreaView\ e permette di aggiornarsi in tempo reale attraverso l'uso del componente esterno \Canvas. La parte di Presenter è identificata dalla classe \BeaconPowerAreaActivity\ tale classe necessita di relazioni con il model solo con la classe \InformationManager\ per reperire le informazioni tramite l'implementazione di \InformationListener.
+		
+			\paragraph*{Componenti interne}
+			\begin{itemize}
+			
+				\item Package:
+				\begin{itemize}
+					\item[] \presenter;
+					\item[] \view;
+					\item[] \model;
+				\end{itemize}
+				
+				\item Interfacce e classi:
+				\begin{itemize}
+					\item[] \BeaconPos, \BeaconPowerPos, \BeaconPowerArea, \BeaconPowerAreaView, \BeaconPowerAreaViewImp, \BeaconPowerAreaActivity, \InformationManager;
+				\end{itemize}
+			\end{itemize}
+				
+			\paragraph*{Componenti esterne}
+			\begin{itemize}
+			
+				\item Interfacce e classi \Gls{Android} SDK:
+				\begin{itemize}
+					\item[] \View, \Canvas, \AppCompatActivity, \InformationListener;
+				\end{itemize}
+			\end{itemize}
 
 \end{document}
