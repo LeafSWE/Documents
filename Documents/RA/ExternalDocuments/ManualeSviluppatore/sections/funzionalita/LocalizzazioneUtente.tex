@@ -118,7 +118,7 @@ nel database locale;
 				\end{itemize}
 			\end{itemize}
 			
-			
+		\newpage	
 		\subsubsection{Rilevamento beacon}
 			La classe \BeaconManagerAdapter\ estende un bind \Service\ (vedi appendice \ref{sec:FondamentiDiAndroid}) ed ha il compito di effettuare il \gls{ranging} e il \gls{monitoring} dei \gls{beacon} circostanti. Il \gls{monitoring} è l'operazione svolta in background per riconoscere i \gls{beacon} 
 circostanti senza eccessiva precisione mentre il \gls{ranging} è l'operazione che segue. Con il \gls{ranging} infatti i beacon vengono rilevati con più dettaglio e precisione con conseguente consumo di maggiore risorse, soprattutto energetiche.
@@ -162,7 +162,7 @@ circostanti senza eccessiva precisione mentre il \gls{ranging} è l'operazione c
 				
 			\end{itemize}
 			
-			
+		\newpage	
 		\subsubsection{Costruzione BuildingMap}
 			L'oggetto \InformationManagerImp\ comunica a \DatabaseService\ la necessità di costruire l'oggetto \BuildingMap. \DatabaseService\ costruisce tale oggetto incaricando \PointOfInterestService, \RegionOfInterestService, \EdgeService, \PhotoService\ di costruire le componenti di \BuildingMap ossia:
 			\begin{itemize}
@@ -177,7 +177,7 @@ circostanti senza eccessiva precisione mentre il \gls{ranging} è l'operazione c
 				\item I dati necessari per la costruzione di \BuildingMap\ devono essere scaricati dal database remoto. A questo punto, dopo aver fatto richiesta all'utente di poter effettuare il download dei dati, \DatabaseService\ reperisce le informazioni dal database remoto converte i dati dal formato Json trasmetto ad oggetti attraverso le classi con prefisso \textit{Remote}, inserisce tali oggetti nel database locale attraverso le classi con suffisso \textit{Dao} e infine costruisce l'oggetto \BuildingMap\ desiderato.
 			\end{itemize}
 			
-		
+			
 			\paragraph*{Componenti interne}
 			\begin{itemize}
 			
@@ -231,7 +231,33 @@ circostanti senza eccessiva precisione mentre il \gls{ranging} è l'operazione c
 				
 			\end{itemize}
 			
+		\newpage
+		\subsubsection{Ricerca destinazione}
+			Tramite la \SearchView\ offerta dall'SDK l'oggetto \SearchSuggestionsProvider\ che estende la classe Android \ContentProvider\ provvede ad effettuare continue ricerche dei \Gls{POI} che corrispondono con la stringa inserita dall'utente usando il riferimento a \InformationManager\ per reperire tali informazioni. Per fare questo è necessario estendere la classe \ContentProvider.
 		
-		%\subsection{Reindirizzamento alla gestione mappe}
+			\paragraph*{Componenti interne}
+			\begin{itemize}
+			
+				\item Package:
+				\begin{itemize}
+					\item[] \view;
+					\item[] \presenter;
+					\item[] \model
+				\end{itemize}
+				
+				\item Interfacce e classi:
+				\begin{itemize}
+					\item[] \SearchSuggestionsProvider, \InformationManager;
+				\end{itemize}
+			\end{itemize}
+
+			\paragraph*{Componenti esterne}
+			\begin{itemize}
+			
+				\item Interfacce e classi \gls{Android} SDK:
+				\begin{itemize}
+					\item[] \SearchView, \ContentProvider;
+				\end{itemize}
+			\end{itemize}
 		
 \end{document}
