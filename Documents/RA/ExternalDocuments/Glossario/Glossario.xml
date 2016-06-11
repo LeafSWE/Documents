@@ -1,6 +1,30 @@
 <glossario>
 	<voce>
 		<termine>
+			Impianto
+		</termine>
+		<descrizione>
+			Ambiente di prova (o test) allestito secondo una configurazione specifica delle variabili più influenti nelle prove (ad es. la posizione di un beacon nell'ambiente).
+		</descrizione>
+	</voce>
+	<voce>
+		<termine>
+			Card
+		</termine>
+		<descrizione>
+			Termine utilizzato per definire una scheda composta da vari campi e dati riguardanti un signolo elemento.
+		</descrizione>
+	</voce>
+	<voce>
+		<termine>
+			Algoritmo di Dijkstra
+		</termine>
+		<descrizione>
+			Famoso ed efficiente algoritmo per il calcolo dei cammini minimi in grafi con pesi non negativi.
+		</descrizione>
+	</voce>
+	<voce>
+		<termine>
 			Schema ER (Modello entity-relationship)
 		</termine>
 		<descrizione>

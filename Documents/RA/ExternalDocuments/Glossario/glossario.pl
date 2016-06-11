@@ -66,15 +66,15 @@ $newfile = $newfile."\\makeglossaries
 	{\\scshape\\LARGE Università di Padova \\par}
 	\\vspace{1cm}
 	%devono essere cambiato il titolo ogni volta
-	{\\scshape\\Large Glossario v5.00\\par}
+	{\\scshape\\Large Glossario v6.00\\par}
 	\\logo
 	\\newpage
 		\\begin{tabular}{c|c}
-			{\\hfill \\textbf{Versione}} 			& 5.00				\\\\[1ex]
-			{\\hfill\\textbf{Data Redazione}} 		& 2015-05-09  			\\\\[1ex]
-			{\\hfill\\textbf{Redazione}} 			& Eduard Bicego      		\\\\[1ex]
-			{\\hfill\\textbf{Verifica}} 			& Marco Zanella			\\\\[1ex]
-			{\\hfill\\textbf{Approvazione}} 		& Davide Castello		\\\\[1ex] 
+			{\\hfill \\textbf{Versione}} 			& 6.00				\\\\[1ex]
+			{\\hfill\\textbf{Data Redazione}} 		& 2015-06-12  			\\\\[1ex]
+			{\\hfill\\textbf{Redazione}} 			& Oscar Elia Conti      		\\\\[1ex]
+			{\\hfill\\textbf{Verifica}} 			& Eduard Bicego			\\\\[1ex]
+			{\\hfill\\textbf{Approvazione}} 		& Andrea Tombolato		\\\\[1ex] 
 			{\\hfill\\textbf{Uso}} 				& Esterno			\\\\[1ex]
 			{\\hfill\\textbf{Distribuzione}} 		& Prof. Vardanega Tullio	\\\\[1ex]
                                                     			& Prof. Cardin Riccardo		\\\\[1ex]
