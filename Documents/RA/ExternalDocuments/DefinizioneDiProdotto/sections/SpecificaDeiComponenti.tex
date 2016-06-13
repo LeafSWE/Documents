@@ -378,6 +378,16 @@
 	\begin{itemize}
 		\item \texttt{BuildingService};
 		
+		\item \texttt{BuildingService.AsyncFindRemoteBuilding};
+		
+		\item \texttt{BuildingService.AsyncFindRemoteBuildingByMajor};
+		
+		\item \texttt{BuildingService.AsyncIsBuildingMapUpdated};
+		
+		\item \texttt{BuildingService.AsyncIsRemoteMapPresent};
+		
+		\item \texttt{BuildingService.AsyncUpdateBuildingMap};
+		
 		\item \texttt{EdgeService};
 		
 		\item \texttt{PhotoService};
@@ -1854,12 +1864,28 @@
 	\end{itemize}
 	\item[Componenti delle librerie utilizzate:] \
 	\begin{itemize}
-		\item \texttt{android.app.Service (Android)}.
+		\item \texttt{android.app.Service (Android)};
+		
+		\item \texttt{android.content.Intent (Android)};
+		
+		\item \texttt{android.support.v4.content.LocalBroadcastManager (Android)};
+		
+		\item \texttt{org.altbeacon.beacon.BeaconConsumer (AltBeacon)};
+		
+		\item \texttt{org.altbeacon.beacon.BeaconManager (AltBeacon)};
+		
+		\item \texttt{org.altbeacon.beacon.BeaconParser (AltBeacon)};
+		
+		\item \texttt{org.altbeacon.beacon.RangeNotifier (AltBeacon)};
+		
+		\item \texttt{org.altbeacon.beacon.Region (AltBeacon)};
+		
+		\item \texttt{org.altbeacon.beacon.startup.BootstrapNotifier (AltBeacon)}.
 		
 	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per rilevare i beacon;
-	\item[Descrizione:] Classe che si occupa del rilevamento dei beacon. Estende la classe android.app.Service e implementa le interfacce org.altbeacon.beacon.BeaconConsumer e org.altbeacon.beacon.startup.BootstrapNotifier;
+	\item[Descrizione:] Classe che si occupa del rilevamento dei beacon. Estende la classe android.app.Service e implementa le interfacce org.altbeacon.beacon.\-BeaconConsumer e org.altbeacon.beacon.startup.BootstrapNotifier;
 	\item[Attributi:] \
 	\begin{itemize}
 		\item \texttt{- \underline{beaconLayout : String}}\\
@@ -2267,7 +2293,7 @@
 	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per calcolare la distanza di un beacon dal dispositivo che lo ho rilevato;
-	\item[Descrizione:] Classe che implementa l'interfaccia org.altbeacon.beacon.distance.DistanceCaluclator;
+	\item[Descrizione:] Classe che implementa l'interfaccia org.altbeacon.beacon.distance.\-DistanceCaluclator;
 	\item[Metodi:] \
 	\begin{itemize}
 		\item \texttt{+ calculateDistance(i : int, v : double) : double}\\
@@ -2445,6 +2471,11 @@
 \begin{description}
 	\item[Nome:] \texttt{BuildingContract};
 	\item[Tipo:] Classe;
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.provider.BaseColumns (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Utilizzata per reperire le informazioni corrette della tabella Building del database locale;
 	\item[Descrizione:] Classe che contiene le informazioni corrette della tabella Building del database locale;
@@ -2644,6 +2675,11 @@
 \begin{description}
 	\item[Nome:] \texttt{CategoryContract};
 	\item[Tipo:] Classe;
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.provider.BaseColumns (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Utilizzata per reperire le informazioni corrette della tabella Category del database locale;
 	\item[Descrizione:] Classe che contiene le informazioni corrette della tabella Category del database locale;
@@ -2810,7 +2846,7 @@
 		Metodo che ritorna un'istanza di DaoFactoryHelper
 		\item \texttt{+ getRemoteDaoFactory() : RemoteDaoFactory}\\
 		Metodo che viene utilizzato per ottenere un'istanza di RemoteDaoFactory
-		\item \texttt{+ getSQLiteDaoFactory(database : SQLiteDatabase) : SQLiteDaoFactory}\\
+		\item \texttt{+ getSQLiteDaoFactory(database : SQLiteDatabase) :\\ SQLiteDaoFactory}\\
 		Metodo che viene utilizzato per ottenere un'istanza di SQLiteDaoFactory
 		\begin{description}
 			\item[Argomenti:] \
@@ -2831,6 +2867,11 @@
 \begin{description}
 	\item[Nome:] \texttt{EdgeContract};
 	\item[Tipo:] Classe;
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.provider.BaseColumns (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Utilizzata per reperire le informazioni corrette della tabella Edge del database locale;
 	\item[Descrizione:] Classe che contiene le informazioni corrette della tabella Edge del database locale;
@@ -3011,6 +3052,11 @@
 \begin{description}
 	\item[Nome:] \texttt{EdgeTypeContract};
 	\item[Tipo:] Classe;
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.provider.BaseColumns (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Utilizzata per reperire le informazioni corrette della tabella EdgeType del database locale;
 	\item[Descrizione:] Classe che contiene le informazioni corrette della tabella EdgeType del database locale;
@@ -3186,6 +3232,11 @@
 \begin{description}
 	\item[Nome:] \texttt{PhotoContract};
 	\item[Tipo:] Classe;
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.provider.BaseColumns (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Utilizzata per reperire le informazioni corrette della tabella Photo del database locale;
 	\item[Descrizione:] Classe che contiene le informazioni corrette della tabella Photo del database locale;
@@ -3321,6 +3372,11 @@
 \begin{description}
 	\item[Nome:] \texttt{PointOfInterestContract};
 	\item[Tipo:] Classe;
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.provider.BaseColumns (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Utilizzata per reperire le informazioni corrette della tabella POI del database locale;
 	\item[Descrizione:] Classe che contiene le informazioni corrette della tabella POI del database locale;
@@ -3367,7 +3423,7 @@
 				\item \texttt{id : int}\\
 				Identificativo del POI di cui rimuovere le informazioni dal database locale\end{itemize}
 		\end{description}
-		\item \texttt{+ \textit{findAllPointsWithMajor(major : int) : Collection<PointOfInterestTable>}}\\
+		\item \texttt{+ \textit{findAllPointsWithMajor(major : int) :\\ Collection<PointOfInterestTable>}}\\
 		Metodo che viene utilizzato per recuperare le informazioni di tutti gli edifici presenti nella tabella "POI" del database locale
 		\begin{description}
 			\item[Argomenti:] \
@@ -3465,6 +3521,11 @@
 \begin{description}
 	\item[Nome:] \texttt{RegionOfInterestContract};
 	\item[Tipo:] Classe;
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.provider.BaseColumns (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Utilizzata per reperire le informazioni corrette della tabella ROI del database locale;
 	\item[Descrizione:] Classe che contiene le informazioni corrette della tabella ROI del database locale;
@@ -3511,7 +3572,7 @@
 				\item \texttt{id : int}\\
 				Identificativo della RegionOfInterest di cui rimuovere le informazioni dal database locale\end{itemize}
 		\end{description}
-		\item \texttt{+ \textit{findAllRegionsWithMajor(major : int) : Collection<RegionOfInterestTable>}}\\
+		\item \texttt{+ \textit{findAllRegionsWithMajor(major : int) :\\ Collection<RegionOfInterestTable>}}\\
 		Metodo che viene utilizzato per recuperare le informazioni di tutte le RegionOfInterest associato ad certo edificio, dato il major dell'edificio
 		\begin{description}
 			\item[Argomenti:] \
@@ -3959,6 +4020,11 @@
 \begin{description}
 	\item[Nome:] \texttt{RoiPoiContract};
 	\item[Tipo:] Classe;
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.provider.BaseColumns (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Utilizzata per reperire le informazioni corrette della tabella ROIPOI del database locale;
 	\item[Descrizione:] Classe che contiene le informazioni corrette della tabella ROIPOI del database locale;
@@ -4674,7 +4740,7 @@
 				\item \texttt{id : int}\\
 				Identificativo del POI di cui rimuovere le informazioni dal database locale\end{itemize}
 		\end{description}
-		\item \texttt{+ findAllPointsWithMajor(major : int) : Collection<PointOfInterestTable>}\\
+		\item \texttt{+ findAllPointsWithMajor(major : int) :\\ Collection<PointOfInterestTable>}\\
 		\textbf{Override} Metodo che viene utilizzato per recuperare le informazioni di tutti gli edifici presenti nella tabella "POI" del database locale
 		\begin{description}
 			\item[Argomenti:] \
@@ -4756,7 +4822,7 @@
 				\item \texttt{id : int}\\
 				Identificativo della RegionOfInterest di cui rimuovere le informazioni dal database locale\end{itemize}
 		\end{description}
-		\item \texttt{+ findAllRegionsWithMajor(major : int) : Collection<RegionOfInterestTable>}\\
+		\item \texttt{+ findAllRegionsWithMajor(major : int) :\\ Collection<RegionOfInterestTable>}\\
 		\textbf{Override} Metodo che viene utilizzato per recuperare le informazioni di tutte le RegionOfInterest associato ad certo edificio, dato il major dell'edificio
 		\begin{description}
 			\item[Argomenti:] \
@@ -4936,7 +5002,7 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ BuildingService(dbURL : String, sqliteBuilding : SQLiteBuildingDao, remoteBuilding : RemoteBuildingDao, roiService : RegionOfInterestService, poiService : PointOfInterestService, edgeService : EdgeService)}\\
+		\item \texttt{+ BuildingService(dbURL : String, sqliteBuilding :\\ SQLiteBuildingDao, remoteBuilding : RemoteBuildingDao, roiService : RegionOfInterestService, poiService :\\ PointOfInterestService, edgeService : EdgeService)}\\
 		Costruttore della classe BuildingService
 		\begin{description}
 			\item[Argomenti:] \
@@ -5044,6 +5110,136 @@
 			\begin{itemize}
 				\item \texttt{major : int}\\
 				Major dell'edificio\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{model::dataaccess::service::-\\BuildingService.AsyncFindRemoteBuilding}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/BuildingService-AsyncFindRemoteBuilding.png}
+	\caption{Classe BuildingService.AsyncFindRemoteBuilding}\label{fig:model::dataaccess::service::BuildingService.AsyncFindRemoteBuilding} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{BuildingService.AsyncFindRemoteBuilding};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{private};
+	\item[Utilizzo:] Utilizzata per poter avviare il download di una nuova mappa;
+	\item[Descrizione:] Classe che estende AsyncTask per il download di una mappa;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{\# doInBackground(params : Object[]) : Object}\\
+		\textbf{Override} Metodo svolto in background per il download della mappa
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{params : Object[]}\\
+				Identificativo della mappa\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{model::dataaccess::service::-\\BuildingService.AsyncFindRemoteBuildingByMajor}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/BuildingService-AsyncFindRemoteBuildingByMajor.png}
+	\caption{Classe BuildingService.AsyncFindRemoteBuildingByMajor}\label{fig:model::dataaccess::service::BuildingService.AsyncFindRemoteBuildingByMajor} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{BuildingService.AsyncFindRemoteBuildingByMajor};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{private};
+	\item[Utilizzo:] Utilizzata per avviare la ricerca ed il recupero di una mappa nel database remoto;
+	\item[Descrizione:] Classe che estende AsyncTask per recuperare la mappa di un edificio ricercandola nel database remoto;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ doInBackground(params : Object[]) : Object}\\
+		\textbf{Override} Metodo svolto in background per la ricerca della mappa in remoto
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{params : Object[]}\\
+				Identificativo della mappa\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{model::dataaccess::service::-\\BuildingService.AsyncIsBuildingMapUpdated}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/BuildingService-AsyncIsBuildingMapUpdated.png}
+	\caption{Classe BuildingService.AsyncIsBuildingMapUpdated}\label{fig:model::dataaccess::service::BuildingService.AsyncIsBuildingMapUpdated} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{BuildingService.AsyncIsBuildingMapUpdated};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{private};
+	\item[Utilizzo:] Utilizzata per avviare il controllo della versione della mappa;
+	\item[Descrizione:] Classe che estende AsyncTask per il controllo della versione della mappa locale rispetto alla mappa remota;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ doInBackground(params : Object[]) : Object}\\
+		\textbf{Override} Metodo eseguito in background per il controllo della versione della mappa locale rispetto alla mappa remota
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{params : Object[]}\\
+				Identificativo della mappa\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{model::dataaccess::service::-\\BuildingService.AsyncIsRemoteMapPresent}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/BuildingService-AsyncIsRemoteMapPresent.png}
+	\caption{Classe BuildingService.AsyncIsRemoteMapPresent}\label{fig:model::dataaccess::service::BuildingService.AsyncIsRemoteMapPresent} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{BuildingService.AsyncIsRemoteMapPresent};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{private};
+	\item[Utilizzo:] Utilizzato per avviare la ricerca della mappa nel database remoto;
+	\item[Descrizione:] Classe che estende AsyncTask per controllare la presenza di una mappa nel database remoto;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ doInBackground(params : Object[]) : Object}\\
+		\textbf{Override} Metodo svolto in background per il controllo della presenza della mappa in remoto
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{params : Object[]}\\
+				Identificativo della mappa\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{model::dataaccess::service::-\\BuildingService.AsyncUpdateBuildingMap}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/BuildingService-AsyncUpdateBuildingMap.png}
+	\caption{Classe BuildingService.AsyncUpdateBuildingMap}\label{fig:model::dataaccess::service::BuildingService.AsyncUpdateBuildingMap} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{BuildingService.AsyncUpdateBuildingMap};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{private};
+	\item[Utilizzo:] Utilizzata per avviare l'aggiornamento della mappa locale;
+	\item[Descrizione:] Classe che estende AsyncTask per l'aggiornamento di una mappa locale;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ doInBackground(params : Object[]) : Object}\\
+		\textbf{Override} Metodo eseguito in background per l'aggiornamento di una mappa locale
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{params : Object[]}\\
+				Identificativo della mappa\end{itemize}
 		\end{description}
 	\end{itemize}
 \end{description}
@@ -5421,7 +5617,7 @@
 				\item \texttt{id : int}\\
 				Identificativo numerico del PointOfInterest da rimuovere\end{itemize}
 		\end{description}
-		\item \texttt{+ findAllPointsWithMajor(major : int) : Collection<PointOfInterest>}\\
+		\item \texttt{+ findAllPointsWithMajor(major : int) :\\ Collection<PointOfInterest>}\\
 		Metodo per recuperare le informazioni di tutti i PointOfInterest di un edificio, dato il major dell'edificio
 		\begin{description}
 			\item[Argomenti:] \
@@ -5582,7 +5778,7 @@
 	\item[Descrizione:] Classe che rappresenta un aiutante per la costruzione di un DatabaseService;
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ \underline{getService(sqliteDaoFactory : SQLiteDaoFactory, remoteDaoFactory : RemoteDaoFactory, dbURL : String) : DatabaseService}}\\
+		\item \texttt{+ getService(sqliteDaoFactory : SQLiteDaoFactory, remoteDaoFactory : RemoteDaoFactory, dbURL : String) : DatabaseService}\\
 		Metodo che viene utilizzato per ottenere un'istanza di DatabaseService
 		\begin{description}
 			\item[Argomenti:] \
@@ -5605,11 +5801,6 @@
 \begin{description}
 	\item[Nome:] \texttt{BuildingInformation};
 	\item[Tipo:] Classe;
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{android.support.v4.content.LocalBroadcastManager (Android)}.
-		
-	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per accedere alle informazioni associate ad un edificio come il nome, l'orario di apertura, una descrizione e l'indirizzo;
 	\item[Descrizione:] Classe che rappresenta le informazioni di un edificio;
@@ -5727,11 +5918,6 @@
 		\item \texttt{BuildingMap}.
 		
 	\end{itemize}
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{android.content.Intent (Android)}.
-		
-	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per accedere alle informazioni riguardanti la mappa di un edificio, alle informazioni generali dell'edificio stesso e per accedere alle collezioni di archi, POI e ROI in cui è stato decomposto un edificio;
 	\item[Descrizione:] Classe che rappresenta la mappa di un edificio con tutte le informazioni ad esso associate;
@@ -5761,7 +5947,7 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ BuildingMapImp(edges : Collection<EnrichedEdge>, id : int, version : int, pois : Collection<PointOfInterest>, rois : Collection<RegionOfInterest>, buildingInfo : BuildingInformation, size : String)}\\
+		\item \texttt{+ BuildingMapImp(edges : Collection<EnrichedEdge>, id : int, version : int, pois : Collection<PointOfInterest>, rois : Collection<RegionOfInterest>, buildingInfo :\\ BuildingInformation, size : String)}\\
 		Costruttore della classe BuildingMapImp
 		\begin{description}
 			\item[Argomenti:] \
@@ -5873,11 +6059,6 @@
 \begin{description}
 	\item[Nome:] \texttt{\textit{NavigationExceptions}};
 	\item[Tipo:] Classe astratta;
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{org.altbeacon.beacon.BeaconParser (AltBeacon)}.
-		
-	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per fornire una implementazione di base dei metodi derivati da java.lang.Exception;
 	\item[Descrizione:] Classe base per le eccezioni che possono essere lanciate durante la navigazione. Estende java.lang.Exception;
@@ -5903,7 +6084,7 @@
 	\item[Descrizione:] Interfaccia che espone i metodi per accedere alle funzionalità di navigazione;
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ \textit{calculatePath(startRoi : RegionOfInterest, endPoi : PointOfInterest) : void}}\\
+		\item \texttt{+ \textit{calculatePath(startRoi : RegionOfInterest, endPoi :\\ PointOfInterest) : void}}\\
 		Metodo che calcola un percorso tra due RegionOfInterest viste come vertici di un grafo MapGraph utilizzando un oggetto PathFinder. Il punto di partenza e il punto di arrivo sono i parametri richiesti in input dal metodo mentre il grafo è un campo dati. Viene lanciata un eccezione di tipo NoGraphSetException nel caso in cui non sia settato alcun grafo.
 		\begin{description}
 			\item[Argomenti:] \
@@ -5952,11 +6133,6 @@
 		\item \texttt{Navigator}.
 		
 	\end{itemize}
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{org.altbeacon.beacon.BeaconManager (AltBeacon)}.
-		
-	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per calcolare un percorso da seguire durante la navigazione e per recuperare da quest'ultimo tutte le informazioni necessarie da fornire all'utente per seguire tale percorso;
 	\item[Descrizione:] Classe che si occupa della navigazione;
@@ -5991,7 +6167,7 @@
 				\item \texttt{compass : Compass}\\
 				Sensore di tipo Compass utilizzato durante la navigazione\end{itemize}
 		\end{description}
-		\item \texttt{+ calculatePath(startRoi : RegionOfInterest, endPoi : PointOfInterest) : void}\\
+		\item \texttt{+ calculatePath(startRoi : RegionOfInterest, endPoi :\\ PointOfInterest) : void}\\
 		\textbf{Override} Metodo che calcola un percorso tra due RegionOfInterest viste come vertici di un grafo MapGraph utilizzando un oggetto PathFinder. Il punto di partenza e il punto di arrivo sono i parametri richiesti in input dal metodo mentre il grafo è un campo dati. Viene lanciata un eccezione di tipo NoGraphSetException nel caso in cui non sia settato alcun grafo
 		\begin{description}
 			\item[Argomenti:] \
@@ -6068,11 +6244,6 @@
 	\begin{itemize}
 		\item \texttt{NavigationExceptions}.
 	\end{itemize}
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{org.altbeacon.beacon.RangeNotifier (AltBeacon)}.
-		
-	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per lanciare una eccezione nel caso in cui si cerchi di accedere alle funzioni di navigazione offerte da Navigator senza aver settato un grafo;
 	\item[Descrizione:] Classe che rappresenta una eccezione che può essere lanciata durante l'utilizzo della classe Navigator;
@@ -6116,11 +6287,6 @@
 	\begin{itemize}
 		\item \texttt{NavigationExceptions}.
 	\end{itemize}
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{org.altbeacon.beacon.BeaconConsumer (AltBeacon)}.
-		
-	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per lanciare un'eccezione nel caso in cui si voglia accedere alle informazioni di navigazione ma non è ancora stato calcolato un percorso;
 	\item[Descrizione:] Classe che rappresenta una eccezione che può essere lanciata durante l'utilizzo della classe Navigator;
@@ -6163,11 +6329,6 @@
 	\item[Estende:] \
 	\begin{itemize}
 		\item \texttt{NavigationExceptions}.
-	\end{itemize}
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{org.altbeacon.beacon.Ragion (AltBeacon)}.
-		
 	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per lanciare una eccezione nel caso in cui si rilevino dei beacon non previsti dal percorso calcolato;
@@ -6239,11 +6400,6 @@
 	\item[Implementa:] \
 	\begin{itemize}
 		\item \texttt{ProcessedInformation}.
-		
-	\end{itemize}
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{org.altbeacon.beacon.startup.BootstrapNotifier (AltBeacon)}.
 		
 	\end{itemize}
 	\item[Visibilità:] \texttt{public};
@@ -6324,7 +6480,7 @@
 		\item \texttt{PathFinder}.
 	\end{itemize}
 	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] È utilizzata per calcolare il percorso di navigazione sfruttando l'algoritmo di Dijkstra. Per fare questo utilizza la classe org.jgrapht.alg.DijkstraShortestPath<V,E>;
+	\item[Utilizzo:] È utilizzata per calcolare il percorso di navigazione sfruttando l'algoritmo di Dijkstra. Per fare questo utilizza la classe org.jgrapht.alg.\-DijkstraShortestPath<V,E>;
 	\item[Descrizione:] Classe che rappresenta un algoritmo per il calcolo del percorso di navigazione;
 	\item[Metodi:] \
 	\begin{itemize}
@@ -6382,7 +6538,7 @@
 	\item[Nome:] \texttt{MapGraph};
 	\item[Tipo:] Classe;
 	\item[Visibilità:] \texttt{public};
-	\item[Utilizzo:] È utilizzata per rappresentare un grafo sul quale applicare un algoritmo per il calcolo di un percorso nel package algorithm. Al suo interno per la rappresentazione del grafo utilizza la classe org.jgrapht.graph.SimpleDirectedWeightedGraph;
+	\item[Utilizzo:] È utilizzata per rappresentare un grafo sul quale applicare un algoritmo per il calcolo di un percorso nel package algorithm. Al suo interno per la rappresentazione del grafo utilizza la classe org.jgrapht.graph.\-SimpleDirectedWeightedGraph;
 	\item[Descrizione:] Classe che rappresenta un grafo da utilizzare per il calcolo del percorso di navigazione;
 	\item[Attributi:] \
 	\begin{itemize}
@@ -6426,7 +6582,7 @@
 				\item \texttt{roi : RegionOfInterest}\\
 				RegionOfInterest da aggiungere al grafo che rappresenta l'edificio\end{itemize}
 		\end{description}
-		\item \texttt{+ getGraph() : SimpleDirectedWeightedGraph<RegionOfInterest,EnrichedEdge>}\\
+		\item \texttt{+ getGraph() : SimpleDirectedWeightedGraph<RegionOfInterest,\\EnrichedEdge>}\\
 		Metodo che permette di restituire il grafo che rappresenta la distribuzione degli oggetti RegionOfInterest ed EnrichedEdge
 		\item \texttt{+ setSettingAllEdge(setting : Setting) : void}\\
 		Metodo che permette di impostare le setting passate come parametro a tutti gli edge all'interno del graph
@@ -7011,7 +7167,7 @@
 	\end{itemize}
 \end{description}
 
-\paragraph{model::navigator::graph::navigationinformation::BasicInformation}
+\paragraph{model::navigator::graph::navigationinformation::-\\BasicInformation}
 \
 \begin{figure}[H]
 	\centering
@@ -7045,7 +7201,7 @@
 	\end{itemize}
 \end{description}
 
-\paragraph{model::navigator::graph::navigationinformation::DetailedInformation}
+\paragraph{model::navigator::graph::navigationinformation::-\\DetailedInformation}
 \
 \begin{figure}[H]
 	\centering
@@ -7079,7 +7235,7 @@
 	\end{itemize}
 \end{description}
 
-\paragraph{model::navigator::graph::navigationinformation::NavigationInformation}
+\paragraph{model::navigator::graph::navigationinformation::-\\NavigationInformation}
 \
 \begin{figure}[H]
 	\centering
@@ -7103,7 +7259,7 @@
 	\end{itemize}
 \end{description}
 
-\paragraph{model::navigator::graph::navigationinformation::NavigationInformationImp}
+\paragraph{model::navigator::graph::navigationinformation::-\\NavigationInformationImp}
 \
 \begin{figure}[H]
 	\centering
@@ -7154,7 +7310,7 @@
 	\end{itemize}
 \end{description}
 
-\paragraph{model::navigator::graph::navigationinformation::PhotoInformation}
+\paragraph{model::navigator::graph::navigationinformation::-\\PhotoInformation}
 \
 \begin{figure}[H]
 	\centering
@@ -7413,7 +7569,7 @@
 		Metodo che ritorna le preferenze di percorso
 		\item \texttt{+ \textit{isDeveloper() : booolean}}\\
 		Metodo che verifica se è stato inserito in precedenza un codice sviluppatore valido
-		\item \texttt{+ \textit{setInstructionPreference(instructionPreference : InstructionPreference) : void}}\\
+		\item \texttt{+ \textit{setInstructionPreference(instructionPreference :\\ InstructionPreference) : void}}\\
 		Metodo che permette di modificare le impostazioni riguardanti le preferenze di fruizione delle istruzioni di navigazione
 		\begin{description}
 			\item[Argomenti:] \
@@ -7508,7 +7664,7 @@
 		\textbf{Override} Metodo che ritorna le preferenze di percorso
 		\item \texttt{+ isDeveloper() : boolean}\\
 		\textbf{Override} Metodo che verifica se è stato inserito in precedenza un codice sviluppatore valido
-		\item \texttt{+ setInstructionPreference(instructionPreference : InstructionPreference) : void}\\
+		\item \texttt{+ setInstructionPreference(instructionPreference :\\ InstructionPreference) : void}\\
 		\textbf{Override} Metodo che permette di modificare le impostazioni riguardanti le preferenze di fruizione delle istruzioni di navigazione
 		\begin{description}
 			\item[Argomenti:] \
@@ -7605,6 +7761,11 @@
 	\item[Implementa:] \
 	\begin{itemize}
 		\item \texttt{InformationListener}.
+		
+	\end{itemize}
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.support.v7.app.AppCompatActivity (Android)}.
 		
 	\end{itemize}
 	\item[Visibilità:] \texttt{public};
@@ -8017,6 +8178,9 @@
 	\item[Descrizione:] Classe che estende AppCompcatActivity per la gestione dell'interazione tra HomeView ed il model;
 	\item[Attributi:] \
 	\begin{itemize}
+		\item \texttt{- downloadMap : AlertDialog}\\
+		Alert da mostrare nel caso in cui non sia presente la mappa in locale
+		
 		\item \texttt{- informationManager : InformationManager}\\
 		Riferimento utilizzato per accedere alle informazioni trattate dal model
 		
@@ -8256,7 +8420,7 @@
 	\begin{itemize}
 		\item \texttt{+ ImageDetailFragment()}\\
 		Costruttore di default della classe ImageDetailFragment
-		\item \texttt{+ \underline{newInstance(photoUris : ArrayList<String>, imageNum : int) : ImageDetailFragment}}\\
+		\item \texttt{+ newInstance(photoUris : ArrayList<String>, imageNum : int) : ImageDetailFragment}\\
 		Usato per costruire un Fragment attraverso il passaggio di parametri. Best practice consigliata dalla documentazione Android
 		\begin{description}
 			\item[Argomenti:] \
@@ -8456,7 +8620,7 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ LocalMapAdapter(presenter : LocalMapActivity , collectionBuildingTable : Collection<BuildingTable>, mapsVersionStatus : boolean [] )}\\
+		\item \texttt{+ LocalMapAdapter(presenter : LocalMapActivity ,\\ collectionBuildingTable : Collection<BuildingTable>,\\ mapsVersionStatus : boolean [] )}\\
 		Costruttore della classe LocalMapAdapter
 		\begin{description}
 			\item[Argomenti:] \
@@ -9427,6 +9591,13 @@
 \begin{description}
 	\item[Nome:] \texttt{BeaconPowerArea};
 	\item[Tipo:] Classe;
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.graphics.Canvas (Android)};
+		
+		\item \texttt{android.util.AttributeSet (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Classe utilizzata per la visualizzazione dei segnali dei Beacon all'interno di una mappa;
 	\item[Descrizione:] Classe ausiliaria che permette definire una View in grado di aggiornarsi in tempo reale attraverso
@@ -9760,7 +9931,7 @@
 	\end{itemize}
 	\item[Metodi:] \
 	\begin{itemize}
-		\item \texttt{+ DetailedInformationViewImp(presenter : DetailedInformationActivity)}\\
+		\item \texttt{+ DetailedInformationViewImp(presenter :\\ DetailedInformationActivity)}\\
 		Costruttore della classe DetailedInformationViewImp
 		\begin{description}
 			\item[Argomenti:] \
@@ -10503,7 +10674,7 @@
 		\end{description}
 		\item \texttt{+ \textit{refreshInstructions() : void}}\\
 		Metodo utilizzato per aggiornare la lista di istruzioni 
-		\item \texttt{+ \textit{setInstructionAdapter(navigationInformation : List<ProcessedInformation>) : void}}\\
+		\item \texttt{+ \textit{setInstructionAdapter(navigationInformation :\\ List<ProcessedInformation>) : void}}\\
 		Collega l'Adapter appropriato alla View deputata a mostrare a lista di istruzioni di navigazione utili per raggiungere una certa destinazione
 		\begin{description}
 			\item[Argomenti:] \
@@ -10571,7 +10742,7 @@
 		\end{description}
 		\item \texttt{+ refreshInstructions() : void}\\
 		\textbf{Override} Metodo utilizzato per aggiornare la lista di istruzioni
-		\item \texttt{+ setInstructionAdapter(navigationInformation : List<ProcessedInformation>) : void}\\
+		\item \texttt{+ setInstructionAdapter(navigationInformation :\\ List<ProcessedInformation>) : void}\\
 		\textbf{Override} Collega l'Adapter appropriato alla View deputata a mostrare a lista di istruzioni di navigazione utili per raggiungere una certa destinazione
 		\begin{description}
 			\item[Argomenti:] \
@@ -10853,6 +11024,15 @@
 		\item \texttt{PreferencesView}.
 		
 	\end{itemize}
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.content.SharedPreferences (Android)};
+		
+		\item \texttt{android.content.SharedPreferences.OnSharedPreferenceChangeListener};
+		
+		\item \texttt{android.preference.PreferenceFragment (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Ogni bottone presente deve essere legato ad un oggetto anonimo di tipo View.OnClickListener, in modo da poter reagire alla pressione su di esso. Per recuperare un riferimento alla lista è sufficiente utilizzare la classe R.id di Android;
 	\item[Descrizione:] Classe che si occupa di mostrare la UI utile alla modifica delle preferenze dell'utente;
@@ -10967,7 +11147,7 @@
 				Collegamento tra la lista delle mappe che è possibile scaricare e la view in cui esse devono essere mostrate\end{itemize}
 		\end{description}
 		\item \texttt{+ showMapAlreadyPresent() : void}\\
-		\textbf{Override} Metodo utilizzato per infomrare l'utente che la mappa selezionata è già installata sul dispositivo
+		\textbf{Override} Metodo utilizzato per informare l'utente che la mappa selezionata è già installata sul dispositivo
 	\end{itemize}
 \end{description}
 \end{document}
