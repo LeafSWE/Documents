@@ -378,6 +378,16 @@
 	\begin{itemize}
 		\item \texttt{BuildingService};
 		
+		\item \texttt{BuildingService.AsyncFindRemoteBuilding};
+		
+		\item \texttt{BuildingService.AsyncFindRemoteBuildingByMajor};
+		
+		\item \texttt{BuildingService.AsyncIsBuildingMapUpdated};
+		
+		\item \texttt{BuildingService.AsyncIsRemoteMapPresent};
+		
+		\item \texttt{BuildingService.AsyncUpdateBuildingMap};
+		
 		\item \texttt{EdgeService};
 		
 		\item \texttt{PhotoService};
@@ -1854,7 +1864,23 @@
 	\end{itemize}
 	\item[Componenti delle librerie utilizzate:] \
 	\begin{itemize}
-		\item \texttt{android.app.Service (Android)}.
+		\item \texttt{android.app.Service (Android)};
+		
+		\item \texttt{android.content.Intent (Android)};
+		
+		\item \texttt{android.support.v4.content.LocalBroadcastManager (Android)};
+		
+		\item \texttt{org.altbeacon.beacon.BeaconConsumer (AltBeacon)};
+		
+		\item \texttt{org.altbeacon.beacon.BeaconManager (AltBeacon)};
+		
+		\item \texttt{org.altbeacon.beacon.BeaconParser (AltBeacon)};
+		
+		\item \texttt{org.altbeacon.beacon.RangeNotifier (AltBeacon)};
+		
+		\item \texttt{org.altbeacon.beacon.Region (AltBeacon)};
+		
+		\item \texttt{org.altbeacon.beacon.startup.BootstrapNotifier (AltBeacon)}.
 		
 	\end{itemize}
 	\item[Visibilità:] \texttt{public};
@@ -2445,6 +2471,11 @@
 \begin{description}
 	\item[Nome:] \texttt{BuildingContract};
 	\item[Tipo:] Classe;
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.provider.BaseColumns (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Utilizzata per reperire le informazioni corrette della tabella Building del database locale;
 	\item[Descrizione:] Classe che contiene le informazioni corrette della tabella Building del database locale;
@@ -2644,6 +2675,11 @@
 \begin{description}
 	\item[Nome:] \texttt{CategoryContract};
 	\item[Tipo:] Classe;
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.provider.BaseColumns (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Utilizzata per reperire le informazioni corrette della tabella Category del database locale;
 	\item[Descrizione:] Classe che contiene le informazioni corrette della tabella Category del database locale;
@@ -2831,6 +2867,11 @@
 \begin{description}
 	\item[Nome:] \texttt{EdgeContract};
 	\item[Tipo:] Classe;
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.provider.BaseColumns (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Utilizzata per reperire le informazioni corrette della tabella Edge del database locale;
 	\item[Descrizione:] Classe che contiene le informazioni corrette della tabella Edge del database locale;
@@ -3011,6 +3052,11 @@
 \begin{description}
 	\item[Nome:] \texttt{EdgeTypeContract};
 	\item[Tipo:] Classe;
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.provider.BaseColumns (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Utilizzata per reperire le informazioni corrette della tabella EdgeType del database locale;
 	\item[Descrizione:] Classe che contiene le informazioni corrette della tabella EdgeType del database locale;
@@ -3186,6 +3232,11 @@
 \begin{description}
 	\item[Nome:] \texttt{PhotoContract};
 	\item[Tipo:] Classe;
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.provider.BaseColumns (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Utilizzata per reperire le informazioni corrette della tabella Photo del database locale;
 	\item[Descrizione:] Classe che contiene le informazioni corrette della tabella Photo del database locale;
@@ -3321,6 +3372,11 @@
 \begin{description}
 	\item[Nome:] \texttt{PointOfInterestContract};
 	\item[Tipo:] Classe;
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.provider.BaseColumns (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Utilizzata per reperire le informazioni corrette della tabella POI del database locale;
 	\item[Descrizione:] Classe che contiene le informazioni corrette della tabella POI del database locale;
@@ -3465,6 +3521,11 @@
 \begin{description}
 	\item[Nome:] \texttt{RegionOfInterestContract};
 	\item[Tipo:] Classe;
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.provider.BaseColumns (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Utilizzata per reperire le informazioni corrette della tabella ROI del database locale;
 	\item[Descrizione:] Classe che contiene le informazioni corrette della tabella ROI del database locale;
@@ -3959,6 +4020,11 @@
 \begin{description}
 	\item[Nome:] \texttt{RoiPoiContract};
 	\item[Tipo:] Classe;
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.provider.BaseColumns (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Utilizzata per reperire le informazioni corrette della tabella ROIPOI del database locale;
 	\item[Descrizione:] Classe che contiene le informazioni corrette della tabella ROIPOI del database locale;
@@ -5048,6 +5114,136 @@
 	\end{itemize}
 \end{description}
 
+\paragraph{model::dataaccess::service::-\\BuildingService.AsyncFindRemoteBuilding}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/BuildingService-AsyncFindRemoteBuilding.png}
+	\caption{Classe BuildingService.AsyncFindRemoteBuilding}\label{fig:model::dataaccess::service::BuildingService.AsyncFindRemoteBuilding} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{BuildingService.AsyncFindRemoteBuilding};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{private};
+	\item[Utilizzo:] Utilizzata per poter avviare il download di una nuova mappa;
+	\item[Descrizione:] Classe che estende AsyncTask per il download di una mappa;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{\# doInBackground(params : Object[]) : Object}\\
+		\textbf{Override} Metodo svolto in background per il download della mappa
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{params : Object[]}\\
+				Identificativo della mappa\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{model::dataaccess::service::-\\BuildingService.AsyncFindRemoteBuildingByMajor}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/BuildingService-AsyncFindRemoteBuildingByMajor.png}
+	\caption{Classe BuildingService.AsyncFindRemoteBuildingByMajor}\label{fig:model::dataaccess::service::BuildingService.AsyncFindRemoteBuildingByMajor} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{BuildingService.AsyncFindRemoteBuildingByMajor};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{private};
+	\item[Utilizzo:] Utilizzata per avviare la ricerca ed il recupero di una mappa nel database remoto;
+	\item[Descrizione:] Classe che estende AsyncTask per recuperare la mappa di un edificio ricercandola nel database remoto;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ doInBackground(params : Object[]) : Object}\\
+		\textbf{Override} Metodo svolto in background per la ricerca della mappa in remoto
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{params : Object[]}\\
+				Identificativo della mappa\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{model::dataaccess::service::-\\BuildingService.AsyncIsBuildingMapUpdated}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/BuildingService-AsyncIsBuildingMapUpdated.png}
+	\caption{Classe BuildingService.AsyncIsBuildingMapUpdated}\label{fig:model::dataaccess::service::BuildingService.AsyncIsBuildingMapUpdated} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{BuildingService.AsyncIsBuildingMapUpdated};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{private};
+	\item[Utilizzo:] Utilizzata per avviare il controllo della versione della mappa;
+	\item[Descrizione:] Classe che estende AsyncTask per il controllo della versione della mappa locale rispetto alla mappa remota;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ doInBackground(params : Object[]) : Object}\\
+		\textbf{Override} Metodo eseguito in background per il controllo della versione della mappa locale rispetto alla mappa remota
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{params : Object[]}\\
+				Identificativo della mappa\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{model::dataaccess::service::-\\BuildingService.AsyncIsRemoteMapPresent}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/BuildingService-AsyncIsRemoteMapPresent.png}
+	\caption{Classe BuildingService.AsyncIsRemoteMapPresent}\label{fig:model::dataaccess::service::BuildingService.AsyncIsRemoteMapPresent} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{BuildingService.AsyncIsRemoteMapPresent};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{private};
+	\item[Utilizzo:] Utilizzato per avviare la ricerca della mappa nel database remoto;
+	\item[Descrizione:] Classe che estende AsyncTask per controllare la presenza di una mappa nel database remoto;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ doInBackground(params : Object[]) : Object}\\
+		\textbf{Override} Metodo svolto in background per il controllo della presenza della mappa in remoto
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{params : Object[]}\\
+				Identificativo della mappa\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
+\paragraph{model::dataaccess::service::-\\BuildingService.AsyncUpdateBuildingMap}
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\maxwidth]{img/BuildingService-AsyncUpdateBuildingMap.png}
+	\caption{Classe BuildingService.AsyncUpdateBuildingMap}\label{fig:model::dataaccess::service::BuildingService.AsyncUpdateBuildingMap} 
+\end{figure}
+\begin{description}
+	\item[Nome:] \texttt{BuildingService.AsyncUpdateBuildingMap};
+	\item[Tipo:] Classe;
+	\item[Visibilità:] \texttt{private};
+	\item[Utilizzo:] Utilizzata per avviare l'aggiornamento della mappa locale;
+	\item[Descrizione:] Classe che estende AsyncTask per l'aggiornamento di una mappa locale;
+	\item[Metodi:] \
+	\begin{itemize}
+		\item \texttt{+ doInBackground(params : Object[]) : Object}\\
+		\textbf{Override} Metodo eseguito in background per l'aggiornamento di una mappa locale
+		\begin{description}
+			\item[Argomenti:] \
+			\begin{itemize}
+				\item \texttt{params : Object[]}\\
+				Identificativo della mappa\end{itemize}
+		\end{description}
+	\end{itemize}
+\end{description}
+
 \paragraph{model::dataaccess::service::DatabaseService}
 \
 \begin{figure}[H]
@@ -5605,11 +5801,6 @@
 \begin{description}
 	\item[Nome:] \texttt{BuildingInformation};
 	\item[Tipo:] Classe;
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{android.support.v4.content.LocalBroadcastManager (Android)}.
-		
-	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per accedere alle informazioni associate ad un edificio come il nome, l'orario di apertura, una descrizione e l'indirizzo;
 	\item[Descrizione:] Classe che rappresenta le informazioni di un edificio;
@@ -5725,11 +5916,6 @@
 	\item[Implementa:] \
 	\begin{itemize}
 		\item \texttt{BuildingMap}.
-		
-	\end{itemize}
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{android.content.Intent (Android)}.
 		
 	\end{itemize}
 	\item[Visibilità:] \texttt{public};
@@ -5873,11 +6059,6 @@
 \begin{description}
 	\item[Nome:] \texttt{\textit{NavigationExceptions}};
 	\item[Tipo:] Classe astratta;
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{org.altbeacon.beacon.BeaconParser (AltBeacon)}.
-		
-	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per fornire una implementazione di base dei metodi derivati da java.lang.Exception;
 	\item[Descrizione:] Classe base per le eccezioni che possono essere lanciate durante la navigazione. Estende java.lang.Exception;
@@ -5950,11 +6131,6 @@
 	\item[Implementa:] \
 	\begin{itemize}
 		\item \texttt{Navigator}.
-		
-	\end{itemize}
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{org.altbeacon.beacon.BeaconManager (AltBeacon)}.
 		
 	\end{itemize}
 	\item[Visibilità:] \texttt{public};
@@ -6068,11 +6244,6 @@
 	\begin{itemize}
 		\item \texttt{NavigationExceptions}.
 	\end{itemize}
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{org.altbeacon.beacon.RangeNotifier (AltBeacon)}.
-		
-	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per lanciare una eccezione nel caso in cui si cerchi di accedere alle funzioni di navigazione offerte da Navigator senza aver settato un grafo;
 	\item[Descrizione:] Classe che rappresenta una eccezione che può essere lanciata durante l'utilizzo della classe Navigator;
@@ -6116,11 +6287,6 @@
 	\begin{itemize}
 		\item \texttt{NavigationExceptions}.
 	\end{itemize}
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{org.altbeacon.beacon.BeaconConsumer (AltBeacon)}.
-		
-	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per lanciare un'eccezione nel caso in cui si voglia accedere alle informazioni di navigazione ma non è ancora stato calcolato un percorso;
 	\item[Descrizione:] Classe che rappresenta una eccezione che può essere lanciata durante l'utilizzo della classe Navigator;
@@ -6163,11 +6329,6 @@
 	\item[Estende:] \
 	\begin{itemize}
 		\item \texttt{NavigationExceptions}.
-	\end{itemize}
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{org.altbeacon.beacon.Ragion (AltBeacon)}.
-		
 	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] È utilizzata per lanciare una eccezione nel caso in cui si rilevino dei beacon non previsti dal percorso calcolato;
@@ -6239,11 +6400,6 @@
 	\item[Implementa:] \
 	\begin{itemize}
 		\item \texttt{ProcessedInformation}.
-		
-	\end{itemize}
-	\item[Componenti delle librerie utilizzate:] \
-	\begin{itemize}
-		\item \texttt{org.altbeacon.beacon.startup.BootstrapNotifier (AltBeacon)}.
 		
 	\end{itemize}
 	\item[Visibilità:] \texttt{public};
@@ -7607,6 +7763,11 @@
 		\item \texttt{InformationListener}.
 		
 	\end{itemize}
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.support.v7.app.AppCompatActivity (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Classe utilizzata per visualizzare l'area coperta dai beacon in base al segnale rssi;
 	\item[Descrizione:] Classe che permette di creare un'Activity che è in grado di rilevare il segnale emesso dai Beacon e visualizzarlo a video. Il segnale preso in considerazione è l'RSSI;
@@ -8017,6 +8178,9 @@
 	\item[Descrizione:] Classe che estende AppCompcatActivity per la gestione dell'interazione tra HomeView ed il model;
 	\item[Attributi:] \
 	\begin{itemize}
+		\item \texttt{- downloadMap : AlertDialog}\\
+		Alert da mostrare nel caso in cui non sia presente la mappa in locale
+		
 		\item \texttt{- informationManager : InformationManager}\\
 		Riferimento utilizzato per accedere alle informazioni trattate dal model
 		
@@ -9427,6 +9591,13 @@
 \begin{description}
 	\item[Nome:] \texttt{BeaconPowerArea};
 	\item[Tipo:] Classe;
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.graphics.Canvas (Android)};
+		
+		\item \texttt{android.util.AttributeSet (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Classe utilizzata per la visualizzazione dei segnali dei Beacon all'interno di una mappa;
 	\item[Descrizione:] Classe ausiliaria che permette definire una View in grado di aggiornarsi in tempo reale attraverso
@@ -10853,6 +11024,15 @@
 		\item \texttt{PreferencesView}.
 		
 	\end{itemize}
+	\item[Componenti delle librerie utilizzate:] \
+	\begin{itemize}
+		\item \texttt{android.content.SharedPreferences (Android)};
+		
+		\item \texttt{android.content.SharedPreferences.OnSharedPreferenceChangeListener};
+		
+		\item \texttt{android.preference.PreferenceFragment (Android)}.
+		
+	\end{itemize}
 	\item[Visibilità:] \texttt{public};
 	\item[Utilizzo:] Ogni bottone presente deve essere legato ad un oggetto anonimo di tipo View.OnClickListener, in modo da poter reagire alla pressione su di esso. Per recuperare un riferimento alla lista è sufficiente utilizzare la classe R.id di Android;
 	\item[Descrizione:] Classe che si occupa di mostrare la UI utile alla modifica delle preferenze dell'utente;
@@ -10967,7 +11147,7 @@
 				Collegamento tra la lista delle mappe che è possibile scaricare e la view in cui esse devono essere mostrate\end{itemize}
 		\end{description}
 		\item \texttt{+ showMapAlreadyPresent() : void}\\
-		\textbf{Override} Metodo utilizzato per infomrare l'utente che la mappa selezionata è già installata sul dispositivo
+		\textbf{Override} Metodo utilizzato per informare l'utente che la mappa selezionata è già installata sul dispositivo
 	\end{itemize}
 \end{description}
 \end{document}
