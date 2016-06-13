@@ -150,7 +150,7 @@
 		
 		
 		\subsubsection{Bussola}
-			La classe \Compass\ permette all'applicazione di ricevere dati dai sensori hardware del device gestiti grazie alla classe \Sensor. \Compass\ rende disponibili i metodi per registrare i listener ai sensori e per disattivarli. Poiché i sensori comunicano attraverso eventi tramite interfaccia \SensorEventListener\ i dati recuperati della bussola non corrispondono all'istante in cui sono recuperati.
+			La classe \Compass\ permette all'applicazione di ricevere dati dai sensori hardware del device gestiti grazie alla classe \Sensor. \Compass\ rende disponibili i metodi per registrare i listener ai sensori e per disattivarli. Poiché i sensori comunicano attraverso eventi tramite interfaccia \SensorEventListener\ i dati vengono segnalati in tempo reale direttamente alle classi che implementeranno \CompassListener, tra questi c'è \NavigationActivity.
 		
 			\paragraph*{Componenti interne}
 			\begin{itemize}
@@ -162,7 +162,7 @@
 				
 				\item Interfacce e classi:
 				\begin{itemize}
-					\item[] \Compass;
+					\item[] \Compass, \CompassListener;
 				\end{itemize}
 				
 			\end{itemize}
