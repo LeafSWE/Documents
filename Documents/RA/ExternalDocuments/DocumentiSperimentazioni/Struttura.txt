@@ -1,0 +1,76 @@
+
+SPERIMENTAZIONE PRATICA data
+	
+	Introduzione
+	
+	Allestimento impianto (l'impostazione dell'impianto è una e una sola per tutte le prove effettuate)
+		planimetrie
+		disposizione beacon
+		qual è e come abbiamo scelto di simulare le condizioni realistiche !!!
+		
+	Il software/ L'applicazione (MARCO)
+		Algoritmo di navigazione
+		Bussola come e perché
+		indichiamo scelte fatte nel software (link manuale sviluppatore)
+		
+	Interazione utente (ANDREA)
+		scelte effettuate e perché nell'interfaccia di navigazione
+		Usabilità
+		
+	Prove concettuali
+	
+	
+	-----------------
+	# Parte pratica #
+	-----------------
+	
+	Sperimentazione $DATA
+	
+		Impianto
+	
+		Dispositivi di prova (telefoni)
+			Dispositivo 1
+			Dispositivo 2
+	
+		Prove effettuate
+			Prova n
+				Risultati attesi
+				Risultati riscontrati
+				Analisi risultati -> se fallito
+					Considerazioni
+					Possibili miglioramenti
+			...
+		
+		Problematiche individuate
+			Hardware
+			Software
+			User Experience (ANDREA)
+	
+		Conclusioni sperimentazione
+
+			
+			
+	Sperimentazione $DATA++
+	
+		Variazioni rispetto la sperimentazione precedente (se è la seconda sperimentazione)
+		
+		Configurazione dispositivi di prova (telefoni)
+			Dispositivo 1
+			Dispositivo 2
+	
+		Prove effettuate
+			Prova n
+				Risultati attesi
+				Risultati riscontrati
+				Analisi risultati -> se fallito
+					Considerazioni
+					Possibili miglioramenti
+			...
+		
+		Problematiche individuate
+			Hardware
+			Software
+			User Experience (ANDREA)
+	
+		Conclusioni sperimentazione
+		

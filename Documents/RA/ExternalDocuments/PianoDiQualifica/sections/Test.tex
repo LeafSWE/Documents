@@ -1,0 +1,834 @@
+\documentclass[../PianoDiQualifica.tex]{subfiles}
+
+\begin{document}
+\begin{appendices}
+
+\section{Test}
+	\subsection{Test di accettazione}
+	Il test di accettazione serve ad accertare il soddisfacimento dei \textbf{requisiti utente}. Viene effettuato in presenza del proponente che può, in questo modo, avere un primo approccio con il prodotto software\g\ terminato. Nel caso in cui il test avesse esito positivo, si può procedere al rilascio ufficiale del prodotto\g\ 
+sviluppato.\\
+	Di seguito vengono riportati i test di accettazione definiti dal gruppo \leaf.
+	
+\begin{longtabu} to \textwidth{X[0.9] X[1.5] X[2.5] X}
+\toprule
+\textbf{Codice} & \textbf{Requisito} & \textbf{Descrizione} & \textbf{Stato}\\
+\midrule
+\endhead
+\arrayrulecolor{gray}
+TA1 & L'utente deve poter verificare che sia possibile navigare all'interno di un edificio utilizzando l'applicazione. & All'utente è chiesto di: \begin{itemize} \item attivare il bluetooth; \item scegliere la destinazione all'interno dell'edificio; \item confermare la destinazione scelta; \item verificare che venga data la possibilità di avviare la navigazione. \end{itemize} & Superato \\ 
+\midrule 
+TA1.1 & L'utente deve poter verificare che sia possibile ricercare una destinazione per la navigazione. & All'utente è chiesto di: \begin{itemize} \item scegliere di ricercare la destinazione per nome; \item scegliere di ricercare la destinazione per categoria. \end{itemize} & Superato \\ 
+\midrule 
+TA1.1.1 & L'utente deve poter verificare che sia possibile ricercare una destinazione per nome. & All'utente è chiesto di: \begin{itemize} \item inserire il nome di una destinazione; \item verificare che sia possibile confermare l'inserimento fatto. \end{itemize} & Superato \\ 
+\midrule 
+TA1.1.1.1 & L'utente deve poter verificare che sia possibile inserire il nome di una destinazione. & All'utente è chiesto di: \begin{itemize} \item inserire il nome di una destinazione; \item verificare che la destinazione voluta sia stata inserita. \end{itemize} & Superato \\ 
+\midrule 
+TA1.1.1.2 & L'utente deve poter verificare che venga segnalato un errore qualore venga inserita una destinazione non prevista dal sistema. & All'utente è chiesto di: \begin{itemize} \item inserire una destinazione non prevista dal sistema; \item verificare che venga visualizzato un errore che spieghi che la destinazione inserita non è presente tra quelle disponibili. \end{itemize} & Superato \\ 
+\midrule 
+TA1.1.2 & L'utente deve poter verificare che sia possibile ricercare una destinazione per categoria. & All'utente è chiesto di: \begin{itemize} \item scegliere una delle categorie proposte \item scegliere una delle destinazioni presenti all'interno della categoria scelta. \end{itemize} & Superato \\ 
+\midrule 
+TA1.1.2.1 & L'utente deve verificare che sia possibile scegliere una categoria tra quelle proposte. & All'utente è chiesto di: \begin{itemize} \item verificare che l'applicazione fornisca una o più categorie di destinazioni; \item verificare che sia possibile scegliere una di queste categorie. \end{itemize} & Superato \\ 
+\midrule 
+TA1.1.2.2 & L'utente deve verificare che sia possibile scegliere una destinazione tra i risultati di una ricerca. & All'utente è chiesto di: \begin{itemize} \item verificare che all'interno di una categoria siano proposte una o più destinazioni; \item verificare che sia possibile scegliere una di queste destinazioni; \item effettuare la ricerca di una destinazione (prevista dal sistema) per nome; \item verificare che sia possibile scegliere una delle destinazioni restituite dalla ricerca. \end{itemize} & Superato \\ 
+\midrule 
+TA1.1.3 & L'utente deve poter verificare che sia possibile confermare una destinazione. & All'utente è chiesto di: \begin{itemize} \item confermare la destinazione scelta; \item verificare che venga data la possibilità di avviare la navigazione verso la destinazione scelta. \end{itemize} & Superato \\ 
+\midrule 
+TA1.2 & L'utente deve poter verificare che sia possibile avviare la navigazione. & All'utente è chiesto di: \begin{itemize} \item confermare l'avvio della navigazione; \item verificare che venga fornita un'indicazione testuale per raggiungere la destinazione scelta. \end{itemize} & Superato \\ 
+\midrule 
+TA1.2.1 & L'utente deve poter verificare che l'indicazione sia fornita in forma testuale. & All'utente è chiesto di: \begin{itemize} \item verificare che l'indicazione fornita sia un testo scritto. \end{itemize} & Superato \\ 
+\midrule 
+TA1.2.2 & L'utente deve poter verificare che l'indicazione testuale fornita per raggiungere la destinazione scelta, quando è stata avviata la navigazione, sia corretta. & All'utente è chiesto di: \begin{itemize} \item seguire l'indicazione testuale data; \item verificare di essere arrivato alla destinazione scelta. \end{itemize} & Superato \\ 
+\midrule 
+TA1.2.3 & L'utente deve poter verificare che l'indicazione testuale fornita dall'applicazione abbia come punto di partenza il POI in cui l'utente si trova. & All'utente è chiesto di: \begin{itemize} \item avviare la navigazione; \item verificare che l'indicazione testuale fornita dall'applicazione abbia come punto di partenza il POI in cui l'utente si trova. \end{itemize} & Superato \\ 
+\midrule 
+TA1.2.4 & L'utente deve poter verificare che sia possibile confermare l'avvio della navigazione. & All'utente viene chiesto di: \begin{itemize} \item impostare una destinazione; \item confermare la destinazione scelta; \item verificare che la navigazione sia stata avviata. \end{itemize} & Superato \\ 
+\midrule 
+TA1.3 & L'utente deve verificare che sia possibile interrompere la navigazione. & All'utente è chiesto di: \begin{itemize} \item scegliere di interrompere la navigazione; \item verificare che la navigazione si interrompa. \end{itemize} & Superato \\ 
+\midrule 
+TA1.4 & L'utente deve verificare che sia possibile accedere a delle informazioni più dettagliate riguardanti il percorso da seguire per raggiungere la destinazione. & All'utente è chiesto di: \begin{itemize} \item scegliere di visualizzare le fotografie della prossima area; \item scegliere di ricevere delle indicazioni testuali estese per raggiungere la prossima area; \item scegliere di accedere alla lista completa delle indicazioni per raggiungere la destinazione scelta. \end{itemize} & Superato \\ 
+\midrule 
+TA1.4.1 & L'utente deve verificare che sia possibile visualizzare le fotografie della prossima area da raggiungere. & All'utente è chiesto di: \begin{itemize} \item verificare che siano visualizzate le fotografie che ritraggono la prossima area da raggiungere. \end{itemize} & Superato \\ 
+\midrule 
+TA1.4.2 & L'utente deve verificare che sia possibile visualizzare delle indicazioni testuali estese dettagliate riguardanti le azioni da compiere per raggiungere la prossima area. & All'utente è chiesto di: \begin{itemize} \item verificare che sia visualizzata una descrizione tesuale estesa che descriva in modo dettagliato le azioni da compiere per raggiungere la prossima area. \end{itemize} & Superato \\ 
+\midrule 
+TA1.4.3 & L'utente deve verificare che sia possibile visualizzare la lista completa delle indicazioni da seguire per raggiungere la destinazione scelta. & All'utente è chiesto di: \begin{itemize} \item verificare che sia visualizzata la lista completa delle indicazioni da seguire per raggiungere la destinazione scelta. \end{itemize} & Superato \\ 
+\midrule 
+TA1.4.4 & L'utente deve verificare che venga visualizzato un errore nel caso in cui acceda alla foto del prossimo POI con connessione Internet non attiva. & All'utente è chiesto di: \begin{itemize} \item disattivare la connessione Internet \item accedere alle fotografie del prossimo POI \item verificare che venga segnalato un errore che spieghi che il dispositivo non ha la connessione Internet attiva. \end{itemize} & Superato \\ 
+\midrule 
+TA1.5 & L'utente deve poter verificare che venga segnalato un errore qualora segua un percorso differente da quello calcolato dall'applicazione. & All'utente è chiesto di: \begin{itemize} \item avviare la navigazione; \item seguire un percorso differente da quello proposto dall'applicazione; \item verificare che venga segnalato un errore che spieghi che il percorso che si sta seguendo non è quello previsto. \end{itemize} & Superato \\ 
+\midrule 
+TA1.6 & L'utente deve poter verificare che venga segnalato un errore nel caso in cui voglia avviare la navigazione all'interno di un'area dove non è presente il segnale di alcun beacon. & All'utente è chiesto di: \begin{itemize} \item posizionarsi in un'area dove non è presente il segnale di alcun beacon; \item avviare l'applicazione; \item verificare che venga segnalato un errore che spieghi che in quell'area non è stato rilevato il segnale di alcun beacon. \end{itemize} & Superato \\ 
+\midrule 
+TA1.7 & L'utente deve poter verificare che venga segnalato un errore nel caso in cui voglia avviare la navigazione con la connessione Internet del proprio dispositivo non attiva. & All'utente è chiesto di: \begin{itemize} \item disattivare la connessione internet; \item avviare la navigazione; \item verificare che venga segnalato un errore che spieghi che il dispositivo non ha la connessione Internet attiva. \end{itemize} & Superato \\ 
+\midrule 
+TA1.8 & L'utente deve poter verificare che venga segnalato un errore nel caso in cui voglia avviare l'applicazione e la mappa installata nel proprio dispositivo differisce dall'ultima versione online della mappa. & All'utente è chiesto di: \begin{itemize} \item avere salvata una mappa che richieda un aggiornamento; \item avviare l'applicazione \item verificare che venga segnalato un errore che spieghi che la mappa presente nel dispositivo non è l'ultima versione della mappa per quell'edificio. \end{itemize} & Superato \\ 
+\midrule 
+TA1.9 & L'utente deve poter verificare che venga segnalato un errore nel caso in cui si rilevi un beacon all'interno di un edificio mappato e non sia installata la mappa per quell'edificio. & All'utente è chiesto di: \begin{itemize} \item entrare in un edificio di cui non dispone della mappa; \item avviare l'applicazione; \item verificare che venga segnalato un errore che spieghi che non è presente nel dispositivo una mappa per quell'edificio. \end{itemize} & Superato \\ 
+\midrule 
+TA2 & L'utente deve poter verificare che sia possibile accedere alle informazioni dell'edificio in cui ci si trova. & All'utente è chiesto di: \begin{itemize} \item scegliere di accedere alle informazioni generali sull'edificio in cui ci si trova; \item scegliere di accedere alla lista completa di tutti i POI presenti nell'edificio in cui si trova; \item scegliere di accedere alla lista dei POI associati al beacon rilevato alla posizione dell’utente. \end{itemize} & Superato \\ 
+\midrule 
+TA2.1 & L'utente deve poter verificare che sia possibile accedere al nome dell'edificio. & All'utente è chiesto di: \begin{itemize} \item verificare che sia presente un nome per l'edificio. \end{itemize} & Superato \\ 
+\midrule 
+TA2.2 & L'utente deve poter verificare che sia possibile accedere alla descrizione dell'edificio dell'edificio. & All'utente è chiesto di: \begin{itemize} \item verificare che sia presente una descrizione per l'edificio. \end{itemize} & Superato \\ 
+\midrule 
+TA2.3 & L'utente deve verificare che sia possibile accedere all'indirizzo dell'edificio. & All'utente è chiesto di: \begin{itemize} \item verificare che sia presente l'indirizzo per l'edificio. \end{itemize} & Superato \\ 
+\midrule 
+TA2.4 & L'utente deve verificare che sia possibile accedere aglio orari dell'edificio. & All'utente è chiesto di: \begin{itemize} \item verificare che siano presenti gli orari di apertura dell'edificio. \end{itemize} & Superato \\ 
+\midrule 
+TA2.5 & L'utente deve poter verificare che sia possibile accedere alla lista completa di tutti i POI presenti nell'edificio in cui si trova. & All'utente è chiesto di: \begin{itemize} \item verificare che venga visualizzata la lista completa di tutti i POI presenti nell'edificio. \end{itemize} & Superato \\ 
+\midrule 
+TA2.6 & L'utente deve poter verificare che sia possibile accedere alla lista dei POI associati ai beacon rilevati alla posizione dell’utente. & All'utente è chiesto di: \begin{itemize} \item verificare che venga visualizzata la lista dei POI associati ai beacon rilevati alla posizione dell’utente; \item verificare che sia possibile accedere alle informazioni riguardanti uno specifico POI nella lista. \end{itemize} & Superato \\ 
+\midrule 
+TA2.6.1 & L'utente deve poter verificare che sia possibile accedere alle informazioni riguardanti uno specifico POI. & All'utente è chiesto di: \begin{itemize} \item verificare che sia possibile accedere all'identificativo del POI; \item verificare che sia possibile accedere alla descrizione del POI. \end{itemize} & Superato \\ 
+\midrule 
+TA2.6.1.1 & L'utente deve poter verificare che sia possibile accedere all'identificativo di uno specifico POI. & All'utente è chiesto di: \begin{itemize} \item verificare che sia presente un identificativo per il POI. \end{itemize} & Superato \\ 
+\midrule 
+TA2.6.1.2 & L'utente deve poter verificare che sia possibile accedere alla descrizione di uno specifico POI. & All'utente è chiesto di: \begin{itemize} \item verificare che sia presente una descrizione per il POI. \end{itemize} & Superato \\ 
+\midrule 
+TA2.7 & L'utente deve verificare che venga visualizzato un errore nel caso in cui acceda alle informazioni di un edificio con connessione internet non attiva. & All'utente è chiesto di: \begin{itemize} \item disattivare la connessione internet; \item accedere alle informazioni di un edificio; \item verificare che venga segnalato un errore che spieghi che il dispositivo non ha la connessione Internet attiva. \end{itemize} & Superato \\ 
+\midrule 
+TA2.8 & L'utente deve verificare che venga visualizzato un errore nel caso in cui acceda alle informazioni dell'edificio e la versione della mappa non coincida con l'ultima versione disponibile. & All'utente è chiesto di: \begin{itemize} \item accedere alle informazioni di un edificio; \item verificare che venga segnalato un errore che spieghi che il dispositivo non è presenta l'ultima versione di mappa disponibile. \end{itemize} & Superato \\ 
+\midrule 
+TA3 & L'utente deve poter verificare che sia possibile gestire gli aspetti relativi all'applicazione. & All'utente è chiesto di: \begin{itemize} \item gestire le mappe dell'applicazione; \item gestire le preferenze di navigazione. \end{itemize} & Non \par superato \\ 
+\midrule 
+TA3.1 & L'utente deve poter verificare che sia possibile gestire le mappe dall'applicazione. & All'utente è chiesto di: \begin{itemize} \item scegliere di gestire le mappe installate sul proprio dispositivo; \item scegliere di gestire le mappe non presenti sul proprio dispositivo. \end{itemize} & Superato \\ 
+\midrule 
+TA3.1.1 & L'utente deve poter verificare che sia possibile gestire le mappe presenti sul proprio dispositivo. & All'utente è chiesto di: \begin{itemize} \item scegliere di accedere alle mappe installate; \item scegliere di aggiornare una mappa installata; \item scegliere di rimuovere una mappa installata; \item scegliere di accedere alle informazioni riguardanti una mappa. \end{itemize} & Superato \\ 
+\midrule 
+TA3.1.1.1 & L'utente deve poter verificare che sia possibile accedere alle mappe installate sul proprio dispositivo. & All'utente è chiesto di: \begin{itemize} \item accedere alle mappe installate; \item se l'utente non ha installato alcuna mappa in precedenza verificare che la sezione sia vuota, in caso contrario verificare che la sezione contenga le mappe installate in precedenza. \end{itemize} & Superato \\ 
+\midrule 
+TA3.1.1.2 & L'utente deve poter verificare che sia possibile aggiornare una mappa (che richieda un aggiornamento) presente sul proprio dispositivo. & All'utente è chiesto di: \begin{itemize} \item scegliere una mappa (che richieda un aggiornamento) presente sul proprio dispositivo; \item aggiornare tale mappa; \item verificare che sia possibile avviare la navigazione all'interno dell'edificio di cui è stata aggiornata la mappa. \end{itemize} & Superato \\ 
+\midrule 
+TA3.1.1.3 & L'utente deve poter verificare che sia possibile rimuovere una mappa dal proprio dispositivo. & All'utente è chiesto di: \begin{itemize} \item scegliere una mappa tra quelle presenti sul proprio dispositivo; \item rimuovere la mappa scelta; \item verificare che la mappa rimossa non sia più presente sul proprio dispositivo. \end{itemize} & Superato \\ 
+\midrule 
+TA3.1.1.4 & L'utente deve poter verificare che sia possibile accedere alle informazioni riguardanti una mappa presente sul proprio dispositivo. & All'utente è chiesto di: \begin{itemize} \item scegliere una mappa presente sul proprio dispositivo; \item accedere al nome di una mappa; \item accedere all'indirizzo dell'edificio; \item accedere alla descrizione dell'edificio; \item accedere alla dimensione in kilobyte della mappa; \item accedere alla versione della mappa. \end{itemize} & Superato \\ 
+\midrule 
+TA3.1.1.4.1 & L'utente deve poter verificare che sia possibile accedere al nome di una mappa presente sul proprio dispositivo. & All'utente è chiesto di: \begin{itemize} \item verificare che sia possibile accedere al nome di una mappa. \end{itemize} & Superato \\ 
+\midrule 
+TA3.1.1.4.2 & L'utente deve poter verificare che sia possibile accedere all'indirizzo dell'edificio dalla mappa presente sul proprio dispositivo. & All'utente è chiesto di: \begin{itemize} \item verificare che sia possibile accedere all'indirizzo dell'edificio (dalla mappa). \end{itemize} & Superato \\ 
+\midrule 
+TA3.1.1.4.3 & L'utente deve poter verificare che sia possibile accedere alla descrizione dell'edificio dalla mappa presente sul proprio dispositivo. & All'utente è chiesto di: \begin{itemize} \item verificare che sia possibile accedere alla descrizione dell'edificio (dalla mappa). \end{itemize} & Superato \\ 
+\midrule 
+TA3.1.1.4.4 & L'utente deve poter verificare che sia possibile accedere alla dimensione in megabyte della mappa di un edificio presente sul proprio dispositivo. & All'utente è chiesto di: \begin{itemize} \item verificare che sia possibile accedere alla dimensione in kilobyte della mappa di un edificio. \end{itemize} & Superato \\ 
+\midrule 
+TA3.1.1.4.5 & L'utente deve poter verificare che sia possibile accedere alla versione della mappa di un edificio presente sul proprio dispositivo. & All'utente è chiesto di: \begin{itemize} \item verificare che sia possibile accedere alla versione della mappa di un edificio. \end{itemize} & Superato \\ 
+\midrule 
+TA3.1.2 & L'utente deve poter verificare che sia possibile gestire le mappe non presenti sul proprio dispositivo. & All'utente è chiesto di: \begin{itemize} \item scegliere di ricercare una mappa non presente sul proprio dispositivo; \item scegliere di installare una mappa non presente sul proprio dispositivo; \item scegliere di accedere alle informazioni riguardanti una mappa non presente sul proprio dispositivo. \end{itemize} & Non \par superato \\ 
+\midrule 
+TA3.1.2.1 & L'utente deve poter verificare che sia possibile ricercare per nome (dell'edificio) una mappa non presente sul proprio dispositivo. & All'utente è chiesto di: \begin{itemize} \item inserire il nome dell'edificio di cui cerca la mappa; \item scegliere la mappa tra quelle proposte come risultati della ricerca. \end{itemize} & Non \par implementato \\ 
+\midrule 
+TA3.1.2.1.1 & L'utente deve poter verificare che venga segnalato un messaggio di errore nel caso in cui l'utente voglia scaricare una mappa non prevista. & All'utente è chiesto di: \begin{itemize} \item inserire il nome di una mappa non prevista dal sistema; \item verificare che venga visualizzato un messaggio di errore che spieghi che tale mappa non è prevista. \end{itemize} & Non \par implementato \\ 
+\midrule 
+TA3.1.2.1.2 & L'utente deve poter verificare che sia possibile inserire il possibile nome di una mappa. & All'utente è chiesto di: \begin{itemize} \item inserire il possibile nome di una mappa; \item verificare che il nome voluto sia stato inserito. \end{itemize} & Non \par implementato \\ 
+\midrule 
+TA3.1.2.2 & L'utente deve poter verificare che sia possibile installare una nuova mappa. & All'utente è chiesto di: \begin{itemize} \item scegliere una mappa tra quelle proposte nella lista \item eseguire il download della mappa; \item verificare che la mappa sia presente tra quelle disponibili nel dispositivo; \item verificare che sia possibile avviare la navigazione all'interno dell'edificio di cui è stato eseguito il download della mappa. \end{itemize} & Superato \\ 
+\midrule 
+TA3.1.2.3 & L'utente deve poter verificare che sia possibile accedere alle informazioni riguardanti una mappa non ancora scaricata. & All'utente è chiesto di: \begin{itemize} \item  accedere al nome dell'edificio; \item scegliere di accedere all'indirizzo dell'edificio; accedere alla descrizione dell'edificio; \item accedere alla dimensione in kilobyte della mappa; \item accedere alla versione della mappa. \end{itemize} & Superato \\ 
+\midrule 
+TA3.1.2.3.1 & L'utente deve poter verificare che sia possibile accedere al nome dell'edificio dalla mappa non presente sul proprio dispositivo. & All'utente è chiesto di: \begin{itemize} \item verificare che sia possibile accedere al nome dell'edificio. \end{itemize} & Superato \\ 
+\midrule 
+TA3.1.2.3.2 & L'utente deve poter verificare che sia possibile accedere all'indirizzo dell'edificio dalla mappa non presente sul proprio dispositivo. & All'utente è chiesto di: \begin{itemize} \item verificare che sia possibile accedere all'indirizzo dell'edificio. \end{itemize} & Superato \\ 
+\midrule 
+TA3.1.2.3.3 & L'utente deve poter verificare che sia possibile accedere alla descrizione dell'edificio dalla mappa non presente sul proprio dispositivo. & All'utente è chiesto di: \begin{itemize} \item verificare che sia possibile accedere alla descrizione dell'edificio. \end{itemize} & Superato \\ 
+\midrule 
+TA3.1.2.3.4 & L'utente deve poter verificare che sia possibile accedere alla dimensione in megabyte della mappa di un edificio non presente sul proprio dispositivo. & All'utente è chiesto di: \begin{itemize} \item verificare che sia possibile accedere alla dimensione in kilobyte della mappa di un edificio. \end{itemize} & Superato \\ 
+\midrule 
+TA3.1.2.3.5 & L'utente deve poter verificare che sia possibile accedere alla versione della mappa di un edificio non presente sul proprio dispositivo. & All'utente è chiesto di: \begin{itemize} \item verificare che sia possibile accedere alla versione della mappa di un edificio. \end{itemize} & Superato \\ 
+\midrule 
+TA3.2 & L'utente deve poter verificare che sia possibile gestire le preferenze di navigazione. & All'utente è chiesto di: \begin{itemize} \item modificare le preferenze riguardanti la modalità di fruizione delle indicazioni; \item modificare le preferenze riguardanti il percorso. \end{itemize} & Non \par implementato \\ 
+\midrule 
+TA3.2.1 & L'utente deve poter verificare che sia possibile gestire le preferenze riguardanti la modalità di fruizione delle indicazioni. & All'utente è chiesto di: \begin{itemize} \item modificare le impostazioni riguardanti le indicazioni vocali; \item modificare le impostazioni riguardanti le inidicazioni sonore. \end{itemize} & Non \par implementato \\ 
+\midrule 
+TA3.2.1.1 & L'utente deve poter verificare che sia possibile attivare le indicazioni vocali, se queste sono disattivate. & All'utente è chiesto di: \begin{itemize} \item attivare le indicazioni vocali; \item verificare che all'avvio della navigazione vengano fornite le indicazioni vocali per raggiungere la destinazione scelta. \end{itemize} & Non \par implementato \\ 
+\midrule 
+TA3.2.1.2 & L'utente deve poter verificare che sia possibile disattivare le indicazioni vocali, se queste sono attivate. & All'utente è chiesto di: \begin{itemize} \item disattivare le indicazioni vocali; \item verificare che all'avvio della navigazione non vengano fornite le indicazioni vocali per raggiungere la destinazione scelta. \end{itemize} & Non \par implementato \\ 
+\midrule 
+TA3.2.1.3 & L'utente deve poter verificare che sia possibile attivare le inidcazioni sonore, se queste sono disattivate. & All'utente è chiesto di: \begin{itemize} \item attivare le indicazioni sonore; \item verificare che all'avvio della navigazione vengano fornite le indicazioni sonore per raggiungere la destinazione scelta. \end{itemize} & Non \par implementato \\ 
+\midrule 
+TA3.2.1.4 & L'utente deve poter verificare che sia possibile disattivare le indicazioni sonore, se queste sono attivate. & All'utente è chiesto di: \begin{itemize} \item disattivare le indicazioni sonore; \item verificare che all'avvio della navigazione non vengano fornite le indicazioni sonore per raggiungere la destinazione scelta. \end{itemize} & Non \par implementato \\ 
+\midrule 
+TA3.2.2 & L'utente deve poter verificare che sia possibile gestire le preferenze riguardanti il percorso da seguire. & All'utente viene chiesto di: \begin{itemize} \item modificare le impostazioni riguardanti il percorso più accessibile; \item modificare le impostazioni riguardanti il percorso con meno ascensori. \end{itemize} & Superato \\ 
+\midrule 
+TA3.2.2.1 & L'utente deve poter verificare che sia possibile scegliere di seguire il percorso più accessibile per arrivare alla destinazione desiderata. & All'utente viene chiesto di: \begin{itemize} \item attivare l'impostazione riguardante il percorso più accessibile; \item verificare che all'avvio della navigazione l'applicazione fornisca un percorso che prediliga gli ascensori rispetto altre soluzioni per raggiungere la destinazione scelta. \end{itemize} & Superato \\ 
+\midrule 
+TA3.2.2.2 & L'utente deve poter verificare che sia possibile scegliere di seguire il percorso con il minor numero di ascensori possibile. & All'utente viene chiesto di: \begin{itemize} \item attivare l'impostazione riguardante il percorso con il minor numero di ascensori possibile; \item verificare che all'avvio della navigazione l'applicazione fornisca un percorso che prediliga soluzioni alternative rispetto gli ascensori per raggiungere la destinazione scelta. \end{itemize} & Superato \\ 
+\midrule 
+TA3.2.2.3 & L'utente deve poter verificare che sia possibile scegliere di seguire il percorso più veloce in assoluto. & All'utente viene chiesto di: \begin{itemize} \item attivare l'impostazione riguardante il percorso che è ritenuto più veloce; \item verificare che all'avvio della navigazione l'applicazione fornisca il percorso effettivamente più veloce. \end{itemize} & Superato \\ 
+\midrule 
+TA4 & L'utente deve poter verificare che sia possibile accedere alla guida. & All'utente viene chiesto di: \begin{itemize} \item verificare che sia possibile accedere alla guida; \item verificare che la guida spieghi il funzionamento dell'applicazione. \end{itemize} & Superato \\ 
+\midrule 
+TA5 & L'utente non sviluppatore deve poter verificare che sia possibile attivare le funzionalità sviluppatore. & All'utente non sviluppatore viene chiesto di: \begin{itemize} \item inserire un codice sviluppatore valido; \item confermare il codice inserito; \item verificare che siano state attivate le funzionalità sviluppatore. \end{itemize} & Superato \\ 
+\midrule 
+TA5.1 & L'utente non sviluppatore deve poter verificare che venga segnalato un errore nel caso in cui venga inserito un codice sviluppatore non valido. & All'utente non sviluppatore viene chiesto di: \begin{itemize} \item inserire un codice sviluppatore non valido; \item confermare il codice inserito; \item verificare che venga visualizzato un errore che spieghi che il codice inserito non è valido; \item verificare che non siano state attivate le funzionalità di sviluppatore. \end{itemize} & Superato \\ 
+\midrule 
+TA5.2 & L'utente non sviluppatore deve poter verificare che sia possibile inserire un codice sviluppatore. & All'utente non sviluppatore viene chiesto di: \begin{itemize} \item inserire un codice sviluppatore; \item verificare che il codice voluto sia stato inserito. \end{itemize} & Superato \\ 
+\midrule 
+TA5.3 & L'utente non sviluppatore deve poter verificare che sia possibile confermare il codice inserito. & All'utente non sviluppatore viene chiesto di: \begin{itemize} \item inserire un codice sviluppatore; \item confermare il codice inserito; \item verificare che, se il codice inserito è valido, sono ora attive le funzionalità sviluppatore, altrimenti se non è valido viene segnalato un errore. \end{itemize} & Superato \\ 
+\midrule 
+TA6 & Lo sviluppatore deve verificare che sia possibile accedere alle informazioni riguardanti i beacon rilevati. & Allo sviluppatore viene chiesto di: \begin{itemize} \item accedere all'UUID di un beacon rilevato; \item accedere al Major di un beacon rilevato; \item accedere al Minor di un beacon rilevato; \item accedere al livello di potenza del segnale di un beacon rilevato; \item accedere al livello di batteria di un beacon rilevato; \item accedere alla distanza approssimativa dal dispositivo utilizzato al beacon rilevato; \item accedere al formato di un beacon rilevato; \item accedere all'area coperta da un beacon rilevato. \end{itemize} & Superato \\ 
+\midrule 
+TA6.1 & Lo sviluppatore deve verificare che sia possibile accedere all'UUID di un beacon rilevato. & Allo sviluppatore viene chiesto di: \begin{itemize} \item accedere all'UUID di un beacon rilevato; \item verificare che l'UUID rilevato corrisponda al valore corretto. \end{itemize} & Superato \\ 
+\midrule 
+TA6.2 & Lo sviluppatore deve verificare che sia possibile accedere al Major di un beacon rilevato. & Allo sviluppatore viene chiesto di: \begin{itemize} \item accedere al Major di un beacon rilevato; \item verificare che il Major rilevato corrisponda al valore corretto. \end{itemize} & Superato \\ 
+\midrule 
+TA6.3 & Lo sviluppatore deve verificare che sia possibile accedere al Minor di un beacon rilevato. & Allo sviluppatore viene chiesto di: \begin{itemize} \item accedere al Minor di un beacon rilevato; \item verificare che il Minor rilevato corrisponda al valore corretto. \end{itemize} & Superato \\ 
+\midrule 
+TA6.4 & Lo sviluppatore deve verificare che sia possibile accedere al formato di un beacon rilevato. & Allo sviluppatore viene chiesto di: \begin{itemize} \item accedere al formato di un beacon rilevato; \item verificare che il formato rilevato corrisponda al valore corretto. \end{itemize} & Superato \\ 
+\midrule 
+TA6.5 & Lo sviluppatore deve verificare che sia possibile accedere al livello di potenza del segnale di un beacon rilevato. & Allo sviluppatore viene chiesto di: \begin{itemize} \item accedere al livello di potenza del segnale di un beacon rilevato. \end{itemize} & Superato \\ 
+\midrule 
+TA6.6 & Lo sviluppatore deve verificare che sia possibile accedere al livello di batteria di un beacon rilevato. & Allo sviluppatore viene chiesto di: \begin{itemize} \item accedere al livello di batteria di un beacon rilevato. \end{itemize} & Superato \\ 
+\midrule 
+TA6.7 & Lo sviluppatore deve verificare che sia possibile accedere alla distanza approssimativa dal dispositivo utilizzato al beacon rilevato. & Allo sviluppatore viene chiesto di: \begin{itemize} \item accedere alla distanza approssimativa dal dispositivo utilizzato al beacon rilevato. \end{itemize} & Superato \\ 
+\midrule 
+TA6.8 & Lo sviluppatore deve verificare che sia possibile accedere all'area coperta da beacon rilevato. & Allo sviluppatore viene chiesto di: \begin{itemize} \item accedere all'area coperta da beacon rilevato. \end{itemize} & Superato \\ 
+\midrule 
+TA7 & Lo sviluppatore deve poter verificare che sia possibile gestire i log. & Allo sviluppatore viene chiesto di: \begin{itemize} \item Avviare un nuovo log; \item Interrompere un log precedentemente avviato; \item Accedere ad un log salvato in precedenza; \item rimuovere un log salvato in precedenza; \item salvare un log appena interrotto. \end{itemize} & Superato \\ 
+\midrule 
+TA7.1 & Lo sviluppatore deve poter verificare che sia possibile avviare un nuovo log. & Allo sviluppatore viene chiesto di: \begin{itemize} \item avviare un nuovo log; \item verificare che il log sia stato avviato. \end{itemize} & Superato \\ 
+\midrule 
+TA7.2 & Lo sviluppatore deve poter verificare che sia possibile interrompere precedentemente avviato. & Allo sviluppatore viene chiesto di: \begin{itemize} \item scegliere di interrompere un log precedentemente avviato; \item verificare che il log non sia più avviato. \end{itemize} & Superato \\ 
+\midrule 
+TA7.3 & Lo sviluppatore deve poter verificare che sia possibile accedere ad un log salvato in precedenza. & Allo sviluppatore viene chiesto di: \begin{itemize} \item accedere ad un log salvato in precedenza; \item verificare che riesca a accedere al contenuto del log scelto. \end{itemize} & Superato \\ 
+\midrule 
+TA7.4 & Lo sviluppatore deve poter verificare che sia possibile rimuovere un log salvato in precedenza. & Allo sviluppatore viene chiesto di: \begin{itemize} \item rimuovere un log salvato in precedenza; \item verificare che il log rimosso non sia più presente nella lista dei log salvati. \end{itemize} & Superato \\ 
+\midrule 
+TA7.5 & Lo sviluppatore deve poter verificare che sia possibile salvare un log appena interrotto. & Allo sviluppatore viene chiesto di: \begin{itemize} \item avviare un nuovo log; \item interrompere il log precedentemente avviato; \item salvare il log appena interrotto; \item verificare che sia possibile accedere al log appena salvato. \end{itemize} & Superato \\ 
+\midrule 
+TA8 & L'utente deve poter verificare che sia possibile accedere alle informazioni dei punti d'interesse dell'edificio in cui si trova. & All'utente è chiesto di: \begin{itemize} \item attivare il bluetooth; \item accedere alla sezione preposta all'esplorazione; \item avviare la scansione; \item verificare che sia possibile accedere alle informazioni dell'area circostante. \end{itemize} & Superato \\ 
+\arrayrulecolor{black}
+\bottomrule
+\caption{Tabella test di accettazione} \\
+\end{longtabu}
+	
+	\subsection{Test di sistema}
+	Il test di sistema verifica il comportamento dinamico del sistema completo al fine di verificare il soddisfacimento dei \textbf{requisiti software}. La maggior parte degli errori dovrebbe essere già stata identificata durante i test di unità e di integrazione. Il test di sistema viene di solito considerato appropriato per verificare il sistema anche rispetto ai requisiti non funzionali, come quelli prestazionali, di qualità e di vincolo. A questo livello, viene effettuata anche una serie di test in una struttura opportunamente mappata da beacon\g\ per verificare il corretto funzionamento del software\g\ ed evidenziare eventuali bug\g\ o mancanze a livello di performance e precisione.\\
+	Di seguito vengono riportati i test di sistema definiti dal gruppo \leaf.
+	
+	\begin{longtabu} to \textwidth {X[0.7] X[2] X[1.3] X}
+\toprule
+\textbf{Test} & \textbf{Descrizione} & \textbf{Requisito} & \textbf{Stato}\\
+\midrule
+\endhead
+\arrayrulecolor{gray}
+TS1 & Viene verificato che il sistema calcoli un percorso per navigare da un POI A ad un POI B. & RObbF8.3 & Superato \\ 
+\midrule 
+TS1.1 & Viene verificato che il sistema calcoli un percorso per navigare da un POI A ad un POI B secondo le preferenze dell'utente. & RDesF8.3.1 & Superato \\ 
+\midrule 
+TS1.1.1 & Viene verificato che il sistema calcoli un percorso per navigare da un POI A ad un POI B scegliendo il percorso con meno barriere architettoniche. & RDesF8.3.1.1 & Superato \\ 
+\midrule 
+TS1.1.2 & Viene verificato che il sistema calcoli un percorso per navigare da un POI A ad un POI B scegliendo il percorso con meno ascensori. & RDesF8.3.1.2 & Superato \\ 
+\midrule 
+TS1.1.3 & Viene verificato che il sistema calcoli un percorso per navigare da un POI A ad un POI B scegliendo il percorso più veloce. & RDesF8.3.1.3 & Superato \\ 
+\midrule 
+TS1.2 & Viene verificato che il sistema fornisca le indicazioni per raggiungere il prossimo POI. & RDesF8.4.2.4 & Superato \\ 
+\midrule 
+TS1.3 & Viene verificato che il sistema fornisce una lista contenente le indicazioni utili per raggiungere la destinazione scelta percorrendo tutti i POI che compongono il percorso previsto. & RDesF8.4.2.2 & Superato \\ 
+\midrule 
+TS1.4 & Viene verificato che il sistema avvisi l'utente qualora rilevi un beacon differente da quelli previsti dal percorso calcolato. & RDesF8.4.2.3 & Superato \\ 
+\midrule 
+TS1.5 & Viene verificato che il sistema avvisi l'utente qualora si trovi in un'area in cui non viene rilevato alcun beacon. & RDesF8.4.2.6 & Superato \\ 
+\midrule 
+TS1.6 & Viene verificato che il sistema fornisca delle informazioni testuali estese. & RDesF8.4.3.2 & Superato \\ 
+\midrule 
+TS1.7 & Viene verificato che il sistema fornisca le fotografie del prossimo POI da raggiungere. & RDesF8.4.3.1 & Superato \\ 
+\midrule 
+TS1.8 & Viene verificato che il sistema fornisca la lista di tutte le prossime indicazioni da seguire per raggiungere la destinazione scelta. & RDesF8.4.3.3 & Superato \\ 
+\midrule 
+TS1.9 & Viene verificato che il sistema permetta di interrompere la navigazione in corso. & RObbF8.5 & Superato \\ 
+\midrule 
+TS1.10 & Viene verificato che il sistema avverta l'utente qualora volesse avviare la navigazione in mancanza di una connessione internet attiva. & RObbF8.6 & Superato \\ 
+\midrule 
+TS1.11 & Viene verificato che il sistema avverta l'utente qualora volesse avviare l'applicazione e la mappa installata sul suo dispositivo differisce dall'ultima versione disponibile per quell'edificio. & RObbF8.7 & Superato \\ 
+\midrule 
+TS1.12 & Viene verificato che il sistema avverta l'utente qualora rilevasse un beacon all'interno di un edificio e la mappa dell’edificio non fosse installata nel dispositivo. & RObbF8.8 & Superato \\ 
+\midrule 
+TS1.13 & Viene verificato che il sistema fornisca la possibilità di ricercare una destinazione per nome. & RDesF8.1.1 & Superato \\ 
+\midrule 
+TS1.13.1 & Viene verificato che il sistema fornisca la possibilità di inserire il nome di una destinazione. & RDesF8.1.1.1 & Superato \\ 
+\midrule 
+TS1.14 & Viene verificato che il sistema fornisca la possibilità di ricercare una destinazione per categoria. & RObbF8.1.2 & Superato \\ 
+\midrule 
+TS1.14.1 & Viene verificato che il sistema permetta di accedere ad una categoria tra quelle disponibili per il dato edificio, accedendo ai POI in essa contenuti. & RObbF8.1.2.1 & Superato \\ 
+\midrule 
+TS1.15 & Viene verificato che il sistema permetta di selezionare il risultato di una ricerca. & RObbF8.1.3 & Superato \\ 
+\midrule 
+TS1.16 & Viene verificato che il sistema permetta di confermare la scelta di una destinazione. & RObbF8.2 & Superato \\ 
+\midrule 
+TS1.17 & Viene verificato che il sistema avverta l'utente qualora volesse accedere alla foto del prossimo POI e la connessione Internet non fosse attiva sul proprio dispositivo. & RDesF8.4.3.4 & Superato \\ 
+\midrule 
+TS2 & Viene verificato che il sistema richieda l'attivazione dei sensori. & RObbF8.4.1 & Superato \\ 
+\midrule 
+TS2.1 & Viene verificato che il sistema richieda l'attivazione della geolocalizzazione. & RObbF8.4.1.1 & Superato \\ 
+\midrule 
+TS2.2 & Viene verificato che il sistema richieda l'attivazione del Bluetooth. & RObbF8.4.1.2 & Superato \\ 
+\midrule 
+TS2.3 & Viene verificato che il sistema richieda l'attivazione del GPS se il dispositivo ha una versione del sistema operativo uguale o superiore a 6.0. & RObbF8.4.1.3 & Superato \\ 
+\midrule 
+TS3 & Viene verificato che il sistema interagisca con i beacon. & RObbF9 & Superato \\ 
+\midrule 
+TS3.1 & Viene verificato che il sistema rilevi gli identificativi (UUID, Major, Minor) di un beacon rilevato dall'applicazione. & RObbF9.1 & Superato \\ 
+\midrule 
+TS3.1.1 & Viene verificato che, rilevato l'identificativo di un beacon, il sistema riesca a reperire informazioni riguardanti il POI a cui è associato quel beacon. & RObbF9.1.1 & Superato \\ 
+\midrule 
+TS3.1.2 & Viene verificato che, rilevato l'identificativo di un beacon, il sistema riesca a reperire informazioni riguardanti i POI circostanti quel beacon. & RObbF9.1.2 & Superato \\ 
+\midrule 
+TS3.2 & Viene verificato che il sistema rilevi il livello di potenza del segnale di un beacon rilevato. & RObbF9.2 & Superato \\ 
+\midrule 
+TS3.3 & Viene verificato che il sistema rilevi il livello di batteria di un beacon rilevato. & RObbF9.3 & Superato \\ 
+\midrule 
+TS3.4 & Viene verificato che il sistema rilevi la distanza approssimativa di un beacon rilevato dal dispositivo utilizzato. & RObbF9.4 & Superato \\ 
+\midrule 
+TS3.5 & Viene verificato che il sistema rilevi il formato di un beacon rilevato. & RObbF9.5 & Superato \\ 
+\midrule 
+TS3.6 & Viene verificato che il sistema rilevi l'area coperta dal segnale di un beacon rilevato. & RObbF9.6 & Superato \\ 
+\midrule 
+TS4 & Viene verificato che il sistema permette di recuperare una mappa collegandosi ad un server. & RDesF11.2.3 & Superato \\ 
+\midrule 
+TS5 & Viene verificato che il sistema permetta di accedere al nome dell'edificio in cui si trova l'utente. & RObbF10.5 & Superato \\ 
+\midrule 
+TS6 & Viene verificato che il sistema permetta di accedere alla descrizione dell'edificio in cui si trova l'utente. & RObbF10.6 & Superato \\ 
+\midrule 
+TS7 & Viene verificato che il sistema permetta di accedere all'orario dell'edificio in cui si trova l'utente. & RObbF10.3 & Superato \\ 
+\midrule 
+TS8 & Viene verificato che il sistema permetta di accedere all'indirizzo dell'edificio in cui si trova l'utente. & RObbF10.4 & Superato \\ 
+\midrule 
+TS9 & Viene verificato che il sistema permetta di accedere alla lista di POI di un edificio. & RObbF10.1 & Superato \\ 
+\midrule 
+TS9.1 & Viene verificato che il sistema permetta di accedere alle informazioni su tutti i luoghi interni all'edificio in cui si trova l'utente. & RDesF10.2 & Superato \\ 
+\midrule 
+TS10 & Viene verificato che il sistema permetta di accedere alle informazioni relative ad uno specifico POI. & RDesF10.2.1 & Superato \\ 
+\midrule 
+TS10.1 & Viene verificato che il sistema permetta di accedere al nome di un POI. & RObbF10.2.3 & Superato \\ 
+\midrule 
+TS10.2 & Viene verificato che il sistema permetta di accedere alla descrizione di un POI. & RObbF10.2.4 & Superato \\ 
+\midrule 
+TS11 & Viene verificato che il sistema permetta di accedere ad un elenco dei POI appartenenti all’edificio in cui si trova l’utente e rilevati alla posizione dell’utente. & RDesF10.2.2 & Superato \\ 
+\midrule 
+TS12 & Viene verificato che il sistema avverta l'utente qualora volesse accedere alle informazioni dell'edificio in cui si trova e la connessione Internet non fosse attiva sul proprio dispositivo. & RObbF10.9 & Superato \\ 
+\midrule 
+TS13 & Viene verificato che il sistema avverta l'utente qualora volesse accedere alle informazioni dell'edificio in cui si trova e la versione della mappa presente sul dispositivo non coincidesse con l'ultima versione della mappa disponibile. & RObbF10.10 & Superato \\ 
+\midrule 
+TS14 & Viene verificato che il sistema permetta di impostare le preferenze di navigazione. & ROpzF11.1 & Non \par implementato \\ 
+\midrule 
+TS14.1 & Viene verificato che il sistema permetta di fornire le indicazioni in forma testuale. & RObbF11.1.2.1 & Superato \\ 
+\midrule 
+TS14.2 & Viene verificato che il sistema permetta di attivare le indicazioni sonore. & ROpzF11.1.2.3 & Non \par implementato \\ 
+\midrule 
+TS14.3 & Viene verificato che il sistema permetta di attivare le indicazioni vocali. & ROpzF11.1.2.2 & Non \par implementato \\ 
+\midrule 
+TS14.4 & Viene verificato che il sistema permetta di disattivare le indicazioni sonore. & ROpzF11.1.2.5 & Non \par implementato \\ 
+\midrule 
+TS14.5 & Viene verificato che il sistema permetta di disattivare le indicazioni vocali. & ROpzF11.1.2.4 & Non \par implementato \\ 
+\midrule 
+TS14.6 & Viene verificato che il sistema permetta di scegliere il percorso più accessibile. & RDesF11.1.1.1 & Superato \\ 
+\midrule 
+TS14.7 & Viene verificato che il sistema permetta di scegliere il percorso con il minor numero di ascensori. & RDesF11.1.1.2 & Superato \\ 
+\midrule 
+TS14.8 & Viene verificato che il sistema permetta di scegliere il percorso più veloce. & RObbF11.1.1.3 & Superato \\ 
+\midrule 
+TS15 & Viene verificato che il sistema permetta la gestione delle mappe. & RDesF11.2 & Superato \\ 
+\midrule 
+TS15.1 & Viene verificato che il sistema permetta di accedere alle mappe installate nel proprio dispositivo. & RDesF11.2.1.1 & Superato \\ 
+\midrule 
+TS15.2 & Viene verificato che il sistema permetta di installare una mappa disponibile online non precedentemente installata. & RDesF11.2.2.2 & Superato \\ 
+\midrule 
+TS15.3 & Viene verificato che il sistema permetta di rimuovere una mappa. & RDesF11.2.1.3 & Superato \\ 
+\midrule 
+TS15.4 & Viene verificato che il sistema permetta di aggiornare una mappa. & RDesF11.2.1.2 & Superato \\ 
+\midrule 
+TS15.5 & Viene verificato che il sistema permetta di accedere al nome di una mappa presente sul dispositivo. & RDesF11.2.1.4.1 & Superato \\ 
+\midrule 
+TS15.6 & Viene verificato che il sistema permetta di accedere all'indirizzo dell'edificio a cui si riferisce una mappa presente sul proprio dispositivo. & RDesF11.2.1.4.2 & Superato \\ 
+\midrule 
+TS15.7 & Viene verificato che il sistema permetta di accedere alla descrizione dell'edificio a cui si riferisce una mappa presente sul proprio dispositivo. & RDesF11.2.1.4.3 & Superato \\ 
+\midrule 
+TS15.8 & Viene verificato che il sistema permetta di accedere alla dimensione in kilobyte di una mappa presente sul proprio dispositivo. & RDesF11.2.1.4.4 & Superato \\ 
+\midrule 
+TS15.9 & Viene verificato che il sistema permetta di accedere alla versione di una mappa presente sul proprio dispositivo. & RDesF11.2.1.4.5 & Superato \\ 
+\midrule 
+TS15.10 & Viene verificato che il sistema permetta di accedere al nome di una mappa non presente sul dispositivo. & RDesF11.2.2.3.1 & Superato \\ 
+\midrule 
+TS15.11 & Viene verificato che il sistema permetta di accedere all'indirizzo dell'edificio a cui si riferisce una mappa non presente sul proprio dispositivo. & RDesF11.2.2.3.2 & Superato \\ 
+\midrule 
+TS15.12 & Viene verificato che il sistema permetta di accedere alla descrizione dell'edificio a cui si riferisce una mappa non presente sul proprio dispositivo. & RDesF11.2.2.3.3 & Superato \\ 
+\midrule 
+TS15.13 & Viene verificato che il sistema permetta di accedere alla dimensione in megabyte di una mappa non presente sul proprio dispositivo. & RDesF11.2.2.3.4 & Superato \\ 
+\midrule 
+TS15.14 & Viene verificato che il sistema permetta di accedere alla versione di una mappa non presente sul proprio dispositivo. & RDesF11.2.2.3.5 & Superato \\ 
+\midrule 
+TS16 & Viene verificato che il sistema permetta di inserire il codice sviluppatore. & RObbF11.3.1 & Superato \\ 
+\midrule 
+TS16.1 & Viene verificato che il sistema permetta di confermare il codice sviluppatore. & RObbF11.3.2 & Superato \\ 
+\midrule 
+TS17 & Viene verificato che il sistema metta a disposizione una sezione per la guida. & RDesF12 & Superato \\ 
+\midrule 
+TS18 & Viene verificato che il sistema permetta di accedere alle informazioni di un beacon rilevato. & RObbF13 & Superato \\ 
+\midrule 
+TS18.1 & Viene verificato che il sistema permetta di accedere al UUID di un beacon rilevato. & RObbF13.1 & Superato \\ 
+\midrule 
+TS18.2 & Viene verificato che il sistema permetta di accedere al Major di un beacon rilevato. & RObbF13.8 & Superato \\ 
+\midrule 
+TS18.3 & Viene verificato che il sistema permetta di accedere al Minor di un beacon rilevato. & RObbF13.9 & Superato \\ 
+\midrule 
+TS18.4 & Viene verificato che il sistema permetta di accedere al livello di potenza del segnale di un beacon rilevato. & RObbF13.2 & Superato \\ 
+\midrule 
+TS18.5 & Viene verificato che il sistema permetta di accedere al livello di batteria di un beacon rilevato. & RDesF13.4 & Superato \\ 
+\midrule 
+TS18.6 & Viene verificato che il sistema permetta di accedere alla distanza approssimativa di un beacon rilevato dal dispositivo utilizzato. & RObbF13.5 & Superato \\ 
+\midrule 
+TS18.7 & Viene verificato che il sistema permetta di accedere al formato di un beacon rilevato. & RObbF13.6 & Superato \\ 
+\midrule 
+TS18.8 & Viene verificato che il sistema permetta di accedere all'area coperta da un beacon rilevato. & RObbF13.7 & Superato \\ 
+\midrule 
+TS18.9 & Viene verificato che il sistema permetta di gestire un log. & RObbF13.3 & Superato \\ 
+\midrule 
+TS18.9.1 & Viene verificato che il sistema permetta di avviare un log. & RDesF13.3.2 & Superato \\ 
+\midrule 
+TS18.9.2 & Viene verificato che il sistema permetta di interrompere un log. & RDesF13.3.1 & Superato \\ 
+\midrule 
+TS18.9.3 & Viene verificato che il sistema permetta di salvare un log. & RDesF13.3.3 & Superato \\ 
+\midrule 
+TS18.9.4 & Viene verificato che il sistema permetta di rimuovere un log. & RDesF13.3.5 & Superato \\ 
+\midrule 
+TS18.9.5 & Viene verificato che il sistema permetta di accedere ad un log salvato. & RDesF13.3.4 & Superato \\ 
+\midrule 
+TS19 & Viene verificato che il sistema avverta l'utente qualora venga inserita una destinazione non prevista dal sistema. & RObbF8.1.4 & Superato \\ 
+\midrule 
+TS20 & Viene verificato che il sistema avverta l'utente qualora il codice inserito per sbloccare le funzionalità sviluppatore non sia corretto. & RObbF11.3.3 & Superato \\ 
+\midrule 
+TS21 & Viene verificato che il sistema fornisca la possibilità di inserire il possibile nome di una mappa. & ROpzF11.2.2.1.1 & Non \par implementato \\ 
+\midrule 
+TS22 & Viene verificato che il prototipo operi all'interno dell'area indoor scelta. & RObbF3 & Superato \\ 
+\midrule 
+TS22.1 & Viene verificato che il prototipo dia un'indicazione approssimativa di un utente all'interno dell'edificio. & RObbF3.1 & Superato \\ 
+\midrule 
+TS22.2 & Viene verificato che il prototipo permetta di fornire informazioni all'utente relative all'area mappata dal beacon (smart places). & RObbF3.2 & Superato \\ 
+\arrayrulecolor{black}
+\bottomrule
+\caption{Tabella di tracciamento test di sistema / requisiti} \\
+\end{longtabu}
+	
+	\subsection{Test di integrazione}
+		I test di integrazione servono per verificare il corretto funzionamento di più moduli assemblati insieme. Per una descrizione completa della sintassi utilizzata nella descrizione di tali test si consulti il documento \normediprogettov.
+		\subsubsection{Test-componenti}
+		\begin{longtabu}to \textwidth{X[0.5] X[2] X[2] X}
+\toprule
+\textbf{Test} & \textbf{Descrizione} & \textbf{Componenti} & \textbf{Stato}\\
+\midrule
+\endhead
+\arrayrulecolor{gray}
+TI1 & Test di integrazione finale tra tutte le componenti per verificare il corretto comportamento del sistema nel suo complesso &  & Superato \\ 
+\midrule 
+TI2 & Viene verificato che il sistema gestisca correttamente le componenti relative al package model. In particolare che la navigazione si comporti secondo le esigenze dell'utente, utilizzi correttamente i sensori, si interfacci correttamente con la tecnologia Beacon e vengano recuperate le informazioni dal database & model & Superato \\ 
+\midrule 
+TI3 & Viene verificato che il sistema gestisca correttamente le componenti relative al package beacon. In particolare che si interfacci correttamente con la libreria AltBeacon e con la tecnologia Beacon & model::\-beacon & Superato \\ 
+\midrule 
+TI4 & Viene verificato che il sistema gestisca correttamente le componenti relative al package usersetting. In particolare che gestisca correttamente le preferenze dell'utente e le renda persistenti sul dispositivo & model::\-usersetting & Superato \\ 
+\midrule 
+TI5 & Viene verificato che il sistema gestisca correttamente le componenti relative al package compass. In particolare che sia possibile avviare e fermare la bussola & model::\-compass & Superato \\ 
+\midrule 
+TI6 & Viene verificato che il sistema gestisca correttamente le componenti relative al package navigator. In particolare che fornisca le funzionalità di navigazione e calcoli il percorso secondo le esigenze dell'utente & model::\-navigator & Superato \\ 
+\midrule 
+TI7 & Viene verificato che il sistema gestisca correttamente le componenti relative al package algorithm. In particolare che, dati un grafo pesato e due nodi, calcoli un percorso dal nodo di partenza al nodo di arrivo & model::\-navigator::\-algorithm & Superato \\ 
+\midrule 
+TI8 & Viene verificato che il sistema gestisca correttamente le componenti relative al package graph. In particolare che gestisca la struttura di un grafo e associ delle informazioni ad un PointOfInterest o ad un Edge & model::\-navigator::\-graph & Superato \\ 
+\midrule 
+TI9 & Viene verificato che il sistema gestisca correttamente le componenti relative al package vertex. In particolare che rappresenti un nodo di un grafo. & model::\-navigator::\-graph::\-vertex & Superato \\ 
+\midrule 
+TI10 & Viene verificato che il sistema gestisca correttamente le componenti relative al package area. In particolare che rappresentino la struttura di un edificio come PointOfInterest e RegionOfInterest & model::\-navigator::\-graph::\-area & Superato \\ 
+\midrule 
+TI11 & Viene verificato che il sistema gestisca correttamente le componenti relative al package navigationInformation. In particolare deve essere possibile recuperare i vari tipi di informazioni & model::\-navigator::\-graph::\-navigationinformation & Superato \\ 
+\midrule 
+TI12 & Viene verificato che il sistema gestisca correttamente le componenti relative al package edge. In particolare che rappresenti i diversi tipi di archi e le informazioni ad essi associate & model::\-navigator::\-graph::\-edge & Superato \\ 
+\midrule 
+TI13 & Viene verificato che il sistema gestisca correttamente le componenti relative al package dataaccess. In particolare che si interfacci in maniera corretta col database remoto e permetta di gestire le informazioni nel database locale & model::\-dataaccess & Superato \\ 
+\midrule 
+TI14 & Viene verificato che il sistema gestisca correttamente le componenti relative al package service. In particolare che faccia da tramite per l'accesso al database per il resto del model e costruisca oggetti della Business Logic a partire dagli oggetti che rappresentano le tabelle del database & model::\-dataaccess::\-service & Superato \\ 
+\midrule 
+TI15 & Viene verificato che il sistema gestisca correttamente le componenti relative al package dao. In particolare che sia possibile effettuare le operazioni CRUD sul database locale e tradurre la struttura del database in oggetti, che rappresentano le tabelle, per accedere alle informazioni & model::\-dataaccess::\-dao & Superato \\ 
+\midrule 
+TI16 & Viene verificato che il sistema gestisca correttamente l'integrazione tra le componenti relative al package view e al package presenter. In particolare che riesca ad eseguire le azioni corrispondenti all'interno del presenter quando viene eseguita una azione sulla view & view \par presenter & Superato \\ 
+\midrule 
+TI17 & Viene verificato che il sistema gestisca correttamente le componenti relative al package di. In particolare che permetta al presenter di risolvere le dipendenze verso i componenti del package model & di & Superato \\ 
+\midrule 
+TI18 & Viene verificato che il sistema gestisca correttamente le componenti relative al package di::component. In particolare che fornisca le interfacce per permettere di eseguire la dependecy injection & di::\-component & Superato \\ 
+\midrule 
+TI19 & Viene verificato che il sistema gestisca correttamente le componenti relative al package di::module. In particolare che risolva le dipendenze tra gli oggetti presenti nell'applicazione e definisca la cardinalità delle istanze di un oggetto & di::\-module & Superato \\ 
+\arrayrulecolor{black}
+\bottomrule
+\caption{Tabella test di integrazione} \\
+\end{longtabu}
+
+\subsubsection{Componente - test}
+
+\begin{longtabu}to \textwidth{X[3] X[0.5]}
+\toprule
+\textbf{Componente} & \textbf{Test}\\
+\midrule
+\endhead
+\arrayrulecolor{gray}
+di & TI17 \\ 
+\midrule 
+di::\-component & TI18 \\ 
+\midrule 
+di::\-module & TI19 \\ 
+\midrule 
+model & TI2 \\ 
+\midrule 
+model::\-beacon & TI3 \\ 
+\midrule 
+model::\-compass & TI5 \\ 
+\midrule 
+model::\-dataaccess & TI13 \\ 
+\midrule 
+model::\-dataaccess::\-dao & TI15 \\ 
+\midrule 
+model::\-dataaccess::\-service & TI14 \\ 
+\midrule 
+model::\-navigator & TI6 \\ 
+\midrule 
+model::\-navigator::\-algorithm & TI7 \\ 
+\midrule 
+model::\-navigator::\-graph & TI8 \\ 
+\midrule 
+model::\-navigator::\-graph::\-area & TI10 \\ 
+\midrule 
+model::\-navigator::\-graph::\-edge & TI12 \\ 
+\midrule 
+model::\-navigator::\-graph::\-navigationinformation & TI11 \\ 
+\midrule 
+model::\-navigator::\-graph::\-vertex & TI9 \\ 
+\midrule 
+model::\-usersetting & TI4 \\ 
+\midrule 
+presenter & TI16 \\ 
+\midrule 
+view & TI16 \\ 
+\arrayrulecolor{black}
+\bottomrule
+\caption{Tabella componente / test di integrazione} \\
+\end{longtabu}
+
+\subsection{Test di unità}
+Il test di unità serve per accertare il corretto funzionamento delle singole unità, ovvero le classi. Per una descrizione completa della sintassi utilizzata nella descrizione di tali test si consulti il documento \normediprogettov.
+	
+\begin{longtabu}to \textwidth {X[0.6] X[2] X[3.2] X[0.8]}
+\toprule
+\textbf{Test} & \textbf{Descrizione} & \textbf{Metodi} & \textbf{Stato}\\
+\midrule
+\endhead
+\arrayrulecolor{gray}
+TU1 & Viene testato che tramite un oggetto SettingImp sia possibile salvare e recuperare le informazioni relative alle preferenze dell'utente & model::\-usersetting::\-SettingImp::\-getPathPreference() \par model::\-usersetting::\-SettingImp::\-getInstructionPreference() \par model::\-usersetting::\-SettingImp::\-setPathPreference() \par model::\-usersetting::\-SettingImp::\-setInstructionPreference() & Superato \\ 
+\midrule 
+TU2 & Viene testato che tramite la classe DeveloperCodeManager sia possibile riconoscere un codice sviluppatore valida da uno non valido & model::\-usersetting::\-DeveloperCodeManager::\-isValid() & Superato \\ 
+\midrule 
+TU3 & Viene testato che tramite un oggetto della classe SettimgImp sia possibile recuperare e modificare le informazioni riguardanti un eventuale codice sviluppatore inserito. In particolare viene testato se vengono salvate le informazioni relative al fatto che un utente sia o meno sviluppatore & model::\-usersetting::\-SettingImp::\-isDeveloper() \par model::\-usersetting::\-SettingImp::\-unlockDeveloper() & Superato \\ 
+\midrule 
+TU4 & Viene testato che sia possibile, utilizzando un oggetto BuildingInformation, accedere alle informazioni relative ad un edificio & model::\-navigator::\-BuildingInformation::\-getName() \par model::\-navigator::\-BuildingInformation::\-getDescription() \par model::\-navigator::\-BuildingInformation::\-getOpeningHours() \par model::\-navigator::\-BuildingInformation::\-getAddress() \par model::\-navigator::\-BuildingInformation::\-toString() & Superato \\ 
+\midrule 
+TU5 & Viene testato che utilizzando un oggetto BuildingMapImp sia possibile accedere alle informazioni dell'edificio, alla versione della mappa della mappa e al suo id all'interno del database, e alle collezioni di PointOfInterest, RegionOfInterest e EnrichedEdge che contiene & model::\-navigator::\-BuildingMapImp::\-getAddress() \par model::\-navigator::\-BuildingMapImp::\-getAllBuildingInformation() \par model::\-navigator::\-BuildingMapImp::\-getAllEdges() \par model::\-navigator::\-BuildingMapImp::\-getAllPOIs() \par model::\-navigator::\-BuildingMapImp::\-getAllROIs() \par model::\-navigator::\-BuildingMapImp::\-getDescription() \par model::\-navigator::\-BuildingMapImp::\-getId() \par model::\-navigator::\-BuildingMapImp::\-getName() \par model::\-navigator::\-BuildingMapImp::\-getOpeningHours() \par model::\-navigator::\-BuildingMapImp::\-getVersion() \par model::\-navigator::\-BuildingMapImp::\-getSize() & Superato \\ 
+\midrule 
+TU6 & Viene testato che utilizzando un oggetto BuildingMapImp sia possibile accedere alla collezione di PointOfInterest associati ad alla RegionOfInterest che contiene il beacon passato & model::\-navigator::\-BuildingMapImp::\-getNearbyPOIs() & Superato \\ 
+\midrule 
+TU7 & Viene testato che sia possibile accedere a tutte le informazioni contenute in un oggetto ProcessedInformationImp & model::\-navigator::\-ProcessedInformationImp::\-getDetailedInstruction() \par model::\-navigator::\-ProcessedInformationImp::\-getPhotoInstruction() \par model::\-navigator::\-ProcessedInformationImp::\-getProcessedBasicInstruction() \par model::\-navigator::\-ProcessedInformationImp::\-getDirection() & Superato \\ 
+\midrule 
+TU8 & Viene testato che sia possibile accedere alle informazioni contenute in un oggetto VertexImp & model::\-navigator::\-graph::\-vertex::\-VertexImp::\-getId() & Superato \\ 
+\midrule 
+TU9 & Viene testato che sia possibile accedere alle informazioni contenute in un oggetto BasicInformation & model::\-navigator::\-graph::\-navigationinformation::\-BasicInformation::\-getBasicInformation() & Superato \\ 
+\midrule 
+TU10 & Viene testato che sia possibile accedere alle informazioni contenute in un oggetto DetailedInformation & model::\-navigator::\-graph::\-navigationinformation::\-DetailedInformation::\-getDetailedInformation() & Superato \\ 
+\midrule 
+TU11 & Viene testato che sia possible accedere alle informazioni contenute in un oggetto PhotoRef & model::\-navigator::\-graph::\-navigationinformation::\-PhotoRef::\-getPhotoUri() \par model::\-navigator::\-graph::\-navigationinformation::\-PhotoRef::\-getId() & Superato \\ 
+\midrule 
+TU12 & Viene testato che sia possibile accedere alla collezione di oggetti PhotoRef contenuta in un oggetto PhotoInformation & model::\-navigator::\-graph::\-navigationinformation::\-PhotoInformation::\-getPhotoInformation() & Superato \\ 
+\midrule 
+TU13 & Viene testato che sia possibile accedere alle informazioni contenute in un oggetto NavigationInformationImp & model::\-navigator::\-graph::\-navigationinformation::\-NavigationInformation::\-getBasicInformation() \par model::\-navigator::\-graph::\-navigationinformation::\-NavigationInformation::\-getDetailedInformation() \par model::\-navigator::\-graph::\-navigationinformation::\-NavigationInformation::\-getPhotoInformation() & Superato \\ 
+\midrule 
+TU14 & Viene testato che sia possibile accedere alle informazioni relative punto di inizio, punto di fine, distanza tra i due punti, l'angolo, rispetto al nord, che c'è tra il primo e il secondo punto, collezione di PhotoRef, id di un oggetto che ha tipo statico AbsEnrichedEdge e tipo dinamico un sottotipo di AbsEnrichedEdge & model::\-navigator::\-graph::\-edge::\-AbsEnrichedEdge::\-getStarterPoint() \par model::\-navigator::\-graph::\-edge::\-AbsEnrichedEdge::\-getEndPoint() \par model::\-navigator::\-graph::\-edge::\-AbsEnrichedEdge::\-getPhotoInformation() \par model::\-navigator::\-graph::\-edge::\-AbsEnrichedEdge::\-getCoordinate() \par model::\-navigator::\-graph::\-edge::\-AbsEnrichedEdge::\-getId() & Superato \\ 
+\midrule 
+TU15 & Viene testato che sia possibile impostare le preferenze relative agli archi da attraversare & model::\-navigator::\-graph::\-edge::\-AbsEnrichedEdge::\-setUserPreference() & Superato \\ 
+\midrule 
+TU16 & Viene testato che sia possibile accedere alle informazioni di navigazione all'interno di una sottoclasse di AbsEnrichedEdge & model::\-navigator::\-graph::\-edge::\-AbsEnrichedEdge::\-getNavigationInformation() & Superato \\ 
+\midrule 
+TU17 & Viene testato che sia possibile accedere alle informazioni di base per superare tale arco e quelle dettagliate in un oggetto DefaultEdge & model::\-navigator::\-graph::\-edge::\-DefaultEdge::\-getBasicInformation() \par model::\-navigator::\-graph::\-edge::\-DefaultEdge::\-getDetailedInformation() & Superato \\ 
+\midrule 
+TU18 & Viene testato che sia possibile accedere alle informazioni di base per superare tale arco e quelle dettagliate in un oggetto StairEdge & model::\-navigator::\-graph::\-edge::\-StairEdge::\-getBasicInformation() \par model::\-navigator::\-graph::\-edge::\-StairEdge::\-getDetailedInformation() & Superato \\ 
+\midrule 
+TU19 & Viene testato che sia possibile accedere alle informazioni di base per superare tale arco e quelle dettagliate in un oggetto ElevatorEdge & model::\-navigator::\-graph::\-edge::\-ElevatorEdge::\-getBasicInformation() \par model::\-navigator::\-graph::\-edge::\-ElevatorEdge::\-getDetailedInformation() & Superato \\ 
+\midrule 
+TU20 & Viene testato che il peso dell'arco venga calcolato in base alle preferenze impostate tramite il metodo AbsEnrichedEdge.setUserPreference in un oggetto StairEdge & model::\-navigator::\-graph::\-edge::\-StairEdge::\-getWeight() & Superato \\ 
+\midrule 
+TU21 & Viene testato che il peso dell'arco venga calcolato in base alle preferenze impostate tramite il metodo AbsEnrichedEdge.setUserPreference in un oggetto ElevatorEdge & model::\-navigator::\-graph::\-edge::\-ElevatorEdge::\-getWeight() & Superato \\ 
+\midrule 
+TU22 & Viene testato che il peso dell'arco venga calcolato in base alle preferenze impostate tramite il metodo AbsEnrichedEdge.setUserPreference in un oggetto DefaultEdge & model::\-navigator::\-graph::\-edge::\-DefaultEdge::\-getWeight() & Superato \\ 
+\midrule 
+TU23 & Viene testato che sia possibile accedere a tutte le informazioni contenute in un oggetto PointOfInterestInformation & model::\-navigator::\-graph::\-area::\-PointOfInterestInformation::\-getName() \par model::\-navigator::\-graph::\-area::\-PointOfInterestInformation::\-getDescription() \par model::\-navigator::\-graph::\-area::\-PointOfInterestInformation::\-getCategory() & Superato \\ 
+\midrule 
+TU24 & Viene testato che sia possibile accedere a tutte le informazioni riguardanti il POI e all'id del POI relativo al database in un oggetto PointOfInterestImp & model::\-navigator::\-graph::\-area::\-PointOfInterestImp::\-getName() \par model::\-navigator::\-graph::\-area::\-PointOfInterestImp::\-getDescription() \par model::\-navigator::\-graph::\-area::\-PointOfInterestImp::\-getCategory() \par model::\-navigator::\-graph::\-area::\-PointOfInterestImp::\-getId() & Superato \\ 
+\midrule 
+TU25 & Viene testato che sia possibile settare e accedere a tutti i ROI in cui è contenuto il POI rappresentato da un oggetto PointOfInterest & model::\-navigator::\-graph::\-area::\-PointOfInterestImp::\-getAllBelongingROIs() \par model::\-navigator::\-graph::\-area::\-PointOfInterestImp::\-setBelongingROIs() & Superato \\ 
+\midrule 
+TU26 & Viene testato che sia possibile accedere alle informazioni alle informazioni relative al beacon che è contenuto in una determinata ROI tramite un oggetto RegionOfInterestImp & model::\-navigator::\-graph::\-area::\-RegionOfInterestImp::\-getUUID() \par model::\-navigator::\-graph::\-area::\-RegionOfInterestImp::\-getMajor() \par model::\-navigator::\-graph::\-area::\-RegionOfInterestImp::\-getMinor() & Superato \\ 
+\midrule 
+TU27 & Viene testato che sia possibile ricavare il piano di appartenenza di un oggetto RegionOfInterestImp ricavandolo dal minor & model::\-navigator::\-graph::\-area::\-RegionOfInterestImp::\-getFloor() & Superato \\ 
+\midrule 
+TU28 & Viene testato che sia possibile verificare tramite la classe RegionOfInterestImp è possibile verificare se un beacon è contenuto o meno in una certa ROI & model::\-navigator::\-graph::\-area::\-RegionOfInterestImp::\-contains() & Superato \\ 
+\midrule 
+TU29 & Viene testato che sia possibile settare e accedere a tutti i POI contenuti nel ROI rappresentato da un oggetto RegionOfInterest & model::\-navigator::\-graph::\-area::\-RegionOfInterestImp::\-getAllNearbyPOIs() \par model::\-navigator::\-graph::\-area::\-RegionOfInterestImp::\-setNearbyPOIs() & Superato \\ 
+\midrule 
+TU30 & Viene testato che sia possibile aggiungere EnrichedEdge e RegionOfInterest ad un oggetto MapGraph & model::\-navigator::\-graph::\-MapGraph::\-addAllRegions() \par model::\-navigator::\-graph::\-MapGraph::\-addEdge() \par model::\-navigator::\-graph::\-MapGraph::\-addAllEdges() & Superato \\ 
+\midrule 
+TU31 & Viene testato che un oggetto MapGraph possa ritornare un grafo & model::\-navigator::\-graph::\-MapGraph::\-getGraph() & Superato \\ 
+\midrule 
+TU32 & Viene testato che sia possibile calcolare un persorso formato da una lista di Edges utilizzando un oggetto DjikstraPathFinder & model::\-navigator::\-algorithm::\-DijkstraPathFinder::\-calculatePath() & Superato \\ 
+\midrule 
+TU33 & Viene testato che sia possibile settare ad un oggetto Navigator il grafo su cui si vuole effettuare la navigazione e calcolare un percorso da un certo punto ad un altro. In particolare deve essere testato che venga lanciata l'eccezione NoGraphSetException nel caso in cui venga richiesto di calcolare un percorso e non sia stato settato alcun grafo, mentre deve essere lanciata l'eccezione NoNavigationInformationException nel caso in cui si richieda un percorso e quest'ultimo non è ancora stato calcolato & model::\-navigator::\-NavigatorImp::\-calculatePath() \par model::\-navigator::\-NavigatorImp::\-setGraph() \par model::\-navigator::\-NavigatorImp::\-getPath() & Superato \\ 
+\midrule 
+TU34 & Viene testato che sia possibile, settato un grafo e calcolato un percorso, ottenere tutte le istruzioni di navigazione. In particolare deve essere lanciata un'eccezione di tipo NoNavigationInformationException nel caso in cui si richiedano le informazioni riguardanti un percorso ma queste non siano disponibili poichè non è stato settato un grafo o non è ancora stato calcolato un percorso & model::\-navigator::\-NavigatorImp::\-getAllInstructions() & Superato \\ 
+\midrule 
+TU35 & Viene testato che sia possibile, settato un grafo e calcolato un percorso, ottenere le informazioni di navifìgazione una di seguito all'altra. In particolare deve essere lanciata un'eccezione di tipo NoNavigationInformationException nel caso in cui si richiedano le informazioni riguardanti un percorso ma queste non siano disponibili poichè non è stato settato un grafo o non è ancora stato calcolato un percorso. Inoltre viene lanciata un'eccezione PathException nel caso in cui il beacon più potente rilevato non faccia parte del percorso previsto & model::\-navigator::\-NavigatorImp::\-toNextRegion() & Superato \\ 
+\midrule 
+TU36 & Viene testato che sia possibile accedere a tutte le informazioni relative ad un oggetto MyBeacon & model::\-beacon::\-MyBeaconImp::\-getDistance() \par model::\-beacon::\-MyBeaconImp::\-getBluetoothAddress() \par model::\-beacon::\-MyBeaconImp::\-getRssi() \par model::\-beacon::\-MyBeaconImp::\-getTxPower() \par model::\-beacon::\-MyBeaconImp::\-getUUID() \par model::\-beacon::\-MyBeaconImp::\-getMajor() \par model::\-beacon::\-MyBeaconImp::\-getMinor() \par model::\-beacon::\-MyBeaconImp::\-getBatteryLevel() \par model::\-beacon::\-MyBeaconImp::\-getBeaconTypeCode() & Superato \\ 
+\midrule 
+TU37 & Viene testato che sia possibile aggiungere ad un oggetto Log le informazioni di un beacon & model::\-beacon::\-Logger::\-add() & Superato \\ 
+\midrule 
+TU38 & Viene testato che sia possibile salvare un oggetto Log & model::\-beacon::\-Logger::\-save() & Superato \\ 
+\midrule 
+TU39 & Viene testato che sia possibile mettere un oggetto BeaconManagerAdapter in background mode & model::\-beacon::\-BeaconManagerAdapter::\-setBackgroundMode() & Superato \\ 
+\midrule 
+TU40 & Viene testato che sia possibile modificare il periodo di scansione di un oggetto BeaconManagerAdapter & model::\-beacon::\-BeaconManagerAdapter::\-modifyScanPeriod() & Superato \\ 
+\midrule 
+TU41 & Viene testato che sia possibile accedere alle informazioni associate ad un oggetto InformationManagerImp. In particolare nel caso in cui nessuna lista di beacon sia disponibile oppure non sia stato ancora visto un beacon e quindi non sia possibile accedere alla mappa dell'edificio deve essere lanciata un'eccezione di tipo NoBeaconSeenException & model::\-InformationManagerImp::\-getBuildingMap() \par model::\-InformationManagerImp::\-getNearbyPOIs() \par model::\-InformationManagerImp::\-getAllVisibleBeacons() \par model::\-InformationManagerImp::\-getDatabaseService() & Superato \\ 
+\midrule 
+TU42 & Viene testato che sia possibile aggiungere e rimuovere un listener ad un oggetto NavigationManagerImp. In particolare viene anche testato che nel caso in cui sia registrato almeno un listener venga avvertito nel caso in cui venga settata una nuova lista di beacon & model::\-NavigationManagerImp::\-addListener() \par model::\-NavigationManagerImp::\-removeListener() & Superato \\ 
+\midrule 
+TU43 & Viene testato che sia possibile registrare e salvare informazioni sui beacon rilevati utilizzando un oggetto InformationManagerImp & model::\-InformationManagerImp::\-startRecordingBeacons() \par model::\-InformationManagerImp::\-saveRecordedBeaconInformation() & Superato \\ 
+\midrule 
+TU44 & Viene testato che sia possibile gestire la navigazione utilizzando un oggetto della classe NavigationManagerImp & model::\-NavigationManagerImp::\-startNavigation() \par model::\-NavigationManagerImp::\-getAllNavigationInstruction() \par model::\-NavigationManagerImp::\-getNextInstruction() \par model::\-NavigationManagerImp::\-stopNavigation() & Superato \\ 
+\midrule 
+TU45 & Viene testato che sia possibile creare e ritornare un oggetto BuildingService.  & model::\-dataaccess::\-service::\-ServiceHelper::\-getService() & Superato \\ 
+\midrule 
+TU46 & Viene testato che sia possibile eliminare una foto dal database locale, recuperarne una o tutte quelle riguardanti un Edge. & model::\-dataaccess::\-service::\-PhotoService::\-deletePhoto() \par model::\-dataaccess::\-service::\-PhotoService::\-findPhoto() \par model::\-dataaccess::\-service::\-PhotoService::\-findAllPhotosOfEdge() & Superato \\ 
+\midrule 
+TU47 & Viene testato che, dato un oggetto JsonObject che possiede gli stessi valori di un oggetto PhotoTable, sia possibile costruire un oggetto PhotoTable e inserirlo nel database locale. & model::\-dataaccess::\-service::\-PhotoService::\-convertAndInsert() & Superato \\ 
+\midrule 
+TU48 & Viene testato che sia possibile eliminare una RegionOfInterest dal database locale, recuperarne una o tutte quelle riguardanti un edificio, dato il major del suddetto edificio. & model::\-dataaccess::\-service::\-RegionOfInterestService::\-deleteRegionOfInterest() \par model::\-dataaccess::\-service::\-RegionOfInterestService::\-findRegionOfInterest() \par model::\-dataaccess::\-service::\-RegionOfInterestService::\-findAllRegionsWithMajor() & Superato \\ 
+\midrule 
+TU49 & Viene testato che, dato un oggetto JsonObject che possiede gli stessi valori di un oggetto RegionOfInterestTable, sia possibile costruire un oggetto RegionOfInterestTable e inserirlo nel database locale. & model::\-dataaccess::\-service::\-RegionOfInterestService::\-convertAndInsert() & Superato \\ 
+\midrule 
+TU50 & Viene testato che sia possibile eliminare un Edge dal database locale, recuperarne uno o tutti quelli riguardanti un edificio, dato il major del suddetto edificio. & model::\-dataaccess::\-service::\-EdgeService::\-deleteEdge() \par model::\-dataaccess::\-service::\-EdgeService::\-findEdge() \par model::\-dataaccess::\-service::\-EdgeService::\-findAllEdgesOfBuilding() & Superato \\ 
+\midrule 
+TU51 & Viene testato che, dato un oggetto JsonObject che possiede gli stessi valori di un oggetto EdgeTable, sia possibile costruire un oggetto EdgeTable e inserirlo nel database locale. & model::\-dataaccess::\-service::\-EdgeService::\-convertAndInsert() & Superato \\ 
+\midrule 
+TU52 & Viene testato che, dato un oggetto JsonObject che possiede gli stessi valori di un oggetto EdgeTypeTable, sia possibile costruire un oggetto EdgeTypeTable e inserirlo nel database locale. & model::\-dataaccess::\-service::\-EdgeService::\-convertAndInsertEdgeType() & Superato \\ 
+\midrule 
+TU53 & Viene testato che sia possibile eliminare un PointOfInterest dal database locale, recuperarne uno o tutti quelli riguardanti un edificio, dato il major del suddetto edificio. & model::\-dataaccess::\-service::\-PointOfInterestService::\-deletePointOfInterest() \par model::\-dataaccess::\-service::\-PointOfInterestService::\-findPointOfInterest() \par model::\-dataaccess::\-service::\-PointOfInterestService::\-findAllPointsWithMajor() & Superato \\ 
+\midrule 
+TU54 & Viene testato che, dato un oggetto JsonObject che possiede gli stessi valori di un oggetto PointOfInterestTable, sia possibile costruire un oggetto PointOfInterestTable e inserirlo nel database locale. & model::\-dataaccess::\-service::\-PointOfInterestService::\-convertAndInsert() & Superato \\ 
+\midrule 
+TU55 & Viene testato che, dato un oggetto JsonObject che possiede gli stessi valori di un oggetto CategoryTable, sia possibile costruire un oggetto CategoryTable e inserirlo nel database locale. & model::\-dataaccess::\-service::\-PointOfInterestService::\-convertAndInsertCategory() & Superato \\ 
+\midrule 
+TU56 & Viene testato che, dato un oggetto JsonObject che possiede gli stessi valori di un oggetto RoiPoiTable, sia possibile costruire un oggetto RoiPoiTable e inserirlo nel database locale. & model::\-dataaccess::\-service::\-PointOfInterestService::\-convertAndInsertRoiPoi() & Superato \\ 
+\midrule 
+TU57 & Viene testato che sia possibile eliminare una BuildingMap dal database locale, recuperarne una o tutte quelle presenti nel database locale. & model::\-dataaccess::\-service::\-BuildingService::\-deleteBuilding() \par model::\-dataaccess::\-service::\-BuildingService::\-findBuildingByMajor() \par model::\-dataaccess::\-service::\-BuildingService::\-findAllBuildings() & Superato \\ 
+\midrule 
+TU58 & Viene testato che sia possibile recuperare una BuildingMap dal database remoto o le informazioni di tutte quelle presenti nel database remoto. & model::\-dataaccess::\-service::\-BuildingService::\-findAllRemoteBuildings() \par model::\-dataaccess::\-service::\-BuildingService::\-findRemoteBuildingByMajor() & Superato \\ 
+\midrule 
+TU59 & Viene testato che, dato un oggetto JsonObject che possiede gli stessi valori di un oggetto BuildingTable, sia possibile costruire un oggetto BuildingTable e inserirlo nel database locale. & model::\-dataaccess::\-service::\-BuildingService::\-convertAndInsert() & Superato \\ 
+\midrule 
+TU60 & Viene testato che, dato il major di un edificio, sia possibile verificare la presenza della BuildingMap nel database locale, verificare se è aggiornata all'ultima versione disponibile e aggiornarla. & model::\-dataaccess::\-service::\-BuildingService::\-isBuildingMapPresent() \par model::\-dataaccess::\-service::\-BuildingService::\-isBuildingMapUpdated() \par model::\-dataaccess::\-service::\-BuildingService::\-updateBuildingMap() & Superato \\ 
+\midrule 
+TU61 & Viene testato che sia possibile creare e ritornare un oggetto SQLiteDaoFactory dato un oggetto SQLiteDatabase. Viene inoltre testato che sia possibile creare e ritornare un oggetto RemoteDaoFactory.  & model::\-dataaccess::\-dao::\-DaoFactoryHelper::\-getSQLiteDaoFactory() \par model::\-dataaccess::\-dao::\-DaoFactoryHelper::\-getRemoteDaoFactory() & Superato \\ 
+\midrule 
+TU62 & Viene testato che sia possibile creare e ritornare: un oggetto RemoteBuildingDao, un oggetto RemotePointOfInterestDao, un oggetto RemoteRegionOfInterestDao, un oggetto RemoteRoiPoiDao, un oggetto RemoteEdgeDao, un oggetto RemoteEdgeTypeDao, un oggetto RemoteCategoryDao, un oggetto RemotePhotoDao.  & model::\-dataaccess::\-dao::\-RemoteDaoFactory::\-getBuildingDao() \par model::\-dataaccess::\-dao::\-RemoteDaoFactory::\-getPointOfInterestDao() \par model::\-dataaccess::\-dao::\-RemoteDaoFactory::\-getRoiPoiDao() \par model::\-dataaccess::\-dao::\-RemoteDaoFactory::\-getEdgeDao() \par model::\-dataaccess::\-dao::\-RemoteDaoFactory::\-getCategoryDao() \par model::\-dataaccess::\-dao::\-RemoteDaoFactory::\-getEdgeTypeDao() \par model::\-dataaccess::\-dao::\-RemoteDaoFactory::\-getPhotoDao() \par model::\-dataaccess::\-dao::\-RemoteDaoFactory::\-getRegionOfInterestDao() & Superato \\ 
+\midrule 
+TU63 & Viene testato che, dato un oggetto JsonObject che possiede gli stessi valori di un oggetto BuildingTable, sia possibile costruire un oggetto BuildingTable e ritornarlo. & model::\-dataaccess::\-dao::\-RemoteBuildingDao::\-fromJSONToTable() & Superato \\ 
+\midrule 
+TU64 & Viene testato che, dato un oggetto JsonObject che possiede gli stessi valori di un oggetto PointOfInterestTable, sia possibile costruire un oggetto PointOfInterestTable e ritornarlo. & model::\-dataaccess::\-dao::\-RemotePointOfInterestDao::\-fromJSONToTable() & Superato \\ 
+\midrule 
+TU65 & Viene testato che, dato un oggetto JsonObject che possiede gli stessi valori di un oggetto RegionOfInterestTable, sia possibile costruire un oggetto RegionOfInterestTable e ritornarlo. & model::\-dataaccess::\-dao::\-RemoteRegionOfInterestDao::\-fromJSONToTable() & Superato \\ 
+\midrule 
+TU66 & Viene testato che, dato un oggetto JsonObject che possiede gli stessi valori di un oggetto RoiPoiTable, sia possibile costruire un oggetto RoiPoiTable e ritornarlo. & model::\-dataaccess::\-dao::\-RemoteRoiPoiDao::\-fromJSONToTable() & Superato \\ 
+\midrule 
+TU67 & Viene testato che, dato un oggetto JsonObject che possiede gli stessi valori di un oggetto EdgeTable, sia possibile costruire un oggetto EdgeTable e ritornarlo. & model::\-dataaccess::\-dao::\-RemoteEdgeDao::\-fromJSONToTable() & Superato \\ 
+\midrule 
+TU68 & Viene testato che, dato un oggetto JsonObject che possiede gli stessi valori di un oggetto EdgeTypeTable, sia possibile costruire un oggetto EdgeTypeTable e ritornarlo. & model::\-dataaccess::\-dao::\-RemoteEdgeTypeDao::\-fromJSONToTable() & Superato \\ 
+\midrule 
+TU69 & Viene testato che, dato un oggetto JsonObject che possiede gli stessi valori di un oggetto CategoryTable, sia possibile costruire un oggetto CategoryTable e ritornarlo. & model::\-dataaccess::\-dao::\-RemoteCategoryDao::\-fromJSONToTable() & Superato \\ 
+\midrule 
+TU70 & Viene testato che, dato un oggetto JsonObject che possiede gli stessi valori di un oggetto PhotoTable, sia possibile costruire un oggetto PhotoTable e ritornarlo. & model::\-dataaccess::\-dao::\-RemotePhotoDao::\-fromJSONToTable() & Superato \\ 
+\midrule 
+TU71 & Viene testato che sia possibile accedere a tutte le informazioni relative ad un oggetto BuildingTable. & model::\-dataaccess::\-dao::\-BuildingTable::\-getId() \par model::\-dataaccess::\-dao::\-BuildingTable::\-getUUID() \par model::\-dataaccess::\-dao::\-BuildingTable::\-getMajor() \par model::\-dataaccess::\-dao::\-BuildingTable::\-getVersion() \par model::\-dataaccess::\-dao::\-BuildingTable::\-getName() \par model::\-dataaccess::\-dao::\-BuildingTable::\-getDescription() \par model::\-dataaccess::\-dao::\-BuildingTable::\-getOpeningHours() \par model::\-dataaccess::\-dao::\-BuildingTable::\-getAddress() \par model::\-dataaccess::\-dao::\-BuildingTable::\-getSize() & Superato \\ 
+\midrule 
+TU72 & Viene testato che sia possibile accedere a tutte le informazioni relative ad un oggetto PointOfInterestTable. & model::\-dataaccess::\-dao::\-PointOfInterestTable::\-getId() \par model::\-dataaccess::\-dao::\-PointOfInterestTable::\-getName() \par model::\-dataaccess::\-dao::\-PointOfInterestTable::\-getDescription() \par model::\-dataaccess::\-dao::\-PointOfInterestTable::\-getCategoryId() & Superato \\ 
+\midrule 
+TU73 & Viene testato che sia possibile accedere a tutte le informazioni relative ad un oggetto RegionOfInterestTable. & model::\-dataaccess::\-dao::\-RegionOfInterestTable::\-getId() \par model::\-dataaccess::\-dao::\-RegionOfInterestTable::\-getUUID() \par model::\-dataaccess::\-dao::\-RegionOfInterestTable::\-getMajor() \par model::\-dataaccess::\-dao::\-RegionOfInterestTable::\-getMinor() & Superato \\ 
+\midrule 
+TU74 & Viene testato che sia possibile accedere a tutte le informazioni relative ad un oggetto RoiPoiTable. & model::\-dataaccess::\-dao::\-RoiPoiTable::\-getRoiID() \par model::\-dataaccess::\-dao::\-RoiPoiTable::\-getPoiID() & Superato \\ 
+\midrule 
+TU75 & Viene testato che sia possibile accedere a tutte le informazioni relative ad un oggetto EdgeTable. & model::\-dataaccess::\-dao::\-EdgeTable::\-getId() \par model::\-dataaccess::\-dao::\-EdgeTable::\-getStartROI() \par model::\-dataaccess::\-dao::\-EdgeTable::\-getEndROI() \par model::\-dataaccess::\-dao::\-EdgeTable::\-getDistance() \par model::\-dataaccess::\-dao::\-EdgeTable::\-getCoordinate() \par model::\-dataaccess::\-dao::\-EdgeTable::\-getTypeId() \par model::\-dataaccess::\-dao::\-EdgeTable::\-getAction() \par model::\-dataaccess::\-dao::\-EdgeTable::\-getLongDescription() & Superato \\ 
+\midrule 
+TU76 & Viene testato che sia possibile accedere a tutte le informazioni relative ad un oggetto EdgeTypeTable. & model::\-dataaccess::\-dao::\-EdgeTypeTable::\-getId() \par model::\-dataaccess::\-dao::\-EdgeTypeTable::\-getTypeName() & Superato \\ 
+\midrule 
+TU77 & Viene testato che sia possibile accedere a tutte le informazioni relative ad un oggetto CategoryTable. & model::\-dataaccess::\-dao::\-CategoryTable::\-getId() \par model::\-dataaccess::\-dao::\-CategoryTable::\-getDescription() & Superato \\ 
+\midrule 
+TU78 & Viene testato che sia possibile accedere a tutte le informazioni relative ad un oggetto PhotoTable. & model::\-dataaccess::\-dao::\-PhotoTable::\-getId() \par model::\-dataaccess::\-dao::\-PhotoTable::\-getUrl() \par model::\-dataaccess::\-dao::\-PhotoTable::\-getEdgeId() & Superato \\ 
+\midrule 
+TU79 & Viene testato che sia possibile creare e ritornare: un oggetto SQLiteBuildingDao, un oggetto SQLitePointOfInterestDao, un oggetto SQLiteRegionOfInterestDao, un oggetto SQLiteRoiPoiDao, un oggetto SQLiteEdgeDao, un oggetto SQLiteEdgeTypeDao, un oggetto SQLiteCategoryDao, un oggetto SQLitePhotoDao.  & model::\-dataaccess::\-dao::\-SQLiteDaoFactory::\-getBuildingDao() \par model::\-dataaccess::\-dao::\-SQLiteDaoFactory::\-getPointOfInterestDao() \par model::\-dataaccess::\-dao::\-SQLiteDaoFactory::\-getRegionOfInterestDao() \par model::\-dataaccess::\-dao::\-SQLiteDaoFactory::\-getRoiPoiDao() \par model::\-dataaccess::\-dao::\-SQLiteDaoFactory::\-getEdgeDao() \par model::\-dataaccess::\-dao::\-SQLiteDaoFactory::\-getCategoryDao() \par model::\-dataaccess::\-dao::\-SQLiteDaoFactory::\-getEdgeTypeDao() \par model::\-dataaccess::\-dao::\-SQLiteDaoFactory::\-getPhotoDao() & Superato \\ 
+\midrule 
+TU80 & Viene testato che sia possibile effettuare le operazioni CRUD sulla tabella "Building" del database locale. In particolare, nel caso della ricerca viene testato che sia possibile effettuarla sia tramite identificativo che tramite major dell'edificio e che sia possibile ottenere le informazioni di tutte le mappe presenti sul database locale. & model::\-dataaccess::\-dao::\-SQLiteBuildingDao::\-insertBuilding() \par model::\-dataaccess::\-dao::\-SQLiteBuildingDao::\-deleteBuilding() \par model::\-dataaccess::\-dao::\-SQLiteBuildingDao::\-findBuildingById() \par model::\-dataaccess::\-dao::\-SQLiteBuildingDao::\-findBuildingByMajor() \par model::\-dataaccess::\-dao::\-SQLiteBuildingDao::\-findAllBuildings() \par model::\-dataaccess::\-dao::\-SQLiteBuildingDao::\-updateBuilding() & Superato \\ 
+\midrule 
+TU81 & Viene testato che, dato un oggetto di tipo Cursor che rappresenta il risultato della query sul database locale, sia possibile creare un oggetto BuildingTable. & model::\-dataaccess::\-dao::\-SQLiteBuildingDao::\-cursorToType() & Superato \\ 
+\midrule 
+TU82 & Viene verificato che, dato il major di un edificio, sia possibile verificare se la sua mappa è presente nel database locale. & model::\-dataaccess::\-dao::\-SQLiteBuildingDao::\-isBuildingMapPresent() & Superato \\ 
+\midrule 
+TU83 & Viene testato che sia possibile effettuare le operazioni CRUD sulla tabella "POI" del database locale. In particolare, nel caso della ricerca viene testato che, dato il major di un edificio, sia possibile recuperare tutti gli oggetti PointOfInterestTable che rappresentano i PointOfInterest di quell'edificio. & model::\-dataaccess::\-dao::\-SQLitePointOfInterestDao::\-insertPointOfInterest() \par model::\-dataaccess::\-dao::\-SQLitePointOfInterestDao::\-deletePointOfInterest() \par model::\-dataaccess::\-dao::\-SQLitePointOfInterestDao::\-findPointOfInterest() \par model::\-dataaccess::\-dao::\-SQLitePointOfInterestDao::\-findAllPointsWithMajor() \par model::\-dataaccess::\-dao::\-SQLitePointOfInterestDao::\-updatePointOfInterest() & Superato \\ 
+\midrule 
+TU84 & Viene testato che, dato un oggetto di tipo Cursor che rappresenta il risultato della query sul database locale, sia possibile creare un oggetto PointOfInterestTable. & model::\-dataaccess::\-dao::\-SQLitePointOfInterestDao::\-cursorToType() & Superato \\ 
+\midrule 
+TU85 & Viene testato che sia possibile effettuare le operazioni CRUD sulla tabella "ROI" del database locale. In particolare, nel caso della ricerca viene testato che, dato il major di un edificio, sia possibile recuperare tutti gli oggetti RegionOfInterestTable che rappresentano le RegionOfinterest di quell'edificio. & model::\-dataaccess::\-dao::\-SQLiteRegionOfInterestDao::\-insertRegionOfInterest() \par model::\-dataaccess::\-dao::\-SQLiteRegionOfInterestDao::\-deleteRegionOfInterest() \par model::\-dataaccess::\-dao::\-SQLiteRegionOfInterestDao::\-findRegionOfInterest() \par model::\-dataaccess::\-dao::\-SQLiteRegionOfInterestDao::\-findAllRegionsWithMajor() \par model::\-dataaccess::\-dao::\-SQLiteRegionOfInterestDao::\-updateRegionOfInterest() & Superato \\ 
+\midrule 
+TU86 & Viene testato che, dato un oggetto di tipo Cursor che rappresenta il risultato della query sul database locale, sia possibile creare un oggetto RegionOfInterestTable. & model::\-dataaccess::\-dao::\-SQLiteRegionOfInterestDao::\-cursorToType() & Superato \\ 
+\midrule 
+TU87 & Viene testato che sia possibile effettuare le operazioni CRUD sulla tabella "ROIPOI" del database locale. In particolare, nel caso della ricerca o della rimozione viene testato che, dato l'identificativo di un PointOfInterest, sia possibile recuperare o eliminare tutti gli oggetti RegionOfInterestTable che rappresentano tutte le RegionOfInterest che lo contengono e viceversa.  & model::\-dataaccess::\-dao::\-SQLiteRoiPoiDao::\-insertRoiPoi() \par model::\-dataaccess::\-dao::\-SQLiteRoiPoiDao::\-deleteRoiPoisWherePoi() \par model::\-dataaccess::\-dao::\-SQLiteRoiPoiDao::\-deleteRoiPoisWhereRoi() \par model::\-dataaccess::\-dao::\-SQLiteRoiPoiDao::\-findAllRegionsWithPoi() \par model::\-dataaccess::\-dao::\-SQLiteRoiPoiDao::\-findAllPointsWithRoi() \par model::\-dataaccess::\-dao::\-SQLiteRoiPoiDao::\-updateRoiPoi() & Superato \\ 
+\midrule 
+TU88 & Viene testato che, dato un oggetto di tipo Cursor che rappresenta il risultato della query sul database locale, sia possibile creare un oggetto RoiPoiTable. & model::\-dataaccess::\-dao::\-SQLiteRoiPoiDao::\-cursorToType() & Superato \\ 
+\midrule 
+TU89 & Viene testato che sia possibile effettuare le operazioni CRUD sulla tabella "Edge" del database locale. In particolare, nel caso della ricerca viene testato che, dato il major di un edificio, sia possibile recuperare tutti gli oggetti EdgeTable che rappresentano gli Edge di quell'edificio. & model::\-dataaccess::\-dao::\-SQLiteEdgeDao::\-insertEdge() \par model::\-dataaccess::\-dao::\-SQLiteEdgeDao::\-deleteEdge() \par model::\-dataaccess::\-dao::\-SQLiteEdgeDao::\-findEdge() \par model::\-dataaccess::\-dao::\-SQLiteEdgeDao::\-findAllEdgesOfBuilding() \par model::\-dataaccess::\-dao::\-SQLiteEdgeDao::\-updateEdge() & Superato \\ 
+\midrule 
+TU90 & Viene testato che, dato un oggetto di tipo Cursor che rappresenta il risultato della query sul database locale, sia possibile creare un oggetto EdgeTable. & model::\-dataaccess::\-dao::\-SQLiteEdgeDao::\-cursorToType() & Superato \\ 
+\midrule 
+TU91 & Viene testato che sia possibile effettuare le operazioni CRUD sulla tabella "Category" del database locale. & model::\-dataaccess::\-dao::\-SQLiteCategoryDao::\-insertCategory() \par model::\-dataaccess::\-dao::\-SQLiteCategoryDao::\-deleteCategory() \par model::\-dataaccess::\-dao::\-SQLiteCategoryDao::\-findCategory() \par model::\-dataaccess::\-dao::\-SQLiteCategoryDao::\-updateCategory() & Superato \\ 
+\midrule 
+TU92 & Viene testato che, dato un oggetto di tipo Cursor che rappresenta il risultato della query sul database locale, sia possibile creare un oggetto CategoryTable. & model::\-dataaccess::\-dao::\-SQLiteCategoryDao::\-cursorToType() & Superato \\ 
+\midrule 
+TU93 & Viene testato che sia possibile effettuare le operazioni CRUD sulla tabella "EdgeType" del database locale. & model::\-dataaccess::\-dao::\-SQLiteEdgeTypeDao::\-insertEdgeType() \par model::\-dataaccess::\-dao::\-SQLiteEdgeTypeDao::\-deleteEdgeType() \par model::\-dataaccess::\-dao::\-SQLiteEdgeTypeDao::\-findEdgeType() \par model::\-dataaccess::\-dao::\-SQLiteEdgeTypeDao::\-updateEdgeType() & Superato \\ 
+\midrule 
+TU94 & Viene testato che, dato un oggetto di tipo Cursor che rappresenta il risultato della query sul database locale, sia possibile creare un oggetto EdgeTypeTable. & model::\-dataaccess::\-dao::\-SQLiteEdgeTypeDao::\-cursorToType() & Superato \\ 
+\midrule 
+TU95 & Viene testato che sia possibile effettuare le operazioni CRUD sulla tabella "Photo" del database locale. In particolare, nel caso della ricerca viene testato che, dato l'identificativo di un Edge, sia possibile recuperare tutti gli oggetti PhotoTable che rappresentano le foto di quell'Edge. & model::\-dataaccess::\-dao::\-SQLitePhotoDao::\-insertPhoto() \par model::\-dataaccess::\-dao::\-SQLitePhotoDao::\-deletePhoto() \par model::\-dataaccess::\-dao::\-SQLitePhotoDao::\-findPhoto() \par model::\-dataaccess::\-dao::\-SQLitePhotoDao::\-findAllPhotosOfEdge() \par model::\-dataaccess::\-dao::\-SQLitePhotoDao::\-updatePhoto() & Superato \\ 
+\midrule 
+TU96 & Viene testato che, dato un oggetto di tipo Cursor che rappresenta il risultato della query sul database locale, sia possibile creare un oggetto PhotoTable. & model::\-dataaccess::\-dao::\-SQLitePhotoDao::\-cursorToType() & Superato \\ 
+\midrule 
+TU97 & Viene testato che sia possibile effettuare le operazioni CRUD sull'intero database locale. & model::\-dataaccess::\-dao::\-SQLDao::\-insert() \par model::\-dataaccess::\-dao::\-SQLDao::\-delete() \par model::\-dataaccess::\-dao::\-SQLDao::\-query() \par model::\-dataaccess::\-dao::\-SQLDao::\-update() \par model::\-dataaccess::\-dao::\-SQLDao::\-rawQuery() & Superato \\ 
+\midrule 
+TU98 & Viene testato che vengano creati il database e le sue tabelle e che venga effettuata la popolazione iniziale delle tabelle. & model::\-dataaccess::\-dao::\-MapsDbHelper::\-onCreate() & Superato \\ 
+\midrule 
+TU99 & Viene testato che venga aggiornato il database in seguito all'aggiunta o alla rimozione di una tabella. & model::\-dataaccess::\-dao::\-MapsDbHelper::\-onUpgrade() & Superato \\ 
+\midrule 
+TU100 & Viene testato che sia possibile recuperare l'URL del database remoto. & model::\-dataaccess::\-dao::\-MapsDbHelper::\-getRemoteDatabaseURL() & Superato \\ 
+\midrule 
+TU101 & Viene testato che Compass sia effettivamente un in ascolto dei sensori & model::\-compass::\-Compass::\-registerListener() & Superato \\ 
+\midrule 
+TU102 & Viene testato che Compass possa terminare l'ascolto dei sensori & model::\-compass::\-Compass::\-unregisterListener() & Superato \\ 
+\midrule 
+TU103 & Viene testato che il valore lastCoordinate nel tempo non cambi con i sensori spenti e cambi con i sensori attivi & model::\-compass::\-Compass::\-getLastCoordinate() & Superato \\ 
+\midrule 
+TU104 & Viene verificato che sia possibile recuperare le informazioni di un ContentProvider per effettuare una ricerca utilizzando la classe SearchSuggestionProvider & presenter::\-SearchSuggestionsProvider::\-query() \par presenter::\-SearchSuggestionsProvider::\-getType() \par presenter::\-SearchSuggestionsProvider::\-insert() \par presenter::\-SearchSuggestionsProvider::\-update() \par presenter::\-SearchSuggestionsProvider::\-delete() & Superato \\ 
+\midrule 
+TU105 & Viene verificato che sia possibile recuperare il nome dell'edificio da InformationManager e che tale nome sia passato ad HomeView & presenter::\-HomeActivity::\-updateBuildingName() & Superato \\ 
+\midrule 
+TU106 & Viene verificato che sia possibile recuperare la descrizione dell'edificio da InformationManager e che tale descrizione sia passata ad HomeView & presenter::\-HomeActivity::\-updateBuildingDescription() & Superato \\ 
+\midrule 
+TU107 & Viene verificato che sia possibile recuperare le ore di apertura dell'edificio da InformationManager e che tale orario sia passato ad HomeView & presenter::\-HomeActivity::\-updateBuildingOpeningHours() & Superato \\ 
+\midrule 
+TU108 & Viene verificato che sia possibile recuperare le categorie di POI dell'edificio da InformationManager e che tali categorie siano passate ad HomeView & presenter::\-HomeActivity::\-updatePoiCategoryList() & Superato \\ 
+\midrule 
+TU109 & Viene verificato che sia possibile recuperare l'indirizzo dell'edificio da InformationManager e che tale indirizzo sia passato ad HomeView & presenter::\-HomeActivity::\-updateBuildingAddress() & Superato \\ 
+\midrule 
+TU110 & Viene verificato che sia possibile recuperare i nomi dei POI dell'edificio da InformationManager & presenter::\-SearchSuggestionsProvider::\-query() & Superato \\ 
+\midrule 
+TU111 & Viene verificato che sia possibile mostrare le categorie di POI & presenter::\-HomeActivity::\-showPoisCategory() & Superato \\ 
+\midrule 
+TU112 & Viene verificato che sia possibile mostrare le prefrenze utente & presenter::\-HomeActivity::\-showPreferences() & Superato \\ 
+\midrule 
+TU113 & Viene verificato che sia possibile mostrare la guida dell'applicazione & presenter::\-HomeActivity::\-showHelp() & Superato \\ 
+\midrule 
+TU114 & Viene verificato che sia possibile visualizzare la lista di tutti i POI & presenter::\-HomeActivity::\-showAllPois() & Superato \\ 
+\midrule 
+TU115 & Viene verificato che sia possibile mostrare le mappe salvate nel databese locale & presenter::\-HomeActivity::\-showLocalMaps() & Superato \\ 
+\midrule 
+TU116 & Viene verificato che sia possibile far partire la navigazione utilizzando l'identificativo di un POI appartenente ad una certa categoria & presenter::\-PoiCategoryActivity::\-startNavigation() & Superato \\ 
+\midrule 
+TU117 & Viene verificato che sia possibile gestire le informazioni di navigazione & presenter::\-NavigationActivity::\-pathError() \par presenter::\-NavigationActivity::\-informationUpdate() & Superato \\ 
+\midrule 
+TU118 & Viiene verificato che sia possibile visualizzare le informazioni dettagliate di navigazione & presenter::\-NavigationActivity::\-showDetailedInformation() & Superato \\ 
+\midrule 
+TU119 & Viene verificato che sia possibile gestire un'immagine utilizzando la classe ImageAdapter & presenter::\-ImageAdapter::\-getCount() \par presenter::\-ImageAdapter::\-getItem() \par presenter::\-ImageAdapter::\-getView() & Superato \\ 
+\midrule 
+TU120 & Viene verificato che sia possibile gestire un insieme di immagini utilizzando la classe ImageListFragment & presenter::\-ImageListFragment::\-onItemClick() \par presenter::\-ImageListFragment::\-newInstance() \par presenter::\-ImageListFragment::\-onCreateView() & Superato \\ 
+\midrule 
+TU121 & Viene verificato che sia possibile gestire le opzioni sviluppatore utilizzando la classe MainDeveloperPresenter & presenter::\-MainDeveloperPresenter::\-isDeveloper() \par presenter::\-MainDeveloperPresenter::\-startDeveloperUnlocker() \par presenter::\-MainDeveloperPresenter::\-startDeveloperOptions() & Superato \\ 
+\midrule 
+TU122 & Viene verificato che sia possibile gestire lo sblocco delle opzioni sviluppatore utilizzando la classe DeveloperUnlockerActivity & presenter::\-DeveloperUnlockerActivity::\-unlockDeveloper() & Superato \\ 
+\midrule 
+TU123 & Viene verificato che sia possibile avviare un nuovo log e accedere ai log salvati sul dispositivo utilizzando la classe MainDeveloperActivity & presenter::\-MainDeveloperActivity::\-showDetailedLog() \par presenter::\-MainDeveloperActivity::\-startNewLog() & Superato \\ 
+\midrule 
+TU124 & Viene verificato che sia possibile salvare le preferenze utente utilizzando la classe PreferencesActivity & presenter::\-PreferencesActivity::\-savePreferences() & Superato \\ 
+\midrule 
+TU125 & Viene verificato che sia possibile effettuare il download di una mappa utilizzando la classe Remote MapManager & presenter::\-RemoteMapManagerActivity::\-downloadMap() & Superato \\ 
+\midrule 
+TU126 & Viene verificato che sia possibile aggiornare o rimuovere una mappa già presente sul dispostivo utilizzando la classe LocalMapActvitiy utilizzando LocalMapActivity & presenter::\-LocalMapActivity::\-updateMap() \par presenter::\-LocalMapActivity::\-deleteMap() & Superato \\ 
+\midrule 
+TU127 & Viene verificato che venga restituita la lista delle immagini & presenter::\-ImageDetailActivity::\-getListPhotos() & Superato \\ 
+\midrule 
+TU128 & Viene verificato che venga visualizzata la lista di POI rilevati dal dispositivo utilizzando la classe NearbyPoiActivity & presenter::\-NearbyPoiActivity::\-onCreate() & Superato \\ 
+\midrule 
+TU129 & Viene verificato che sia possibile gestire le foto e la descrizione dettagliata relativa ad una certa istruzione utilizzando la classe DetailedInformationActivity & presenter::\-DetailedInformationActivity::\-updatePhoto() \par presenter::\-DetailedInformationActivity::\-updateDetailedDescription() & Superato \\ 
+\midrule 
+TU130 & Viene verificato che sia possibile gestire la lista di immagini di un certo POI utilizzando la classe ImageAdapter & presenter::\-ImageAdapter::\-getCount() \par presenter::\-ImageAdapter::\-getItem() \par presenter::\-ImageAdapter::\-getItemId() \par presenter::\-ImageAdapter::\-getView() & Superato \\ 
+\midrule 
+TU131 & Viene verificato che venga visualizzata la schermata iniziale dell'applicazione utilizzando la classe MainActivity & presenter::\-MainActivity::\-onCreate() & Superato \\ 
+\midrule 
+TU132 & Viene verificato che venga arrestata l'attività di log e che venga salvato il log utilizzando la classe LogginActivity & presenter::\-LoggingActivity::\-stopLogging() & Superato \\ 
+\midrule 
+TU133 & Viene verificato che sia possibile eliminare un log salvato utilizzando la classe LogInformationActivity & presenter::\-LogInformationActivity::\-deleteLog() & Superato \\ 
+\midrule 
+TU134 & Viene verificato che sia possibile gesitre la lista di indicazioni utili per raggiungere una certa destinazione utilizzando la classe NavigationAdapter & presenter::\-NavigationAdapter::\-getCount() \par presenter::\-NavigationAdapter::\-getItem() \par presenter::\-NavigationAdapter::\-getItemId() \par presenter::\-NavigationAdapter::\-getView() & Superato \\ 
+\midrule 
+TU135 & Viene verificato che vengano visualizzate le informazioni di un edificio & view::\-HomeViewImp::\-setBuildingName() \par view::\-HomeViewImp::\-setBuildingOpeningHours() \par view::\-HomeViewImp::\-setPoiCategoryListAdapter() \par view::\-HomeViewImp::\-setBuildingAddress() & Superato \\ 
+\midrule 
+TU136 & Viene verificato che sia possibile visualizzare le istruzioni di navigazione & view::\-NavigationViewImp::\-setInstructionAdapter() \par view::\-NavigationViewImp::\-refreshInstructions() & Superato \\ 
+\midrule 
+TU137 & Viene verificato che vengano visualizzate le categorie dei POI & view::\-PoiCategoryViewImp::\-setPoiListAdapter() & Superato \\ 
+\midrule 
+TU138 & Viene verificato che vengano visualizzate le indicazioni dettagliate e le foto associate ad un arco & view::\-DetailedInformationViewImp::\-setPhoto() \par view::\-DetailedInformationViewImp::\-setDetailedDescription() & Superato \\ 
+\midrule 
+TU139 & Viene verificato che vengano visualizzati tutti i POI associati ad un certo ROI & view::\-NearbyPoiViewImp::\-setAdapter() & Superato \\ 
+\midrule 
+TU140 & Viene verificato che sia possibile visualizzare una immagine & view::\-ImageDetailViewImp::\-setAdapter() & Superato \\ 
+\midrule 
+TU141 & Viene verificato che sia possibile visualizzare la guida & view::\-HelpViewImp::\-setHelp() & Superato \\ 
+\midrule 
+TU142 & Viene verificato che siano visualizzate le impostazioni per gestire le mappe remote & view::\-RemoteMapManagerViewImp::\-setRemoteMaps() & Superato \\ 
+\midrule 
+TU144 & Viene verificato che sia possibile inserire un codice per sbloccare le funzionalità sviluppatore e visualizzare un messaggio di errore in caso di codice errato & view::\-DeveloperUnlockerViewImp::\-showWrongCode() & Superato \\ 
+\midrule 
+TU145 & Viene verificato che vengano visualizzati i log salvati & view::\-MainDeveloperViewImp::\-setLogsAdapter() & Superato \\ 
+\midrule 
+TU146 & Viene verificato che vengano visualizzati gli identificati dei beacon circostanti & view::\-LoggingViewImp::\-setBeaconListAdapter() & Superato \\ 
+\midrule 
+TU147 & Viene verificato che vengano visualizzato il dettaglio di un log e che questo possa essere eliminato & view::\-LogInformationViewImp::\-setBeaconAdapter() & Superato \\ 
+\midrule 
+TU148 & Viene testato che, dato un oggetto JsonObject che possiede gli stessi valori di un oggetto PhotoTable, sia possibile costruire un oggetto PhotoTable e inserirlo nel database locale. & model::\-dataaccess::\-service::\-EdgeService::\-convertAndInsertPhoto() & Superato \\ 
+\midrule 
+TU149 & Viene testato che tramite un oggetto InformationManagerImp venga lanciata un'eccezione di tipo NoBeaconSeenExcetpion nel caso in cui si cerchi di recuperare la mappa di un edificio o i POI circostanti senza aver rilevato alcun beacon & model::\-InformationManagerImp::\-getBuildingMap() \par model::\-InformationManagerImp::\-getNearbyPOIs() & Superato \\ 
+\midrule 
+TU150 & Viene testato che sia possibile aggiungere e rimuovere un listener ad un oggetto InformationManagerImp. In particolare viene anche testato che nel caso in cui sia registrato almeno un listener venga avvertito nel caso in cui siano disponiobili informazioni o ci siano problemi nel reperire informazioni & model::\-InformationManagerImp::\-removeListener() \par model::\-InformationManagerImp::\-addListener() & Superato \\ 
+\midrule 
+TU151 & Viene testato che sia possibile recuperare le RegionOfInterest che sono già state associate ai PointOfInterest vicini & model::\-dataaccess::\-service::\-RegionOfInterestService::\-getTracedRois() & Superato \\ 
+\midrule 
+TU152 & Viene testato che sia possibile impostare le RegionOfInterest che sono già state associate i PointOfInterest vicini & model::\-dataaccess::\-service::\-RegionOfInterestService::\-setTracedRois() & Superato \\ 
+\midrule 
+TU153 & Viene testato che sia possibile recuperare gli identificativi di tutti i PointOfInterest associati ad una specifica RegionOfInterest & model::\-dataaccess::\-service::\-RegionOfInterestService::\-findAllPointsWithRoi() & Superato \\ 
+\midrule 
+TU154 & Viene testato che sia possibile recuperare gli identificativi di tutte le RegionOfInterest associate ad uno specifico PointOfInterest & model::\-dataaccess::\-service::\-PointOfInterestService::\-findAllRegionsWithPoi() & Superato \\ 
+\midrule 
+TU155 & Viene testato che sia possibile verificare la presenza sul database remoto della mappa di un edificio & model::\-dataaccess::\-service::\-BuildingService::\-isRemoteMapPresent() & Superato \\ 
+\arrayrulecolor{black}
+\bottomrule
+\caption{Tabella descrizione test unità} \\
+\end{longtabu}
+\end{appendices}
+\end{document}

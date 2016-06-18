@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sperimentazioni>
+
+	<sperimentazione id="1">
+
+		<data>DATA-SPERIMENTAZIONE</data>
+		<orario>ORARIO-SPERIMENTAZIONE</orario>
+		<edificio>EDIFICIO-SPERIMENTAZIONE</edificio>
+
+		<prova id="1A.1">
+
+			<numProva>1</numProva>
+			<configProva>A</configProva>
+			<tentativoProva>1</tentativoProva>
+
+			<input>
+				<variabile nome="$CAT">Valore variabile</variabile>
+				<!-- etc. -->
+			</input>
+
+			<outputAttesi>
+				<variabile nome="$RESULT">Valore risultato atteso</variabile>
+				<!-- etc. -->
+			</outputAttesi>
+
+			<outputRiscontrati>
+
+				<dispositivo id="1">
+					<variabile nome="$RESULT">Valore risultato riscontrato dal dispositivo 1</variabile>
+					<!-- etc. -->
+				</dispositivo>
+
+				<dispositivo id="2">
+					<variabile nome="$RESULT">Valore risultato riscontrato dal dispositivo 2</variabile>
+					<!-- etc. -->
+				</dispositivo>
+
+			</outputRiscontrati>
+
+		</prova>
+
+		<prova id="1A.2">
+			<numProva>1</numProva>
+			<configProva>A</configProva>
+			<tentativoProva>2</tentativoProva>
+
+			<input>
+				<variabile nome="$CAT">Valore variabile</variabile>
+				<!-- etc. -->
+			</input>
+
+			<outputAttesi>
+				<variabile nome="$RESULT">Valore risultato atteso</variabile>
+				<!-- etc. -->
+			</outputAttesi>
+
+			<outputRiscontrati>
+
+				<dispositivo id="1">
+					<variabile nome="$RESULT">Valore risultato riscontrato dal dispositivo 1</variabile>
+					<!-- etc. -->
+				</dispositivo>
+
+				<dispositivo id="2">
+					<variabile nome="$RESULT">Valore risultato riscontrato dal dispositivo 2</variabile>
+					<!-- etc. -->
+				</dispositivo>
+
+			</outputRiscontrati>
+		</prova>
+
+		<prova id="2A.1">
+			<numProva>1</numProva>
+			<configProva>A</configProva>
+			<tentativoProva>2</tentativoProva>
+
+			<input>
+				<variabile nome="$CAT">Valore variabile</variabile>
+				<!-- etc. -->
+			</input>
+
+			<outputAttesi>
+				<variabile nome="$RESULT">Valore risultato atteso</variabile>
+				<!-- etc. -->
+			</outputAttesi>
+
+			<outputRiscontrati>
+
+				<dispositivo id="1">
+					<variabile nome="$RESULT">Valore risultato riscontrato dal dispositivo 1</variabile>
+					<!-- etc. -->
+				</dispositivo>
+
+				<dispositivo id="2">
+					<variabile nome="$RESULT">Valore risultato riscontrato dal dispositivo 2</variabile>
+					<!-- etc. -->
+				</dispositivo>
+
+			</outputRiscontrati>
+		</prova>
+
+		<!-- etc. -->
+
+	</sperimentazione>
+	
+	<sperimentazione id="2">
+		<!-- ... -->
+	</sperimentazione>
+	
+	<!-- etc. -->
+
+</sperimentazioni>

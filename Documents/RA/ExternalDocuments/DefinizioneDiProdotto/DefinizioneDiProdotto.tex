@@ -1,0 +1,84 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{leaf}
+\usepackage{listings}
+\usepackage{float}
+\setcounter{table}{-1}
+
+\titlepage{}
+
+\author{}
+\date{03/03/2016}
+\intestazioni{Definizione di prodotto}
+\pagenumbering{gobble}
+\begin{document}
+\begin{titlepage}
+	\centering
+	{\huge\bfseries CLIPS\par}
+	Communication \& Localization with Indoor Positioning Systems \\*
+	\line(1,0){350} \\
+	{\scshape\LARGE Università di Padova \par}
+	\vspace{1cm}
+	%deve essere cambiato il titolo ogni volta
+	{\scshape\Large Definizione di prodotto v4.00\par}
+	\logo
+	
+	\vfill \vfill
+	%devono essere compilati questi campi ogni volta
+		\begin{tabular}{c|c}
+			{\hfill \textbf{Versione}} 			& 4.00				\\
+			{\hfill\textbf{Data Redazione}} 	& 2016-06-13	\\
+			{\hfill\textbf{Redazione}} 			& Marco Zanella \\
+												& Andrea Tombolato \\
+												& Oscar Elia Conti \\
+												& Cristian Andrighetto \\
+			{\hfill\textbf{Verifica}} 			& Eduard Bicego \\
+			{\hfill\textbf{Approvazione}} 		& Andrea Tombolato		\\ 
+			{\hfill\textbf{Uso}} 				& Esterno			\\ 
+			{\hfill\textbf{Distribuzione}} 		& Prof. Vardanega Tullio \\
+												& Prof. Cardin Riccardo \\
+												& Miriade S.p.A. \\
+		\end{tabular}
+	\end{titlepage}
+	
+	\newpage
+	\pagestyle{myfront}
+		\include{diarioModificheDP}
+	\newpage
+		\tableofcontents
+	\newpage
+		\listoffigures	
+	\label{LastFrontPage}
+	\newpage
+	
+	\pagestyle{mymain}
+	
+	\newpage
+		\subfile{sections/Introduzione}
+		
+	\newpage
+		\subfile{sections/standardDiProgetto}
+		
+	\newpage
+		\subfile{sections/ArchitetturaApplicazione}
+		
+	\newpage
+	\subfile{sections/DiagrammiPackage}
+		
+	\newpage
+		\subfile{sections/SpecificaDeiComponenti}	
+		
+	\newpage
+		\subfile{sections/SchemaBaseDati}
+		
+	\newpage
+		\subfile{sections/DiagrammiDiSequenza}
+		
+	\newpage
+		\subfile{sections/Tracciamento}
+		
+		
+		
+	\label{LastPage}
+
+\end{document}

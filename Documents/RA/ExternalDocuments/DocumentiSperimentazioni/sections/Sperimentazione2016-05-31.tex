@@ -1,0 +1,77 @@
+\documentclass[../Sperimentazione.tex]{subfiles}
+
+\begin{document}
+
+	\section{Sperimentazione 2016-05-31}
+	
+		\begin{table} [h]
+		\centering
+		\begin{tabular}[width=0.5\textwidth]{r|c}
+			\textbf{Numero sperimentazione} & 2 \\
+			\textbf{Data sperimentazione} & 2016-05-31 \\
+			\textbf{Orario sperimentazione} & 15:35 - 16:45 \\
+			\textbf{Impianto allestito} & Impianto1 \\
+			\textbf{Versione prototipo testato} & 2.00 \\		
+		\end{tabular}
+		\end{table}
+		
+		\subsection{Variazioni rispetto la sperimentazione precedente}
+			Dalla sperimentazione precedente si è aggiornata la versione del prototipo. Ora implementa una navigazione più guidata che dà modo all'utente di visualizzare il progresso del proprio percorso. Inoltre molte altre funzionalità sono state implementate. Di seguito le elenchiamo:
+			\begin{itemize}
+				\item Navigazione guidata;
+				\item Area sviluppatore - Beacon power area;
+				\item Gestione mappe;
+				\item Esplora tutti i luoghi.
+			\end{itemize}
+		
+		% impianto utilizzato
+		\subsection{Impianto}
+		L'impianto\g\ allestito per la sperimentazione è l'impianto \textbf{Impianto1}. Tutte le informazioni nel dettaglio sono disponibili nella sezione \textit{Allestimento impianti} \ref{sec:AllestimentoImpianto}. Durante l'orario delle sperimentazioni all'interno dell'edificio si svolgevano le normali attività per cui si considera che l'impianto abbia condizioni esterne realistiche.
+
+
+		% dispositivi utilizzati
+		\subsection{Dispositivi di prova}
+			Nella presente sperimentazione si sono utilizzati tre dispositivi con diverso hardware e sistema operativo. Inoltre la \textbf{versione del prototipo} installata e testata è la \textbf{2.00}.
+	
+			\begin{table} [h]
+			\centering
+				\begin{tabular}{lc}
+					%\toprule
+					\textbf{Modello} & \textbf{Sistema operativo} \\
+					\toprule
+					 Moto G 2015 & Android 6.0 \\
+					 \midrule
+					 Nexus 4 & Android 5.1.1 \\
+					 \midrule
+					 Galaxy S4 Mini & Android 4.4.4 \\
+					\bottomrule
+				\end{tabular}
+				\caption{Sperimentazione 2016-05-31 - Dispositivi utilizzati}
+				\label{tab:Sperimentazione1Dispositivi}
+			\end{table}
+		
+			
+		% prove effettuate (commentarlo per compilare il seguente file)
+		\newpage
+			\subfile{sections/Sperimentazione2016-05-31/ProveEffettuate}
+	
+		% problematiche 
+		\newpage
+		\subsection{Problematiche riscontrate}
+		
+			\subsubsection{Problematiche hardware}
+				I problemi hardware riscontrati sono gli stessi della precedente prova. I sensori hardware dei dispositivi testati variano molto in precisione. Durante questa sperimentazione le antenne bluetooth rispondevano con tempi diversi notevoli inoltre i sensori utilizzati per il calcolo dell'orientamento (bussola) sono risultati molto imprecisi e variano molto da un dispositivo all'altro. Questi sensori (accelerometro e magnetometro) risultano molto suscettibili a interferenze esterne e in taluni casi rendevano la funzionalità della bussola non affidabile. Risulta comunque doveroso sottolineare che non sono stati previsti e implementati algoritmi di correzione per i dati raccolti da tali sensori.
+		
+			\subsubsection{Problematiche software}
+				Non sono state riscontrate problematiche software, pertanto l'applicativo prodotto supera tutti i test richiesti.
+		
+			\subsubsection{Problematiche user experience}
+				Le problematiche lato utente rimangono quelle della prima sperimentazione, l'inesperienza del team e i vincoli estern: versione minima Android, limiti dei beacon e tempi di consegna, hanno impedito miglioramenti. Tali accorgimenti però non risultavano essere parte fondamentale del progetto ma parte opzionale.
+			
+		% conclusioni della sperimentazione
+		\newpage
+		\subsection{Conclusioni}
+			Tutte le altre prove sono superate con successo, per le prove 15 e 16 nonostante segnate come superate è stato segnalato il comportamento poiché il comportamento è molto variabile date i limiti hardware discussi precedentemente.
+			L'applicazione risulta quindi un utile supporto per la navigazione indoor seppur con certi limiti e raggiunge gli obiettivi prefissati.
+			
+\end{document}

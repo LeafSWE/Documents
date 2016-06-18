@@ -1,0 +1,36 @@
+\documentclass[../AnalisiDeiRequisiti.tex]{subfiles}
+
+\begin{document}
+\section{Descrizione generale}
+	\subsection{Obiettivo del prodotto}
+	Il prodotto\g\ vuole essere un prototipo utile alla sperimentazione dei risultati conseguiti dal gruppo nella ricerca di metodi di navigazione indoor\g\ alternativi al tradizionale Global Positioning System (GPS).
+Il prototipo dovrà avvalersi della tecnologia beacon\g\ per implementare una navigazione di tipo semantico.
+
+	\subsection{Funzioni del prodotto}
+	Il prodotto\g\ permette la navigazione all’interno di un edificio: l’utente sceglie come destinazione un'area dell’edifico in cui si trova e riceve indicazioni utili per poterla raggiungere. 
+	
+	Per identificare le varie aree che compongono un edificio, si utilizza la dicitura Point of Interest (POI\g).
+	
+	Dall'applicazione è inoltre possibile consultare informazioni di varia natura:
+	\begin{itemize}
+		\item relative all’edificio nel suo complesso: nome, indirizzo, orari d'apertura, descrizione;
+		\item relative ai singoli POI\g: nome, descrizione.
+	\end{itemize}
+	In entrambi i casi la descrizione viene messa a disposizione dal gestore dell'edificio o del singolo POI\g, essa serve da presentazione e/o per fornire informazioni aggiuntive a quelle già previste dall'applicazione (nome, indirizzo, orari d'apertura). 
+	
+	Il prodotto\g\ mette a disposizione degli utenti in possesso di un codice sviluppatore alcune funzionalità avanzate. Tali funzionalità permettono di registrare  i valori di Universal Unique Identifier (UUID), Major, Minor, livello di potenza del segnale, livello della batteria, distanza approssimativa del dispositivo dal beacon\g, area coperta e formato dei beacon rilevati dal dispositivo. I primi utilizzatori di queste funzionalità saranno i componenti del gruppo \leaf\ che le adopereranno per creare l’infrastruttura beacon\g\ necessaria al funzionamento dell’applicazione ed ottimizzarne l'interazione con l'applicazione. Le funzionalità avanzate potranno poi essere messe a disposizione di chiunque voglia contribuire al progetto CLIPS: sia per mappare nuovi edifici, sia per manutenere l'infrastruttura dei beacon\g\ di edifici già mappati.
+		
+	\subsection{Caratteristiche degli utenti} 
+	Il prodotto\g\ si rivolge principalmente a due categorie di utenti:
+	\begin{itemize}
+		\item L'utente finale: utilizza le funzionalità esposte dal prototipo. Agli utenti appartenenti a questa categoria non sono richieste conoscenze tecniche specifiche, è sufficiente che siano in grado di utilizzare uno smartphone Android\g;
+		\item L'utente sviluppatore: utilizza funzionalità avanzate del sistema, principalmente per testare l'interazione tra il prototipo ed il sistema beacon\g\ entro il quale il prototipo opera. Gli utenti di questa categoria devono conoscere la teoria alla base della tecnologia beacon\g.
+	\end{itemize}
+	
+	\subsection{Piattaforma di esecuzione}
+	Per utilizzare il prototipo è necessario possedere un dispositivo con sistema operativo Android\g\ 4.4 o superiore provvisto di tecnologia BLE\g.
+	
+	\subsection{Vincoli generali}
+	Le funzionalità principali del prototipo sono accessibili solo da dispositivi con Bluetooth\g\ attivato e all'interno di edifici mappati tramite l'opportuno posizionamento di sensori beacon\g.
+\end{document}
+

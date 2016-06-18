@@ -1,0 +1,229 @@
+\documentclass[../PianoDiQualifica.tex]{subfiles}
+
+\begin{document}
+\section{Visione generale della strategia di gestione della qualità}
+	\subsection{Obiettivi di qualità}\label{ObiettiviDiQualità}
+	In questa sezione vengono riportati gli obiettivi di qualità che il gruppo \leaf\ si impegna a perseguire durante lo svolgimento dell'intero progetto. Per capire se un certo obiettivo è stato raggiunto oppure no, il gruppo fa uso di standard, modelli e metriche. Ognuno di questi fa uso di scale differenti e fissate a priori: per ogni criterio utilizzato abbiamo fissato dei valori minimi che intendiamo raggiungere nell'arco dell'intero progetto. Oltre a ciò sono stati fissati dei valori ottimali che dovrebbero essere sperabilmente (ma non obbligatoriamente) raggiunti.\\
+	Inoltre, gli obiettivi riportati in questa sezione sono identificati da un codice identificativo, al fine di rendere più semplice il tracciamento tra l'obiettivo di qualità da soddisfare e la metrica che permette di verificarne il soddisfacimento.\\
+	La procedura di denominazione degli obiettivi è spiegata in dettaglio nel documento \normediprogettov.
+	
+		\subsubsection{Qualità di processo}
+		Assicurare la qualità dei processi è indispensabile durante lo svolgimento del progetto per le seguenti ragioni:
+		\begin{itemize}
+		\item aiuta ad ottimizzare l'uso delle risorse;
+		\item fa in modo che i costi siano maggiormente contenuti;
+		\item migliora la stima dei rischi e degli impegni.
+		\end{itemize}
+		Un altro fattore da tenere in considerazione è che, molto spesso, prodotti scadenti derivano da processi scadenti.\\
+		Desideriamo che i processi posseggano le seguenti caratteristiche ottimali:
+		\begin{itemize}
+			\item un processo\g\ dovrebbe essere in grado di migliorare continuamente le proprie performance
+			\begin{itemize}
+				\item le performance di un processo\g\ dovrebbero essere costantemente misurabili;
+				\item un processo\g\ dovrebbe cercare di perseguire sempre degli obiettivi quantitativi di miglioramento.
+			\end{itemize}
+			\item le attività di un processo\g\ dovrebbero rispettare i tempi indicati nel documento \pianodiprogettov;
+			\item i costi effettivi di ogni processo\g\ dovrebbero essere in linea con quanto dichiarato nel documento \pianodiprogettov.
+		\end{itemize}
+		Nelle prossime sezioni si enunciano gli obiettivi che il gruppo \leaf\ intende raggiungere. Per ognuno di essi vengono specificati i criteri con i quali si effettuano le misurazioni sulla qualità (per capire quanto si è vicini all’obiettivo).\\
+		Per ogni criterio scelto vengono inoltre dichiarati i valori minimi che si intendono raggiungere, oltre a quelli ottimali.
+			
+		\paragraph{Miglioramento costante - OQPC1}
+		Si è deciso di adottare il modello CMM\g\ per quantificare la capacità dei processi di misurare le proprie performance e di porsi obiettivi quantitativi di miglioramento.\\
+		In particolare si vuole raggiungere almeno il livello 2 previsto da tale scala. Il livello ottimale che sperabilmente dovremmo raggiungere è il 4.\\
+		Riassumendo:
+		\begin{description}
+			\item[Modello utilizzato:] CMM\g;
+			\item[Soglia di accettabilità:] livello 2 previsto da CMM\g;
+			\item[Soglia di ottimalità:] livello 4 previsto da CMM\g;
+		\end{description}
+		Per una migliore e più dettagliata descrizione del modello CMM\g\ qui adottato si faccia riferimento all'appendice \ref{appCMM} "Capability Maturity Model".\\
+		Per approfondire la scelta dei range di accettazione e ottimalità si consulti invece la metrica MPC1 "Capability Maturity Model" alla sezione \ref{MPC1}.
+		
+		\paragraph{Rispetto della pianificazione - OQPC2}
+		Per capire se le attività di un processo\g\ sono in ritardo rispetto a quanto pianificato all’interno del \pianodiprogetto\ viene utilizzata la seguente metrica: Schedule Variance.\\
+		Si desidera che il ritardo accumulato sia minore del 5\% rispetto al totale pianificato. Sarebbe invece ottimale essere esattamente in linea con quanto prevede il \pianodiprogetto, o essere addirittura in anticipo.\\
+		Riassumendo:
+		\begin{description}
+			\item[Metrica utilizzata:] Schedule Variance;
+			\item[Soglia di accettabilità:] in ritardo al massimo del 5\% rispetto a quanto pianificato;
+			\item[Soglia di ottimalità:] essere in linea o in anticipo con quanto pianificato (ritardo minore o uguale a 0\%).
+		\end{description}
+		Per una descrizione dettagliata della metrica utilizzata si faccia riferimento alla metrica MPC2 "Schedule Variance" alla sezione \ref{MPC2}.
+		
+		\paragraph{Rispetto del budget - OQPC3}
+		Per capire se i costi di un processo\g\ rientrano nel budget previsto dal \pianodiprogetto\ viene utilizzata la seguente metrica: Budget Variance.\\
+		L’obiettivo minimo è quello di avere dei costi che non superano il budget a disposizione per più del 10\%. Sarebbe invece ottimale che i costi fossero esattamente in linea con il preventivo o che addirittura si avesse speso meno.\\
+		Riassumendo:
+		\begin{description}
+			\item[Metrica utilizzata:] Budget Variance;
+			\item[Soglia di accettabilità:] costi al massimo maggiori del 10\% rispetto al preventivo;
+			\item[Soglia di ottimalità:] costi in linea o minori di quanto previsto dal \pianodiprogetto (minore o uguale a 0\%).
+		\end{description}
+		Per una descrizione dettagliata della metrica utilizzata si faccia riferimento alla metrica MPC3 "Budget Variance" alla sezione \ref{MPC3}.
+		
+		\subsubsection{Qualità di prodotto}
+		Il gruppo si prefigge di mantenere la stessa qualità sia nei processi che nei prodotti: per garantire la migliore qualità del prodotto\g, anche il processo\g\ da cui proviene deve avere una buona qualità. Per mantenere la qualità del prodotto\g, il gruppo cercherà di seguire al meglio lo standard di qualità [ISO/IEC 9126:2001].\\
+		Il progetto prevede la produzione di due tipologie di prodotti: documenti e software\g; nelle prossime sezioni sono esposti gli obiettivi che il gruppo \leaf\ intende raggiungere, suddivisi per tipologia di prodotto\g.\\
+		Per ogni obiettivo, vengono specificati i criteri con i quali si effettuano le misurazioni sulla qualità (per capire quanto si è vicini all’obiettivo).\\
+		Per ogni criterio scelto vengono inoltre dichiarati i valori minimi e i valori ottimali che si intendono raggiungere.
+				
+			\paragraph{Qualità dei documenti}
+			Gli obiettivi di qualità riguardanti i documenti ai quali il gruppo \leaf\ desidera arrivare nell'arco dell'intero progetto sono i seguenti:
+			\begin{itemize}
+				\item i documenti devono essere comprensibili da individui dotati di una licenza superiore;
+				\item i documenti devono essere corretti a livello ortografico;
+				\item i documenti non devono contenere concetti errati.
+			\end{itemize}
+			Descriviamo ora quali sono le metriche o i criteri che si intendono utilizzare per quantificare la vicinanza a ognuno degli obiettivi sopra descritti.\\
+			Individuiamo inoltre le soglie di accettabilità e ottimalità, per fissare quantitativamente i punti ai quali desideriamo arrivare.
+				
+				\subparagraph{Leggibilità e comprensibilità - OQPRD1}
+				Per cercare di capire quanto i documenti siano effettivamente leggibili e comprensibili da persone dotate di una licenza superiore viene utilizzato l’indice Gulpease\g.\\
+				Si desidera che i documenti posseggano costantemente un indice maggiore a 40 (soglia di accettabilità). Si dovrebbe tuttavia cercare di raggiungere un valore più alto, considerato ottimale, ovvero 60.\\
+				Riassumendo:
+				\begin{description}
+					\item[Metrica utilizzata:] indice Gulpease\g;
+					\item[Soglia di accettabilità:] valori almeno maggiori di 40;
+					\item[Soglia di ottimalità:] valori almeno maggiori di 60.
+				\end{description}
+				Per una descrizione dettagliata della metrica utilizzata si faccia riferimento alla metrica MPRD1 "Indice di leggibilità" alla sezione \ref{MPRD1}.
+				
+				\subparagraph{Correttezza ortografica - OQPRD2}
+				Per capire quanto i documenti siano effettivamente corretti a livello ortografico viene utilizzata la seguente metrica: percentuale di errori ortografici rinvenuti e non corretti.\\
+				Si desidera che tutti gli errori ortografici che sono stati trovati siano corretti. In questo caso, dunque, l'obiettivo minimo coincide con l’obiettivo ottimale.\\
+				Riassumendo:
+				\begin{description}
+					\item[Metrica utilizzata:] percentuale di errori ortografici rinvenuti e non corretti;
+					\item[Soglia di accettabilità:] tutti gli errori trovati sono stati corretti;
+					\item[Soglia di ottimalità:] tutti gli errori trovati sono stati corretti.
+				\end{description}
+				Per una descrizione dettagliata della metrica utilizzata si faccia riferimento alla metrica MPRD2 "Errori ortografici rinvenuti e non corretti" alla sezione \ref{MPRD2}.
+				
+				\subparagraph{Correttezza concettuale - OQPRD3}
+				Per capire quanto i documenti siano effettivamente corretti a livello concettuale viene utilizzata la seguente metrica: percentuale di errori concettuali rinvenuti e non corretti.\\
+				Si desidera che al massimo il 5\% (soglia di accettabilità) degli errori concettuali rinvenuti non siano corretti. L’obiettivo ottimale sarebbe quello di correggere tutti gli errori trovati.\\
+				Riassumendo:
+				\begin{description}
+					\item[Metrica utilizzata:] percentuale di errori concettuali rinvenuti e non corretti;
+					\item[Soglia di accettabilità:] almeno il 95\% degli errori trovati è stato corretto;
+					\item[Soglia di ottimalità:] tutti gli errori trovati sono stati corretti.
+				\end{description}
+				Per una descrizione dettagliata della metrica utilizzata si faccia riferimento alla metrica MPRD3 "Errori concettuali rinvenuti e non corretti" alla sezione \ref{MPRD3}.
+			
+			\paragraph{Qualità del software}
+			Gli obiettivi di qualità del software\g\ ai quali il gruppo \leaf\ desidera arrivare nell'arco del progetto sono un sottoinsieme di quelli enunciati nello standard [ISO/IEC 9126:2001]:
+		\begin{itemize}
+			\item il prodotto\g\ possiede le funzionalità descritte all'interno dei requisiti obbligatori;
+			\item il prodotto\g\ possiede le funzionalità descritte all'interno dei requisiti desiderabili;
+			\item il codice risulta manutenibile e facilmente comprensibile;
+			\item il prodotto\g\ è testato in ogni sua parte e in ogni situazione nella quale si può trovare;
+			\item il prodotto\g\ è robusto e non interrompe l'esecuzione in seguito a situazioni anomale\g;
+			\item il prodotto\g\ garantisce un funzionamento senza interruzioni.
+		\end{itemize}
+				\subparagraph{Funzionalità obbligatorie - OBPRS1}
+				Il prodotto\g\ deve ricoprire tutte le funzionalità descritte nei requisiti obbligatori. Per monitorare lo stato di completamento delle funzionalità richieste, il gruppo ha pensato di rapportare i requisiti completati con quelli ancora da completare.
+					\begin{description}
+						\item [Metrica utilizzata:] Copertura Requisiti Obbligatori
+						\item [Soglia di accettabilità:] 100\% requisiti soddisfatti
+						\item [Soglia di ottimalità:] 100\% requisiti soddisfatti
+					\end{description}
+					Per una descrizione dettagliata della metrica qui utilizzata e per una maggiore comprensione degli indici di ottimalità e accettabilità presentati si faccia riferimento alla metrica MPRS1 "Copertura Requisiti Obbligatori" alla sezione \ref{MPRS1}.
+				\subparagraph{Funzionalità desiderabili - OBPRS2}	
+				Il prodotto\g\ deve ricoprire tutte le funzionalità descritte nei requisiti desiderabili. Per monitorare lo stato di completamento delle funzionalità richieste il gruppo ha pensato di rapportare i requisiti completati con quelli ancora da completare.
+					\begin{description}
+						\item [Metrica utilizzata:] Copertura Requisiti Desiderabili
+						\item [Soglia di accettabilità:] 100\% requisiti soddisfatti
+						\item [Soglia di ottimalità:] 100\% requisiti soddisfatti
+					\end{description}
+					Per una descrizione dettagliata della metrica qui utilizzata e per una maggiore comprensione degli indici di ottimalità e accettabilità presentati si faccia riferimento alla metrica MPRS2 "Copertura Requisiti Desiderabili" alla sezione \ref{MPRS2}.
+				\subparagraph{Manutenibilità e Comprensibilità del codice - OBPRS3}	
+					Il prodotto\g\ deve avere codice manutenibile e non deve generare incomprensioni al suo interno. Per questo si tiene conto della sua complessità e della sua lunghezza. Codice poco manutenibile può portare all'abbandono dello sviluppo del prodotto\g.
+					\begin{description}
+						\item [Metrica utilizzata:] Numero di statement per metodo
+						\item [Soglia di accettabilità:] 30<X<60
+						\item [Soglia di ottimalità:] X<30
+						\item X = numero di statement per metodo
+					\end{description}
+					\begin{description}
+						\item [Metrica utilizzata:] Numero di parametri per metodo
+						\item [Soglia di accettabilità:] 4<X<10
+						\item [Soglia di ottimalità:] X<4
+						\item X = numero di parametri per metodo
+					\end{description}
+					\begin{description}
+						\item [Metrica utilizzata:] Numero di campi dati per classe
+						\item [Soglia di accettabilità:] 10<X<15
+						\item [Soglia di ottimalità:] X<10
+						\item X = numero di campi dati per classe
+					\end{description}
+					\begin{description}
+					    \item [Metrica utilizzata:] Grado di accoppiamento
+						\item [Soglia di accettabilità:] 3<X<10
+						\item [Soglia di ottimalità:] X<3
+						\item X = numero di dipendenze tra classi in un package\g 
+					\end{description}
+					\begin{description}
+						\item [Metrica utilizzata:] Cyclomatic Number
+						\item [Soglia di accettabilità] 4<X<10
+						\item [Soglia di ottimalità] X<4
+						\item X = numero di complessità ciclomatica
+					\end{description}
+					%\begin{description}
+						%\item [Metrica utilizzata:] Conditional Statement
+						%\item [Soglia di accettabilità:] 20<X<50
+						%\item [Soglia di ottimalità:] X<20
+						%\item X = numero di statement condizionali in un metodo
+					%\end{description}
+					\begin{description}
+					    \item [Metrica utilizzata:] Adequacy of variable names
+						\item [Soglia di accettabilità] 80\%<X<90\%
+						\item [Soglia di ottimalità] X>90\%
+						\item X = percentuale dei nomi delle variabili che corrispondono alla \definizionediprodottov
+					\end{description}
+					\begin{description}
+						\item [Metrica utilizzata:] Average Module Size
+						\item [Soglia di accettabilità:] 50<X<100
+						\item [Soglia di ottimalità:] X<50
+						\item X = numero di linee di codice per modulo\g\ 					\end{description}
+					Per una descrizione dettagliata delle metriche qui utilizzate e per una maggiore comprensione degli
+					indici di ottimalità e accettabilità presentati si faccia riferimento alle sezioni
+					\begin{itemize}
+						\item \ref{MPRS3} - MPRS3 - Numero di statement per metodo
+						\item \ref{MPRS4} - MPRS4 - Numero di parametri per metodo
+						\item \ref{MPRS5} - MPRS5 - Numero di campi dati per classe
+						\item \ref{MPRS6} - MPRS6 - Grado di accoppiamento
+						\item \ref{MPRS7} - MPRS7 - Cyclomatic Number
+						\item \ref{MPRS8} - MPRS8 - Adequacy of variable names
+						\item \ref{MPRS9} - MPRS9 - Average Module Size
+					\end{itemize}
+				\subparagraph{Copertura dei test richiesti - OBPRS4}
+				Il prodotto\g\ deve essere testato in ogni sua parte per garantirne il funzionamento. I test presi in considerazioni sono quelli che testano le funzionalità previste dai requisiti. 
+					\begin{description}
+						\item [Metrica utilizzata:] Test Passati Richiesti
+						\item [Soglia di accettabilità:] 80\%<X<90\%
+						\item [Soglia di ottimalità:] 90\%<X<98\%
+						\item X = percentuale di test passati su test ricavati dai requisti
+					\end{description}
+			    Per una descrizione dettagliata della metrica qui utilizzata e per una maggiore comprensione degli indici di ottimalità e accettabilità presentati si faccia riferimento alla metrica MPRS10 "Test Passati Richiesti" nella sezione \ref{MPRS10}.
+				\subparagraph{Robustezza -  OBPRS5}	
+				Il prodotto\g\ deve essere robusto e non deve interrompere il suo funzionamento in seguito al verificarsi di situazioni anomale\g. Il prodotto\g\ deve essere in grado inoltre di gestire le situazioni di errore.
+					\begin{description}
+						\item [Metrica utilizzata:] Failure Avoidance
+						\item [Soglia di accettabilità:] 80\%<X<90\%
+						\item [Soglia di ottimalità:] X>90\%
+						\item X = percentuale di situazioni anomale\g\ evitate su situazioni anomale\g\ prese in considerazione
+					\end{description}
+					Per una descrizione dettagliata della metrica qui utilizzata e per una maggiore comprensione degli indici di ottimalità e accettabilità presentati si faccia riferimento alla metrica MPRS11 "Failure Avoidance" nella sezione \ref{MPRS11}.
+				\subparagraph{Funzionamento senza interruzioni - OBPRS6}
+					Il prodotto\g\ deve garantire un funzionamento senza interruzioni. Questo livello è considerato ottimale ma secondo la metrica scelta possono esserci al massimo il 20\% di interruzioni dovute al verificarsi di situazioni anomale\g.  
+					\begin{description}
+						\item [Metrica utilizzata:] Breakdown Avoidance
+						\item [Soglia di accettabilità:] 80\%<X<90\%
+						\item [Soglia di ottimalità:] X>90\%
+						\item X = percentuale di interruzioni evitate in base a situazioni anomale\g\ presentate
+					\end{description}
+					Per una descrizione dettagliata della metrica qui utilizzata e per una maggiore comprensione degli indici di ottimalità e accettabilità presentati si faccia riferimento alla metrica MPRS12 "Breakdown Avoidance" nella sezione \ref{MPRS12}.
+	\subsection{Scadenze temporali}
+	Le scadenze che il gruppo \leaf\ ha deciso di rispettare sono riportate nel \pianodiprogettov.
+\end{document}

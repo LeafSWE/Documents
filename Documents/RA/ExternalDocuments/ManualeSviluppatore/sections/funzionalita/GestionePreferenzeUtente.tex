@@ -1,0 +1,164 @@
+\documentclass[../Funzionalita.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Gestione delle preferenze}
+\label{subsec:GestionePreferenze}
+
+		\subsubsection{Panoramica}
+			La funzionalità di gestione delle preferenze utente è resa disponibile dalle componenti dei Package:
+			\begin{itemize}
+				\item \usersetting.
+			\end{itemize}
+			Tali funzionalità permettono di impostare le preferenze riguardanti il percorso che viene presentato, la fruizione delle informazioni di navigazione e permette inoltre di sbloccare le funzionalità sviluppatore.
+			Un utente può quindi:
+			\begin{enumerate}
+				\item impostare la preferenza verso scale o ascensori, utilizzata dall'applicazione nel calcolo del percorso da presentare;
+				\item impostare la preferenza verso indicazioni sonore, utilizzata dall'applicazione nella presentazione delle informazioni di navigazione;
+				\item inserire un codice sviluppatore per sbloccare le funzionalità sviluppatore.
+			\end{enumerate}
+			
+		\newpage
+		\subsubsection{Interfaccia grafica}
+			Interfaccia grafica non ancora implementata.
+			%\paragraph*{Componenti interne}
+			%\begin{itemize}
+			
+				%\item Package:
+				%\begin{itemize}
+				%	\item[] \view;
+				%\end{itemize}
+				
+				%\item Interfacce e classi:
+				%\begin{itemize}
+				%	\item[] ...
+				%\end{itemize}
+				
+			%\end{itemize}
+			
+			
+			%\paragraph*{Componenti esterne}
+			
+			%\begin{itemize}
+				%\item Interfacce e classi SDK:
+				%\begin{itemize}
+				%	\item[] ...
+				%\end{itemize}
+			%\end{itemize}
+		
+		
+		\subsubsection{Presenter}
+			Presenter non ancora implementato.
+			%\paragraph*{Componenti interne}
+			%\begin{itemize}
+			
+				%\item Package:
+				%\begin{itemize}
+				%	\item[]
+				%	\item[] ...
+				%\end{itemize}
+				
+				%\item Interfacce e classi:
+				%\begin{itemize}
+				%	\item[] ...
+				%\end{itemize}
+				
+			%\end{itemize}
+			
+			
+			%\paragraph*{Componenti esterne}
+			%\begin{itemize}
+				%\item Interfacce e classi SDK:
+				%\begin{itemize}
+				%	\item[] \Activity ...
+					
+				%\end{itemize}
+			%\end{itemize}
+					
+		
+		\subsubsection{Gestione delle preferenze di percorso}
+			La classe \SettingImp\ permette di impostare le preferenze di percorso utilizzando il metodo \lstinline|setPathPreference()| e passando come argomento l'oggetto di tipo \PathPreference\ che rappresenta la preferenza voluta. \SettingImp\ provvederà a rendere tale preferenza persistente utilizzando le classi \SharedPreferences\ e \SharedPreferenceEditor.
+
+			\paragraph*{Componenti interne}
+			\begin{itemize}
+			
+				\item Package:
+				\begin{itemize}
+					\item[] \usersetting;
+				\end{itemize}
+				
+				\item Interfacce e classi:
+				\begin{itemize}
+					\item[] \Setting, \SettingImp, \PathPreference;
+				\end{itemize}
+				
+			\end{itemize}
+			
+			
+			\paragraph*{Componenti esterne}
+			
+			\begin{itemize}
+				\item Interfacce e classi SDK:
+				\begin{itemize}
+					\item[] \SharedPreferences, \SharedPreferenceEditor.
+				\end{itemize}
+			\end{itemize}
+		
+		
+		\subsubsection{Gestione delle preferenze di fruizione delle informazioni}
+			La classe \SettingImp\ permette di impostare le preferenze di fruizione delle informazioni di navigazione utilizzando il metodo \lstinline|setInstructionPreference()| e passando come argomento l'oggetto di tipo \InstructionPreference\ che rappresenta la preferenza voluta. \SettingImp\ provvederà a rendere tale preferenza persistente utilizzando le classi \SharedPreferences\ e \SharedPreferenceEditor.
+		
+			\paragraph*{Componenti interne}
+			\begin{itemize}
+			
+				\item Package:
+				\begin{itemize}
+					\item[] \usersetting;
+				\end{itemize}
+				
+				\item Interfacce e classi:
+				\begin{itemize}
+					\item[] \Setting, \SettingImp, \PathPreference;
+				\end{itemize}
+				
+			\end{itemize}
+			
+			
+			\paragraph*{Componenti esterne}
+			
+			\begin{itemize}
+				\item Interfacce e classi SDK:
+				\begin{itemize}
+					\item[] \SharedPreferences, \SharedPreferenceEditor.
+				\end{itemize}
+			\end{itemize}
+						
+		
+		\subsubsection{Sblocco funzionalità sviluppatore}
+			La classe \SettingImp\ permette di sbloccare le funzionalità sviluppatore utilizzando il metodo \lstinline|unlockDeveloper()| e passando come argomento una stringa rappresentate il codice sviluppatore. \SettingImp\ validerà tale codice utilizzando la classe \DeveloperCodeManager\ utilizzando il metodo \lstinline|isValid()| e salvando in modo persistente tale sblocco utilizzando le classi \SharedPreferences\ e \SharedPreferenceEditor.
+		
+			\paragraph*{Componenti interne}
+			\begin{itemize}
+			
+				\item Package:
+				\begin{itemize}
+					\item[] \usersetting;
+				\end{itemize}
+				
+				\item Interfacce e classi:
+				\begin{itemize}
+					\item[] \Setting, \SettingImp, \PathPreference;
+				\end{itemize}
+				
+			\end{itemize}
+			
+			
+			\paragraph*{Componenti esterne}
+			
+			\begin{itemize}
+				\item Interfacce e classi SDK:
+				\begin{itemize}
+					\item[] \SharedPreferences, \SharedPreferenceEditor.
+				\end{itemize}
+			\end{itemize}
+\end{document}

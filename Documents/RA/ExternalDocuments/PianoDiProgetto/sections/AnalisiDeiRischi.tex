@@ -1,0 +1,645 @@
+\documentclass[../PianoProgetto.tex]{subfiles}
+
+\begin{document}
+
+\section{Analisi dei rischi}
+
+	Al fine di migliorare l'avanzamento del progetto è stata effettuata un'attenta analisi dei rischi per individuarli, comprenderli e prendere le contromisure necessarie. Essa è suddivisa in quattro attività:
+	\begin{itemize}
+	\item identificazione: individuare i rischi che possono interessare il progetto, indicandone le cause e cercando di prevedere le conseguenze;
+	\item analisi di fase: stimare la probabilità di occorrenza di un rischio e determinarne l'impatto sul progetto nella fase in corso. Le fasi sono descritte dettagliatamente nella sezione \nameref{sec:pianificazione}. Sarà compito del \responsabilediprogetto\  all'inizio di ogni periodo effettuare una nuova analisi dei rischi presentati;
+	\item pianificazione di controllo: definire una metodologia per il controllo dei rischi, in modo che possano essere evitati;
+	\item mitigazione: nel caso in cui fossero inevitabili, definire un piano di contingenza per poter minimizzare i danni prodotti nel caso si verificassero. Questa attività è obbligatoria per tutti i rischi difficilmente controllabili e gestibili mentre è consigliata per tutti gli altri.
+	\end{itemize}
+    Qualora il \responsabilediprogetto\ lo ritenesse necessario, l'analisi dei rischi potrà essere riveduta ed estesa attraverso la ripetizione delle attività elencate.
+
+	Ogni rischio identificato avrà le seguenti caratteristiche: 
+		\begin{itemize}
+			\item nome;
+			\item descrizione; 
+			\item risultati analisi:
+			\begin{itemize}
+				\item probabilità di occorrenza;
+				\item livello di rischio;
+				\item possibili conseguenze;
+			\end{itemize}
+			\item strategia di individuazione e gestione.
+		\end{itemize}	
+	Ogni rischio verrà monitorato nel tempo e ne verrà indicato l'effettivo riscontro nella fase in corso.
+    Nel registro dei rischi (tabella ~\ref{tab:rischi}) si elencheranno tutti i rischi, suddivisi per livello, identificati durante tutto il periodo di progetto fino alla fase corrente.
+		
+	\newpage
+	
+	\begin{table}[h]
+		\centering
+		\begin{longtabu} to \textwidth {X[l 0.3cm] X[l]}
+			\toprule
+			\textbf{Livello} & \multicolumn{1}{c}{\textbf{Tipologia}} \\
+			\midrule
+			Strumenti & Inesperienza nell'utilizzo (\ref{sec:Inesperienza nell'utilizzo})\\
+			\arrayrulecolor{gray}
+			\midrule
+			Tecnologico	& Tecnologie adottate sconosciute (\ref{sec:Tecnologie adottate sconosciute})\\
+					\arrayrulecolor{lightgray}
+					\cmidrule{2-2}
+					\arrayrulecolor{gray}
+					& Guasti hardware e malfunzionamenti software\g\ (\ref{sec:Guasti hardware e malfunzionamenti software}) \\
+			\midrule
+			Organizzativo & Valutazione delle risorse (\ref{sec:Valutazione delle risorse}) \\
+			\midrule
+			Personale	& Problemi personali dei membri del team\g\ (\ref{sec:Problemi personali dei membri del team}) \\
+					\arrayrulecolor{lightgray}
+					\cmidrule{2-2}
+					\arrayrulecolor{gray}
+					& Problemi personali tra i membri del team\g\ (\ref{sec:Problemi personali tra i membri del team}) \\
+			
+			\midrule
+			Requisiti & Mancata comprensione (\ref{sec:Mancata comprensione}) \\
+			\arrayrulecolor{black}
+			\bottomrule
+		\end{longtabu}
+		
+		\caption{Registro dei rischi}
+		\label{tab:rischi}
+		
+	\end{table}
+
+\newpage
+\subsection{Livello strumenti}
+
+\subsubsection{Inesperienza nell'utilizzo}
+\label{sec:Inesperienza nell'utilizzo}
+
+	\paragraph*{Descrizione:} per lo svolgimento del progetto didattico, il team\g\ dovrà utilizzare una serie di strumenti che nessun membro ha mai utilizzato.
+	
+	\paragraph*{Analisi del rischio per fase:} 
+	
+		\subparagraph*{Analisi}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} alta;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} rallentamento delle attività che richiedono l'utilizzo dei suddetti strumenti e conseguente ritardo nella consegna.
+			\end{itemize}
+			
+		\subparagraph*{Analisi di Dettaglio}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} il rischio non dovrebbe presentarsi perché non saranno introdotti nuovi strumenti e il gruppo ha acquisito sufficiente esperienza con gli strumenti adottati fino ad ora.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione Architetturale}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} tale rischio dovrebbe presentarsi solo per strumenti poco utilizzati nelle fasi precedenti, mentre per gli altri strumenti il gruppo dovrebbe aver acquisito sufficiente esperienza.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Obbligatori}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} il team dovrebbe aver sviluppato delle best practices per l'apprendimento di nuovi strumenti, di conseguenza non dovrebbero verificarsi ritardi o rallentamenti nei lavori.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Desiderabili}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} tale rischio potrebbe impattare nella qualità e correttezza del codice.
+			\end{itemize}
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Opzionali}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} sviluppo di test non corretti o idonei con conseguente correzione necessaria che comporterebbe ulteriore sforzo.
+			\end{itemize}
+		\subparagraph*{Validazione}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} basso;
+				\item \textbf{Possibili conseguenze:} il team dovrebbe aver sviluppato una sufficiente esperienza anche nello sviluppo di test. Di conseguenza eventuali ritardi o rallentamenti dovrebbero essere di entità molto limitata. 
+			\end{itemize}
+	
+	\paragraph*{Identificazione:} il \responsabilediprogetto\ si impegnerà a verificare periodicamente il livello di conoscenza dei singoli membri sulle tecnologie adottate.
+	
+	\paragraph*{Gestione:}
+	\begin{enumerate}
+		\item annullamento: il \responsabilediprogetto\ affiderà l'utilizzo dello strumento al membro che ritiene il più indicato a manovrarlo nel minor tempo possibile;
+		\item minimizzazione: se l'individuo a cui è stato assegnato lo strumento non riesce ad apprenderne le modalità di utilizzo, verrà sostituito da un altro membro;
+		\item contingenza: se nel periodo previsto nessuno riesce ad utilizzare lo strumento, verrà sostituito da un suo equivalente. 
+	\end{enumerate}		
+	
+	\paragraph*{Riscontro effettivo:} 
+		\begin{description}
+			\item[Fase A - Analisi] l'utilizzo dello strumento Freedcamp\g\ è stato giudicato dal team\g\ di difficile utilizzo, perciò si è passati ad un suo equivalente più intuitivo: Teamwork\g .
+	Qualche membro ha trovato difficoltà ad interfacciarsi con il linguaggio \LaTeX\  , perciò è stato creato un Notebook\g\ su Teamwork\g\ in cui ogni membro si impegna a riportare informazioni che ritiene utili al fine di velocizzare l'apprendimento di tale linguaggio all'interno del team\g .
+			\item[Fase AD - Analisi di Dettaglio] il gruppo grazie all'esperienza acquisita nella fase A è riuscito ad utilizzare gli strumenti adottati senza gravi problemi. Questo ha garantito una produttività immediata da parte dei componenti. 
+			\item[Fase PA - Progettazione Architetturale] il gruppo non ha avuto particolari problemi nell'utilizzo degli strumenti, grazie all'esperienza accumulata. L'unico strumento fino a questa fase poco utilizzato è Astah\g, ma il suo impiego non ha causato problemi ai \progettisti.
+			\item[Fase PDROB - Progettazione di Dettaglio e codifica dei] \ \\
+			\textbf{Requisiti Obbligatori} il gruppo non ha introdotto nuovi strumenti e di conseguenza il rischio non è stato riscontrato. 
+					 
+			\item[Fase PDRD - Progettazione di Dettaglio e codifica dei] \ \\
+					\textbf{Requisiti Desiderabili} il gruppo ha introdotto lo strumento Android Studio e grazie alla sua semplicità e alla somiglianza con altri ambienti di sviluppo è stato pienamente integrato nel processo di sviluppo per cui il rischio non si è presentato.
+			\item[Fase PDROP - Progettazione di Dettaglio e codifica dei]  \ \\
+					\textbf{Requisiti Opzionali} il gruppo è riuscito ad approfondire le conoscenze degli strumenti di testing, questo ha evitato l'insorgere del rischio.
+			\item[Fase V - Validazione] il gruppo grazie l'esperienza acquisita è riuscito ad evitare l'insorgere del rischio.
+		\end{description}
+		
+\newpage
+\subsection{Livello tecnologico}
+
+\subsubsection{Tecnologie adottate sconosciute}
+\label{sec:Tecnologie adottate sconosciute}
+
+	\paragraph*{Descrizione:} per la progettazione e l'implementazione del software\g\ per il progetto, il team\g\ dovrà utilizzare una serie di tecnologie praticamente sconosciute.
+	
+	\paragraph*{Analisi del rischio per fase:} 
+
+		\subparagraph*{Analisi}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} l'utilizzo di tecnologie sconosciute richiede tempo per la scelta e l'apprendimento di quest'ultima, il che può portare ad un ritardo sulle date di consegna.
+			\end{itemize}
+			
+		\subparagraph*{Analisi di Dettaglio}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} il rischio non dovrebbe presentarsi perché non sono previste nuove tecnologie da introdurre. Potrebbe esserci una remota possibilità, in quel caso alcune attività potrebbero subire rallentamenti.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione Architetturale}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} alta;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} rallentamenti ed errori nelle scelte soprattutto riguardanti la progettazione, che possono portare ritardi nello svolgimento delle attività e quindi nella consegna.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Obbligatori}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} possibili rallentamenti e ritardi sulle date di consegna.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Desiderabili}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} ritardi e riduzione della qualità del codice.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Opzionali}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} ritardi e qualità complessiva del codice ridotta.
+			\end{itemize}	
+			
+		\subparagraph*{Validazione}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} basso;
+				\item \textbf{Possibili conseguenze:} ritardi e qualità complessiva del codice ridotta.
+			\end{itemize}		
+	
+	\paragraph*{Identificazione:} il \responsabilediprogetto\ si impegnerà a monitorare costantemente il grado di conoscenza delle tecnologie adottate.	
+	
+	\paragraph*{Gestione:}
+	\begin{enumerate}
+		\item annullamento: se possibile, il team\g\ ricorrerà a tecnologie di propria conoscenza;
+		\item minimizzazione: il piano di lavoro terrà conto dell'inesperienza del team\g : verranno previsti dei periodi di formazione mediante la documentazione fornita dall'\amministratore , che ogni membro del team\g\ si impegnerà a visionare in maniera autonoma;
+		\item contingenza: se il periodo previsto non risulterà essere sufficiente, il piano di lavoro verrà riadattato affinché i membri abbiano più tempo per approfondire lo studio della tecnologia. Questo porterà fare nuovamente la pianificazione, con probabile modifica delle scadenze.
+	\end{enumerate}
+	
+	
+	\paragraph*{Riscontro effettivo:} 
+		\begin{description}
+			\item[Fase A - Analisi] non sono state adottate tecnologie, di conseguenza il team\g\ non ha ancora riscontrato il rischio.
+			\item[Fase AD - Analisi di Dettaglio] il rischio non si è presentato perché non sono state introdotte nuove tecnologie.
+			\item[Fase PA - Progettazione Architetturale] il rischio non si è presentato poiché in questa fase è solo iniziato lo studio di tecnologie quali Android\g\ e delle librerie per utilizzare i beacon\g.
+			\item[Fase PDROB - Progettazione di Dettaglio e codifica dei]  \ \\
+					 \textbf{Requisiti Obbligatori} lo studio della tecnologia Android\g\ ha rallentato notevolmente i \progettisti\, causando un ritardo sulle date previste per la stesura della \definizionediprodotto.
+			\item[Fase PDRD - Progettazione di Dettaglio e codifica dei] \ \\
+					\textbf{Requisiti Desiderabili} alcuni costrutti particolari di Android\g\ hanno richiesto diverse ore per essere utilizzate correttamente dai \programmatori.
+			\item[Fase PDROP - Progettazione di Dettaglio e codifica dei]  \ \\
+					\textbf{Requisiti Opzionali} le tecnologie ormai sono conosciute da tutto il team, il rischio quindi non si è riscontrato.
+			\item[Fase V - Validazione] il gruppo ha acquisito nelle fasi precedenti una buona padronanza nell'utilizzo delle tecnologie coinvolte nel progetto, quindi tale rischio non si è presentato.
+		\end{description}
+
+\newpage
+	\subsubsection{Guasti hardware e malfunzionamenti software}
+	\label{sec:Guasti hardware e malfunzionamenti software}
+	
+	\paragraph*{Descrizione:} durante lo svolgimento del progetto didattico, è possibile che si verifichino guasti hardware e/o malfunzionamenti software\g\ che comportino la perdita di dati.
+	
+	\paragraph*{Analisi del rischio per fase:} 
+
+		\subparagraph*{Analisi}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} basso;
+				\item \textbf{Possibili conseguenze:} il malfunzionamento di un dispositivo può portare al rallentamento delle attività e alla perdita di dati, con una conseguente ripetizione del lavoro già svolto.
+			\end{itemize}
+			
+		\subparagraph*{Analisi di Dettaglio}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} basso;
+				\item \textbf{Possibili conseguenze:} il rischio non dovrebbe presentarsi. Una sua manifestazione potrebbe comportare un rallentamento delle attività e alla perdita di dati.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione Architetturale}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} basso;
+				\item \textbf{Possibili conseguenze:} il malfunzionamento di uno dispositivo può portare al rallentamento delle attività e alla perdita di dati, con una conseguente ripetizione del lavoro già svolto.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Obbligatori}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} basso;
+				\item \textbf{Possibili conseguenze:} un'eventuale malfunzionamento di un dispositivo potrebbe causare un rallentamento delle attività per il team.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Desiderabili}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} un'eventuale malfunzionamento ad un dispositivo potrebbe causare il rallentamento delle attività per il team.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Opzionali}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} rallentamento dell'esecuzione delle attività.
+			\end{itemize}
+			
+		\subparagraph*{Validazione}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} rallentamento dell'esecuzione delle attività.
+			\end{itemize}
+		
+	\paragraph*{Identificazione:} ogni membro del team\g\ avrà cura della propria attrezzatura; ne verificherà inoltre giornalmente il completo funzionamento.
+	
+	\paragraph*{Gestione:}
+	\begin{enumerate}
+		\item annullamento: i membri del team\g\ si impegneranno ad impostare un backup automatico, con cadenza giornaliera, del materiale relativo al progetto su repository\g . Inoltre eseguiranno una copia in locale di eventuale materiale online che non è presente sulle proprie macchine;
+		\item minimizzazione: il backup giornaliero permetterà di perdere al più una giornata di lavoro, in questo modo le perdite verranno ridotte al minimo. In caso di guasto di una macchina, il membro colpito si impegna ad utilizzare una macchina messa a disposizione dai laboratori fino all'acquisto di una nuova;
+		\item contingenza: grazie al backup giornaliero, non si rende necessario un piano di contingenza.
+	\end{enumerate} 	
+	
+	
+	\paragraph*{Riscontro effettivo:}
+		\begin{description}
+			\item[Fase A - Analisi] non si sono verificati guasti hardware o problemi software\g\ di nessun genere sulle macchine dei membri del team\g .
+			\item[Fase AD - Analisi di Dettaglio] non si sono verificati problemi hardware o software\g.
+			\item[Fase PA - Progettazione Architetturale] non sono stati riscontrati problemi hardware o software\g.
+			\item[Fase PDROB - Progettazione di Dettaglio e codifica dei]  \ \\
+					\textbf{Requisiti Obbligatori} il notebook di un membro del gruppo ha subito un danno hardware al monitor ma, fortunatamente, questo non ha causato un rallentamento nei lavori.
+			\item[Fase PDRD - Progettazione di Dettaglio e codifica dei] \ \\
+					\textbf{Requisiti Desiderabili} un membro del gruppo ha avuto problemi con il proprio computer portatile, tuttavia i malfunzionamenti non sono stati così gravi da compromettere il proseguimento delle attività previste.
+			\item[Fase PDROP - Progettazione di Dettaglio e codifica dei]  \ \\
+					\textbf{Requisiti Opzionali} fortunatamente in questa fase nessun membro del gruppo ha riscontrato malfunzionamenti sui propri dispositivi.
+			\item[Fase V - Validazione] in questa fase alcun membro del team ha riscontrato malfunzionamenti sui propri dispositivi.
+		\end{description}
+
+\newpage
+\subsection{Livello organizzativo}
+
+\subsubsection{Valutazione delle risorse}
+\label{sec:Valutazione delle risorse}
+
+	\paragraph*{Descrizione:} essendo al primo approccio con un progetto di questa dimensione, il team\g\ potrebbe andare incontro a stime errate di valutazione delle risorse.
+	
+	\paragraph*{Analisi del rischio per fase:} 
+
+		\subparagraph*{Analisi}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} un'errata stima delle risorse può portare ad un ritardo nelle date di consegna (sottostima) o ad un eccessivo spreco d'esse per le attività di progetto (sovrastima).
+			\end{itemize}
+			
+		\subparagraph*{Analisi di Dettaglio}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} un bilanciamento errato delle risorse assegnate ai processi potrebbe comportare una disomogeneità nello svolgimento delle attività. Il rischio ha una probabilità medio-alta di presentarsi perché la pianificazione e la distribuzione delle risorse soffre dell'inesperienza del gruppo.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione Architetturale}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} un'errata stima può portare ad un utilizzo di risorse eccessivo per l'attività di progettazione a discapito delle altre, causando ritardi e possibili errori nelle attività sottostimate.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Obbligatori}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} un'errata stima può portare ad un utilizzo di risorse eccessivo per l'attività di progettazione a discapito delle altre, causando ritardi e possibili errori nelle attività sottostimate. 
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Desiderabili}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} un'errata stima può portare ad un ritardo sulla consegna.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Opzionali}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} un'errata stima può portare ad un ritardo sulla prossima consegna o comportare un bilancio negativo rispetto al preventivo.
+			\end{itemize}
+			
+		\subparagraph*{Validazione}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} delle stime errate potrebbero portare a sforare il preventivo fatto.
+			\end{itemize}
+	
+	\paragraph*{Identificazione:} il \responsabilediprogetto\ si impegnerà a verificare, di giorno in giorno tramite l'utilizzo della Dashboard\g, lo stato di avanzamento delle attività.
+	
+	\paragraph*{Gestione:}
+	\begin{enumerate}
+		\item annullamento: il \responsabilediprogetto\ prevederà, per ogni attività, un periodo di slack\g, in modo che un eventuale ritardo non vada ad intaccare la durata totale di ogni fase\g ;
+		\item minimizzazione: nel caso in cui lo slack\g\ si rivelasse insufficiente, verrà rieseguita la pianificazione delle attività, tenendo conto del ritardo che dovrà essere in qualche modo recuperato;
+		\item contingenza: nel caso in cui un eventuale recupero si dimostri impossibile, verrà eseguita nuovamente la pianificazione, con conseguente ritardo nelle consegne.
+	\end{enumerate}	
+	
+	
+	\paragraph*{Riscontro effettivo:} 
+		\begin{description}
+			\item[Fase A - Analisi] in un primo momento, era stato stimato un periodo ottimistico per la stesura della documentazione, di conseguenza è stata rieffettuata una pianificazione delle attività tenendo conto dell'errore commesso, che non ha intaccato le date di consegna.
+			\item[Fase AD - Analisi di Dettaglio] il rischio previsto si è manifestato e ha comportato un ritardo delle attività sulla pianificazione prevista. Il rischio è stato alimentato da impegni da parte dei componenti del gruppo e da una pianificazione ottimistica. Per recuperare il ritardo è stata eseguita una redistribuzione delle attività.
+			\item[Fase PA - Progettazione Architetturale] il rischio previsto non si è manifestato. È stato necessario invece, da parte dei \progettisti, impiegare più ore di investimento di quante preventivate a causa della scarsa esperienza nella progettazione software\g.
+			\item[Fase PDROB - Progettazione di Dettaglio e codifica dei]  \ \\
+					\textbf{Requisiti Obbligatori} a causa del ritardo accumulato nelle fasi precedenti, è stato necessario ridistribuire le ore per ruolo, in modo da evitare ritardi nella consegna dei documenti.
+			\item[Fase PDRD - Progettazione di Dettaglio e codifica dei] \ \\
+					\textbf{Requisiti Desiderabili} grazie alla ripianificazione effettuata nella fase precedente non si è riscontrato il rischio.
+			\item[Fase PDROP - Progettazione di Dettaglio e codifica dei]  \ \\
+					\textbf{Requisiti Opzionali} nonostante la decisione di non implementare i requisiti opzionali per continuare l'implementazione dei desiderabili e che alcuni membri del team fossero meno disponibili per impegni esterni, il resto del team è riuscito comunque ad eseguire le attività pianificate.
+			\item[Fase V - Validazione] Nonostante che per impegni esterni alcuni membri del gruppo 		non abbiano supportato le attività relative al progetto non si sono verificati 			rallentamenti significativi.
+		\end{description}
+		
+
+\newpage
+\subsection{Livello personale}
+
+\subsubsection{Problemi personali dei membri del team}
+\label{sec:Problemi personali dei membri del team}
+
+	\paragraph*{Descrizione:} ogni membro del team\g\ avrà le sue necessità e i suoi impegni personali lungo la durata del progetto. Di conseguenza è inevitabile prevedere che alcuni membri del team\g\ non siano disponibili in certi momenti.
+	 
+	\paragraph*{Analisi del rischio per fase:} 
+
+		\subparagraph*{Analisi}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} possibile ritardo nello svolgimento delle attività nel caso di impegni imprevisti di qualche membro del gruppo.
+			\end{itemize}
+			
+		\subparagraph*{Analisi di Dettaglio}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} alta;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} possibile ritardo delle attività previste. Il rischio ha una alta probabilità di presentarsi perché il periodo comprende diversi impegni dei componenti del gruppo.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione Architetturale}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} possibile ritardo delle attività previste. Il rischio ha una probabilità più bassa di presentarsi perché il periodo comprende un numero minore di impegni da parte dei componenti del gruppo.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Obbligatori}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} possibile ritardo nello svolgimento delle attività nel caso di impegni imprevisti di qualche membro del gruppo.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Desiderabili}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} alta;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} possibile ritardo nella consegna o mancata consegna nei tempi previsti.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Opzionali}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} ritardi sull'esecuzione delle attività e copertura requisiti opzionali inferiore alle attese.
+			\end{itemize}
+			
+		\subparagraph*{Validazione}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} rallentamenti nell'esecuzione delle attività del progetto.
+			\end{itemize}
+		
+	\paragraph*{Identificazione:} i membri del team\g\ comunicheranno, con il maggior anticipo possibile, i propri impegni al \responsabilediprogetto . Questo compito verrà reso più semplice dall'utilizzo di un calendario di gruppo. 
+	
+	\paragraph*{Gestione:}
+	\begin{enumerate}
+		\item annullamento: quotidianamente i membri del gruppo segnaleranno al \responsabilediprogetto\ eventuali impegni o indisponibilità, il quale ne terrà conto nella suddivisione delle attività;
+		\item minimizzazione: in caso di indisponibilità improvvisa ci si opererà al meglio per ridistribuire il lavoro in modo equo, con l'obiettivo di non rimandare la milestone\g\ prevista;
+		\item contingenza: nel caso in cui fosse impossibile rispettare le tempistiche, verrà effettuato uno spostamento in avanti della consegna.
+	\end{enumerate}
+		
+		
+	\paragraph*{Riscontro effettivo:}
+		\begin{description}
+			\item[Fase A - Analisi] i membri hanno fatto il possibile per comunicare con il maggior anticipo possibile i propri impegni. Nella distribuzione a monte del lavoro si è cercato di effettuare una pianificazione a lungo termine che rispettasse i vari impegni, mantenendo una distribuzione equa del lavoro.
+			\item[Fase AD - Analisi di Dettaglio] alcuni membri hanno avuto degli impegni inderogabili da soddisfare e le attività hanno subito un ritardo. E' stata effettuata una redistribuzione delle attività tra i membri in modo da recuperare il ritardo accumulato. 
+			\item[Fase PA - Progettazione Architetturale] a differenza  di quanto preventivato il rischio si è presentato poiché alcuni membri del gruppo si sono ammalati in questa fase. Questo ho comportato uno slittamento nei compiti a loro assegnati. Per non aggravare i ritardi è stata effettuata una redistribuzione dei compiti.
+			\item[Fase PDROB - Progettazione di Dettaglio e codifica dei]  \ \\
+					\textbf{Requisiti Obbligatori} i membri del gruppo hanno avuto un minor numero di impegni in questa fase e di conseguenza il rischio non si è verificato.
+			\item[Fase PDRD - Progettazione di Dettaglio e codifica dei] \ \\
+					\textbf{Requisiti Desiderabili} causa potenziale inizio tirocinio, in molte occasioni i membri del gruppo hanno avuto impegni non previsti per sostenere colloqui di lavoro. Nonostante questo però non è stata necessaria una ridistribuzione delle ore e il rischio quindi non si è presentato.
+			\item[Fase PDROP - Progettazione di Dettaglio e codifica dei]  \ \\
+					\textbf{Requisiti Opzionali} causa importante esame per tre membri del team per poter eseguire tutte le attività in tempo il resto del team ha dovuto sopportare un sovraccarico di lavoro. Nonostante questo il lavoro è proseguito e non ha generato importanti ritardi.
+			\item[Fase V - Validazione] Causa impegni relativi allo stage alcuni membri non hanno 			supportato sufficientemente le attività di progetto, causando un aumento del 			carico di lavoro sugli altri membri del team. Nonostante ciò il lavoro è 				proseguito senza ritardi significativi. 
+		\end{description}
+	
+\newpage
+\subsubsection{Problemi personali tra i membri del team}
+\label{sec:Problemi personali tra i membri del team}
+
+	\paragraph*{Descrizione:} i membri del team\g\ non hanno mai collaborato alla realizzazione di un progetto che richiedesse collaborazione a stretto contatto, il che può causare attriti tra essi.
+	
+	\paragraph*{Analisi del rischio per fase:} 
+
+		\subparagraph*{Analisi}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} problemi tra i membri del team\g\ possono causare un rallentamento delle attività.
+			\end{itemize}
+			
+		\subparagraph*{Analisi di Dettaglio}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} problemi tra i membri del team\g\ possono causare un rallentamento delle attività. Il rischio dovrebbe avere un'occorrenza sempre minore con l'aumentare del tempo.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione Architetturale}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} problemi tra i membri del team\g\ possono causare un rallentamento delle attività. Il rischio è più alto per via delle attività che andranno intraprese, che includono molte decisioni da prendere, che possono non essere condivise dai tutti i componenti del gruppo. 
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Obbligatori}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} problemi tra i membri del team\g\ possono causare un rallentamento delle attività. Il rischio mantiene una probabilità media in quanto l'elevato carico di lavoro è fonte di stress per i membri del gruppo. 
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Desiderabili}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} ritardi sulla consegna con necessaria ripianificazione delle attività e riduzione della produttività del gruppo.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Opzionali}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} riduzione della produttività del gruppo e della qualità degli output delle attività.
+			\end{itemize}
+			
+		\subparagraph*{Validazione}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} riduzione della produttività del gruppo e della qualità degli output delle attività.
+			\end{itemize}
+	
+	\paragraph*{Identificazione:} il \responsabilediprogetto\ avrà l'onere di verificare periodicamente i rapporti tra i vari membri del team\g. D'altro canto, ogni membro del team\g\ si impegnerà a riferire al \responsabilediprogetto\ eventuali problemi di cui non è a conoscenza.
+	
+	\paragraph*{Gestione:}
+	\begin{enumerate}
+		\item annullamento: in caso di dispute, il \responsabilediprogetto\ si impegnerà a fare il possibile per risolverle. In aggiunta, i membri del team\g\ si impegneranno a tenere i propri incontri e le proprie discussioni in un'ottica di critica costruttiva, consapevoli che un carico di lavoro elevato può portare a situazioni stressanti;
+		\item minimizzazione: nel caso di mancata risoluzione del contrasto, si effettuerà una pianificazione che preveda il minimo contatto tra le parti; 
+		\item contingenza: se il problema persiste, i membri coinvolti verranno costretti a svolgere i propri compiti in luoghi differenti (nel limite del possibile).
+	\end{enumerate}	
+	
+	
+	\paragraph*{Riscontro effettivo:}
+		\begin{description}
+			\item[Fase A - Analisi] non si sono verificati problemi a riguardo.
+			\item[Fase AD - Analisi di Dettaglio] non si sono verificati problemi a riguardo.
+			\item[Fase PA - Progettazione Architetturale] non si sono verificati problemi a riguardo.
+			\item[Fase PDROB - Progettazione di Dettaglio e codifica dei]  \ \\
+					\textbf{Requisiti Obbligatori} non si sono verificati problemi a riguardo.
+			\item[Fase PDRD - Progettazione di Dettaglio e codifica dei] \ \\
+					\textbf{Requisiti Desiderabili} non si sono verificati problemi a riguardo.
+			\item[Fase PDROP - Progettazione di Dettaglio e codifica dei]  \ \\
+					\textbf{Requisiti Opzionali} la scelta di iniziare il tirocinio di alcuni membri del team ha comportato sforzo aggiuntivo per gli altri membri. Nonostante qualche attrito iniziale, i membri del team hanno continuato a collaborare e a impegnarsi.
+			\item[Fase V - Validazione] non si sono verificati particolari attriti tra i membri del team.
+		\end{description}
+
+\newpage
+\subsection{Livello requisiti}
+
+\subsubsection{Mancata comprensione}
+\label{sec:Mancata comprensione}
+
+	\paragraph*{Descrizione:} è possibile che durante le varie attività di analisi dei requisiti del problema non vengano compresi o siano fraintesi.
+	
+	\paragraph*{Analisi del rischio per fase:} 
+
+		\subparagraph*{Analisi}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} alta;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} possibili divergenze tra la visione del prodotto\g\ da parte del team\g\ e quella del proponente.
+			\end{itemize}
+			
+		\subparagraph*{Analisi di Dettaglio}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} alta;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} possibili divergenze tra la visione del prodotto\g\ da parte del team\g\ e quella del proponente.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione Architetturale}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} possibili divergenze tra la visione del prodotto\g\ da parte del team\g\ e quella del proponente.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Obbligatori}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} possibili divergenze tra la visione del prodotto\g\ da parte del team\g\ e quella del proponente.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Desiderabili}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} alto;
+				\item \textbf{Possibili conseguenze:} ricodifica di alcune parti del prodotto con conseguente aumento di ore di lavoro.
+			\end{itemize}
+			
+		\subparagraph*{Progettazione di Dettaglio e codifica dei Requisiti Opzionali}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} bassa;
+				\item \textbf{Impatto:} alta;
+				\item \textbf{Possibili conseguenze:} ricodifica di alcune parti del prodotto con conseguente sforzo aggiuntivo e aumento delle ore di lavoro rispetto a quanto pianificato.
+			\end{itemize}
+			
+		\subparagraph*{Validazione}
+			\begin{itemize}[label={-}]
+				\item \textbf{Occorrenza:} media;
+				\item \textbf{Impatto:} medio;
+				\item \textbf{Possibili conseguenze:} ricodifica di alcune parti di codice e conseguente aumento delle ore di impegno sul progetto rispetto a quelle pianificate.
+			\end{itemize}
+		
+	\paragraph*{Identificazione:} il team\g\ effettuerà una serie di incontri con il proponente per verificare la comprensione dei requisiti e la corrispondenza con le loro aspettative.
+	
+	\paragraph*{Gestione:}
+	\begin{enumerate}
+		\item annullamento: non si ritiene possibile annullare questo rischio;
+		\item minimizzazione: gli incontri verranno sfruttati al massimo per chiarire tutte le incomprensioni. I membri del team\g\ cercheranno di arrivare agli incontri con dei dubbi ben definiti e faranno tutto il possibile affinché l'eventuale problema sorto sia affrontato a livello di gruppo e risolto.
+		\item contingenza: nel caso in cui si verifichino delle divergenze a lavoro iniziato, verrà fatto il possibile per riadattarsi alle esigenze del proponente.
+	\end{enumerate}	
+	
+	
+	\paragraph*{Riscontro effettivo:}
+		\begin{description}
+			\item[Fase A - Analisi] i dubbi emersi durante l'analisi sono stati esposti al proponente per ottenere dei chiarimenti. Al momento i requisiti sono stati solamente presentati al proponente, quindi tale rischio non si è ancora verificato.
+			\item[Fase AD - Analisi di Dettaglio]  i requisiti in seguito alla presentazione tenuta in sede di \revisionedeirequisiti\ sono stati corretti ed estesi in base alle richieste del committente. Il rischio non si è presentato perché la maggior parte dei requisiti incontrava le aspettative sia del committente sia del proponente. 
+			\item[Fase PA - Progettazione Architetturale] il rischio non si è presentato.
+			\item[Fase PDROB - Progettazione di Dettaglio e codifica dei]  \ \\
+					\textbf{Requisiti Obbligatori} il rischio non si è presentato.
+			\item[Fase PDRD - Progettazione di Dettaglio e codifica dei] \ \\
+					\textbf{Requisiti Desiderabili} cercando di mantenere il contatto con il proponente, il rischio non si è presentato.
+			\item[Fase PDROP - Progettazione di Dettaglio e codifica dei]  \ \\
+					\textbf{Requisiti Opzionali} l'analisi dei requisiti sembra aver raggiunto una forma stabile, il rischio non si è presentato.
+			\item[Fase V - Validazione] l'analisi dei requisiti ha subito un cambiamento di priorità di alcuni requisiti funzionali, ciò è dovuto ad una maggior comprensione delle funzionalità aggiuntive utili ad aggiungere più valore a ciò che è già stato implementato con i requisiti obbligatori. Inoltre tali requisiti opzionali sono risultati di maggior interesse per il proponente rispetto ad altri classificati come desiderabili. In accordo con il proponente questi sono stati cambiati. Fortunatamente la modifica non ha generato ritardi.
+		\end{description}
+
+			
+\end{document}

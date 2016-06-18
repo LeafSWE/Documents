@@ -1,0 +1,92 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{leaf}
+\usepackage[inline]{enumitem}
+\usepackage{lipsum}
+\usepackage[many]{tcolorbox}
+\usepackage{xcolor}
+\usepackage{gensymb} % per usare il comando \degree
+
+
+
+\setcounter{table}{-1}
+\usepackage{float}
+\restylefloat{table}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue
+}
+
+\titlepage{}
+
+\author{}
+\date{9/12/2015}
+\intestazioni{Sperimentazioni pratiche}
+\pagenumbering{gobble}
+\begin{document}
+	\begin{titlepage}
+		\centering
+		{\huge\bfseries CLIPS\par}
+	Communication \& Localization with Indoor Positioning Systems \\
+	\line(1,0){350} \\
+	{\scshape\LARGE Università di Padova \par}
+	\vspace{1cm}
+	{\scshape\Large Sperimentazioni pratiche v1.00\par}
+	\logo
+	\newpage
+		\begin{tabular}{c|c}
+			{\hfill \textbf{Versione}} 		& 1.00				\\
+			{\hfill\textbf{Data Redazione}} 	& 2016-06-13	  		\\
+			{\hfill\textbf{Redazione}}		& Eduard Bicego \\
+											& Andrea Tombolato  \\
+											& Marco Zanella		\\
+			{\hfill\textbf{Verifica}} 		& Federico Tavella		\\
+			{\hfill\textbf{Approvazione}} 		& Andrea Tombolato		\\
+			{\hfill\textbf{Uso}} 			& Esterno			\\
+			{\hfill\textbf{Distribuzione}} 		& Prof. Vardanega Tullio 	\\
+								& Prof. Cardin Riccardo 	\\
+								& Miriade S.p.A. 		\\
+		\end{tabular}
+	\end{titlepage}
+	\newpage
+		\pagestyle{myfront}
+		\include{diarioModificheS}
+
+	\newpage
+		\tableofcontents
+	\newpage
+		\listoftables
+	\newpage
+		\listoffigures
+	\label{LastFrontPage}
+
+	\newpage
+	\pagestyle{mymain}
+		\subfile{sections/Introduzione}		
+		
+	\newpage
+		\subfile{sections/AllestimentoImpianti}
+		
+	\newpage
+		\subfile{sections/Applicazione}
+		
+	\newpage
+		\subfile{sections/InterazioneUtente}		
+		
+	\newpage
+		\subfile{sections/ProveConcettuali}
+		
+	\newpage
+		\subfile{sections/ConcretizzazioneProve}
+		
+	% Parte pratica
+	
+	\newpage
+		\subfile{sections/Sperimentazione2016-05-26}
+		
+	\newpage
+		\subfile{sections/Sperimentazione2016-05-31}
+		
+	\label{LastPage}
+
+\end{document}

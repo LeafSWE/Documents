@@ -1,0 +1,88 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{leaf}
+\setcounter{table}{-1}
+\setcounter{secnumdepth}{6}
+\usepackage{float}
+\restylefloat{table}
+\definecolor{dkgreen}{RGB}{0,160,0}
+
+\titlepage{}
+
+\author{Andrighetto Cristian, Castello Davide}
+\date{27/12/2015}
+\intestazioni{Piano di Qualifica}
+\pagenumbering{gobble}
+\begin{document}
+	\begin{titlepage}
+		\centering
+	{\huge\bfseries CLIPS\par}
+	Communication \& Localization with Indoor Positioning Systems \\*
+	\line(1,0){350} \\
+	{\scshape\LARGE Università di Padova \par}
+	\vspace{1cm}
+	{\scshape\Large Piano di Qualifica v7.00 \par}
+	\logo
+	\newpage
+		\begin{tabular}{c|c}
+			{\hfill \textbf{Versione}} 			& 7.00 				\\
+			{\hfill\textbf{Data Redazione}} 		& 2016-06-13	 		\\ 
+			{\hfill\textbf{Redazione}} 			& Cristian Andrighetto 		\\ 
+			{\hfill\textbf{Verifica}} 			& Davide Castello 		\\
+			{\hfill\textbf{Approvazione}} 			& Andrea Tombolato 		\\
+			{\hfill\textbf{Uso}} 				& Esterno			\\
+			{\hfill\textbf{Distribuzione}} 			& Prof. Vardanega Tullio	\\
+									& Prof. Cardin Riccardo 	\\
+									& Miriade S.p.A.
+		\end{tabular}
+	\end{titlepage}
+	
+	\newpage
+	\pagestyle{myfront}
+		\include{diarioModifichePQ}
+	
+	\newpage
+		\tableofcontents
+	
+	\newpage
+		\listoftables
+	
+	\label{LastFrontPage}
+	\newpage
+		\pagestyle{mymain}
+		\subfile{sections/Introduzione}
+	\newpage
+		\subfile{sections/VisioneGeneraleDellaStrategiaDiGestioneDellaQualita}
+	\newpage
+		\subfile{sections/LaStrategiaDiGestioneDellaQualitaNelDettaglio}
+	\newpage
+		\subfile{sections/CapabilityMaturityModel}
+	\newpage
+		\subfile{sections/Standard9126}
+	\newpage
+		\subfile{sections/PDCA}
+	\newpage
+		\subfile{sections/Test}
+	
+	\newpage
+		\subfile{sections/ResocontoDelleAttivitaDiVerificaFaseA}
+	
+	\newpage
+		\subfile{sections/ResocontoDelleAttivitaDiVerificaFaseAD}
+	
+	\newpage
+		\subfile{sections/ResocontoDelleAttivitaDiVerificaFasePA}
+	
+	\newpage
+		\subfile{sections/ResocontoDelleAttivitaDiVerificaFasePDROB}
+	
+	\newpage
+		\subfile{sections/ResocontoDelleAttivitaDiVerificaFasePDRD}
+		
+	\newpage
+		\subfile{sections/ResocontoDelleAttivitaDiVerificaFasePDROP}
+	
+	\newpage
+		\subfile{sections/ResocontoDelleAttivitaDiVerificaFaseV}
+		
+\label{LastPage}
+\end{document}

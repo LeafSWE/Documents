@@ -1,0 +1,87 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{leaf}
+\usepackage{listings}
+\setcounter{table}{-1}
+
+\titlepage{}
+
+\author{}
+\date{03/03/2016}
+\intestazioni{Specifica tecnica}
+\pagenumbering{gobble}
+\begin{document}
+\begin{titlepage}
+	\centering
+	{\huge\bfseries CLIPS\par}
+	Communication \& Localization with Indoor Positioning Systems \\*
+	\line(1,0){350} \\
+	{\scshape\LARGE Università di Padova \par}
+	\vspace{1cm}
+	%deve essere cambiato il titolo ogni volta
+	{\scshape\Large Specifica Tecnica v0.03 \par}
+	\logo
+	\newpage
+	%devono essere compilati questi campi ogni volta
+		\begin{tabular}{c|c}
+			{\hfill \textbf{Versione}} 			& 					\\ \\
+			{\hfill\textbf{Data Redazione}} 	&            		\\ \\
+			{\hfill\textbf{Redazione}} 			&  					\\ \\
+			{\hfill\textbf{Verifica}} 			&  					\\ \\
+			{\hfill\textbf{Approvazione}} 		&  					\\ \\
+			{\hfill\textbf{Uso}} 				& Esterno			\\ \\
+			{\hfill\textbf{Distribuzione}} 		& Prof. Vardanega Tullio \\
+												& Prof. Cardin Riccardo \\
+												& Miriade S.p.A. \\
+		\end{tabular}
+	\end{titlepage}
+	
+	\newpage
+	\pagestyle{myfront}
+		\include{diarioModificheST}
+	\newpage
+		\tableofcontents
+	\newpage
+		\listoffigures	
+	\label{LastFrontPage}
+	\newpage
+	
+	\pagestyle{mymain}
+	
+	 \newpage
+		\subfile{sections/Introduzione}
+
+	\newpage
+		\subfile{sections/TecnologieUtilizzate}
+	
+	\newpage
+		\subfile{sections/DescrizioneArchitettura}
+	
+	\newpage
+		\subfile{sections/ComponentiClassi}
+	
+	\newpage
+		\subfile{sections/SchemaBaseDiDati}
+	
+	\newpage
+		\subfile{sections/DiagrammiDelleAttivita}
+	
+	\newpage
+		\subfile{sections/DesignPattern}
+	
+	\newpage
+		\subfile{sections/StimeFattibilita}
+
+	\newpage
+		\subfile{sections/Tracciamento}
+	
+	\newpage
+		\subfile{sections/DescrizioneDesignPattern}
+	
+	\newpage
+		\subfile{sections/Mockup}
+
+		
+	\label{LastPage}
+
+\end{document}

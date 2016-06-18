@@ -1,0 +1,66 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{leaf}
+\setcounter{table}{-1}
+\usepackage{float}
+\restylefloat{table}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue
+}
+
+\titlepage{}
+
+\author{Oscar Elia Conti, Marco Zanella}
+\date{9/12/2015}
+\intestazioni{Analisi dei requisiti}
+\pagenumbering{gobble}
+\begin{document}
+	\begin{titlepage}
+		\centering
+		{\huge\bfseries CLIPS\par}
+	Communication \& Localization with Indoor Positioning Systems \\*
+	\line(1,0){350} \\
+	{\scshape\LARGE Università di Padova \par}
+	\vspace{1cm}
+	{\scshape\Large Analisi dei Requisiti v6.00\par}
+	\logo
+	\newpage
+		\begin{tabular}{c|c}
+			{\hfill \textbf{Versione}} 		& 6.00				\\
+			{\hfill\textbf{Data Redazione}} 	& 2016-06-13	  		\\
+			{\hfill\textbf{Redazione}}		& Andrea Tombolato	\\
+			{\hfill\textbf{Verifica}} 		& Eduard Bicego		\\
+			{\hfill\textbf{Approvazione}} 		& Andrea Tombolato		\\
+			{\hfill\textbf{Uso}} 			& Esterno			\\
+			{\hfill\textbf{Distribuzione}} 		& Prof. Vardanega Tullio 	\\
+								& Prof. Cardin Riccardo 	\\
+								& Miriade S.p.A. 		\\
+		\end{tabular}
+	\end{titlepage}
+	\newpage
+		\pagestyle{myfront}
+		\include{diarioModificheAR}
+
+	\newpage
+		\tableofcontents
+	\newpage
+		\listoftables
+	\newpage
+		\listoffigures
+	\label{LastFrontPage}
+
+	\newpage
+	\pagestyle{mymain}
+		\subfile{sections/Introduzione}
+	\newpage
+		\subfile{sections/DescrizioneGenerale}
+	\newpage
+		\subfile{sections/CasiDUso}
+	\newpage
+		\subfile{sections/Requisiti}
+	\newpage
+		\subfile{sections/TracciamentoTest}
+	\label{LastPage}
+
+\end{document}

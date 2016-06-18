@@ -1,0 +1,83 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{leaf}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{subfig}
+\usepackage{sidecap}
+\usepackage[toc]{glossaries}
+
+\include{GlossarioMU/glos}
+
+\makeglossaries
+
+\titlepage{}
+
+\author{Eduard Bicego}
+\date{01/05/2016}
+\intestazioni{Manuale utente}
+\pagenumbering{gobble}
+
+\begin{document}
+\begin{titlepage}
+	\centering
+	{\huge\bfseries CLIPS\par}
+	Communication \& Localization with Indoor Positioning Systems \\
+	\line(1,0){350} \\
+	{\scshape\LARGE Università di Padova \par}
+	\vspace{1cm}
+	%devono essere cambiato il titolo ogni volta
+	{\scshape\Large Manuale Utente 3.00 \par}
+	\logo
+	\newpage
+	%devono essere compilati questi campi ogni volta
+	\begin{tabular}{c|c}
+		{\hfill \textbf{Versione}} 			& 3.00					\\
+		{\hfill\textbf{Data Redazione}} 		& 2016-06-01  		\\
+		{\hfill\textbf{Redazione}} 			& Oscar Elia Conti		\\
+		{\hfill\textbf{Verifica}} 				&  Eduard Bicego	\\
+		{\hfill\textbf{Approvazione}} 		& Andrea Tombolato		\\
+		{\hfill\textbf{Uso}} 					& Esterno			\\
+		{\hfill\textbf{Distribuzione}} 			& Pubblica 			\\
+	\end{tabular}
+\end{titlepage}
+
+
+	
+	\newpage
+	\pagestyle{myfront}
+	
+		\newpage
+			\include{diarioModificheMU}
+		\newpage
+			\tableofcontents
+		\newpage
+			\listoffigures
+	\label{LastFrontPage}
+
+	\newpage
+		\pagestyle{mymain}
+	%\newpage
+		%\subfile{sections/introduzione}
+	\newpage
+		\subfile{sections/Panoramica}
+	\newpage
+		\subfile{sections/Requisiti}
+	\newpage
+		\subfile{sections/Installazione}
+	\newpage
+		\subfile{sections/PerIniziare}
+	\newpage
+		\subfile{sections/Applicazione}
+	\newpage
+		\subfile{sections/SegnalazioneProblemi}
+	
+	
+	% Glossario
+	\newpage
+		\printglossary
+
+		
+	\label{LastPage}
+
+\end{document}

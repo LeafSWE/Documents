@@ -1,0 +1,53 @@
+\documentclass[../ManualeSviluppatore.tex]{subfiles}
+
+\begin{document}
+\section{Librerie esterne}
+	
+	\subsection{SQLite}
+		Libreria che implementa un DBMS SQL transazionale senza la necessità di un server. Viene utilizzata per salvare e gestire le mappe scaricate e installate nel dispositivo e il relativo contenuto.
+		\begin{itemize} \item Versione utilizzata 3.9.2\end{itemize}
+
+	\subsection{AltBeacon}
+		Libreria che permette ai sistemi operativi mobile di interfacciarsi ai \gls{beacon}, offrendo molteplici funzionalità. Viene utilizzata per permettere la comunicazione tra l'applicativo \gls{Android} e i \gls{beacon}.
+		\begin{itemize} \item Versione utilizzata 2.02\end{itemize}
+		
+	\subsection{JGraphT}
+		Libreria \gls{Java} che fornisce funzionalità matematiche per modellare grafi. Viene utilizzata per la rappresentazione delle mappe e per il calcolo dei percorsi. 
+		\begin{itemize} \item Versione utilizzata 0.9.1\end{itemize}
+
+	\subsection{Gson}
+		Libreria \gls{Java} che fornisce funzionalità per la gestione di oggetti JSON. Tale libreria è utilizzata la gestione del download delle mappe da remoto. 
+		\begin{itemize} \item Versione utilizzata 2.6.2\end{itemize}
+
+	\subsection{Dagger}
+		Libreria \gls{Android} utilizzata per effettuare la dependency injection. Viene utilizzata per la creazione dei singleton.
+		\begin{itemize} \item Versione utilizzata 2.0\end{itemize}
+
+	\subsection{Picasso}
+		Libreria per la gestione delle immagini in remoto. Viene utilizzata per scaricare le immagini utilizzate durante la navigazione.
+		\begin{itemize} \item Versione utilizzata 2.5.2\end{itemize}
+
+
+\section{Tecnologie esterne}
+	L'applicazione svolge la sua principale funzionalità di \gls{navigazione indoor} grazie al supporto della tecnologia e dei dispositivi \gls{Beacon}.
+	
+	\subsection{Configurazione dispositivi}
+	I dispositivi utilizzati e quindi testati con l'applicazione Clips sono gli \textit{Smart Beacon} prodotti dalla \textit{Kontakt.io}. La configurazione di essi è avvenuta attraverso l'applicazione \textbf{Kontact.io Administration App} disponibile nel Play Store. 
+	Pertanto non si certifica che l'applicazione Clips supporti altre tipologie di dispositivi di marche differenti, in tal caso comunque l'uso della libreria esterna \textit{AltBeacon} dovrebbe permettere ciò o facilitare le modifiche da effettuare all'interno del codice sorgente.	
+	
+	Per i dati da impostare nei dispositivi si rimanda alla sezione successiva \textit{Mappatura dell'edificio} \ref{subsec:ConfigurazioneBeacon}.
+	
+	\subsection{Manutenzione dispositivi}
+		 La manutenzione richiesta dei dispositivi beacon fortunatamente è bassa e riguarda principalmente:
+		 \begin{enumerate}
+		 	\item livello della batteria;
+		 	\item malfunzionamenti del dispositivo;
+		 	\item spostamenti fisici e riposizionamento del dispositivo;
+		 \end{enumerate}
+		 Per i primi due punti si faccia riferimento ai manuali rilasciati dalla relativa marca produttrice dei dispositivi adottati. Per il secondo punto si segnala che esistono numerose applicazioni gratuite per effettuare lo scanning dell'area e individuare i dispositivi che non rispondono più. Si precisa che tale funzionalità è stata implementata nell'applicazione Clips all'interno della sezione \textit{Area sviluppatore}.
+		 
+		 Il terzo punto si verifica nel caso in cui la mappatura svolta precedentemente non soddisfa o necessita di modifiche per migliorare l'esperienza utente. In tal caso oltre al riposizionamento del dispositivo nel nuovo punto si richiede una manutenzione dei dati nel database remoto per tale mappe dell'edificio, per effettuare questa operazione si rimanda alla sezione apposita \textit{Persistenza dei dati} \ref{subsec:Database}.
+		 
+
+
+\end{document}

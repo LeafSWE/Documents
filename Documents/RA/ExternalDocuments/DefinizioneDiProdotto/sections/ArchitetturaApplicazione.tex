@@ -1,0 +1,47 @@
+\documentclass[../DefinizioneDiProdotto.tex,lanscape]{subfiles}
+\begin{document}
+
+\section{Architettura applicazione}
+
+	\subsection{Architettura ad alto livello}
+		L'architettura dell'applicazione rispecchia il pattern architetturale a livelli presentando cinque livelli:
+		\begin{description}
+			\item[Presentation layer:] contiene le componenti dell'interfaccia grafica utente passiva e le componenti facenti parte dell'interfaccia di comunicazione tra vista e il layer sottostante;
+			\item[Business layer:] contiene le componenti logiche del model tranne quelle adibite all'accesso al database;
+			\item[Service layer:] contiene le componenti adibite a interfacciare le componenti della logica dell'applicativo con quelle che si interfacciano direttamente al database;
+			\item[Persistance layer:] contiene le componenti che comunicano direttamente con il database e vengono utilizzate dal Service layer; 
+			\item[Database layer:] corrisponde al database SQLite all'interno del dispositivo mobile.
+		\end{description}
+	La scelta di tale pattern architetturale deriva dai vantaggi che ne derivano:
+	\begin{itemize}
+		\item Garantisce un ambiente facile da testare;
+		\item Facilita lo sviluppo grazie alla sua semplicità teorica;
+		\item Disaccoppiamento delle componenti con diversi scopi;
+	\end{itemize}
+	
+	\begin{figure} [h]
+		\centering
+		\includegraphics[scale=0.4]{img/LayeredArchitecture}
+		\caption{Architettura a layer}
+		\label{fig:LayerArchitecture}
+	\end{figure}
+	
+	\newpage
+	\subsection{Implementazione nell'applicativo}
+		Seguendo il pattern presentato in precedenza si mostra nel diagramma in figura \ref{fig:multi-tier} quali package che compongono l'applicazione corrispondono ai layer prima presentati.
+		\begin{description}
+			\item[Presentation layer:] comprende i package \verb|view| e \verb|presenter|;
+			\item[Business layer:] comprende i package interni al package \verb|model| ossia \verb|navigator|, \verb|compass|, \verb|usersetting| e \verb|compass|;
+			\item[Service layer:] comprende il package \verb|service| contenuto nel package \verb|dataaccess|;
+			\item[Persistence layer:] comprende il package \verb|dao| contenuto nel package \verb|dataaccess|;
+			\item[Database layer:] è il database SQLite.
+		\end{description}
+		
+	\begin{figure} [h]
+		\centering
+		\includegraphics[scale=0.45]{img/package/multi-tier}
+		\caption{Architettura a layer implementata nell'applicazione}
+		\label{fig:multi-tier}
+	\end{figure}
+
+\end{document}

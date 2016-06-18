@@ -1,0 +1,73 @@
+\documentclass[../Sperimentazione.tex]{subfiles}
+
+\begin{document}
+
+	\section{Sperimentazione 2016-05-26}
+	
+		\begin{table} [h]
+		\centering
+		\begin{tabular}[width=0.5\textwidth]{r|c}
+			\textbf{Numero sperimentazione} & 1 \\
+			\textbf{Data sperimentazione} & 2016-05-26 \\
+			\textbf{Orario sperimentazione} & 16:00 - 17:20 \\
+			\textbf{Impianto allestito} & Impianto1 \\
+			\textbf{Versione prototipo testato} & 1.00 \\		
+		\end{tabular}
+		\end{table}
+	
+		
+		% impianto utilizzato
+		\subsection{Impianto}
+		L'impianto\g\ allestito per la sperimentazione è l'impianto \textbf{Impianto1}. Tutte le informazioni nel dettaglio sono disponibili nella sezione \textit{Allestimento impianti} \ref{sec:AllestimentoImpianto}. Durante l'orario delle sperimentazioni all'interno dell'edificio si svolgevano le normali attività per cui si considera che l'impianto abbia condizioni esterne realistiche.
+
+
+		% dispositivi utilizzati
+		\subsection{Dispositivi di prova}
+			Nella presente sperimentazione si sono utilizzati due dispositivi con diverso hardware e sistema operativo. Inoltre la \textbf{versione del prototipo} installata e testata è la \textbf{1.00}.
+	
+			\begin{table} [h]
+			\centering
+				\begin{tabular}{lcc}
+					\textbf{Modello} & \textbf{Sistema operativo} \\
+					\toprule
+					Moto G 2015 & Android 6.0 \\
+					\midrule
+					Nexus 4 & Android 5.1.1 \\
+					\bottomrule
+				\end{tabular}
+				\caption{Sperimentazione 2016-05-26 - Dispositivi utilizzati}
+				\label{tab:Sperimentazione1Dispositivi}
+			\end{table}
+		
+			
+		% prove effettuate (commentarlo per compilare il seguente file)
+		\newpage
+			\subfile{sections/Sperimentazione2016-05-26/ProveEffettuate}
+	
+		% problematiche 
+		\newpage
+		\subsection{Problematiche riscontrate}
+		
+			\subsubsection{Problematiche hardware}
+				Talvolta durante la sperimentazioni si sono osservati significativi tempi di caricamento, in particolare nella schermata attivata solo dopo aver rilevato il beacon. Le cause sembrano essere date dalla qualità dell'antenna bluetooth montata nel dispositivo. Nel caso sperimentato il bluetooth del dispositivo Nexus 4 in alcuni casi richiedeva più tempo rispetto al Moto G.
+		
+			\subsubsection{Problematiche software}
+				Le problematiche riscontrate relative all'applicazione derivano principalmente dalle funzionalità non ancora implementate, per il resto sono stati individuati alcuni bug che verranno risolti entro il rilascio della prossima versione del prototipo.
+		
+			\subsubsection{Problematiche user experience}
+				Nell'interfaccia grafica emergono incoerenze di design poiché alcune caratteristiche distintive del Material Design non possono essere applicate in maniera nativa ad applicazioni che abbiano come target delle versioni Android precedenti alla 21, un esempio è l'attributo \verb|android:elevation| che permette di ottenere le caratteristiche card\g.
+
+La funzione di alcuni bottoni ed il modo per raggiungere le istruzioni dettagliate possono risultare non particolarmente intuitive. Per emarginare tale lacuna è stata implementata una guida in-app, raggiungibile dal menu dell'applicazione.
+	
+		L'ultima istruzione di ogni percorso comunica all'utente che esso si trova "nei pressi" della destinazione. Questa specifica è necessario in quanto il sistema non è in grado di capire (dopo l'ultima istruzione del percorso) la posizione precisa dell'utente rispetto alla sua destinazione. 
+			
+		% conclusioni della sperimentazione
+		\newpage
+		\subsection{Conclusioni}
+			Tranne per le funzionalità non ancora implementate l'applicazione in tutte le prove si è comportata nel modo atteso tranne nella prova 11A.1 in cui l'inserimento ha rilevato un bug  dell'applicazione che tuttavia non creava malfunzionamenti dell'applicazione. 
+			
+			Le problematiche emerse riguardano soprattutto la componente hardware sia da parte dei dispositivi smartphone utilizzati sia da parte dei dispositivi beacon. Nonostante ciò, l'applicazione riesce a comportarsi nel modo previsto grazie alla progettazione che ha tenuto conto delle problematiche che coinvolgevano la tecnologia beacon. 
+			
+			Prima dello svolgimento della successiva prova si implementeranno funzionalità di supporto e la funzionalità di navigazione sarà migliorata cercando di fornire maggiori indicazioni all'utente. 
+
+\end{document}
